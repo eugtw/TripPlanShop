@@ -1,0 +1,9 @@
+.items-list-form-box{
+    border: 1px solid #cccccc;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.items-list-form-box ul li{
+    margin-left: 20px;
+}

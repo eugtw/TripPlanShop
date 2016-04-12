@@ -1,0 +1,72 @@
+
+
+
+/********************************************************************/
+
+
+#itit-form{
+    background-color: #ffffff;
+    padding: 20px 5%;
+}
+
+.top-places label{
+    width: 100%;
+}
+
+.top-places input{
+    width: 100%;
+}
+
+#pv-photo-block img{
+    width: 33%;
+    float: left;
+}
+
+
+.photo-box{
+    width: 25%;
+    float: left;
+}
+.open-link{
+    min-width: 100px;
+}
+#openGallery{
+    display: inline-block;
+    position: relative;
+    top: 40%;
+}
+.itiday-box{
+    border-top: 1px solid #dce0e0;
+}
+
+.day_details_title{
+    font-size: 1.4em;
+    text-align: left;
+
+}
+.daily-summary-block{
+    width: 90%;
+    margin: 0 auto;
+}
+.daily-summary-block img[style*="left"]  {margin:0 20px 20px 0;}
+.daily-summary-block img[style*="right"] {margin:0 0 20px 20px; }
+
+.daily-summary-block iframe{
+    display: block;
+    margin: 10px auto;
+    max-width: 800px;
+    max-height: 400px;
+}
+@media (max-width: 400px){
+    .daily-summary-block{
+        width: 100%;
+    }
+    .daily-summary-block img{
+        margin: 0px;
+    }
+    .daily-summary-block iframe{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,238 @@
+.itit-extra-padding{
+    background-color: #edefed;
+}
+
+.itit-container{
+    background-color: #ffffff;
+    padding: 20px 100px 50px 100px;
+    -moz-box-shadow:    inset 0 0 10px #878d90;
+    -webkit-box-shadow: inset 0 0 10px #878d90;
+    box-shadow:         inset 0 0 10px #878d90;
+}
+#itit-header h1{
+    margin: 10px 0;
+}
+.itit-container h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.itit-pub-date{
+    font-size: 0.8em;
+}
+.itit-author{
+    height: 50px;
+}
+.itit-author{
+    position: relative;
+    top: -40px;
+    left: 20px;
+}
+
+.iti-big-purchase .iti-info-box{
+    top: 350px;
+    width: 150px;
+    font-size: 1.1em;
+}
+.iti-author-info{
+    margin-left: 110px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+.iti-author-info div{
+    height: 20px;
+}
+.iti-author-info .name{
+    font-size: 18px;
+    color: #393c3d
+}
+.author-avatar{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+.author-avatar img{
+    padding: 3px;
+    background-color: #ffffff;
+}
+#itit-header{
+    padding: 20px 0 0 0;
+}
+
+#itit-header>img{
+    width: 60px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.itit-header-box{
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    text-align: center;
+    background-image: url("../images/itineraries/default iti cover.jpg");
+}
+
+.itit-summary{
+    padding-bottom: 20px;
+
+}
+
+/*********** header buy button, price tag, and add to wishlist "heart" block ************/
+#header-info-box{
+    position: relative;
+    top: 65%;
+    float: left;
+}
+
+
+
+.items-2-col li{
+   display: inline-block;
+    width: 47%;
+}
+.items-list{
+    border-top: 1px solid #dce0e0;
+    padding-top: 20px;
+
+}
+
+.items-list>ul>li{
+    border-bottom: 1px solid #dce0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.item-check-yes{
+    color: #d94d1a;
+    font-size: 0.9em;
+}
+.item-check-yes-text{
+    font-size: 1em;
+}
+.item-check-no{
+
+}
+.item-check-no, .pv-item-check-no-text{
+    color: #cacaca;
+    font-size: 0.9em;
+}
+
+.itit-btn{
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 0.9em;
+    min-width: 100px;
+    text-align: center;
+    border: none;
+    padding: 7px 10px;
+}
+.itit-footer-button {
+    padding: 7px 30px;
+    min-width: 150px;
+
+}
+.info-block-subtitle{
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.itit-info-block{
+}
+.itit-info-block li{
+    background-color: #f3f3f3;
+    line-height: 1;
+    padding: 7px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+.itit-info-block p{
+    background-color: #d94d1a;
+    padding: 4px 11px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+.itit-info-block li ul{
+    margin-left: 5px;
+}
+.items-cat{
+    color: #aeaeae;
+}
+.blog_link{
+    font-size: 0.9em;
+}
+#itit-price-block{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+#itit-price{
+    width: 100px;
+    margin-left: 5px;
+}
+/* media **********************************/
+@media (max-width: 992px){
+    .itit-container{
+        padding: 20px;
+
+    }
+}
+
+@media (max-width: 768px){
+    .itit-container{
+        padding: 10px;
+    }
+}
+@media (max-width: 450px) {
+    /*
+    .daily-summary-block{
+        width: 100%;
+    }
+    #header-info-box{
+        top: 45%;
+    }
+
+    .itit-author{
+        top: -55px;
+        left: 0;
+    }
+    */
+    .itit-author{
+        left: 0;
+    }
+    .itit-header-box {
+        height: 300px;
+    }
+    .iti-big-purchase .iti-info-box {
+        top: 180px;
+        width: 115px;
+        font-size: 1.1em;
+    }
+    .author-avatar{
+        width: 75px;
+        height: 75px;
+        top: 25px;
+        margin-left: 5px;
+    }
+    .iti-author-info{
+        margin-left: 85px;
+        margin-top: 55px;
+        font-size: 0.9em;
+    }
+    .items-2-col li{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+
+.iti-footer{
+    border-top: 1px solid #dee0de;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.iti-info-box{
+    position: absolute;
+    top: 150px;
+    float: left;
+}
+.iti-price sup{
+    top: -0.5em;
+    font-size: 50%;
+}
+.iti-price{
+    padding: 1px 10px;
+    background-color: rgba(74, 74, 74, 0.65);
+    color: #ffffff;
+    font-size: 1.2em;
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+.iti-card-container{
+    background-color: #ffffff;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    border: 1px solid #b0b1b0;
+    line-height: normal;
+}
+
+.header-buy-button{
+    padding: 2px 10px;
+    background-color: #d94d1a;
+    color: #ffffff;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    display: inline-block;
+    float: left;
+    width: 100%;
+
+}
+
+
+.pop-box-style{
+    font-size: 0.95em;
+}
+.pop-box-style a{
+    color: #999999;
+}
+.iti-day{
+    text-align: center;
+    /*margin-right: 10px;*/
+    position: absolute;
+    top: 10px;
+   /* left: 20px;*/
+    padding: 3px 5px;
+    background-color: #393c3d;
+    background-color: #42b142;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+.iti-card-title{
+    margin-top: 10px;
+    display: block;
+    font-size: 1.1em;
+    width: 100%;
+
+}
+.iti-card-title a{
+
+    color: #393c3d;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.iti-card-container ul{
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+.iti-card-container ul li{
+    margin: 0 0 2px 0 ;
+}
+#see-details-link{
+    font-size: 0.8em;
+    display: inline;
+    float: right;
+    position: relative;
+    top: 3px;
+}
+.iti-author{
+    margin: 8px 0;
+    font-family: "Charter BT W01 Roman","Georgia","serif";
+}
+.iti-author-info>span{
+    color: #c8c8c8;
+    font-size: 0.8em;
+}
+.iti-author-blog{
+    color: #c8c8c8;
+    font-size: 0.8em;
+}
+.iti-author .name{
+    color: #a3a3a3;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
