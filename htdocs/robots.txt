@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /user/
+Disallow: /itinerary/create/
+Disallow: /itinerary/get-free-itinerary/
+Disallow: /itinerary/sales-statement/
+Disallow: /itinerary/purchase/
+Disallow: /itinerary/favorite/
+Disallow: /itinerary/publish/
+Disallow: /itinerary/unpublish/
+Disallow: /itinerary/confirm-purchase/
+Disallow: /itinerary-delete/
+Disallow: /itinerary/*/edit
+Disallow: /itinerary-day/
+
