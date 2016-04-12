@@ -1,0 +1,76 @@
+#becoming-seller-header{
+    padding: 30px 0;
+}
+#becoming-seller>nav h2{
+    font-size: 1.2em;
+}
+
+
+#become-seller-header{
+    height: 450px;
+    width: 100%;
+
+    background-image: url("../images/site/becoming-seller/fb_becomeseller.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:50% 30%;
+}
+#become-seller-header>div{
+    height: 100%;
+    background-color: rgba(95, 95, 95, 0.20);
+}
+#become-seller-header h1, #become-seller-header p{
+    color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+
+#become-seller-header h1{
+    font-size: 3em;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+#become-seller-header p{
+    font-size: 1.7em;
+}
+#become-seller h2, #become-seller h3{
+    font-weight: 400;
+
+}
+#become-seller h2{
+    font-size: 1.9em;
+}
+#become-seller h3{
+    font-size: 1.2em;
+}
+#become-seller p{
+    color: #939da3;
+}
+.become-seller-intro-block{
+    margin-bottom: 30px;
+}
+
+
+
+
+#become-seller-container>div{
+    margin-bottom: 30px;
+    width: auto;
+}
+#become-seller-container ol h4{
+    margin-top: 20px;
+}
+
+@media (max-width: 400px) {
+    #become-seller-header h1{
+        font-size: 2.5em;
+    }
+    #become-seller-header p{
+        font-size: 1.5em;
+    }
+    #become-seller-header h1, #become-seller-header p{
+        top: 30%;
+    }
+}

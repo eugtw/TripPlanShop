@@ -1,0 +1,261 @@
+@import '../nav';
+@import '../homepage';
+@import '../search-result';
+@import '../itinerary';
+@import '../footer';
+@import '../preview';
+@import '../signin';
+@import '../howitworks';
+@import '../review';
+@import '../becoming-seller';
+@import '../user-pages';
+@import '../stickyfooter';
+@import '../itit-card';
+@import '../faq';
+@import '../itit_day';
+@import '../itit';
+@import '../iti-input-form';
+@import '../promo';
+
+
+@theme-color: #d94d1a;
+
+body{
+    color: #565a5c;
+    background-color: #edefed;
+    font-family: 'Lato',sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.625;
+}
+/*
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: normal FLight, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 100;
+    color: #393c3d;
+}*/
+
+.inline-block{
+    display: inline-block;
+}
+.screen-height{
+    min-height: 300px;
+}
+.btn, .btn-lg, .btn-md, .btn-sm{
+    border-radius: 0;
+}
+.btn-primary{
+    background-color: @theme-color;
+    border-color: @theme-color;
+}
+.btn-info{
+    background-color: #393c3d;
+    border-color: #393c3d;
+}
+.btn-wide{
+    width: 200px;
+}
+.theme-orange{
+    color: @theme-color;
+}
+.theme-blue{
+    color: #0093de;
+}
+.theme-pink{
+    color: #ff5a5f;
+}
+
+.table{
+    margin-bottom: 0;
+}
+.size-medium{
+    font-size: 1.1em;
+}
+
+
+.container{
+     max-width: 1100px;
+ }
+.top-buffer{
+    margin-top: 50px;
+}
+.top-buffer2{
+    margin-top: 100px;
+}
+.bottom-buffer{
+    margin-bottom: 50px;
+}
+.bottom-buffer2{
+    margin-bottom: 100px;
+}
+
+
+/* modal css change for google maps */
+.pac-container {
+    background-color: #FFF;
+    z-index: 20;
+    position: fixed;
+    display: inline-block;
+    float: left;
+}
+.modal{
+    z-index: 20;
+}
+.modal-backdrop{
+    z-index: 10;
+}​
+
+.stars
+{
+    margin: 0 2px;
+    font-size: 14px;
+
+    position: relative;
+    top: 3px;
+}
+.itinerary-display-title{
+    display: inline-block;
+}
+.modal-backdrop{
+}
+.day-create-container{
+    margin-top: 40px;
+    padding: 75px 0;
+    border: 2px solid #e7e7e7;
+}
+.location-add{
+    margin-bottom: 5px;
+}
+.itinerary-paginator, .itinerary-paginator a, .itinerary-paginator li{
+    background-color: #e7e7e7;
+}
+.itinerary-paginator ul{
+    margin: 0px;
+}
+.itinerary-paginator a{
+    width: 14%;
+}
+.itinerary-container h1{
+
+    font-family: "NationalRegularLF","NationalLightLF",georgia,serif;
+    font-size: 3em;
+}
+.itinerary-auther-info{
+margin-left: 5px;
+}
+.subheader{
+    color: #25526b;
+    margin-top: 30px;
+}
+.summary{
+    font-family: "NationalRegularLF","NationalLightLF",georgia,serif;
+    border-top: 1px solid #b9c6cd;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.block{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: solid #b9c6cd;
+    border-width: 0 1px 0 0;
+    color: #225069;
+    height: 155px;
+    padding-top: 15px
+}
+
+p#search-result-preview{
+    margin-top: 20px;
+}
+#itinerary-search-result-table{
+    margin: 10px 0 0 0;
+    height: auto;
+    border-bottom:0px !important;
+}
+.table th, .table td {
+    border: 0px !important;
+}
+.fixed-table-container {
+    border:0px !important;
+}
+
+
+.itinerary-container{
+    padding: 30px 40px;
+    background-color: #fafafa;
+}
+.itinerary-search-result-info{
+    background-color: rgba(23,23,23,0.85);
+}
+.itinerary-search-result-day-stay{
+    font-size: 2em;
+    font-weight: 500;
+}
+/*
+div.jumbotron{
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: #959595;
+    background-image: url("../files/default_images/itinerary/default.jpg");
+}
+div.jumbotron p{
+    font-size: 1em;
+}*/
+.FlexEmbed {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.FlexEmbed:before {
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+
+.FlexEmbed--2by1:before {
+    padding-bottom: 50%;
+}
+.cover-container{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px){
+    body{
+        font-size: 14px;
+    }
+    h1, .h1{
+        font-size: 2em;
+    }
+    h2, .h2{
+        font-size: 1.6em;
+    }
+    h3, .h3{
+        font-size: 1.3em;
+    }
+    .block{
+        height: auto;
+        border-width: 0 0 1px 0;
+    }
+
+    .top-buffer{
+        margin-top: 20px;
+    }
+    .top-buffer2{
+        margin-top: 40px;
+    }
+    .bottom-buffer{
+        margin-bottom: 20px;
+    }
+    .bottom-buffer2{
+        margin-bottom: 40px;
+    }
+}

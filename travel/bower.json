@@ -1,0 +1,12 @@
+{
+  "name": "laravel/laravel",
+  "description": "The Laravel Framework.",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_dl"
+  ],
+  "dependencies": {
+    "dante": "michelson/Dante#^0.0.14"
+  }
+}

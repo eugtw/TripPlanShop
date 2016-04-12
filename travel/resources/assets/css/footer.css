@@ -1,0 +1,15 @@
+#footer-container{
+
+}
+#footer-content ul{
+    display: inline-block;
+    font-size: 1em;
+}
+#footer-content a{
+    color: #ffffff;
+}
+
+#trademark{
+    font-size: 0.9em;
+    color: #82888a
+}

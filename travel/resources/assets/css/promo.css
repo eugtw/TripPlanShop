@@ -1,0 +1,349 @@
+
+#pm-header{
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% 1%;
+    background-image: url('../images/site/homepage_promo.jpg');
+}
+#pm-logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    border: 3px solid #ffffff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#pm-header-text-box{
+    position: relative;
+    top: 20%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+#pm-header h1, #pm-header h2{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-weight: 400;
+}
+#pm-header h1{
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+#pm-header h2{
+    font-size: 30px;
+}
+.pm-button{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.pm-button>div{
+    display: block;
+    margin: 0 auto;
+}
+.pm-button a{
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 200px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 15px 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: rgba(221, 221, 221, 0);
+
+}
+.pm-button>p{
+    margin-top: 60px;
+    color: #ffffff;
+}
+.pm-button>p>a{
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 14px;
+    margin: 0;
+}
+.pm-button>a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+#pm-form{
+    line-height: normal;
+    padding: 20px 0;
+}
+#pm-form input{
+    height: 40px;
+}
+#pm-form .inputBox{
+    width: 90%;
+    padding-left: 10px;
+}
+#pm-form .inputSubmit{
+    display: block;
+    margin-top: 10px;
+    background-color: #d94d1a;
+    color: #ffffff;
+    border: none;
+    height: 40px;
+    padding: 0 20px;
+}
+
+
+#pm-how-it-works{
+    background: #ffffff;
+}
+#pm-how-it-works img, #pm-become-a-seller img{
+    width: 100%;
+}
+#pm-become-a-seller{
+    border-top: 1px solid #e9edf1;
+    border-bottom: 1px solid #e9edf1;
+    background: #f5f7f9;
+    padding-bottom: 100px;
+}
+.pm-intro-box{
+    padding: 0 30px;
+}
+.pm-intro-box h3{
+    font-size: 1.6em;
+}
+.pm-intro-box>button{
+    margin-top: 50px;
+}
+.pm-intro-box img{
+    border: 1px solid #cdcdcd;
+}
+.pm-info-box-title{
+    font-size: 2em;
+
+}
+.pm-header-banner{
+    font-size: 36px;
+    color: #d94d1a;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+#pm-footer{
+    font-size: 0.9em;
+    color: #82888a;
+    height: 150px;
+    padding-top: 30px;
+    border-top: 1px solid #bcc5c8;
+    background-color: #ffffff;
+}
+#pm-footer a{
+    color: #82888a;
+}
+@media (max-width: 768px) {
+    .pm-intro-box{
+        padding: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    #pm-header{
+        height: 550px;
+    }
+    #pm-logo{
+        width: 60px;
+        border: 3px solid #ffffff;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .pm-header-banner{
+        font-size: 30px;
+
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    #pm-header h1 {
+        font-size: 25px;
+        font-weight: 400;
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+    #pm-header h2{
+        font-size: 20px;
+        max-width: 80%;
+        margin: 0 auto 0 auto;
+    }
+    .pm-button{
+        margin-top: 30px;
+    }
+    .pm-button div a {
+        font-size: .9em;
+        font-weight: normal;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 5px 10px;
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+        background-color: rgba(221, 221, 221, 0);
+    }
+    .pm-button>p {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/************************************************************* new */
+#promo-wrapper{
+    background-image: url('../images/site/homepage_promo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    max-width: 100%;
+    padding: 100px 0;
+    height: 100%;
+}
+
+#addthis-toolbox{
+    height: 40px;
+}
+#test{
+    position: relative;
+    left: -50px;
+    top: -50px;
+    width: 150%;
+    margin-top: 100px;
+    color: #ffffff;
+    padding: 30px;
+}
+#test h1{
+    font-family: "Georgia", Times, serif;
+    font-size: 48px;
+    line-height: 1.2em;
+    transform: scaleY(1.6);
+}
+#content-box{
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+#content-box-left{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    color: grey;
+    padding: 30px;
+}
+#content-box-left h1{
+    margin-top: 0;
+    font-size: 2em;
+    color: grey;
+}
+#content-box-left h2, #content-box-left h3{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+.highlight, #content-box-left a{
+    color: #ffffff;
+}
+.strong-highlight{
+    color: #d94d1a;
+}
+#content-box-right{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 30px;
+}
+#content-box-right h2{
+    margin-top: 0px;
+}
+#content-box-right p{
+    margin-top: 56px;
+    font-size: 2em;
+}
+#content-box-right form{
+    margin-top: 30px;
+}
+#promo-wrapper .btn-primary{
+    background-color: #d94d1a;
+    border-color: #d94d1a;
+}
+
+
+#contactus-content-box-left{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    color: grey;
+    padding: 30px;
+}
+#contactus-content-box-left a{
+
+}
+#contactus-content-box-left h1{
+    margin-top: 0;
+    font-size: 1.8em;
+}
+#contactus-content-box-left h2, #contactus-content-box-left h3{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+#contactus-content-box-left h4{
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.highlight{
+    color: #ffffff;
+}
+.modal-body p{
+    padding: 20px;
+}
+.modal-body ol li{
+    margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+    /*
+    html, body {
+        font-size: 12px;
+    }
+    */
+    #promo-wrapper{ padding: 0;}
+    #content-box-left h1{
+        margin-top: 15px;
+    }
+    #content-box-right{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .top-buffer{
+        margin-top: 15px;
+    }
+
+    #test h2{
+        margin-bottom: 15px;
+    }
+    #content-box-right p{
+        margin-top:0px;
+    }
+    #content-box-left{
+        padding: 15px;
+    }
+    #content-box-right{
+        padding: 0 15px 15px 15px;
+    }
+    #content-box-left h2, #content-box-left h3{
+        margin-bottom: 15px;
+    }
+    #content-box-right form{
+        margin-top: 15px;
+    }
+}
