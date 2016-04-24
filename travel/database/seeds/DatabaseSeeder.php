@@ -8,12 +8,9 @@ use App\User;
 use App\Profile;
 use App\TravelStyle;
 use App\ItiDay;
-use App\Location;
-use App\Transportation;
 use App\City;
 use App\Country;
 use App\ItineraryStyle;
-use App\DayLocation;
 use App\CityItinerary;
 use App\Region;
 use App\ItiItem;
@@ -30,19 +27,18 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-				//$this->call('ExperienceTableSeeder');
-				$this->call('StylesTableSeeder');
-				//$this->call('ItiItemTableSeeder');
-      /*
-                $this->call('UserTableSeeder');
-                //$this->call('ProfileTableSeeder');
+		$this->call('ExperienceTableSeeder');
+		$this->call('StylesTableSeeder');
+		$this->call('ItiItemTableSeeder');
 
-                $this->call('CountryTableSeeder');
-                $this->call('CityTableSeeder');
-        */
-		//
-		//$this->call('LocationTableSeeder');
-		/*$this->call('TransportationTableSeeder');
+		$this->call('UserTableSeeder');
+		$this->call('ProfileTableSeeder');
+
+		$this->call('CountryTableSeeder');
+		$this->call('CityTableSeeder');
+
+
+		$this->call('LocationTableSeeder');
 
 		$this->call('RegionTableSeeder');
 		$this->call('ItineraryTableSeeder');
@@ -50,10 +46,9 @@ class DatabaseSeeder extends Seeder {
 
 
 		$this->call('ItineraryStyleTableSeeder');
-		//$this->call('DayLocationsTableSeeder');
 		$this->call('CityItineraryTableSeeder');
-*/
-		//
+
+
 
 	}
 
@@ -267,26 +262,6 @@ class CityItineraryTableSeeder extends Seeder
 
 }
 
-class DayLocationsTableSeeder extends Seeder
-{
-	public function run()
-	{
-		DB::table('day_location')->delete();
-
-		DayLocation::create([
-			'day_id' => ItiDay::first()->id,
-			'location_id' => Location::first()->id
-		]);
-		DayLocation::create([
-			'day_id' => ItiDay::first()->id,
-			'location_id' => Location::first()->id + 1
-		]);
-		DayLocation::create([
-			'day_id' => ItiDay::first()->id,
-			'location_id' => Location::first()->id+2
-		]);
-	}
-}
 class ItineraryStyleTableSeeder extends Seeder
 {
 	public function run()
@@ -427,27 +402,7 @@ class LocationTableSeeder extends Seeder
 */
 	}
 }
-class TransportationTableSeeder extends Seeder
-{
-	public function run()
-	{
-		DB::table('transportations')->delete();
 
-		Transportation::create([
-			'type' => 'car'
-		]);
-		Transportation::create([
-			'type' => 'bike'
-		]);
-		Transportation::create([
-			'type' => 'bus'
-		]);
-		Transportation::create([
-			'type' => 'walk'
-		]);
-
-	}
-}
 class DayTableSeeder extends Seeder
 {
 	public function run()
@@ -455,84 +410,70 @@ class DayTableSeeder extends Seeder
 		DB::table('itidays', 'id')->delete();
 
 		ItiDay::create([
-			'day_of_itinerary' => 1,
+			'day_num' => 1,
 			'itinerary_id' => Itinerary::first()->id,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 150,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 2,
+			'day_num' => 2,
 			'itinerary_id' => Itinerary::first()->id,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 300,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 3,
+			'day_num' => 3,
 			'itinerary_id' => Itinerary::first()->id,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 150,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 1,
+			'day_num' => 1,
 			'itinerary_id' => Itinerary::first()->id + 1,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 150,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 2,
+			'day_num' => 2,
 			'itinerary_id' => Itinerary::first()->id + 1,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 300,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 1,
+			'day_num' => 1,
 			'itinerary_id' => Itinerary::first()->id + 2,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 150,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
 
 		]);
 		ItiDay::create([
-			'day_of_itinerary' => 1,
+			'day_num' => 1,
 			'itinerary_id' => Itinerary::first()->id + 3,
 			'title' => 'Sed velit mauris, vestibulum et orci vel',
-			'budget' => 150,
-			'transportation' => 'car',
-			'summary' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
+			'intro' => 'Sed velit mauris, vestibulum et orci vel, eleifend luctus ex.
 						Ut at orci condimentum, interdum est a, laoreet metus. Maecenas rutrum,
 						ligula nec tincidunt suscipit, tellus ante luctus turpis,
 						vitae placerat libero arcu congue sapien. Nam tincidunt in nisi ut scelerisque.',
@@ -546,10 +487,11 @@ class ProfileTableSeeder extends Seeder
 {
 	public function run()
 	{
+		/*
 		DB::table('profiles')->delete();
 		Profile::create([
 			'avatar' => ''
-		]);
+		]);*/
 	}
 }
 
@@ -571,7 +513,8 @@ class UserTableSeeder extends Seeder
 			'name' => 'omg',
 			'email'=> 's901236@gmail.com',
 			'password'=> \Illuminate\Support\Facades\Hash::make('123456'),
-			'active'=>1
+			'active'=>1,
+			'stripe_active' => 1
 			//'profile_id' => Profile::first()->id
 		]);
 		Profile::create(['user_id'=>$user2->id]);

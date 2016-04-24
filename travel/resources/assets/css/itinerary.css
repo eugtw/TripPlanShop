@@ -1,13 +1,238 @@
+/***************** new design **********************/
+i.fa{
+    margin-right: 1px;
+}
+#iti-header{
+    min-height: 400px;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #808080;
+}
+#iti-header .content-container{
+    display: inline-block;
+    max-width: 800px;
+}
+#iti-header h1{
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#iti-header .author-name{
+    display: block;
+    margin-top: 20px;
+    font-family: "Charter BT W01 Roman","Georgia","serif";
+    font-size: 24px;
+    text-transform: none;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+#iti-header .img-author img{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+#iti-header .rating{
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+#iti-header .rating a{
+    color: #ffffff;
+}
+/************* iti-overview ******************/
+
+#iti-overview .buy-block{
+    margin: 20px auto 40px auto;
+    max-width: 80%;
+    padding: 4px 30px 6px;
+    border-radius: 5px;
+    background-color: rgba(235, 83, 28, 0.85);
+}
+#iti-overview .buy-button{
+    font-size: 1.2em;
+}
+#iti-overview .heart{
+    font-size: 1.7em;
+    position: relative;
+    top: 1px;
+    float: right;
+    margin-left: 10px;
+}
+#iti-overview .buy-button{
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+}
+#iti-overview a:hover{
+    color: #fff;
+}
+#iti-overview .buy-button sup{
+    top: -4px;
+    font-size: 60%;
+}
+#iti-overview .buy-button sup:first-of-type{
+   margin-left: 10px;
+}
+#iti-overview h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+
+
+/*************** iti daily plan *********************/
+.tabs{
+}
+#swiper{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.swiper-container {
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.gallery-top {
+    height: 85%;
+    width: 100%;
+}
+.gallery-thumbs {
+    height: 15%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+    width: 15%;
+    height: 100%;
+    opacity: 0.6;
+}
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+}
+
+#iti-day-map iframe{
+    width: 100%;
+    max-height: 350px;
+}
+
+
+
+/**************** iti daily places *********************/
+.route-list  li a {
+    text-align: left;
+    border-bottom: none;
+    padding: 10px;
+    font-weight: 300;
+    position: relative;
+    display: table;
+    min-height: 70px;
+    width: 100%;
+    line-height: 1.4;
+ }
+.route-list  li{
+    border: 1px solid #ccc;
+}
+.route-list  li:last-child{
+    border-bottom: 1px solid #ccc;;
+}
+.iti-route li a.active {
+    background-color: rgba(217, 151, 26, 0.14);
+    text-decoration: none;
+}
+.iti-route .route-letter{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px 0 10px;
+    font-size: 16px;
+    width: 46px;
+    color: #d94d1a;
+}
+.iti-route .route-item{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: #393c3d;
+}
+.iti-route .route-item>div{
+    padding-top: 5px;
+}
+.iti-route .route-extra{
+
+    margin-right: 20px;
+    color: #999;
+    font-size: 0.8em;
+}
+.iti-route .route-item-exp{
+    padding: 3px 8px 4px;
+    background-color: #d94d1a;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 0.75em;
+    border-radius: 5px;
+}
+.iti-route .route-item-exp:last-child{
+    margin-right: 0;
+}
+.iti-route .route-img{
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.route-detail-table{
+    font-size: 0.9em;
+}
+.route-detail-title{
+    font-weight: bold;
+    margin-top: 30px;
+}
+.route-add{
+    background-color: transparent;
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+}
+/**************************************** day form edit ******************/
+
+.day-photo-thumbs{
+    width: 75px;
+}
+.delete-btn{
+    color: #ff5a5f;
+}
+.like-anchor{
+    background: transparent;
+    border: none;
+}
+.day-photo-thumbs i{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
 
 
 
 /********************************************************************/
 
 
-#itit-form{
-    background-color: #ffffff;
-    padding: 20px 5%;
-}
 
 .top-places label{
     width: 100%;

@@ -1,7 +1,7 @@
 @if($is_preview == 1)
     <div class="iti-info-box">
         @if( $itinerary->price == 0 )
-            <a type="button" class="header-buy-button" href="{{ route('itinerary.getItitFree', $itinerary) }}">Get this</a>
+            <a type="button" class="header-buy-button" href="{{ route('itinerary.getItiFree', $itinerary) }}">Get this</a>
         @else
             <a type="button" class="header-buy-button" href="{{ route('itinerary.purchaseConfirm', $itinerary) }}">Buy</a>
         @endif

@@ -4,6 +4,8 @@
         {!! Form::text('title', null, ['placeholder' => 'Itinerary Title','class'=>'form-control', 'autocomplete'=>'off']) !!}
     </div>
 </div>
+
+
 <div class="form-group">
     {!! Form::label('price', 'Sales Price (USD)', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9" id="itit-price-block">
@@ -195,6 +197,17 @@
                 data-toggle="tooltip" data-placement="right" data-html="true" title="{{ env('ITI_COVER_IMG_BTN') }}">
             Select Cover Image</button>
 </div>
+
+
+//select2 max selected items
+<script src="/js/select2/select2.min.js"></script>
+<script>
+    $('#style_list').select2({
+        maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
+        tags: true
+    });
+</script>
+
 <script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}">
     //standalone elfinder
 </script>
@@ -209,11 +222,7 @@
         $('#itit-price-desc').hide();
     });
 
-    //select2 max selected items
-    $('#style_list').select2({
-        maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
-        tags: true
-    });
+
 
     //when 'Add' cliced, move google autocomplted city, state, country, to list box
     $('#addCity').click(function(){

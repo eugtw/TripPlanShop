@@ -22,15 +22,15 @@ class StoreDayCreateRequest extends Request {
 	public function rules()
 	{
 		return [
-			//'title'=>'required',
-			'image'=>'required|imagename', //at least one image a day
+			'title'=>'required',
+			//'image'=>'required|imagename', //at least one image a day
 			//'budget' => 'required|digits_between:1,999999',
-			'day_of_itinerary'=> 'required|integer|min:1',
-			'experience' => 'required',
-			'day_cities' => 'required',
-			'places' => 'required',
+			'day_num'=> 'required|integer|min:1',
+			//'experience' => 'required',
+			//'day_cities' => 'required',
+			//'places' => 'required',
 			'intro'=> 'required',
-			'summary' => 'required'
+			//'summary' => 'required'
 		];
 	}
 

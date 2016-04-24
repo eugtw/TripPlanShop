@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Mail;
 
 class PromoController extends Controller {
 
-	public function getItiExample()
+	/*public function getItiExample()
 	{
 		return view('promo.promo-screenshot');
-	}
+	}*/
 
 	public function getPromoPage()
 	{

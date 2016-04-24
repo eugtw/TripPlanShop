@@ -81,11 +81,17 @@ Route::group(['middleware' => ['promo']], function(){
 		//itinerary purchase
 		Route::post('itinerary/purchase/{itinerary}', ['as'=>'itinerary.purchase', 'uses'=>'ItineraryController@purchase']);
 		//get itit free
-		Route::get('itinerary/get-free-itinerary/{itinerary}', ['as'=>'itinerary.getItitFree', 'uses'=>'ItineraryController@getItitFree']);
+		Route::get('itinerary/get-free-itinerary/{itinerary}', ['as'=>'itinerary.getItiFree', 'uses'=>'ItineraryController@getItiFree']);
 		//itinerary sales details
 		Route::get('itinerary/sales-statement/{itinerary}', ['as'=>'itinerary.getSalesDetails', 'uses'=>'ItineraryController@getSalesDetails']);
 
 		//itineraryDay
+		Route::post('itinerary-day/places/photo-upload', ['as' => 'itidayplace.storePlaceImage', 'uses' => 'ItiDayPlaceController@storePlaceImage']);
+		Route::get('iti-day-place-photo-delete/{photo_id}', ['as' => 'itidayplace.deletePlaceImage', 'uses' => 'ItiDayPlaceController@deletePlaceImage']);
+		Route::resource('itinerary-day/day-place','ItiDayPlaceController');
+
+		Route::post('itinerary-day/photo-upload', ['as' => 'itiday.storeDayImages', 'uses' => 'ItiDayController@storeDayImages']);
+		Route::get('iti-day-photo-delete/{photo_id}', ['as' => 'itiday.deleteDayImages', 'uses' => 'ItiDayController@deleteDayImages']);
 		Route::resource('itinerary-day','ItiDayController');
 
 		//users
@@ -104,7 +110,6 @@ Route::group(['middleware' => ['promo']], function(){
 		}]);
 
 	});
-
 
 
 	//itinerary preview does not require login
@@ -140,7 +145,7 @@ Route::group(['middleware' => ['promo']], function(){
 
 //phpunit done
 Route::get('promo', ['as' => 'promo.getPromoPage', 'uses' => 'PromoController@getPromoPage']);
-Route::get('promo/screenshot', ['as' => 'promo.getItiExample', 'uses' => 'PromoController@getItiExample']);
+//Route::get('promo/screenshot', ['as' => 'promo.getItiExample', 'uses' => 'PromoController@getItiExample']);
 
 //not done
 Route::post('promo/notify-me-when-open', ['as' => 'promo.postNotifyMe', 'uses' => 'PromoController@postNotifyMe']);

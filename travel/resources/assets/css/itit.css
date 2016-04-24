@@ -130,7 +130,7 @@
     padding: 7px 10px;
 }
 .itit-footer-button {
-    padding: 7px 30px;
+    padding: 6px 30px;
     min-width: 150px;
 
 }
@@ -140,9 +140,9 @@
     font-weight: bold;
 }
 .itit-info-block{
+    background-color: #f3f3f3;
 }
 .itit-info-block li{
-    background-color: #f3f3f3;
     line-height: 1;
     padding: 7px;
     margin-bottom: 3px;

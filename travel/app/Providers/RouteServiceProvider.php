@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use App\ItiDay;
+use App\ItiDayPlace;
 use App\Itinerary;
 use App\User;
 use Illuminate\Routing\Router;
@@ -66,6 +67,7 @@ class RouteServiceProvider extends ServiceProvider {
 
 		});
 
+		$router->model('day-place', 'App\ItiDayPlace');
 	}
 
 	/**

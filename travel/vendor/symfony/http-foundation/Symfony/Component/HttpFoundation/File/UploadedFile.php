@@ -112,7 +112,8 @@ class UploadedFile extends File
      */
     public function getClientOriginalName()
     {
-        return $this->originalName;
+        return pathinfo($this->originalName, PATHINFO_FILENAME);
+        //return $this->originalName;
     }
 
     /**

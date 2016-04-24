@@ -9,7 +9,7 @@
                 <li><a href="{{ route('user.liked', [Auth::user()]) }}">Wish List
                         {{' ('. \App\Itinerary::whereliked()->count() .')' }}</a></li>
 
-                <li><a href="{{ route('user.purchasedList', [Auth::user()]) }}">Purchased Plans
+                <li><a href="{{ route('user.purchasedList', [Auth::user()]) }}">Plans for Viewing
                         {{' (' . $user->transactions()->where('transactions.user_id',$user->id)->count() . ')'}}</a></li>
 
 

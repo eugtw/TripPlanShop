@@ -5,13 +5,13 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 */
 use App\User;
-
+use \Laracasts\Integrated\Services\Laravel\DatabaseTransactions as DatabaseTransactions;
 
 
 
 class AuthTest extends TestCase
 {
-    use \Laracasts\Integrated\Services\Laravel\DatabaseTransactions;
+    use DatabaseTransactions;
 
     public function test_redirect_to_homepage_if_user_is_signedin()
     {

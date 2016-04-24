@@ -7,9 +7,12 @@
 }
 
 .rating{
-    color: #fbbc05;
     font-size: .8em;
     display: inline;
+}
+.rating a{
+
+    color: #fbbc05;
 }
 .star-yellow .glyphicon{
     top: 2px;

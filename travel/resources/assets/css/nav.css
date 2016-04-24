@@ -40,7 +40,9 @@
 
 #sticky{
     z-index: 1000;
-    background-color: #393c3d;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px grey;
+    padding: 5px 0;
 
 }
 #sticky-nav{
@@ -53,20 +55,16 @@
 }
 #sticky-nav>ul>li{
     float: left;
-    color: #ffffff;
+    color: #ececec;
     width: 40px;
     margin-right: 3px;
+    display: table;
 }
 #sticky-nav>ul>li>a{
-    color: #ffffff;
+    color: #393c3d;
 }
-#sticky-nav>ul>li>a:hover{
-    background-color: #ff5a5f;
-}
-#sticky-nav>ul>li.selected {
-
-    background-color: #ff5a5f;
-    text-decoration: underline;
+#sticky-nav>ul>li.selected{
+    border-bottom: 5px solid #ff5a5f;
 }
 @media (max-width: 768px) {
     #nav-link-theme a{

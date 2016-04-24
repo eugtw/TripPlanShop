@@ -24,6 +24,8 @@ class CreateUserProfilesTable extends Migration {
 			$table->text('about_yourself');
 			$table->text('travel_style');
 
+			$table->string('contact_email');
+
 			$table->timestamps();
 		});
 	}

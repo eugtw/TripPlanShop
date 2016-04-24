@@ -14,6 +14,15 @@
                         <button class="iti-delete" data-href="{{ route('itinerary.iti-delete', $itinerary) }}" data-toggle="modal" data-target="#confirm-delete">
                             <i class="fa fa-trash-o"></i> Delete
                         </button>
+
+                        <div class="inline-block">
+                            <form action="{{ route('itinerary.publish', $itinerary) }}", method="GET">
+                                <button type="submit" class="iti-publish" data-href="">
+                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i> Publish
+                                </button>
+                            </form>
+                        </div>
+
                      @endif
                 </div>
             @endforeach

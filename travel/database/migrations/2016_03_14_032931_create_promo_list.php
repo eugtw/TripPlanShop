@@ -28,7 +28,7 @@ class CreatePromoList extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('promo');
+		Schema::drop('presignups');
 	}
 
 }

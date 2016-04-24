@@ -2,6 +2,7 @@
 
 use Laracasts\Integrated\Extensions\Laravel as IntegrationTest;
 
+
 class TestCase extends IntegrationTest //Illuminate\Foundation\Testing\TestCase
 {
     /**

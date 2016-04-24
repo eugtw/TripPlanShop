@@ -23,10 +23,6 @@ class ItiDay extends Model {
         return $this->belongsTo('App\Itinerary');
     }
 
-    public function getlocations()
-    {
-        return $this->belongsToMany('App\Location')->withTimestamps();
-    }
 
     public function getRouteKey()
     {
@@ -35,16 +31,24 @@ class ItiDay extends Model {
         return $hashids->encode($this->getKey());
     }
 
-    public function getExperienceAttribute()
+
+    public function places()
     {
-        return  explode(',', $this->attributes['top_exp']);
+        return $this->hasMany('\App\ItiDayPlace', 'itiday_id');
     }
 
-    public function getTopExpNames()
+    public function photos()
     {
-        $exp_array = explode(',', $this->attributes['top_exp']);
-        $TopExpNames = Experience::find($exp_array);
-        return $TopExpNames;
+        return $this->hasMany('App\ItiDayPhoto', 'itiday_id');
+    }
+
+    public function addPhoto(ItiDayPhoto $photo)
+    {
+
+        return $this->photos()->create([
+            'name' => $photo->name,
+            'photo_path' => $photo->photo_path
+        ]);
     }
 
 }

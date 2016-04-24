@@ -1,4 +1,4 @@
-@import url('nav.css');
+/*@import url('nav.css');
 @import url('homepage.css');
 @import url('search-result.css');
 @import url('itinerary.css');
@@ -16,12 +16,12 @@
 @import url('itit.css');
 @import url('iti-input-form.css');
 @import url('promo.css');
-
+*/
 body{
     color: #565a5c;
     background-color: #edefed;
     font-family: 'Lato',sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.625;
 }

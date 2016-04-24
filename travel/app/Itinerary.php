@@ -67,7 +67,7 @@ class Itinerary extends Model
         if($is_preview)
         {
             return $this->hasMany('App\ItiDay')
-                        ->where('day_of_itinerary', '=','1');
+                        ->where('day_num', '=','1');
         }else{
             return $this->hasMany('App\ItiDay');
         }

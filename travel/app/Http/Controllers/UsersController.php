@@ -113,11 +113,11 @@ class UsersController extends Controller {
 		{
 			$userImgPath = '.'.$userProfile->avatar;
 
-			//delete existing avatar
-			if(file_exists($userImgPath))
+			if(\File::isFile($userImgPath))
 			{
-				unlink(sprintf( $userImgPath));
+				\File::delete($userImgPath);
 			}
+
 
 
 			//get uploaded image
@@ -127,7 +127,7 @@ class UsersController extends Controller {
 			//create and save image
 			//public Intervention\Image\Image save([string $path, [int $quality]])
 
-			$img = Image::make($file)->resize(150, 150)->save(".".env('USER_AVATAR_PATH') . $image_name);
+			$img = Image::make($file)->resize(300, 300)->save(".".env('USER_AVATAR_PATH') . $image_name);
 			$userProfile->avatar = env('USER_AVATAR_PATH') . $image_name;
 
 		}

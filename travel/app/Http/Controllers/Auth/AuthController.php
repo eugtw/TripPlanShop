@@ -185,7 +185,7 @@ class AuthController extends Controller {
 
 		$token =str_random(10);
 		$user = User::create([
-			'name' => $request->name,
+			'name' => ucwords($request->name),
 			'email' => $request->email,
 			'activation_token' => $token,
 			'password' => bcrypt($request->password)

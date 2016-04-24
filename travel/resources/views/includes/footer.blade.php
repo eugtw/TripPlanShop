@@ -1,29 +1,26 @@
-
-<!-- Footer -->
-<footer class="footer-main">
-        <div class="container text-center">
-            <div class="footer-title col-xs-12 col-md-8 col-md-offset-2">
-                <h3>n2Share</h3>
-                <p>Wouldn't it be nice if someone tells you where to find your electrical closets
-                    and whether the building key is needed for accessing the service boxes?
-                    How many times have you stuck in a call just because you can't find some closets?
-                    Let's all work together, store the building information here, and save time for all of us.
-                </p>
-
-
-                <div class="footer-links top-buffer">
-                    <a href="/auth/register/">Sign Up</a> |
-                    <a href="/auth/login">Log In</a> |
-                    <a href="{{URL::route('address.create')}}">Create Address</a> |
-                    <a href="/address-search/">Find Address</a> |
-                    <a href="/contact_us/">Contact Me</a>
-                </div>
-
-
-                <h5 class="text-center">Copyright &copy; Eugene 2015</h5>
-            </div>
-
+<div class="footer">
+    <div id="footer-content" class="col-sm-8 col-sm-offset-2 col-xs-12">
+        <p class="text-center">About Us</p>
+        <p class="text-center col-xs-12 col-sm-8 col-sm-offset-2">TripPlanShop is a marketplace for travel lovers to buy and sell trip plans. Travellers can find trip
+            plans for their styles and benefit from other travellers' experiences.
+        </p>
+        <div class=" text-center">
+            <ul class="list-unstyled list-inline">
+                @if(Auth::guest())
+                    <li><a href="{{ url('/auth/login') }}">Login</a></li>
+                    <li><a href="{{ url('/auth/register') }}">Join</a></li>
+                @else
+                    <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                @endif
+                <li><a href="{{ route('home.getContactus') }}">Contact</a></li>
+                <li><a href="{{ route('home.getTerms') }}">Terms & Privacy</a></li>
+            </ul>
         </div>
+    </div>
 
+    <div class="clearfix"></div>
 
-</footer>
+    <div id="trademark">
+        <p class="text-center">&copyTripPlanShop 2016</p>
+    </div>
+</div>

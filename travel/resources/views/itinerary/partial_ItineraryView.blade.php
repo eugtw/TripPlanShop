@@ -114,7 +114,7 @@
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">BUDGET</div>
                             <div class="col-sm-9 col-xs-12">
-                                <p>${{ $itinerary->days()->sum('budget') }} (per person / accom. not included)</p>
+                                <p>n/a (per person / accom. not included)</p>
                             </div>
                             <div class="clearfix"></div>
                         </li>
@@ -227,6 +227,7 @@
         </div>
 </div>
 
+<!-- daily plans nav bar -->
 @if(!$is_preview)
     <div class="row">
         <!-- day sticky navbar -->
@@ -242,6 +243,11 @@
         </div>
     </div>
 @endif
+
+
+
+
+
 
 <!-- days container -->
 @include('itineraryDay.view')

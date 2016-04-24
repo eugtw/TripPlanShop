@@ -3,40 +3,39 @@
 use App\Country;
 use App\ItiItem;
 use Auth;
+use Illuminate\Contracts\Auth\Guard;
 use Image;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
 
 use Stripe\Stripe;
-use App\Http\Requests\StoreItineraryEditRequest;
 use App\TravelStyle;
 use App\City;
-use App\User;
 use App\Region;
 use App\Itinerary;
 use App\Transaction;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class ItineraryController extends Controller {
 
+	protected $user;
 
-	public function __construct()
-	{
+	public function __construct(Guard $user)
+		{
 		parent::__construct();
+
+		$this->user = Auth::user();
 
 		view()->share('regions',Region::lists('region','id'));
 		view()->share('items', ItiItem::all());
 
 	}
 
-	public function getItitFree(Itinerary $itinerary)
+	public function getItiFree(Itinerary $itinerary)
 	{
 		if ($itinerary->price == 0){
-			$user = Auth::user();
-			$user->transactions()
+			//$user = Auth::user();
+			$this->user->transactions()
 				->attach($itinerary->id, [
 					'currency'=>'usd',
 					'purchase_price'=>$itinerary->price
@@ -57,7 +56,7 @@ class ItineraryController extends Controller {
 	public function purchase(Itinerary $itinerary, Request $request)
 	{
 
-		$user = Auth::user();
+		//$user = Auth::user();
 
 		//remove purchased itinerary from favorite list if in user's favorite list
 		// check if currently logged in user liked the article
@@ -67,7 +66,7 @@ class ItineraryController extends Controller {
 		}
 
 		//check if user already has this in purchase list
-		$purItineraries = $user->transactions()->where('itinerary_id',$itinerary->id)->get();
+		$purItineraries = $this->user->transactions()->where('itinerary_id',$itinerary->id)->get();
 		if(!$purItineraries->isEmpty())
 		{
 			return back()->withErrors(' ERROR!!! You already have this itinerary in you purchased list');
@@ -274,7 +273,7 @@ class ItineraryController extends Controller {
 	{
 
 		//must set up Stripe account first b4 selling
-		if(Auth::user()->stripe_active == 0)
+		if($this->user->stripe_active == 0)//Auth::user()->stripe_active == 0
 		{
 			return view('users.StripeConnect');
 		}
@@ -371,10 +370,12 @@ class ItineraryController extends Controller {
 
 	public function getItineraryExample()
 	{
-		$itinerary = Itinerary::where('id', env('DEMO_ITIT_ID'))->first();
-		return view('itinerary.view')
-			->with('is_preview', '1')
-			->withItinerary($itinerary);
+
+		$iti = Itinerary::where('published', 1)->first();
+
+		return view('itinerary.itiMockView')
+		->with('is_preview', '1')
+		->withItinerary($iti);
 	}
 	/**
 	 * Display the specified resource.
@@ -384,26 +385,27 @@ class ItineraryController extends Controller {
 	 */
 	public function show(Itinerary $itinerary)
 	{
+
 		//check if logged in user has purchased the itinerary for full view
-		$user = Auth::user();
+		//$user = Auth::user();
 
 			if(!Auth::check())
 			{
 				//not logged in, show itinerary as "preview"
-				return view('itinerary.view')
+				return view('itinerary.itiMockView')
 					->with('is_preview', '1')
 					->withItinerary($itinerary);
 			}
-			elseif($itinerary->transactions->find($user->id) != null || $itinerary->user_id == $user->id){
+			elseif($itinerary->transactions->find($this->user->id) != null || $itinerary->user_id == $this->user->id){
 				//published and user has purchased, full view, ow user is the author
-				return view('itinerary.view')
+				return view('itinerary.itiMockView')
 					->with('is_preview', '0')
 					->withItinerary($itinerary);
 			}
-			elseif($itinerary->transactions->find($user->id) == null)
+			elseif($itinerary->transactions->find($this->user->id) == null)
 			{
 				//notnot purchased, show itinerary as "preview"
-				return view('itinerary.view')
+				return view('itinerary.itiMockView')
 					->with('is_preview', '1')
 					->withItinerary($itinerary);
 			}
@@ -524,11 +526,12 @@ class ItineraryController extends Controller {
 		$viewer = count($itinerary->transactions()->get());
 
 		//check if someone still owns this itinerary
+
 		if( $viewer != 0 ){
 
 			if($viewer == 1){
-				return redirect()->back()->withErrors($viewer . " person has purchased this itinerary within 6 months.
-			You can delete when the purchase expires.");
+				return redirect()->back()->withErrors("Someone has purchased this itinerary within 6 months.
+			You can only delete when the purchase expires.");
 			}
 
 			return redirect()->back()->withErrors($viewer . " people have purchased this itinerary within 6 months.
@@ -536,8 +539,18 @@ class ItineraryController extends Controller {
 
 		}else{
 			$itinerary->delete();
+
+			//delete photo folder
+			$iti_dir = 'images/itineraries/' . $itinerary->getRouteKey();
+			if(is_dir($iti_dir))
+			{
+				\File::deleteDirectory($iti_dir);
+			}
+
 			return redirect()->route('user.getInProgress', Auth::user())->withMessage($itinerary->title . ' has been deleted.');
 		}
+
+		//delete iti photo folders as well
 	}
 
 	public function getPopTripPlansPage()

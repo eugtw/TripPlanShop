@@ -15,8 +15,6 @@
 	<!-- fav icon -->
 	<link rel="shortcut icon" href="{{ asset('images/site/favicon.ico') }}">
 
-	<!-- ckeditor-old
-	<script src="//cdn.ckeditor-old.com/4.5.3/full/ckeditor-old.js"></script>-->
 	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
 
@@ -34,9 +32,9 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	<!-- select2-->
+	<!-- select2
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>-->
 
 	<!-- colorbox-->
 	<script src="{{ asset('/js/colorbox/jquery.colorbox.js') }}"></script>
@@ -64,6 +62,27 @@
 
 	<!-- starr -->
 	<script src="{{ asset('/js/starrr.min.js')  }}"></script>
+
+	<!-- sweet alert -->
+	<script src="/js/sweetalert/sweetalert.min.js"></script>
+
+	<!-- swiper -->
+	<script src="/js/swiper/swiper.js"></script>
+	<script src="/js/swiper/swiper.jquery.js"></script>
+
+
+	<!-- dropzone -->
+	<script src="/js/dropzone/dropzone.js"></script>
+
+
+	<!-- unite gallery
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel='stylesheet' href='/unitegallery/themes/default/ug-theme-default.css' type='text/css' />-->
+	<script type='text/javascript' src='/unitegallery/js/unitegallery.min.js'></script>
+
+	<link rel='stylesheet' href='/unitegallery/css/unite-gallery.css' type='text/css' />
+	<script type='text/javascript' src='/unitegallery/themes/grid/ug-theme-grid.js'></script>
+
 
 
 	<!-- Stripe -->
@@ -145,7 +164,6 @@
 			</div>
 		</nav>
 
-
 		<!-- messages -->
 		@if($errors->any())
 			<div class="container">
@@ -174,34 +192,15 @@
 
 		@yield('content')
 
+
+
 		<div class="push"></div>
 	</div><!-- .wrapper -->
 
-	<div class="footer">
-		<div id="footer-content" class="col-sm-8 col-sm-offset-2 col-xs-12">
-			<p class="text-center">About Us</p>
-			<p class="text-center col-xs-12 col-sm-8 col-sm-offset-2">TripPlanShop is a marketplace for travel lovers to buy and sell trip plans. Travellers can find trip
-				plans for their styles and benefit from other travellers' experiences.
-			</p>
-			<div class=" text-center">
-				<ul class="list-unstyled list-inline">
-					@if(Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Join</a></li>
-					@else
-						<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-					@endif
-					<li><a href="{{ route('home.getContactus') }}">Contact</a></li>
-					<li><a href="{{ route('home.getTerms') }}">Terms & Privacy</a></li>
-				</ul>
-			</div>
-		</div>
+	<script src="/js/all.js"></script>
+	@yield('javascriptfooter5')
 
-		<div class="clearfix"></div>
 
-		<div id="trademark" class="text-center">
-			<p>&copyTripPlanShop 2016</p>
-		</div>
-	</div>
+	@include('includes.footer')
 </body>
 </html>
