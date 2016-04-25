@@ -15,7 +15,9 @@
 	<!-- fav icon -->
 	<link rel="shortcut icon" href="{{ asset('images/site/favicon.ico') }}">
 
-	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+
+	<!--
+	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>  -->
 
 
 	<!-- Fonts -->
@@ -36,22 +38,23 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>-->
 
-	<!-- colorbox-->
-	<script src="{{ asset('/js/colorbox/jquery.colorbox.js') }}"></script>
+	<!-- colorbox
+	<script src="{{ asset('/js/colorbox/jquery.colorbox.js') }}"></script>-->
 
 	<!-- matchHeight -->
 	<script src="{{ asset('/js/matchHeight/jquery.matchHeight.js') }}"></script>
 
-	<!-- dotdotdot -->
-	<script src="{{ asset('/js/dotdotdot/jquery.dotdotdot.js') }}"></script>
+	<!-- dotdotdot
+	<script src="{{ asset('/js/dotdotdot/jquery.dotdotdot.js') }}"></script>-->
 
 	<!-- multiselect -->
 	<script src="/js/multiselect/bootstrap-multiselect.js"></script>
 
 
-	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}">
-		//standalone elfinder
-	</script>
+	<!--
+	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}"></script> -->
+
+
 
 
 	<link href="/css/app.css" rel="stylesheet">

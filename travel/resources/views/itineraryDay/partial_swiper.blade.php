@@ -10,13 +10,16 @@
 
 
     </div>
+
     <script type="text/javascript">
 
         jQuery(document).ready(function(){
             jQuery("#gallery{{$day->day_num}}").unitegallery({
                 gallery_theme: "grid",
+
+
                 theme_panel_position: "right",
-                gallery_width:"100%"
+                theme_hide_panel_under_width: 480
             });
         });
 

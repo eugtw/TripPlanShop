@@ -55,10 +55,11 @@
 }
 #sticky-nav>ul>li{
     float: left;
-    color: #ececec;
     width: 40px;
     margin-right: 3px;
     display: table;
+    border-bottom: 5px solid #f4f4f4;
+
 }
 #sticky-nav>ul>li>a{
     color: #393c3d;

@@ -17,10 +17,6 @@ class ItiDayPhoto extends Model {
         return $this->belongsTo('App\ItiDay');
     }
 
-
-
-
-
     public static function makePhoto(UploadedFile $file, $folderName, $namePrefix = '')
     {
         $photo = new static;
@@ -35,7 +31,7 @@ class ItiDayPhoto extends Model {
             }
         }
 
-        $full_name = preg_replace('/ /', '_', $namePrefix . $file->getClientOriginalName() .'.'. $file->getClientOriginalExtension());
+        $full_name = preg_replace('/ /', '_', $namePrefix . time() . '-' .  $file->getClientOriginalName() .'.'. $file->getClientOriginalExtension());
 
         $file->move($iti_dir, $full_name);
 

@@ -26,6 +26,8 @@
         {!! Form::textarea('intro',null, ['placeholder' => 'breifly describe what happens in this day',
         'class'=>'form-control', 'rows'=>'5']) !!}
     </div>
+
+    <!--
     <script>
         CKEDITOR.replace( 'nono',{
 
@@ -53,7 +55,7 @@
                 //dialogDefinition.removeContents( 'Link' );
             }
         });
-    </script>
+    </script> -->
 </div>
 
 <div class="form-group">

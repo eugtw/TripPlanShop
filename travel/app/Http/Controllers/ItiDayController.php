@@ -99,8 +99,10 @@ class ItiDayController extends Controller {
 
 	}
 
-	public function deleteDayImages($photo_id)
+	public function deleteDayImages($photo_id) //
 	{
+
+
 		$photoDB = ItiDayPhoto::find($photo_id);
 		//$photo = ItiDayphoto::where('photo_path', $photo_path)->first();
 
