@@ -73,6 +73,8 @@ Route::group(['middleware' => ['promo']], function(){
 		//itinerary favorite. this will throw an error to ajax requrest and ajax will redirect to "/login"
 		Route::get('itinerary/favorite/{itinerary}', ['as'=>'itinerary.favorite', 'uses'=>'ItineraryController@favorite']);
 
+		//store cover image
+		Route::post('itinerary/store-cover-image', ['as' => 'itinerary.storeCoverImage', 'uses' => 'ItineraryController@storeCoverImage']);
 		//itinerary publish
 		Route::get('itinerary/publish/{itinerary}', ['as'=>'itinerary.publish', 'uses'=>'ItineraryController@publish']);
 		Route::get('itinerary/unpublish/{itinerary}', ['as'=>'itinerary.unpublish', 'uses'=>'ItineraryController@unpublish']);

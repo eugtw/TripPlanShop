@@ -156,4 +156,5 @@ class Itinerary extends Model
 
         return $hashids->encode($this->getKey());
     }
+
 }

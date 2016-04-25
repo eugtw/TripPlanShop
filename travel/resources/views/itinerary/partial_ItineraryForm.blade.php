@@ -33,7 +33,6 @@
         {!! Form::select('styles_list[]', $travelStyles, null, ['multiple' => 'multiple','class'=>'form-control', 'id' => 'style_list']) !!}
     </div>
 </div>
-
 <div class="form-group">
     {!! Form::label('autocomplete', 'Destination City (max: '.env('ITI_MAX_CITY').')',['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-6">
@@ -177,6 +176,7 @@
         {!! Form::textarea('summary', null, ['placeholder' => 'type your itinerary summary here','class'=>'form-control']) !!} </div>
 </div>
 
+<!--
 <div class="form-group">
     {!! Form::label('gallery_folder_name', 'Gallery Folder: ', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-5">
@@ -186,21 +186,9 @@
                 data-toggle="tooltip" data-placement="right" data-html="true" title="{{ env('ITI_COVER_IMG_BTN') }}">
             Select Gallery Folder</button>
 </div>
-
-<div class="form-group">
-
-    {!! Form::label('image', 'Cover Image: ', ['class'=>'col-sm-3 control-label']) !!}
-    <div class="col-sm-5">
-        {!! Form::text('image', null, ['placeholder'=>'use default image if left empty','class'=>'form-control']) !!}
-    </div>
-        <button class="btn btn-info popup_selector" data-inputid="image" type="button"
-                data-toggle="tooltip" data-placement="right" data-html="true" title="{{ env('ITI_COVER_IMG_BTN') }}">
-            Select Cover Image</button>
-</div>
+-->
 
 
-//select2 max selected items
-<script src="/js/select2/select2.min.js"></script>
 <script>
     $('#style_list').select2({
         maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
@@ -208,9 +196,7 @@
     });
 </script>
 
-<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}">
-    //standalone elfinder
-</script>
+
 <script>
     //hide show price div
     $('#not-free').click(function(){

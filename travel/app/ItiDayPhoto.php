@@ -39,7 +39,7 @@ class ItiDayPhoto extends Model {
         $photo->name = $file->getClientOriginalName();
 
 
-        $newPhoto = Image::make($photo->photo_path)->resize(1000, null, function ($constraint) {
+        $newPhoto = Image::make($photo->photo_path)->resize(2000, null, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });

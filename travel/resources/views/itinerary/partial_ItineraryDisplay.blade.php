@@ -84,13 +84,14 @@
 
     <script>
         //background image replacement
-        var image_url = '{{url(env('IMAGE_ROOT') .$itinerary->image)}}';
+        var image_url = '{{url("./" . $itinerary->image_path)}}';
+
         jQuery.ajax({
             url: image_url,
             type: "HEAD",
             success: function(){
                 jQuery("#" + "{{'iti-card-' . $itinerary->getRouteKey() }}" ).css('background-image',
-                        'url("{{ env('IMAGE_ROOT') .$itinerary->image }} ")');
+                        'url("{{ '/' .$itinerary->image_path }} ")');
             }
         });
     </script>

@@ -28,7 +28,7 @@ class CreateItineraryTable extends Migration {
 			$table->text('top_places');
 			$table->string('items_list');
 
-			$table->string('image');
+			$table->string('image_path');
 			$table->string('gallery_folder_name');
 
 			$table->text('summary');

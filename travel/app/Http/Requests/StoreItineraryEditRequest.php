@@ -33,8 +33,8 @@ class StoreItineraryEditRequest extends Request {
 				'styles_list' => 'required|max:5',
 				'cities_list'=> 'required|max:'.env('ITI_MAX_CITY'),
 				'items_list'=>	'required',
-				'gallery_folder_name' => 'required|foldername',
-				'image' => 'required|imagename',
+				//'gallery_folder_name' => 'required|foldername',
+				//'image' => 'required|imagename',
 				'summary' => 'required'
 		];
 	}

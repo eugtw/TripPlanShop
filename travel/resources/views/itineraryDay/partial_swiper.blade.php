@@ -17,7 +17,8 @@
             jQuery("#gallery{{$day->day_num}}").unitegallery({
                 gallery_theme: "grid",
 
-
+                gallery_width:1800,							//gallery width
+                gallery_height:1000,
                 theme_panel_position: "right",
                 theme_hide_panel_under_width: 480
             });

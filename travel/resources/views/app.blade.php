@@ -52,7 +52,10 @@
 
 
 	<!--
-	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}"></script> -->
+	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}"></script>
+	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}">
+    //standalone elfinder
+</script>-->
 
 
 

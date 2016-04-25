@@ -44,13 +44,14 @@
             </div>
             <script>
                 //background image replacement
-                var image_url = '{{url(env('IMAGE_ROOT') .$itinerary->image)}}';
+                var image_url = '{{url('/'.$itinerary->image)}}';
+                alert(image_url);
                 $.ajax({
                     url: image_url,
                     type: "HEAD",
                     success: function(){
                         $("#iti-header-div").css('background-image',
-                                'url("{{ env('IMAGE_ROOT') .$itinerary->image }}")' );
+                                'url("/{{ $itinerary->image_path }}")' );
                     }
                 });
             </script>

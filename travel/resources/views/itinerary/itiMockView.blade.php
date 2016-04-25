@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="iti-header" class="text-center"
-         style = "background-image: url('../files/{{$itinerary->image}}');">
+         style = "background-image: url('/{{$itinerary->image_path}}');">
 
         <div class="content-container">
             <h1>{{$itinerary->title}}</h1>

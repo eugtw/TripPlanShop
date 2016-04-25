@@ -5,6 +5,7 @@ use App\ItiItem;
 use Auth;
 use Illuminate\Contracts\Auth\Guard;
 use Image;
+use App\ItiDayPhoto;
 
 use Stripe\Stripe;
 use App\TravelStyle;
@@ -452,8 +453,8 @@ class ItineraryController extends Controller {
 			'region_id' => $request->input('region_id'),
 			'best_season' => $request->input('best_season'),
 			'summary' => $request->input('summary'),
-			'gallery_folder_name' => $request->input('gallery_folder_name'),
-			'image' => preg_replace('|\\\|', '/', $request->input('image')),
+			//'gallery_folder_name' => $request->input('gallery_folder_name'),
+			//'image' => preg_replace('|\\\|', '/', $request->input('image')),
 			'items_list' => implode(',',$request->items_list)
 		];
 		if($request->free == 1)
@@ -590,8 +591,8 @@ class ItineraryController extends Controller {
 			'styles_list' => 'required|max:5',
 			'cities_list'=> 'required|max:'.env('ITI_MAX_CITY'),
 			'items_list'=>	'required',
-			'gallery_folder_name' => 'required|foldername',
-			'image' => 'required|imagename',
+			//'gallery_folder_name' => 'required|foldername',
+			//'image' => 'required|imagename',
 			'summary' => 'required'
 		]);
 		$v->sometimes('price', 'required|numeric|min: '.env("ITI_MIN_PRICE").'|max:'.env("ITI_MAX_PRICE"), function($input)
@@ -605,5 +606,38 @@ class ItineraryController extends Controller {
 	public function getRecentIti($itineraries)
 	{
 		return Itinerary::whereNotIn('id', $itineraries->lists('id'))->published(true)->orderBy('created_at')->paginate(env('RECENT_ITI'));
+	}
+
+	public function storeCoverImage(Request $request)
+	{
+
+		$this->validate($request, [
+			'iti_image' => 'required|mimes:jpg,jpeg,png'
+		]);
+
+
+		if($request->iti_id == 'new')
+		{
+			$itinerary = new Itinerary();
+			$iti_dir = 'images/itineraries' . '/' . $itinerary->getRouteKey();
+			if(!is_dir($iti_dir))
+			{
+				if(!mkdir($iti_dir))
+				{
+					return "We are having technical difficulties. Please contact admin.";
+				}
+			}
+		}else{
+			$itinerary = Itinerary::find($request->iti_id);
+			\File::delete($itinerary->image_path);
+
+		}
+
+		$photo = ItiDayPhoto::makePhoto($request->file('iti_image'), $itinerary->getRouteKey(), 'cover-');
+
+		$itinerary->image_path = $photo->photo_path;
+		$itinerary->save();
+
+		return redirect()->back();
 	}
 }
