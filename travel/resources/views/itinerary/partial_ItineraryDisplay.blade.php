@@ -15,7 +15,7 @@
 
     <div class="col-xs-12">
         <div class="iti-card-title">
-            <a href="{{ route('itinerary.show',$itinerary) }}">{{ $itinerary->title }}</a>
+            <a href="{{ route('itinerary.show',$itinerary) }}#disqus_thread">{{ $itinerary->title }}</a>
         </div>
 
         <ul class="list-inline">
@@ -84,14 +84,21 @@
 
     <script>
         //background image replacement
-        var image_url = '{{url("./" . $itinerary->image_path)}}';
+        var image_path = <?php echo json_encode($itinerary->image_path); ?>;
 
+        if(image_path == '')
+        {
+            image_path = '/nowhere';
+        }else{
+            image_path = '/'+image_path;
+
+        }
         jQuery.ajax({
-            url: image_url,
+            url: image_path,
             type: "HEAD",
             success: function(){
                 jQuery("#" + "{{'iti-card-' . $itinerary->getRouteKey() }}" ).css('background-image',
-                        'url("{{ '/' .$itinerary->image_path }} ")');
+                        'url("'+this.url+'")');
             }
         });
     </script>

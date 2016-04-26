@@ -106,7 +106,7 @@
 	@yield('javascript-block')
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="top">
 		<nav class="navbar navbar-default mynav">
 			<div class="container-fluid">
 				<div class="navbar-header">

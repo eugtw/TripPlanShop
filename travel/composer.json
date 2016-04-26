@@ -10,9 +10,7 @@
 	  "vinelab/laravel-editor": "*",
 	  "laravel/cashier": "~5.0",
 	  "intervention/image":"2.3.4",
-	  "barryvdh/laravel-cors": "0.7.x",
 	  "hashids/hashids": "^1.0",
-	  "barryvdh/laravel-elfinder": "^0.3.4",
 	  "rtconner/laravel-likeable": "1.0.7",
 	  "laravel/socialite": "~2.0",
 	  "guzzlehttp/guzzle": "~5.0"

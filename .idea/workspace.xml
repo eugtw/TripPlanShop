@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf2a9f69-feb8-4501-9e9f-12df96c49b87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/travel/resources/views/includes/disqus.blade.php" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\adapters\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\build-config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\contents.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\about\dialogs\about.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\about\dialogs\logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\clipboard\dialogs\paste.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\css\codemirror.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\beautify.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.addons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.addons.search.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.mode.bbcode.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.mode.bbcodemixed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.mode.htmlmixed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.mode.javascript.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\js\codemirror.mode.php.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\3024-day.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\3024-night.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\ambiance-mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\ambiance.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\base16-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\base16-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\blackboard.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\cobalt.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\colorforth.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\eclipse.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\elegant.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\erlang-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\lesser-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\liquibyte.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\mbo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\mdn-like.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\midnight.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\monokai.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\neat.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\neo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\night.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\paraiso-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\paraiso-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\pastel-on-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\rubyblue.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\solarized.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\the-matrix.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\tomorrow-night-bright.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\tomorrow-night-eighties.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\ttcn.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\twilight.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\vibrant-ink.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\xq-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\xq-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\codemirror\theme\zenburn.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\dialog\dialogDefinition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\embedbase\dialogs\embedbase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\image2\dialogs\image2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\image\dialogs\image.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\image\images\noimage.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\link\dialogs\anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\link\dialogs\link.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\link\images\anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\link\images\hidpi\anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\magicline\images\hidpi\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\magicline\images\icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\magicline\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\pastefromword\filter\default.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\scayt\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\scayt\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\scayt\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\scayt\dialogs\options.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\scayt\dialogs\toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\af.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\cy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\eo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\et.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\eu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\gl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ja.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\km.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ku.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\nb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\si.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\sq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\tt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\ug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\lang\zh.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\specialchar\dialogs\specialchar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\table\dialogs\table.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\tabletools\dialogs\tableCell.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\widget\images\handle.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\dialogs\ciframe.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\dialogs\wsc.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\dialogs\wsc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\plugins\wsc\dialogs\wsc_ie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\css\samples.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\img\github-top.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\img\header-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\img\header-separator.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\img\navigation-tip.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\js\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\js\sf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\api.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\appendto.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\assets\inlineall\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\assets\posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\assets\sample.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\assets\uilanguages\languages.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\datafiltering.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\devtools\devtools.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\dialog\assets\my_dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\dialog\dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\divreplace.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\enterkey\enterkey.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\htmlwriter\outputforflash.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\htmlwriter\outputhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\image2\assets\image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\image2\assets\image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\image2\image2.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\inlineall.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\inlinebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\inlinetextarea.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\jquery.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\magicline\magicline.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\readonly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\replacebyclass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\replacebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\sample.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\sample_posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\tabindex.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\toolbar\toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\uicolor.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\uilanguages.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\wysiwygarea\fullpage.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\old\xhtmlstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\css\fontello.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\config.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\font\fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\hidpi\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\hidpi\lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\hidpi\lock.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\hidpi\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\lock.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\images\spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\skins\moonocolor\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\ckeditor\styles.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\dante.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\dante.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\dante.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\dante.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\fonts\dante\fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\homepage.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\iti-card.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\colorbox\jquery.colorbox-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\colorbox\jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dist\css\mr-uploader.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dist\css\mr-uploader.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dist\js\mr-uploader.all.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dist\js\mr-uploader.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dist\js\mr-uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dotdotdot\jquery.dotdotdot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\js\dotdotdot\jquery.dotdotdot.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\mycss.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\css\elfinder.full.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\css\elfinder.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\css\theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\arrows-active.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\arrows-normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\crop.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\dialogs.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\icons-big.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\icons-small.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\quicklook-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\quicklook-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\resize.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\spinner-mini.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\toolbar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\volume_icon_dropbox.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\volume_icon_ftp.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\volume_icon_googledrive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\volume_icon_local.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\img\volume_icon_sql.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\elfinder.full.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\elfinder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\extras\quicklook.googledocs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.LANG.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.fo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.jp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.sr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.ug_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\i18n\elfinder.zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\proxy\elFinderSupportVer1.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\standalonepopup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\standalonepopup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\packages\barryvdh\elfinder\js\tiny_mce_popup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\remove\jpages\animate.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\remove\jpages\github.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\remove\jpages\jPages.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\remove\jpages\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\htdocs\remove\placecomplete\jquery.placecomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\adapters\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\build-config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\contents.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\about\dialogs\about.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\about\dialogs\logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\clipboard\dialogs\paste.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\css\codemirror.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\beautify.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.addons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.addons.search.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.mode.bbcode.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.mode.bbcodemixed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.mode.htmlmixed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.mode.javascript.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\js\codemirror.mode.php.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\3024-day.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\3024-night.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\ambiance-mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\ambiance.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\base16-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\base16-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\blackboard.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\cobalt.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\colorforth.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\eclipse.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\elegant.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\erlang-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\lesser-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\liquibyte.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\mbo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\mdn-like.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\midnight.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\monokai.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\neat.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\neo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\night.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\paraiso-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\paraiso-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\pastel-on-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\rubyblue.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\solarized.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\the-matrix.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\tomorrow-night-bright.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\tomorrow-night-eighties.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\ttcn.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\twilight.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\vibrant-ink.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\xq-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\xq-light.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\codemirror\theme\zenburn.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\dialog\dialogDefinition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\embedbase\dialogs\embedbase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\image2\dialogs\image2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\image\dialogs\image.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\image\images\noimage.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\link\dialogs\anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\link\dialogs\link.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\link\images\anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\link\images\hidpi\anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\magicline\images\hidpi\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\magicline\images\icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\magicline\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\pastefromword\filter\default.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\scayt\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\scayt\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\scayt\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\scayt\dialogs\options.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\scayt\dialogs\toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\af.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\cy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\eo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\et.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\eu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\gl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ja.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\km.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ku.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\nb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\si.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\sq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\tt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\ug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\lang\zh.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\specialchar\dialogs\specialchar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\table\dialogs\table.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\tabletools\dialogs\tableCell.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\widget\images\handle.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\dialogs\ciframe.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\dialogs\wsc.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\dialogs\wsc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\plugins\wsc\dialogs\wsc_ie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\css\samples.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\img\github-top.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\img\header-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\img\header-separator.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\img\navigation-tip.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\js\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\js\sf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\api.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\appendto.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\assets\inlineall\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\assets\posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\assets\sample.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\assets\uilanguages\languages.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\datafiltering.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\devtools\devtools.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\dialog\assets\my_dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\dialog\dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\divreplace.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\enterkey\enterkey.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\htmlwriter\outputforflash.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\htmlwriter\outputhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\image2\assets\image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\image2\assets\image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\image2\image2.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\inlineall.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\inlinebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\inlinetextarea.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\jquery.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\magicline\magicline.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\readonly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\replacebyclass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\replacebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\sample.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\sample_posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\tabindex.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\toolbar\toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\uicolor.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\uilanguages.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\wysiwygarea\fullpage.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\old\xhtmlstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\css\fontello.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\config.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\font\fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\hidpi\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\hidpi\lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\hidpi\lock.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\hidpi\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\lock.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\images\spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\skins\moonocolor\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\ckeditor\styles.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\border.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\colorbox\images\overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\dante.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\dante.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\dante.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\dante.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\fonts\dante\fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\images\dante\media-loading-placeholder.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\colorbox\jquery.colorbox-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\colorbox\jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dist\css\mr-uploader.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dist\css\mr-uploader.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dist\js\mr-uploader.all.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dist\js\mr-uploader.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dist\js\mr-uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dotdotdot\jquery.dotdotdot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\dotdotdot\jquery.dotdotdot.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\js\placecomplete\jquery.placecomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\css\elfinder.full.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\css\elfinder.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\css\theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\arrows-active.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\arrows-normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\crop.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\dialogs.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\icons-big.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\icons-small.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\quicklook-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\quicklook-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\resize.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\spinner-mini.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\toolbar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\volume_icon_dropbox.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\volume_icon_ftp.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\volume_icon_googledrive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\volume_icon_local.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\img\volume_icon_sql.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\elfinder.full.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\elfinder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\extras\quicklook.googledocs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.LANG.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.bg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ca.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.cs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.da.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.de.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.el.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.es.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.fa.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.fo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.fr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.he.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.hu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.it.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.jp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ko.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.nl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.no.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.pl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.sk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.sl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.sr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.sv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.tr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.ug_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.uk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.vi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\i18n\elfinder.zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\proxy\elFinderSupportVer1.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\standalonepopup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\standalonepopup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\packages\barryvdh\elfinder\js\tiny_mce_popup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\remove\jpages\animate.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\remove\jpages\github.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\remove\jpages\jPages.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\remove\jpages\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\superthie.com\travel\public\remove\placecomplete\jquery.placecomplete.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/composer.json" afterPath="$PROJECT_DIR$/travel/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/itiMockView.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/itiMockView.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryView.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryView.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" />
+    </list>
+    <ignored path="superthie.com.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="superthie.com" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="itiMockView.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/itiMockView.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37777779" vertical-offset="0" max-vertical-offset="935">
+              <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
+              <folding>
+                <element signature="e#42#1753#0#HTML" expanded="false" />
+                <element signature="e#92#155#0#HTML" expanded="true" />
+                <element signature="e#1801#10659#0#HTML" expanded="false" />
+                <element signature="e#11399#13716#0#HTML" expanded="false" />
+                <element signature="e#13831#14001#0#HTML" expanded="false" />
+                <element signature="e#14007#14106#0#HTML" expanded="false" />
+                <element signature="e#14164#14888#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="1581" max-vertical-offset="3706">
+              <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disqus.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/includes/disqus.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.818182" vertical-offset="840" max-vertical-offset="4488">
+              <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partial_ItineraryDisplay.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="1921">
+              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/view.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1003">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partial_swiper.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="578">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/travel/composer.json" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryView.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/includes/disqus.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/itiMockView.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/app.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itineraryDay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itinerary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf2a9f69-feb8-4501-9e9f-12df96c49b87" name="Default" comment="" />
+      <created>1461649068655</created>
+      <option name="number" value="Default" />
+      <updated>1461649068655</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/travel/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385" vertical-offset="255" max-vertical-offset="4845">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3043">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="578">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.818182" vertical-offset="840" max-vertical-offset="4488">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="1921">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/includes/disqus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="1581" max-vertical-offset="3706">
+          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/itiMockView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37777779" vertical-offset="0" max-vertical-offset="935">
+          <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
+          <folding>
+            <element signature="e#42#1753#0#HTML" expanded="false" />
+            <element signature="e#92#155#0#HTML" expanded="true" />
+            <element signature="e#1801#10659#0#HTML" expanded="false" />
+            <element signature="e#11399#13716#0#HTML" expanded="false" />
+            <element signature="e#13831#14001#0#HTML" expanded="false" />
+            <element signature="e#14007#14106#0#HTML" expanded="false" />
+            <element signature="e#14164#14888#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
