@@ -203,10 +203,12 @@
 		<div class="push"></div>
 	</div><!-- .wrapper -->
 
-	<script src="/js/all.js"></script>
-	@yield('javascriptfooter5')
-
 
 	@include('includes.footer')
+
+
+	@yield('js-bottom')
+	<script src="/js/all.js"></script>
+
 </body>
 </html>

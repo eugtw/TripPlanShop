@@ -8,12 +8,22 @@
 
                 <div class="clearfix"></div>
                 @if(!$is_preview && $itinerary->user_id == Auth::user()->id && $itinerary->published == 0)
-                    {!! Form::model($day,['route'=>['itinerary-day.edit', $day], 'method'=>'GET','class'=>'pull-left']) !!}
-                    {{-- send day_num thru hidden form --}}
-                    <div class="">
+                    <div class="inline-block top-buffer bottom-buffer">
+                        {!! Form::model($day,['route'=>['itinerary-day.edit', $day], 'method'=>'GET','class'=>'pull-left']) !!}
                         {!! Form::submit('Edit This Day', ['class'=>'btn btn-info']) !!}
+                        {!! Form::close() !!}
                     </div>
-                    {!! Form::close() !!}
+
+                    <div class="inline-block top-buffer bottom-buffer">
+                        {!! Form::model($day,[
+                            'route'=>['itinerary-day.destroy', $day],
+                            'method'=>'DELETE',
+                            'class'=>'pull-left',
+                            'data-delete'
+                        ]) !!}
+                        {!! Form::submit('Delete This Day', ['class'=>'btn btn-danger']) !!}
+                        {!! Form::close() !!}
+                    </div>
                     <div class="clearfix"></div>
                 @endif
             </div>
@@ -30,10 +40,11 @@
 
 
             <!-- ifrom div for googleMap -->
-            <div id="iti-day-map" class="col-xs-12  top-buffer">
-                {!! $day->map !!}
-            </div>
+            <div id="day-{{$day->day_num}}-map" class="col-xs-12  top-buffer dayMap"
+                 data-dayid="{{ $day->day_num }}"
+                 data-places="{{ $day->places }}">
 
+            </div>
 
             <!-- day places -->
             <div class="container">
@@ -41,26 +52,28 @@
                     <div class="iti-route col-xs-12 ">
                         <div class="row">
                             <h3 class="col-xs-12">Places to visit in this day</h3>
-                            <ol class="route-list route-day{{ $day->day_num }} col-md-4 col-xs-12 list-unstyled">
+                            <ol class="route-list col-md-4 col-xs-12 list-unstyled">
                                 @foreach($day->places as $key => $place)
 
                                     <li>
-                                        <a href='#day{{ $day->day_num }}-route{{($key+1)}}'>
-                                            <span class="route-letter">{{($key+1)}} </span>
-                                <span class="route-item">
-                                    {{ $place->place_title }}
-                                    <div>
-                                        <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>St. John's</span>
-                                        <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                        <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
-                                    </div>
-                                    <div>
-                                        @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                            <span class="route-item-exp">{{$exp}}</span>
-                                        @endforeach
-                                    </div>
-                                </span>
-                                        </a>
+                                    <a href='#day{{ $day->day_num }}-route{{($key+1)}}'>
+                                        <span class="route-letter">{{ $place->letterLabel() }} </span>
+                                        <span class="route-item">
+                                            {{ $place->place_title }}
+                                            <div class="marker-table">
+                                                <span class="route-extra mark"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span  class="route-extra detail">{{ $place->place_name_short }}</span>
+                                            </div>
+                                            <div>
+                                                <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
+                                                <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
+                                            </div>
+                                            <div>
+                                                @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                    <span class="route-item-exp">{{$exp}}</span>
+                                                @endforeach
+                                            </div>
+                                        </span>
+                                    </a>
                                     </li>
 
                                 @endforeach
@@ -69,7 +82,7 @@
                             @foreach($day->places as $key => $place)
                                 <article id='day{{ $day->day_num }}-route{{($key+1)}}'  class="col-md-8 col-xs-12">
                                     <h3>{{ $place->place_title }}</h3>
-                                    <p class="place-extra">St. John's</p>
+                                    <p class="place-extra">{{ $place->place_name_long }}</p>
 
 
                                     <div class="row">
@@ -126,44 +139,6 @@
             </div>
 
 
-            {{-- jquery tabs --}}
-            <script>
-                $("ol.route-day{{ $day->day_num }}").each(function(){
-                    // For each set of tabs, we want to keep track of
-                    // which tab is active and its associated content
-                    var $active, $content, $links = $(this).find('a');
-
-                    // If the location.hash matches one of the links, use that as the active tab.
-                    // If no match is found, use the first link as the initial active tab.
-                    $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-                    $active.addClass('active');
-
-                    $content = $($active[0].hash);
-
-                    // Hide the remaining content
-                    $links.not($active).each(function () {
-                        $(this.hash).hide();
-                    });
-
-                    // Bind the click event handler
-                    $(this).on('click', 'a', function(e){
-                        // Make the old tab inactive.
-                        $active.removeClass('active');
-                        $content.hide();
-
-                        // Update the variables with the new link and content
-                        $active = $(this);
-                        $content = $(this.hash);
-
-                        // Make the tab active.
-                        $active.addClass('active');
-                        $content.show();
-
-                        // Prevent the anchor's default click action
-                        e.preventDefault();
-                    });
-                });
-            </script>
 
         </div>
     </div>
@@ -171,3 +146,6 @@
 </div>
 
 <div class="clearfix"></div>
+
+
+

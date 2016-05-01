@@ -17,6 +17,11 @@ class ItiDayController extends Controller {
 		parent:: __construct();
 	}
 
+	public function destroy(ItiDay $day)
+	{
+		$day->delete();
+	}
+
 	public function edit(ItiDay $day)
 	{
 		//$exp = Experience::all()->sortBy('experience')->lists('experience','id');
@@ -30,6 +35,7 @@ class ItiDayController extends Controller {
 
 	public function update(StoreDayCreateRequest $request,ItiDay $day)
 	{
+		return "in";
 		$itinerary = Itinerary::find($day->itinerary->id);
 
 		$day->update($request->all());

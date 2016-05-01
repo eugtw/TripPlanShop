@@ -1,6 +1,14 @@
-@extends('app')
+@extends('app', ['title' => $itinerary->title . ': Travel Itinerary On TripPlanShop'])
 
-
+@section('meta-og')
+    <meta property="og:url"                content="{{ route('itinerary.show',$itinerary) }}">
+    <meta property="og:type"               content="article">
+    <meta property="og:title"              content="{{ $itinerary->title }}">
+    <meta property="og:description"        content="{{ $itinerary->summary }}">
+    <meta property="og:image"              content="http://tripplanshop.com{{ preg_replace('/ /', '%20', env('IMAGE_ROOT') . $itinerary->image)   }}">
+    <meta property="og:site_name" content="TripPlanShop"/>
+    <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
+@stop
 @section('content')
     <div id="iti-header" class="text-center"
          style = "background-image: url('/{{$itinerary->image_path}}');">
@@ -44,7 +52,6 @@
             </div>
         </div><!-- .content-container -->
     </div><!-- #iti-header -->
-
 
     <!-- summary -->
     <div class="container" id="iti-overview">
@@ -290,7 +297,7 @@
     @include('itinerary.review_modal')
 @stop
 
-@section('javascriptfooter5')
+@section('js-bottom')
     <script>
         var $li = $('#sticky li').click(function() {
             $li.removeClass('selected');
@@ -328,4 +335,44 @@
     </script>
 
     <script id="dsq-count-scr" src="//tripplanshop.disqus.com/count.js" async></script>
+    <script>
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var labelIndex = 0;
+        function initMap() {
+            $('div.dayMap').each(function () {
+
+                var loc = $(this).data('places');
+                var id = $(this).data('dayid');
+                window['bounds' + id] = new google.maps.LatLngBounds();
+
+                window['map' + id] = new google.maps.Map(document.getElementById('day-'+id+'-map'), {
+                    zoom: 7,
+                    mousescroll: true
+                    //center: {lat: 52.520, lng: 13.410}
+                });
+
+
+                for (var i = 0; i < loc.length; i++) {
+                    if(loc[i].loc_lat != '' && loc[i].loc_lng != '')
+                    {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(loc[i].loc_lat, loc[i].loc_lng),
+                            map: window['map' + id],
+                            animation: google.maps.Animation.DROP,
+                            label: labels[labelIndex % labels.length]
+                        });
+
+                        window['bounds' + id].extend(marker.position);
+                    }
+
+                    labelIndex++;
+                }
+
+                window['map' + id].fitBounds(window['bounds' + id]);
+            });
+        }//initMap()
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initMap">
+    </script>
 @stop

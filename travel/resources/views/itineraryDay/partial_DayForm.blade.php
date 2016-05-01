@@ -14,13 +14,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('map', 'Embed Google Map Code Paste', ['class'=>'col-sm-3 control-label']) !!}
-    <div class="col-sm-9">
-        {!! Form::text('map', null, ['placeholder' => 'Embed Google Map','class'=>'form-control']) !!}
-    </div>
-</div>
-
-<div class="form-group">
     {!! Form::label('intro', 'Day Intro', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::textarea('intro',null, ['placeholder' => 'breifly describe what happens in this day',

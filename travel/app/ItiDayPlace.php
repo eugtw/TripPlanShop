@@ -7,6 +7,7 @@ class ItiDayPlace extends Model {
 
     protected $guarded = ['id', 'created_at'];
 
+    protected $letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     public function getExperiencesAttribute()
     {
@@ -18,5 +19,13 @@ class ItiDayPlace extends Model {
         return $this->belongsTo('App\ItiDay');
     }
 
+    public function letterLabel()
+    {
+
+        $places = ItiDayPlace::where('itiday_id', $this->itiday_id)->get();
+        $place_index = array_search($this->toArray(), $places->toArray());
+        $letter = substr($this->letters, $place_index, 1);
+        return  $letter;
+    }
 
 }

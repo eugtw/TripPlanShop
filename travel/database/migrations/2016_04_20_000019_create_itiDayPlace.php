@@ -19,6 +19,11 @@ class CreateItiDayPlace extends Migration {
 			$table->integer('itiday_id')->unsigned();
 			$table->foreign('itiday_id')->references('id')->on('itidays')->onDelete('cascade');
 
+			$table->string('place_name_short');
+			$table->string('place_name_long');
+			$table->string('loc_lat');
+			$table->string('loc_lng');
+
 			$table->string('image_path');
 			$table->string('image_desc');
 

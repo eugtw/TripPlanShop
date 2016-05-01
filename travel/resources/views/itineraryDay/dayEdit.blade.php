@@ -51,9 +51,10 @@
             {!! Form::model($day, [
                     'data-remote',
                     'route'=>['itinerary-day.update', $day],
-                    'method'=>'PATCH', 'class'=>'form-horizontal'
-            ]) !!}
+                    'method'=>'PATCH', 'class'=>'form-horizontal']) !!}
+
             {!! Form::hidden('day_num', $day->num) !!}
+
             @include('itineraryDay.partial_DayForm', ['SubmitButtonText' => 'Save Changes'])
 
             {!! Form::close() !!}
@@ -66,33 +67,40 @@
             <div class="iti-route col-xs-12 ">
                 <div class="row">
                     <h3 class="col-xs-12">Places to visit in this day</h3>
-                    <ol class="route-list route-day{{ $day->day_num }} col-md-4 col-xs-12 list-unstyled">
+                    <ol class="route-list col-md-4 col-xs-12 list-unstyled">
                         @foreach($day->places as $key => $place)
 
                         <li>
-                                {!! Form::model($place, ['data-delete',
-                                                            'route' => ['itinerary-day.day-place.destroy',
-                                                            $place], 'method' => 'DELETE']) !!}
-                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                {!! Form::close() !!}
-                                <a href='#day-route{{($key+1)}}'>
-                                    <span class="route-letter">{{($key+1)}} </span>
-                                    <span class="route-item">
-                                        {{ $place->place_title }}
-                                        <div>
-                                            <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>St. John's</span>
-                                            <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                            <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
-                                        </div>
-                                        <div>
-                                            @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                            <span class="route-item-exp">{{$exp}}</span>
-                                            @endforeach
-                                        </div>
-                                    </span>
-                                </a>
+                            {!! Form::model($place, [
+                                'data-delete',
+                                'route' => ['itinerary-day.day-place.destroy',
+                                $place], 'method' => 'DELETE']) !!}
 
-                            </li>
+                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button>
+                            {!! Form::close() !!}
+
+                            <a href='#day-route{{($key+1)}}'>
+                                <span class="route-letter">{{($key+1)}} </span>
+                                <span class="route-item">
+                                    {{ $place->place_title }}
+
+                                    <div class="marker-table">
+                                        <span class="route-extra mark"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span  class="route-extra detail">{{ $place->place_name_short }}</span>
+                                    </div>
+
+                                    <div>
+
+                                        <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
+                                        <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
+                                    </div>
+                                    <div>
+                                        @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                        <span class="route-item-exp">{{$exp}}</span>
+                                        @endforeach
+                                    </div>
+                                </span>
+                            </a>
+                        </li>
 
                         @endforeach
 
@@ -109,7 +117,7 @@
 
                     <div class="col-md-8 col-xs-12">
                     @foreach($day->places as $key => $place)
-                        <div id='day-route{{($key+1)}}'>
+                        <div id='day-route{{($key+1)}}' data-place-id = {{ $place->id }}>
 
                             {{-- dropzone --}}
                             <form action="{{ route('itidayplace.storePlaceImage') }}"
@@ -126,7 +134,7 @@
                             {{-- display photos already saved for editing --}}
                             @if( $place->image_path != '')
                             <div class="day-photo-thumbs inline-block">
-                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" class="">
+                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" >
                                     <i class="fa fa-times delete-btn" aria-hidden="true"></i>
                                 </a>
                                 <img class="thumbnail" src="/{{ $place->image_path }}" alt="}}">
@@ -135,21 +143,41 @@
                             @endif
 
 
-                            {!! Form::model($place, ['data-remote',
-                            'route' => ['itinerary-day.day-place.update', $place->id],
-                            'method' => 'PATCH'
-                            ]) !!}
+                            {!! Form::model($place, [   'data-remote',
+                                                        'route' => ['itinerary-day.day-place.update', $place->id],
+                                                        'method' => 'PATCH']) !!}
+
+
+                            <!-- day google map input -->
+                            @include('includes.dayPlaceMap')
+
+
+                            {!! Form::label('loc_lat', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('loc_lat', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-lat']) !!}
+                            {!! Form::label('loc_lng', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('loc_lng', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-lng']) !!}
+                            {!! Form::label('place_name_short', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('place_name_short', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-name-short']) !!}
+
                             <div class="form-group top-buffer">
                                 {!! Form::label('place_title', 'Title', ['class'=>'control-label']) !!}
                                 <div class="">
                                     {!! Form::text('place_title', null, ['placeholder' => 'Place Title','class'=>'form-control', 'required']) !!}
                                 </div>
                             </div>
-                            <p class="place-extra">St. John's</p>
+
 
                             <div class="row">
 
                                 <ul class="route-detail-table list-unstyled col-xs-12">
+                                    <li>
+                                        <div class="form-group top-buffer">
+                                            {!! Form::label('place_name_long', 'Place Name', ['class'=>'control-label col-xs-4']) !!}
+                                            <div class="col-xs-8">
+                                                {!! Form::text('place_name_long', null, ['placeholder' => 'Place name','class'=>'form-control', 'id' => 'place-'.$place->id.'-name-long', 'required']) !!}
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li>
                                         <div class="form-group">
                                             {!! Form::label('time_to_visit', 'time to visit', ['class'=>'control-label col-xs-4', ]) !!}
@@ -197,18 +225,12 @@
                                             <div class="col-xs-8">
 
                                                 {!! Form::select('experiences[]', $experiences, null,
-                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control', 'id' => "exp_place_$key" , 'required']) !!}
+                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '3', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                                <script>
-                                    $('#exp_place_{{$key}}').select2({
-                                        maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
-                                        tags: true
-                                    });
 
-                                </script>
                             </div>
 
 
@@ -262,52 +284,13 @@
 @stop
 
 
-@section('javascriptfooter5')
-    {{-- jquery tabs --}}
-    <script>
-        $("ol.route-day{{ $day->day_num }}").each(function(){
-            // For each set of tabs, we want to keep track of
-            // which tab is active and its associated content
-            var $active, $content, $links = $(this).find('a');
-
-            // If the location.hash matches one of the links, use that as the active tab.
-            // If no match is found, use the first link as the initial active tab.
-            $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-            $active.addClass('active');
-
-            $content = $($active[0].hash);
-
-            // Hide the remaining content
-            $links.not($active).each(function () {
-                $(this.hash).hide();
-            });
-
-            // Bind the click event handler
-            $(this).on('click', 'a', function(e){
-                // Make the old tab inactive.
-                $active.removeClass('active');
-                $content.hide();
-
-                // Update the variables with the new link and content
-                $active = $(this);
-                $content = $(this.hash);
-
-                // Make the tab active.
-                $active.addClass('active');
-                $content.show();
-
-                // Prevent the anchor's default click action
-                e.preventDefault();
-            });
-        });
-    </script>
-
+@section('js-bottom')
 
     {{-- dropzone x 2--}}
     <script>
         Dropzone.options.dayPhotosDropzone = {
             paramName: "image", // The name that will be used to transfer the file
-            maxFilesize: 15, // MB
+            maxFilesize: 15, // MB,
             acceptedFiles: '.jpg, .jpeg, .png',
             //addRemoveLinks: true,
             init: function(file) {
@@ -333,5 +316,231 @@
     </script>
 
 
+
+    {{-- map  --}}
+    <script>
+        var maps = [];
+        var markers = [];
+        var componentForm = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name'
+            //administrative_area_level_1: 'short_name',
+            //country: 'long_name',
+            //postal_code: 'short_name'
+        };
+
+        function setMaps(){
+            $('div.placeMap').each( function() {
+
+                var pId = $(this).data('placeId');
+               setEachGoogleMap(pId);
+            });
+        }
+
+        function setEachGoogleMap(pId){
+            var default_location = {lat: 59.327, lng: 18.067};
+            var LngLat = default_location;
+            var loc_lat = $('#place-' + pId + '-lat').val();
+            var loc_lng = $('#place-' + pId + '-lng').val();
+
+            if(loc_lat != '' && loc_lng != '')
+            {
+                LngLat = new google.maps.LatLng(loc_lat, loc_lng);
+            }
+
+            var geocoder = new google.maps.Geocoder();
+
+            maps[pId] = initMap(pId, LngLat, geocoder);
+
+            if(loc_lat != '' && loc_lng != '')
+            {
+                markers[pId] = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: LngLat,
+                    map: maps[pId],
+                    draggable: true
+                });
+
+                google.maps.event.addListener(markers[pId], 'dragend', function() {
+                    //updateMarkerStatus('Drag ended');
+                    geoPosition(markers[pId].getPosition(), geocoder, pId);
+                });
+
+            }
+        }
+
+        function initMap(pId, center, geocoder){
+
+
+            var newMap = new google.maps.Map(document.getElementById('place-' + pId + '-Map'), {
+                zoom: 13,
+                scrollwheel: true,
+                scaleControl: true,
+                center: center
+
+            });
+            document.getElementById('place-' + pId + '-submit').addEventListener('click', function () {
+                geoAddress(geocoder, newMap, pId);
+            });
+           return newMap;
+        }
+
+        function geoPosition(pos, geocoder, placeId) {
+            geocoder.geocode({
+                latLng: pos
+            }, function(responses) {
+                if (responses && responses.length > 0) {
+
+
+
+
+                    updateInputs(placeId, responses);
+                   /* $('#place-' + placeId + '-address').val(responses[0].formatted_address);
+                    $('#place-' + placeId + '-lat').val(responses[0].geometry.location.lat());
+                    $('#place-' + placeId + '-lng').val(responses[0].geometry.location.lng());
+                    $('#place-' + placeId + '-name-short').val(address_short);
+                    $('#place-' + placeId + '-name-long').val(responses[0].formatted_address);*/
+
+
+                } else {
+                    // updateMarkerAddress('Cannot determine address at this location.');
+                }
+            });
+        }
+        function geoAddress(geocoder, resultsMap, placeId) {
+            var address = document.getElementById('place-'+placeId+'-address').value;
+            geocoder.geocode({'address': address}, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+
+                    placeMarker(results[0].geometry.location, resultsMap, placeId);
+                    updateInputs(placeId, results);
+
+
+                    /*$('#place-' + placeId + '-lat').val(results[0].geometry.location.lat());
+                    $('#place-' + placeId + '-lng').val(results[0].geometry.location.lng());
+                    $('#place-' + placeId + '-name-short').val(results[0].address_components[0].long_name);
+                    $('#place-' + placeId + '-name-long').val(results[0].formatted_address);
+                    $('#place-' + placeId + '-address').val(results[0].formatted_address);*/
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+
+        function placeMarker(location, map, placeId) {
+            if ( markers[placeId] ) {
+                //if marker already was created change positon
+                markers[placeId].setPosition(location);
+            } else {
+                //create a marker
+                markers[placeId] = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    draggable: true
+                });
+
+            }
+            map.setCenter(markers[placeId].getPosition());
+        }
+
+        function updateInputs(placeId, responses){
+
+            var address_short = '';
+
+            for( var i = 0; i < responses[0].address_components.length; i++) {
+                var addressType = responses[0].address_components[i].types[0];
+                if( componentForm[addressType]) {
+                    if( i == 0){
+                        address_short = responses[0].address_components[i][componentForm[addressType]]
+                    }else{
+                        address_short = address_short + ' ' + responses[0].address_components[i][componentForm[addressType]];
+                    }
+
+                }
+
+            }
+
+            $('#place-' + placeId + '-address').val(responses[0].formatted_address);
+            $('#place-' + placeId + '-lat').val(responses[0].geometry.location.lat());
+            $('#place-' + placeId + '-lng').val(responses[0].geometry.location.lng());
+            $('#place-' + placeId + '-name-short').val(address_short);
+            $('#place-' + placeId + '-name-long').val(responses[0].formatted_address);
+
+            alert(address_short);
+
+        }
+
+    </script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=setMaps">
+    </script>
+
+
+
+    <script>
+        /*
+        var map = null;
+       // var marker = null;
+        var LngLat = '';
+        var componentForm = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name'
+            //administrative_area_level_1: 'short_name',
+            //country: 'long_name',
+            //postal_code: 'short_name'
+        };
+
+        function initMap() {
+            $('div.placeMap').each(function (index) {
+
+                var id = $(this).data('placeId');
+                var loc_lat = $('#place-' +id + '-lat').val();
+                var loc_lng = $('#place-' +id + '-lng').val();
+
+                if(loc_lat != '' && loc_lng != '')
+                {
+                     LngLat = new google.maps.LatLng(loc_lat, loc_lng);
+                }else{
+                     LngLat = {lat: 59.327, lng: 18.067};
+                }
+
+                window['map' + id] = new google.maps.Map(document.getElementById('place-' + id + '-Map'), {
+                    zoom: 13,
+                    scrollwheel: true,
+                    scaleControl: true,
+                    center: LngLat
+
+                });
+
+                window['geocoder' + id] = new google.maps.Geocoder();
+
+                if(loc_lat != '' && loc_lng != '')
+                {
+                    window['marker' + id] = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: LngLat,
+                        map: window['map' + id],
+                        draggable: true
+                    });
+
+                    google.maps.event.addListener(window['marker' + id], 'dragend', function() {
+                        //updateMarkerStatus('Drag ended');
+                        geocodePosition(window['marker' + id].getPosition(), window['geocoder' + id], id);
+                    });
+
+                }
+
+
+
+                document.getElementById('place-' + id + '-submit').addEventListener('click', function () {
+
+                    geocodeAddress(window['geocoder' + id], window['map' + id], id);
+                });
+            });
+        }*/
+
+    </script>
 
 @stop
