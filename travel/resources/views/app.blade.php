@@ -25,11 +25,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<!-- jQuery -->
-	<script   src="https://code.jquery.com/jquery-1.12.3.min.js"
-			  integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
-			  crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-	</script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -90,6 +87,8 @@
 	<script type='text/javascript' src='/unitegallery/themes/grid/ug-theme-grid.js'></script>
 
 
+	<!-- responsive tabs-->
+	<script src="/js/ddslick/ddslick.js"></script>
 
 	<!-- Stripe -->
 	<script src="https://checkout.stripe.com/checkout.js"></script>
@@ -105,7 +104,7 @@
 
 	@yield('javascript-block')
 </head>
-<body>
+<body data-spy="scroll" data-target="#sticky-nav">
 	<div class="wrapper" id="top">
 		<nav class="navbar navbar-default mynav">
 			<div class="container-fluid">
@@ -116,7 +115,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="{{ url('home') }}"><img alt="logo" class="img-responsive" src="{{ env('SITE_IMAGE_PATH') . 'logo.jpg' }}"> </a>
+					<a class="navbar-brand tps-brand" href="{{ url('home') }}"><img alt="logo" class="img-responsive" src="{{ env('SITE_IMAGE_PATH') . 'logo.jpg' }}"> </a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

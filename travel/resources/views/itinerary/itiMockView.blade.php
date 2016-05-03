@@ -12,9 +12,18 @@
 @section('content')
     <div id="iti-header" class="text-center"
          style = "background-image: url('/{{$itinerary->image_path}}');">
+        <div class="overlay"></div>
 
         <div class="content-container">
             <h1>{{$itinerary->title}}</h1>
+
+            <div>
+                <ul class="list-unstyled list-inline">
+                    @foreach($itinerary->styles as $style)
+                        <li class="style-tag">{{ $style->style }}</li>
+                    @endforeach
+                </ul>
+            </div>
 
             <span class="author-name">By {{$itinerary->user->name}}</span>
 
@@ -26,7 +35,6 @@
                         <img src="/images/avatars/default_user.jpg">
                     @endif
                 </a>
-
             </div>
 
             <!-- comment and review block -->
@@ -52,6 +60,7 @@
             </div>
         </div><!-- .content-container -->
     </div><!-- #iti-header -->
+
 
     <!-- summary -->
     <div class="container" id="iti-overview">
@@ -101,7 +110,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">DURATION:</div>
-                            <div class="col-sm-9 col-xs-12">{!!$itinerary->days()->count()!!}
+                            <div class="col-sm-9 col-xs-12 itmes-detail">{!!$itinerary->days()->count()!!}
                                         <span>
                                             Day{{ ($itinerary->days()->count() > 1) ? 's' :  ''}}
                                         </span></div>
@@ -109,8 +118,8 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">TRIP STYLES</div>
-                            <div class="col-sm-9 col-xs-12">
-                                <ul class="list-unstyled items-2-col">
+                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                                <ul class="list-unstyled ">
                                     @foreach($itinerary->styles as $style)
                                         {{--@if($style != $itinerary->styles[0])
                                             <span> | </span>
@@ -122,20 +131,20 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">BUDGET</div>
-                            <div class="col-sm-9 col-xs-12">
+                            <div class="col-sm-9 col-xs-12 itmes-detail">
                                 <p>$ na (per person / accom. not included)</p>
                             </div>
                             <div class="clearfix"></div>
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">TOP PLACES</div>
-                            <div class="col-sm-9 col-xs-12">
-                                <ul class="list-unstyled items-2-col">
+                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                                <ul class="list-unstyled">
                                     @foreach(explode(',', $itinerary->top_places)  as $tp)
                                         {{--@if($tp != explode(',', $itinerary->top_places)[0])
                                             <span> | </span>
                                         @endif --}}
-                                        <li><span>- </span> {{ $tp }}</li>
+                                        <li><span></span> {{ $tp }}</li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -143,7 +152,7 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">BEST TIME TO VISIT</div>
-                            <div class="col-sm-9 col-xs-12">
+                            <div class="col-sm-9 col-xs-12 itmes-detail">
                                 {{ $itinerary->best_season }}
                             </div>
                             <div class="clearfix"></div>
@@ -151,19 +160,19 @@
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">REGION</div>
                             <div class="col-sm-9 col-xs-12">
-                                {{ $itinerary->region->region }}
+                                <span class="items-detail">{{ $itinerary->region->region }}</span>
                             </div>
                             <div class="clearfix"></div>
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">DESTINATION CITIES</div>
-                            <div class="col-sm-9 col-xs-12">
+                            <div class="col-sm-9 col-xs-12 ">
                                 <ul class="list-unstyled">
                                     @foreach($itinerary->cities as $c)
                                         {{-- @if($c != $itinerary->cities[0])
                                              <span> | </span>
                                          @endif --}}
-                                        <li>{{ $c->city  }}, {{$c->country->country}}</li>
+                                        <li class="items-detail">{{ $c->city  }}, {{$c->country->country}}</li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -187,14 +196,19 @@
                             <a type="button" class="buy-button" href="{{ route('itinerary.getItiFree', $itinerary) }}">Get this Free</a>
                         @else
                             <a type="button" class="buy-button"href="{{ route('itinerary.purchaseConfirm', $itinerary) }}">
-                                Buy<sup> $</sup><span>{{ $itinerary->price }}</span><sup> US</sup></a>
+                                BUY<sup> $</sup><span>{{ $itinerary->price }}</span><sup> US</sup></a>
 
-                            <a id="{{ $itinerary->getRouteKey() }}"
-                               href="{{ route('itinerary.favorite',$itinerary) }}">
 
-                                <span class="glyphicon glyphicon-heart heart {{ $itinerary->liked() ? 'theme-pink' : ''}}"></span>
-                            </a>
                         @endif
+
+
+                    </div>
+
+                    <div class="buy-block text-center">
+
+
+                        <a type="button" class="buy-button"href="{{ route('itinerary.favorite',$itinerary) }}">
+                            <span class="glyphicon glyphicon-heart heart {{ $itinerary->liked() ? 'theme-pink' : ''}}"></span>SAVE TO COLLECTION</a>
 
 
 
@@ -229,23 +243,43 @@
         </div>
     </div>
 
-    <!-- day sticky navbar -->
-    @if(!$is_preview)
-    <div id="sticky">
+
+<div id="sticky">
+    <div class="navbar navbar-default" id="sticky-nav">
         <div class="container">
-            <nav  id="sticky-nav" >
-                <ul class="nav nav-pills">
-                    <li><a href="#top">Top</a></li>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#days-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#top">Top</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="days-nav">
+                <ul class="nav navbar-nav">
                     @foreach($itinerary->days($is_preview)->orderby('day_num')->get() as $day)
-                        <li class="text-center"><a href="#day-{{ $day->day_num }}">{{$day->day_num}}</a></li>
+                        <li><a href="#day-{{ $day->day_num }}">Day{{$day->day_num}}</a></li>
                     @endforeach
                     <li><a href="#disqus">Comments</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</div>
+    <!-- day sticky navbar -->
+<script>
+    $('body').scrollspy({ target: '#sticky-nav' })
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).collapse('hide');
+        }
+    });
+</script>
 
-        </div>
-    @endif
 
     <!-- daily plan -->
     @include('itineraryDay.view')
@@ -337,10 +371,10 @@
     <script id="dsq-count-scr" src="//tripplanshop.disqus.com/count.js" async></script>
     <script>
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        var labelIndex = 0;
+
         function initMap() {
             $('div.dayMap').each(function () {
-
+                var labelIndex = 0;
                 var loc = $(this).data('places');
                 var id = $(this).data('dayid');
                 window['bounds' + id] = new google.maps.LatLngBounds();

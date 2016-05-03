@@ -19,6 +19,7 @@
 
                 gallery_width:1800,							//gallery width
                 gallery_height:900,
+                gallery_min_height: 250,
                 theme_panel_position: "right",
                 theme_hide_panel_under_width: 480
             });

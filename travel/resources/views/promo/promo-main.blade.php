@@ -53,7 +53,7 @@
                     <a class="" href="#pm-become-a-seller">Have trip plans?</a>
                 </div>
 
-                <p>already a seller? <a href="" data-toggle="modal" data-target="#loginModal">Log in</a></p>
+                <p class="text-center">already a seller? <a href="" data-toggle="modal" data-target="#loginModal">Log in</a></p>
             </div>
 
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -154,7 +154,7 @@
         </div>
 
 
-        <p>&copyTripPlanShop 2016</p>
+        <p class="text-center">&copyTripPlanShop 2016</p>
     </div>
 
 

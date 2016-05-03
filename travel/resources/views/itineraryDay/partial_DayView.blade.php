@@ -46,17 +46,24 @@
 
             </div>
 
+
             <!-- day places -->
             <div class="container">
                 <div class="row" id="day-route">
                     <div class="iti-route col-xs-12 ">
                         <div class="row">
                             <h3 class="col-xs-12">Places to visit in this day</h3>
-                            <ol class="route-list col-md-4 col-xs-12 list-unstyled">
+
+
+                            @include('itineraryDay.day-scroll')
+
+
+
+                            <ol class="route-list col-md-4 col-xs-12 list-unstyled hidden-xs">
                                 @foreach($day->places as $key => $place)
 
                                     <li>
-                                    <a href='#day{{ $day->day_num }}-route{{($key+1)}}'>
+                                    <a href='#day{{ $day->day_num }}-route{{($key)}}'>
                                         <span class="route-letter">{{ $place->letterLabel() }} </span>
                                         <span class="route-item">
                                             {{ $place->place_title }}
@@ -80,7 +87,7 @@
                             </ol>
 
                             @foreach($day->places as $key => $place)
-                                <article id='day{{ $day->day_num }}-route{{($key+1)}}'  class="col-md-8 col-xs-12">
+                                <article id='day{{ $day->day_num }}-route{{($key)}}'  class="col-md-8 col-xs-12 day{{$day->day_num}}">
                                     <h3>{{ $place->place_title }}</h3>
                                     <p class="place-extra">{{ $place->place_name_long }}</p>
 
@@ -138,7 +145,20 @@
                 </div><!-- row -->
             </div>
 
-
+            <script>
+                $('#day{{ $day->day_num }}').ddslick({
+                    truncateDescription: true,
+                    width: 'inherit',
+                    electText: "Select A Place",
+                    onSelected: function(selectedData){
+                        //callback function: do something with selectedData;
+                        $('article.day{{$day->day_num}}').each(function(){
+                            $(this).hide();
+                        });
+                        $('article#day{{ $day->day_num }}-route'+selectedData.selectedIndex).show();
+                    }
+                });
+            </script>
 
         </div>
     </div>

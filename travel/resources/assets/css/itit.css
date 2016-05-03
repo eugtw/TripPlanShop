@@ -105,7 +105,7 @@
 }
 
 .item-check-yes{
-    color: #d94d1a;
+    color: #ff5a5f;
     font-size: 0.9em;
 }
 .item-check-yes-text{
@@ -149,7 +149,7 @@
     margin-left: 10px;
 }
 .itit-info-block p{
-    background-color: #d94d1a;
+    background-color: #ff5a5f;
     padding: 4px 11px;
     display: inline-block;
     color: #ffffff;
@@ -160,6 +160,10 @@
 }
 .items-cat{
     color: #aeaeae;
+    font-size: 0.9em;
+}
+.items-detail{
+    font-size: 0.8em;
 }
 .blog_link{
     font-size: 0.9em;

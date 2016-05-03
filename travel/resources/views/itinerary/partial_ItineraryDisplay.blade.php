@@ -34,14 +34,17 @@
 
         <div class="iti-author">
             <div class="iti-card-author-info">
-                <a class="name" target="_blank" href="{{ route('user.show', $itinerary->user) }}">
-                    <i>{{$itinerary->user->name }}</i>
+                <a target="_blank" href="{{ route('user.show', $itinerary->user) }}">
+                    @if($itinerary->user->profile->avatar != '')
+                        <img class="avatar img-circle" src="{{$itinerary->user->profile->avatar}}">
+                    @else
+                        <img class="avatar img-circle" src="/images/avatars/default_user.jpg">
+                    @endif
                 </a>
 
-                @if(isset($itinerary->user->profile->blog_link) && !is_null($itinerary->user->profile->blog_link) )
-                    <span class="iti-author-blog"> | </span>
-                    <a class="iti-author-blog" href="">
-                        {{ $itinerary->user->profile->blog_link }}
+                @if(isset($itinerary->user->profile->blog_link) && $itinerary->user->profile->blog_link != '' )
+                    <a class="iti-author-blog" href="{{url($itinerary->user->profile->blog_link)}}" target="_blank">
+                        <span>from {{ $itinerary->user->profile->blog_link }}</span>
                     </a>
                 @endif
             </div>

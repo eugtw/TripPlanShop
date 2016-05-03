@@ -1,6 +1,6 @@
 <div class="container top-buffer2" id="disqus">
     <div class="row">
-        <div id="disqus_thread" class="col-xs-12"></div>
+        <div id="disqus_thread" class="col-md-8 col-md-offset-2 col-xs-12"></div>
         <script>
             /**
              * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

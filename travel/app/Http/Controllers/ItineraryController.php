@@ -372,7 +372,7 @@ class ItineraryController extends Controller {
 	public function getItineraryExample()
 	{
 
-		$iti = Itinerary::where('published', 1)->first();
+		$iti = Itinerary::find(env('DEMO_ITIT_ID'));
 
 		return view('itinerary.itiMockView')
 		->with('is_preview', '1')
