@@ -110,7 +110,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">DURATION:</div>
-                            <div class="col-sm-9 col-xs-12 itmes-detail">{!!$itinerary->days()->count()!!}
+                            <div class="col-sm-9 col-xs-12 items-detail">{!!$itinerary->days()->count()!!}
                                         <span>
                                             Day{{ ($itinerary->days()->count() > 1) ? 's' :  ''}}
                                         </span></div>
@@ -118,7 +118,7 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">TRIP STYLES</div>
-                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                            <div class="col-sm-9 col-xs-12 items-detail">
                                 <ul class="list-unstyled ">
                                     @foreach($itinerary->styles as $style)
                                         {{--@if($style != $itinerary->styles[0])
@@ -131,14 +131,14 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">BUDGET</div>
-                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                            <div class="col-sm-9 col-xs-12 items-detail">
                                 <p>$ na (per person / accom. not included)</p>
                             </div>
                             <div class="clearfix"></div>
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">TOP PLACES</div>
-                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                            <div class="col-sm-9 col-xs-12 items-detail">
                                 <ul class="list-unstyled">
                                     @foreach(explode(',', $itinerary->top_places)  as $tp)
                                         {{--@if($tp != explode(',', $itinerary->top_places)[0])
@@ -152,7 +152,7 @@
                         </li>
                         <li>
                             <div class="col-sm-3 col-xs-12 items-cat">BEST TIME TO VISIT</div>
-                            <div class="col-sm-9 col-xs-12 itmes-detail">
+                            <div class="col-sm-9 col-xs-12 items-detail">
                                 {{ $itinerary->best_season }}
                             </div>
                             <div class="clearfix"></div>

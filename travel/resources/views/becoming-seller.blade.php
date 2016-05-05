@@ -56,7 +56,7 @@
                 your websites, and sell them to people who already love your styles.</p>
 
                 <div class="text-center top-buffer">
-                    <a class="btn-primary itit-btn itit-footer-button" href="{{ route('user.stripeSignup') }}" role="button">GET STARTED FREE</a>
+                    <a class="btn-primary itit-btn itit-footer-button" href="{{ url('/auth/register') }}" role="button">GET STARTED FREE</a>
                 </div>
             </div>
         </div>

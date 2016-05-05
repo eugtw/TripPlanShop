@@ -16,7 +16,7 @@
                             @endif
                         </span>
                         <span class="thumb pub-list-cell">
-                            <img class="" src="{{ env('IMAGE_ROOT') . $itinerary->image }}">
+                            <img class="" src="/{{ $itinerary->image_path }}">
                         </span>
 
                         <span class="iti-pub-detail pub-list-cell">

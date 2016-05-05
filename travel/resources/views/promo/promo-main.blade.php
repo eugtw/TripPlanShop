@@ -43,7 +43,7 @@
                 </div><!-- messages -->
             </div>
 
-            <P class="pm-header-banner">OPENING SOON!!</P>
+            <P class="pm-header-banner text-center">OPENING SOON!!</P>
             <h1 class="text-center">Lost In Travel Planning?</h1>
             <h2>Find trip plans that fit your travel styles</h2>
 
@@ -80,18 +80,21 @@
                     <div class="pm-intro-box">
                         <div class="become-seller-intro-block">
                             <h3>No trip plan fits what you want?</h3>
-                            <p>Our trip plans are designed for different travel styles:
-                                adventurous, romantic, family-friendly and etc.
-                                Define your travel style, and find trip plans just right for you.</p>
+                            <p>Our trip plans are designed by people like you: people who love to travel. Trip plans suit
+                                different travel styles that are unique personality and lifestyle. Adventurous. Romantic.
+                                Family-friendly. Define your travel style, and find trip plans just right for you.
+                            </p>
                         </div>
 
                         <div class="become-seller-intro-block">
-                            <h3>Want more than general travel guide?</h3>
-                            <p>Our trip plans writers' focus on  insights, experiences, and tips rather than general descriptions.</p>
+                            <h3>Want more than a general travel guide?</h3>
+                            <p>Our trip plan writers focus on insights, experiences, and tips rather than general descriptions.</p>
                         </div>
 
                         <h3>Overwhelmed? Lost in travel planning?</h3>
-                        <p>Our day-by-day trip plans can save you time searching, so you can enjoy more during trips.</p>
+                        <p>Our day-by-day trip plans can save you time searching.
+                            Relax before your trip and enjoy more time during trips.
+                        </p>
 
                         <a href="{{ url('/promo/itinerary-example') }}">See our trip plan example</a>
                         <div class="text-center top-buffer">
@@ -116,8 +119,8 @@
                     <div class="pm-intro-box">
                         <div class="become-seller-intro-block">
                             <h3>Great way to promote</h3>
-                            <p>Are you a blogger or in travel business? Include any links in trip plans to promote them. Trip plans
-                            can be for sale or share.</p>
+                            <p>Are you a blogger or in travel business? Include any links in trip plans to promote your services.
+                                Trip plans can be for sale or share.</p>
                         </div>
 
                         <div class="become-seller-intro-block">
@@ -126,7 +129,8 @@
                         </div>
 
                         <h3>Catch audience with travel styles</h3>
-                        <p>Secure the right audience with style tags: #kid-friendly, #romantic, #adventurous, #marriage proposal, and etc.</p>
+                        <p>Secure the right audience with style tags: #kid-friendly,
+                            #romantic, #adventurous, #marriage proposal.</p>
 
                         <div class="text-center top-buffer">
                             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sellerModal">

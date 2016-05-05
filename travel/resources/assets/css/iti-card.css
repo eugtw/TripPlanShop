@@ -14,7 +14,7 @@
 }
 .iti-price sup{
     top: -0.5em;
-    font-size: 50%;
+    font-size: 65%;
 }
 .iti-price{
     padding: 1px 10px;
@@ -64,14 +64,14 @@
     font-size: 0.8em;
 }
 .iti-card-style a{
-    color: #999999;
+    color: #ff5a5f;
 }
 .iti-card-style span{
     margin-right: 1px;
 }
 
 .iti-card-city{
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 .iti-card-city a, .iti-card-city span{
     color: #999999;
@@ -115,11 +115,13 @@
 }
 .iti-author-info>span{
     color: #c8c8c8;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 .iti-author-blog{
     color: #c8c8c8;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    margin-left: 3px;
+
 }
 .iti-author .avatar{
     height: 32px;

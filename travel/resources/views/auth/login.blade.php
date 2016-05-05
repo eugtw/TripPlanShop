@@ -16,13 +16,14 @@
 			</label>
 		</div>
 		<button class="btn btn-block" type="submit">Sign in</button>
-		<p>
+
+		<div>
 			<a href="{{ url('/auth/register') }}">Sign up</a>
 			<span> | </span>
 			<a href="{{ url('/password/email') }}">Password</a>
 			<span> | </span>
 			<a href="{{ route('auth.getActivation') }}">Account activation</a>
-		</p>
+		</div>
 
 		<div>
 			<a class="btn btn-facebook btn-block" href="{{ url('/auth/facebook') }}" role="button"><i class="fa fa-lg fa-facebook pull-left"></i>Sign In with Facebook</a>

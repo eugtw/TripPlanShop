@@ -1,5 +1,5 @@
 .form-signin {
-    max-width: 330px;
+    max-width: 360px;
     padding: 15px;
     margin: 0 auto;
 }
@@ -30,9 +30,9 @@
 }
 .form-signin button[type="submit"] {
     margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #d94d1a;
-    border-color: #d94d1a;
+    margin-bottom: 5px;
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
     color: #ffffff;
     /*border-top-left-radius: 0;
     border-top-right-radius: 0;*/
@@ -41,7 +41,7 @@
     background-color: #3b5998;
     border-color: #3b5998;
     color: #ffffff;
-    /*line-height: 0.75em;*/
+    margin-top: 5px;
 }
 .btn-facebook i{
     position: relative;

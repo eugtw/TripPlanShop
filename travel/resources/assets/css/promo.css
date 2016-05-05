@@ -88,7 +88,7 @@
 #pm-form .inputSubmit{
     display: block;
     margin-top: 10px;
-    background-color: #d94d1a;
+    background-color: #ff5a5f;
     color: #ffffff;
     border: none;
     height: 40px;
@@ -126,7 +126,7 @@
 }
 .pm-header-banner{
     font-size: 36px;
-    color: #d94d1a;
+    color: #ff5a5f;
     margin-bottom: 50px;
     font-weight: 400;
 }
@@ -256,7 +256,7 @@
     color: #ffffff;
 }
 .strong-highlight{
-    color: #d94d1a;
+    color: #ff5a5f;
 }
 #content-box-right{
     background-color: rgba(0, 0, 0, 0.7);
@@ -274,8 +274,8 @@
     margin-top: 30px;
 }
 #promo-wrapper .btn-primary{
-    background-color: #d94d1a;
-    border-color: #d94d1a;
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
 }
 
 

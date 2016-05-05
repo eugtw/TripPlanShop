@@ -57,11 +57,11 @@ i.fa{
 }
 /************* iti-overview ******************/
 #iti-header .style-tag{
-    padding: 3px 8px 4px;
+    padding: 2px 8px 2px;
     background-color: #ff5a5f;
     color: #fff;
     margin-right: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     border-radius: 5px;
 }
 #iti-header .overlay{
