@@ -74,10 +74,36 @@ class Itinerary extends Model
 
     }
 
+    public function getItiDays($is_preview = 0)
+    {
+        return $this->days($is_preview)->orderby('day_num')->get();
+    }
+
+
     public function user()
     {
         return $this->belongsTo('App\User');
     }
+
+    public function authorName()
+    {
+        return $this->user->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function authorAvatar()
+    {
+        $avatar = $this->user->profile->avatar;
+
+        if($avatar == '')
+        {
+            $avatar = '/images/avatars/default_user.jpg';
+        }
+        return $avatar;
+    }
+
 
     public function reviews()
     {

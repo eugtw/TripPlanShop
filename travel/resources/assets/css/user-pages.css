@@ -104,6 +104,10 @@
 #search-result h2{
     font-size: 1.5em;
 }
+
+.stripe_power{
+    max-width: 150px;
+}
 @media (max-width: 400px) {
     .iti_view_list_box{
         margin-left: 0;

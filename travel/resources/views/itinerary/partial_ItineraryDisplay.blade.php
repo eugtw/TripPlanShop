@@ -3,7 +3,7 @@
         <span>DAY{{ ($itinerary->days()->count() > 1) ? 'S' :  ''}}</span>
     </div>
 
-    <a href="{{ route('itinerary.show',$itinerary) }}">
+    <a href="{{ route('itinerary.show',$itinerary->slug) }}">
         <div class="iti-card-image" id="{{'iti-card-' . $itinerary->getRouteKey()}}">
             {{-- feature image in background --}}
         </div><!-- .pop-itit-dis-box -->
@@ -15,7 +15,7 @@
 
     <div class="col-xs-12">
         <div class="iti-card-title">
-            <a href="{{ route('itinerary.show',$itinerary) }}#disqus_thread">{{ $itinerary->title }}</a>
+            <a href="{{ route('itinerary.show',$itinerary->slug) }}">{{ $itinerary->title }}</a>
         </div>
 
         <ul class="list-inline">
@@ -56,7 +56,7 @@
             @include('includes.inc-review')
 
             <div id="see-details-link">
-                <a class="theme-blue" href="{{ route('itinerary.show',$itinerary) }}">See Details</a>
+                <a class="theme-blue" href="{{ route('itinerary.show',$itinerary->slug) }}">See Details</a>
             </div>
         </div><!-- pop-itit-container-footer -->
     </div><!-- col-xs-12 -->
@@ -65,9 +65,9 @@
     <script>
         //add/delete item to/from favorite list
         (function($) {
-            $("#"+"{{ $itinerary->getRouteKey() }}").on('click', function(e) {
+            $("#fav-"+"{{ $itinerary->getRouteKey() }}").on('click', function(e) {
                 e.preventDefault();
-                $.get('{{url(route('itinerary.favorite',$itinerary))}}',function (data) {
+                $.get('{{url(route('itinerary.favorite',$itinerary->slug))}}',function (data) {
                     if(data == 'added')
                     {
                         $(e.target).removeClass('').addClass('theme-pink');
@@ -76,7 +76,7 @@
                         $(e.target).removeClass('theme-pink').addClass('');
                     }
 
-                }).error(function() {
+                }).error(function(data) {
                     //redirect to login,
                     window.location.href = "/login";
                 });

@@ -22,7 +22,7 @@ class CreateItiDaysTable extends Migration {
 			$table->integer('day_num');
 			$table->string('title');
 			$table->longText('intro');
-			$table->longText('map');
+			//$table->longText('map');
 			$table->string('top_exp'); //list of top_exp tags. IDs are imploded by ','
 
 			$table->timestamps();

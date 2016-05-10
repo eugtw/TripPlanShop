@@ -27,7 +27,7 @@ class StoreItineraryEditRequest extends Request {
 		return [
 				'title' => 'required|min:10|max:100',
 				'region' => 'required',
-				'top-place'=>'required',
+				//'top-place'=>'required',
 				'price' => 'required|numeric|min: '.env('ITI_MIN_PRICE').'|max:'.env('ITI_MAX_PRICE'),
 				//'best_season' => 'required',
 				'styles_list' => 'required|max:5',

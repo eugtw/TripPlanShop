@@ -114,8 +114,9 @@ $(document).ready(function(){
             var id = $(this.hash).data('placeId');
             if(id){
                 google.maps.event.trigger(maps[id], 'resize');
-                maps[id].setCenter(markers[id].getPosition());
-
+                if(markers[id]){
+                    maps[id].setCenter(markers[id].getPosition());
+                }
                /* google.maps.event.trigger(window['map'+id], 'resize');
                 window['map'+id].setCenter(window['marker'+id].getPosition());*/
             }
@@ -136,3 +137,5 @@ $('select.select2').each(function(){
         tags: true
     });
 });
+
+

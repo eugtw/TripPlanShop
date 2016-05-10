@@ -16,7 +16,7 @@
 
             <!-- details -->
             <div class="col-md-8 col-sm-6 col-xs-12 prepurchase-details same-height">
-                <form action="{{ route('itinerary.purchase', $itinerary) }}" method="POST" class="form">
+                <form action="{{ route('itinerary.purchase', $itinerary->slug) }}" method="POST" class="form">
 
                     <div class="table-responsive">
                         <table class="table table-condensed">
@@ -43,7 +43,7 @@
                                 <td>Payment:</td>
                                 <td>
                                     credit card
-                                    <img src="{{ env('SITE_IMAGE_PATH') . 'powered_by_stripe.png'}}"
+                                    <img class="stripe_power" src="{{ env('SITE_IMAGE_PATH') . 'powered_by_stripe.png'}}"
                                 </td>
                             </tr>
                             <tr>

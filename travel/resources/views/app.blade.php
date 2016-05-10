@@ -31,9 +31,9 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	<!-- select2
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>-->
+
+	{{-- select2 --}}
+	<script src="/js/select2/select2.min.js"></script>
 
 	<!-- colorbox
 	<script src="{{ asset('/js/colorbox/jquery.colorbox.js') }}"></script>-->
@@ -154,7 +154,6 @@
 									@if(Auth::user()->stripe_active)
 										<li role="separator" class="divider"></li>
 										<li><a href="{{ route('itinerary.create') }}">Create Plans</a></li>
-										<li><a class="popup_selector" data-inputid="image">My Photo Gallery</a></li>
 										<li><a href="https://dashboard.stripe.com/login" target="_blank">Stripe Login</a></li>
 									@endif
 

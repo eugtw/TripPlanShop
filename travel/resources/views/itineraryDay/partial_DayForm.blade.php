@@ -52,9 +52,9 @@
 </div>
 
 <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-9 top-buffer text-center">
+    <div class="col-sm-offset-3 col-sm-9 top-buffer">
         {!! Form::submit($SubmitButtonText, ['class'=>'btn itit-footer-button btn-primary']) !!}
-        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary) }}">Back to Overview</a>
+        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Overview</a>
     </div>
 
 </div>

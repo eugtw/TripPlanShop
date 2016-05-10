@@ -59,12 +59,7 @@ class ItineraryController extends Controller {
 
 		//$user = Auth::user();
 
-		//remove purchased itinerary from favorite list if in user's favorite list
-		// check if currently logged in user liked the article
-		if($itinerary->liked())
-		{
-			$itinerary->unlike();
-		}
+
 
 		//check if user already has this in purchase list
 		$purItineraries = $this->user->transactions()->where('itinerary_id',$itinerary->id)->get();
@@ -91,6 +86,13 @@ class ItineraryController extends Controller {
 			return redirect()->previous()->withErrors($e);
 		}
 
+		//remove purchased itinerary from favorite list if in user's favorite list
+		// check if currently logged in user liked the article
+		if($itinerary->liked())
+		{
+			$itinerary->unlike();
+		}
+
 		//store transaction record
 		$user = Auth::user();
 		$user->transactions()
@@ -114,7 +116,6 @@ class ItineraryController extends Controller {
 
 	public function favorite(Itinerary $itinerary)
 	{
-
 		if(!$itinerary->liked())
 		{
 			$itinerary->like();
@@ -185,7 +186,7 @@ class ItineraryController extends Controller {
 
 		if ($location != '') {
 			$data = explode(',', $location);
-			$city = $data[0];
+			$city = trim($data[0]);
 			$query->where('cities.city', '=', $city);
 			//address input validation
 			//address has 3 elements? or only city and country? or only city
@@ -300,12 +301,10 @@ class ItineraryController extends Controller {
 		$itinerary = new Itinerary([
 			'user_id'=>Auth::user()->id,
 			'title' => $request->input('title'),
-			'top_places' => $request->input('top_places'),
+			'slug' => str_slug($request->input('title')),
 			'region_id' => $request->input('region_id'),
 			'best_season' => $request->input('best_season'),
 			'summary' => $request->input('summary'),
-			'gallery_folder_name' => $request->input('gallery_folder_name'),
-			'image' => preg_replace('|\\\|', '/', $request->input('image')),
 			'items_list' => implode(',',$request->items_list)
 		]);
 
@@ -318,12 +317,22 @@ class ItineraryController extends Controller {
 			$itinerary['price'] = $request->price;
 		}
 
+		//slug
+		$itinerary['slug'] = $this->makeSlug($request->input('title'));
 		$itinerary->save();
 
-		//saving it to user model
-		//many-many style tags attach
-		//create new tag on the fly.  swap tag text with new created id and then sync
-		$tags = $request->styles_list;
+		$tags = $this->createTags($request->input('styles_list'));
+		$itinerary->styles()->sync($tags);
+
+		$city_ids = $this->updateCities($request->input('cities_list'));
+		$itinerary->cities()->sync($city_ids);
+
+
+		return redirect()->route('itinerary.edit', $itinerary->slug)->withItinerary($itinerary);
+	}
+
+	public function createTags($tags)
+	{
 		foreach($tags as $key => $tag)
 		{
 			if(!is_numeric($tag))
@@ -332,56 +341,43 @@ class ItineraryController extends Controller {
 				$tags[$key] = "$new_StyleTag->id";
 			}
 		}
-		$itinerary->styles()->sync($tags);
 
-		//cities tags update
-		$cities = $request->input('cities_list');
+		return $tags;
+	}
+	public function updateCities($cities)
+	{
 		//load city_ids to sync the many to many relationship
 		$city_ids = '';
-		for($i=0;$i<count($request->input('cities_list'));$i++)
+		for($i=0;$i<count($cities);$i++)
 		{
-			if($cities[$i] != 'default') //'default' option has been removed!! will need to update this code here
+			if($cities[$i] != '') //'default' option has been removed!! will need to update this code here
 			{
 				$data = explode(',', $cities[$i]); //'0' city, '1', 'state', '2' 'country'
-				//City table
-				for($a=0;$a<3;$a++)
-				{
-					if($data[$a] == '')
-					{
-						$data[$a] = ' ';
-					}
-				}
 
 				//load country_id from country table or create new country
-				$country = Country::firstOrCreate(['country' => $data[2]]);
+				$country = Country::firstOrCreate(['country' => trim(end($data))]);
 
 				//city table update
-				$city = City::firstOrCreate(['city'=>$data[0], 'state'=>$data[1], 'country_id'=>$country->id]);
+				$city = City::firstOrCreate(['city'=>$data[0],  'country_id'=>$country->id]);
 				$city_ids[] = $city->id;
 			}
-
 		}
-		$itinerary->cities()->sync($city_ids);
 
-
-		return view('itinerary.view')
-			->with('is_preview', '0')
-			->withItinerary($itinerary);
+		return $city_ids;
 	}
-
 	public function getItineraryExample()
 	{
 
 		$iti = Itinerary::find(env('DEMO_ITIT_ID'));
 
-		return view('itinerary.itiMockView')
+		return view('itinerary.itiView')
 		->with('is_preview', '1')
 		->withItinerary($iti);
 	}
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  int  $itinerary
 	 * @return Response
 	 */
 	public function show(Itinerary $itinerary)
@@ -393,20 +389,20 @@ class ItineraryController extends Controller {
 			if(!Auth::check())
 			{
 				//not logged in, show itinerary as "preview"
-				return view('itinerary.itiMockView')
+				return view('itinerary.itiView')
 					->with('is_preview', '1')
 					->withItinerary($itinerary);
 			}
 			elseif($itinerary->transactions->find($this->user->id) != null || $itinerary->user_id == $this->user->id){
 				//published and user has purchased, full view, ow user is the author
-				return view('itinerary.itiMockView')
+				return view('itinerary.itiView')
 					->with('is_preview', '0')
 					->withItinerary($itinerary);
 			}
 			elseif($itinerary->transactions->find($this->user->id) == null)
 			{
 				//notnot purchased, show itinerary as "preview"
-				return view('itinerary.itiMockView')
+				return view('itinerary.itiView')
 					->with('is_preview', '1')
 					->withItinerary($itinerary);
 			}
@@ -422,8 +418,10 @@ class ItineraryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit(Itinerary $itinerary)
+	public function edit(Itinerary $itinerary)//
 	{
+
+
 		//switching off the itinerary for sale
 		$itinerary->published = 0;
 		$itinerary->save();
@@ -449,12 +447,10 @@ class ItineraryController extends Controller {
 
 		$data = [
 			'title' => $request->input('title'),
-			'top_places' => $request->input('top_places'),
+			'slug' => str_slug($request->input('title')),
 			'region_id' => $request->input('region_id'),
 			'best_season' => $request->input('best_season'),
 			'summary' => $request->input('summary'),
-			//'gallery_folder_name' => $request->input('gallery_folder_name'),
-			//'image' => preg_replace('|\\\|', '/', $request->input('image')),
 			'items_list' => implode(',',$request->items_list)
 		];
 		if($request->free == 1)
@@ -465,55 +461,49 @@ class ItineraryController extends Controller {
 			$data['price'] = $request->price;
 		}
 
-		$itinerary->fill($data);
+		//slug
+		$data['slug'] = $this->makeSlug($request->input('title'), $itinerary->id);
 
+		$itinerary->fill($data);
 		$itinerary->save();
 
-
+		//create tags on the fly
+		$tags = $this->createTags($request->input('styles_list'));
 		//many-many style tags attach
-		$tags = $request->styles_list;
-		foreach($tags as $key => $tag)
-		{
-			if(!is_numeric($tag))
-			{
-				$new_StyleTag = TravelStyle::firstOrCreate(['style'=>$tag]);
-				$tags[$key] = "$new_StyleTag->id";
-			}
-		}
 		$itinerary->styles()->sync($tags);
 
 		//cities tags update
-		$cities = $request->input('cities_list');
-		//load city_ids to sync the many to many relationship
-		$city_ids = '';
-
-		//explode address string
-		for($i=0;$i<count($request->input('cities_list'));$i++)
-		{
-			if($cities[$i] != 'default')
-			{
-				$data = explode(',', $cities[$i]); //'0' city, '1', 'state', '2' 'country'
-				//City table
-				for($a=0;$a<3;$a++)
-				{
-					if($data[$a] == '')
-					{
-						$data[$a] = ' ';
-					}
-				}
-
-				//load country_id from country table or create new country
-				$country = Country::firstOrCreate(['country' => $data[2]]);
-
-				//city table update
-				$city = City::firstOrCreate(['city'=>$data[0], 'state'=>$data[1], 'country_id'=>$country->id]);
-				$city_ids[] = $city->id;
-			}
-		}
+		$city_ids = $this->updateCities($request->input('cities_list'));
 		$itinerary->cities()->sync($city_ids);
 
-		return redirect()->route('itinerary.show', [$itinerary]);
+		return redirect()->route('itinerary.show', $itinerary->slug);
+	}
 
+
+	/** create unique slug for itineraries
+	 *
+	 * @param $title
+	 * @param int $itiId
+	 * @return string
+	 */
+	public function makeSlug($title, $itiId = 0)
+	{
+		$index = 1;
+		$finalSlug = str_slug($title);
+
+		while (Itinerary::where('slug', $finalSlug)->exists()) {
+
+			$iti = Itinerary::where('slug', $finalSlug)->first();
+
+			if($iti->id != $itiId){
+				$finalSlug = str_slug($title) . '-' . $index++;
+			}else{
+				break;
+			}
+
+		}
+
+		return $finalSlug;
 	}
 
 	/**
@@ -585,14 +575,12 @@ class ItineraryController extends Controller {
 
 			'title' => 'required|min:10|max:100',
 			'region_id' => 'required',
-			'top-place'=>'required',
+			//'top-place'=>'required',
 			//'price' => 'required|numeric|min: '.env('ITI_MIN_PRICE').'|max:'.env('ITI_MAX_PRICE'),
-			//'best_season' => 'required',
+			'best_season' => 'required',
 			'styles_list' => 'required|max:5',
 			'cities_list'=> 'required|max:'.env('ITI_MAX_CITY'),
 			'items_list'=>	'required',
-			//'gallery_folder_name' => 'required|foldername',
-			//'image' => 'required|imagename',
 			'summary' => 'required'
 		]);
 		$v->sometimes('price', 'required|numeric|min: '.env("ITI_MIN_PRICE").'|max:'.env("ITI_MAX_PRICE"), function($input)
@@ -611,14 +599,15 @@ class ItineraryController extends Controller {
 	public function storeCoverImage(Request $request)
 	{
 
+
 		$this->validate($request, [
 			'iti_image' => 'required|mimes:jpg,jpeg,png'
 		]);
 
+		$itinerary = Itinerary::whereSlug($request->iti_slug)->firstOrFail();
 
-		if($request->iti_id == 'new')
+		if($itinerary->image_path == '')
 		{
-			$itinerary = new Itinerary();
 			$iti_dir = 'images/itineraries' . '/' . $itinerary->getRouteKey();
 			if(!is_dir($iti_dir))
 			{
@@ -628,7 +617,7 @@ class ItineraryController extends Controller {
 				}
 			}
 		}else{
-			$itinerary = Itinerary::find($request->iti_id);
+
 			\File::delete($itinerary->image_path);
 
 		}
@@ -638,6 +627,5 @@ class ItineraryController extends Controller {
 		$itinerary->image_path = $photo->photo_path;
 		$itinerary->save();
 
-		return redirect()->back();
 	}
 }

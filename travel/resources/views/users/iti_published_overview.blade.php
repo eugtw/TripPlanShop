@@ -10,19 +10,19 @@
                         <div class="pub-list table">
                         <span class="pub-list-cell">
                             @if($itinerary->published == env("ITI_PUBLISHED"))
-                                <a type="button" class="" href="{{route('itinerary.unpublish',[$itinerary])}}">
+                                <a type="button" class="" href="{{route('itinerary.unpublish',$itinerary->slug)}}">
                                     Unpublish
                                 </a>
                             @endif
                         </span>
                         <span class="thumb pub-list-cell">
-                            <img class="" src="/{{ $itinerary->image_path }}">
+                            <a href="{{ route('itinerary.show', $itinerary->slug) }}"><img class="" src="/{{ $itinerary->image_path }}"></a>
                         </span>
 
                         <span class="iti-pub-detail pub-list-cell">
-                                <div><a href="{{ route('itinerary.show', $itinerary) }}">{{ $itinerary->title }}</a></div>
+                                <div><a href="{{ route('itinerary.show', $itinerary->slug) }}">{{ $itinerary->title }}</a></div>
                                 <div>
-                                    <a class="iti_sales" href="{{ route('itinerary.getSalesDetails', $itinerary) }}">
+                                    <a class="iti_sales" href="{{ route('itinerary.getSalesDetails', $itinerary->slug) }}">
                                         <span>{{ 'sales: ' . $itinerary->transactions()->count() }}</span>
                                     </a>
                                     @if(count($itinerary->unreadSales()) > 0)

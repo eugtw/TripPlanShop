@@ -1,8 +1,7 @@
 @extends('app')
 
 @section('javascript-block')
-    {{-- select2 --}}
-    <script src="/js/select2/select2.min.js"></script>
+
 @stop
 
 @section('content')
@@ -225,7 +224,7 @@
                                             <div class="col-xs-8">
 
                                                 {!! Form::select('experiences[]', $experiences, null,
-                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '3', 'required']) !!}
+                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '2', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -264,9 +263,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="top-buffer text-center">
+                                    <div class="top-buffer">
                                         {!! Form::submit('Save Changes', ['class'=>'btn itit-footer-button btn-primary']) !!}
-                                        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary) }}">Back to Overview</a>
+                                        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Overview</a>
                                     </div>
                                 </div>
                             </div>
@@ -371,8 +370,6 @@
         }
 
         function initMap(pId, center, geocoder){
-
-
             var newMap = new google.maps.Map(document.getElementById('place-' + pId + '-Map'), {
                 zoom: 13,
                 scrollwheel: true,
@@ -380,6 +377,17 @@
                 center: center
 
             });
+            var input = /** @type {!HTMLInputElement} */(
+                    document.getElementById('place-' + pId + '-address'));
+            console.log(input);
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', newMap);
+            var infowindow = new google.maps.InfoWindow();
+            autocomplete.addListener('place_changed', function() {
+                infowindow.close();
+
+            });
+
             document.getElementById('place-' + pId + '-submit').addEventListener('click', function () {
                 geoAddress(geocoder, newMap, pId);
             });
@@ -391,44 +399,29 @@
                 latLng: pos
             }, function(responses) {
                 if (responses && responses.length > 0) {
-
-
-
-
                     updateInputs(placeId, responses);
-                   /* $('#place-' + placeId + '-address').val(responses[0].formatted_address);
-                    $('#place-' + placeId + '-lat').val(responses[0].geometry.location.lat());
-                    $('#place-' + placeId + '-lng').val(responses[0].geometry.location.lng());
-                    $('#place-' + placeId + '-name-short').val(address_short);
-                    $('#place-' + placeId + '-name-long').val(responses[0].formatted_address);*/
-
 
                 } else {
                     // updateMarkerAddress('Cannot determine address at this location.');
                 }
             });
         }
+
         function geoAddress(geocoder, resultsMap, placeId) {
             var address = document.getElementById('place-'+placeId+'-address').value;
             geocoder.geocode({'address': address}, function(results, status) {
                 if (status === google.maps.GeocoderStatus.OK) {
 
-                    placeMarker(results[0].geometry.location, resultsMap, placeId);
+                    placeMarker(results[0].geometry.location, resultsMap, placeId, geocoder);
                     updateInputs(placeId, results);
 
-
-                    /*$('#place-' + placeId + '-lat').val(results[0].geometry.location.lat());
-                    $('#place-' + placeId + '-lng').val(results[0].geometry.location.lng());
-                    $('#place-' + placeId + '-name-short').val(results[0].address_components[0].long_name);
-                    $('#place-' + placeId + '-name-long').val(results[0].formatted_address);
-                    $('#place-' + placeId + '-address').val(results[0].formatted_address);*/
                 } else {
                     alert('Geocode was not successful for the following reason: ' + status);
                 }
             });
         }
 
-        function placeMarker(location, map, placeId) {
+        function placeMarker(location, map, placeId, geocoder) {
             if ( markers[placeId] ) {
                 //if marker already was created change positon
                 markers[placeId].setPosition(location);
@@ -440,12 +433,15 @@
                     draggable: true
                 });
 
+                google.maps.event.addListener(markers[placeId], 'dragend', function() {
+                    //updateMarkerStatus('Drag ended');
+                    geoPosition(markers[placeId].getPosition(), geocoder, placeId);
+                });
             }
             map.setCenter(markers[placeId].getPosition());
         }
 
         function updateInputs(placeId, responses){
-
             var address_short = '';
 
             for( var i = 0; i < responses[0].address_components.length; i++) {
@@ -456,91 +452,20 @@
                     }else{
                         address_short = address_short + ' ' + responses[0].address_components[i][componentForm[addressType]];
                     }
-
                 }
-
             }
-
             $('#place-' + placeId + '-address').val(responses[0].formatted_address);
             $('#place-' + placeId + '-lat').val(responses[0].geometry.location.lat());
             $('#place-' + placeId + '-lng').val(responses[0].geometry.location.lng());
             $('#place-' + placeId + '-name-short').val(address_short);
             $('#place-' + placeId + '-name-long').val(responses[0].formatted_address);
 
-            alert(address_short);
-
+            //alert(address_short);
         }
 
     </script>
     <script
-            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=setMaps">
-    </script>
-
-
-
-    <script>
-        /*
-        var map = null;
-       // var marker = null;
-        var LngLat = '';
-        var componentForm = {
-            street_number: 'short_name',
-            route: 'long_name',
-            locality: 'long_name'
-            //administrative_area_level_1: 'short_name',
-            //country: 'long_name',
-            //postal_code: 'short_name'
-        };
-
-        function initMap() {
-            $('div.placeMap').each(function (index) {
-
-                var id = $(this).data('placeId');
-                var loc_lat = $('#place-' +id + '-lat').val();
-                var loc_lng = $('#place-' +id + '-lng').val();
-
-                if(loc_lat != '' && loc_lng != '')
-                {
-                     LngLat = new google.maps.LatLng(loc_lat, loc_lng);
-                }else{
-                     LngLat = {lat: 59.327, lng: 18.067};
-                }
-
-                window['map' + id] = new google.maps.Map(document.getElementById('place-' + id + '-Map'), {
-                    zoom: 13,
-                    scrollwheel: true,
-                    scaleControl: true,
-                    center: LngLat
-
-                });
-
-                window['geocoder' + id] = new google.maps.Geocoder();
-
-                if(loc_lat != '' && loc_lng != '')
-                {
-                    window['marker' + id] = new google.maps.Marker({
-                        animation: google.maps.Animation.DROP,
-                        position: LngLat,
-                        map: window['map' + id],
-                        draggable: true
-                    });
-
-                    google.maps.event.addListener(window['marker' + id], 'dragend', function() {
-                        //updateMarkerStatus('Drag ended');
-                        geocodePosition(window['marker' + id].getPosition(), window['geocoder' + id], id);
-                    });
-
-                }
-
-
-
-                document.getElementById('place-' + id + '-submit').addEventListener('click', function () {
-
-                    geocodeAddress(window['geocoder' + id], window['map' + id], id);
-                });
-            });
-        }*/
-
+            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&libraries=places&callback=setMaps">
     </script>
 
 @stop

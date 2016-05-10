@@ -8,7 +8,7 @@
              */
 
              var disqus_config = function () {
-             this.page.url = '{{ route('itinerary.show', $itinerary) }}}'; // Replace PAGE_URL with your page's canonical URL variable
+             this.page.url = '{{ route('itinerary.show', $itinerary->slug) }}}'; // Replace PAGE_URL with your page's canonical URL variable
              this.page.identifier = '{{ $itinerary->getRouteKey() }}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
              };
 

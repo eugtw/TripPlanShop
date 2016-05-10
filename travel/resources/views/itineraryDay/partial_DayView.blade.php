@@ -68,7 +68,7 @@
                                         <span class="route-item">
                                             {{ $place->place_title }}
                                             <div class="marker-table">
-                                                <span class="route-extra mark"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span  class="route-extra detail">{{ $place->place_name_short }}</span>
+                                                <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i><span  class="route-extra detail">{{ $place->place_name_short }}</span></span>
                                             </div>
                                             <div>
                                                 <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>

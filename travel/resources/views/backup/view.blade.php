@@ -42,7 +42,7 @@
                 @endif
             @endif
 
-            @include('itinerary.partial_ItineraryView')
+            @include('delete.partial_ItineraryView')
 
 
             <hr class="top-buffer">

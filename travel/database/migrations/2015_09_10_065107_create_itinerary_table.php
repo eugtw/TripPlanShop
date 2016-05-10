@@ -23,13 +23,14 @@ class CreateItineraryTable extends Migration {
 			$table->foreign('region_id')->references('id')->on('regions');
 
 			$table->string('title');
+			$table->string('slug')->unique();
 
 			$table->string('best_season');
-			$table->text('top_places');
+			//$table->text('top_places');
 			$table->string('items_list');
 
 			$table->string('image_path');
-			$table->string('gallery_folder_name');
+			//$table->string('gallery_folder_name');
 
 			$table->text('summary');
 

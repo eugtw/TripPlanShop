@@ -31,17 +31,9 @@ class RouteServiceProvider extends ServiceProvider {
 
 		//route model binding: itinerary
 		//$router->model('itinerary', 'App\Itinerary');
-		$router->bind('itinerary', function($value, $route)
+		$router->bind('itinerary', function($value)
 		{
-
-			$hashids = new \Hashids\Hashids(env('MY_SECRET_SALT'), 12);
-
-			if(isset($value))
-			{
-				$id = $hashids->decode($value)[0];
-				return Itinerary::findOrFail($id);
-			}
-
+			return Itinerary::whereSlug($value)->firstOrFail();
 
 		});
 

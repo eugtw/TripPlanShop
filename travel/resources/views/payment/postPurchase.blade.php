@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('meta-og')
-    <meta property="og:url"                content="{{ route('itinerary.show',$itinerary) }}">
+    <meta property="og:url"                content="{{ route('itinerary.show',$itinerary->slug) }}">
     <meta property="og:type"               content="article">
     <meta property="og:title"              content="{{ 'I just bought: \''.$itinerary->title. '\' from TripPlanShop.com' }}">
     <meta property="og:description"        content="{{ $itinerary->summary }}">

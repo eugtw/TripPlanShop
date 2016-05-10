@@ -30,7 +30,7 @@
 <div class="form-group">
     {!! Form::label('styles_list', 'Travel Style (max: '.env('MAX_STYLE_TAG').')', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::select('styles_list[]', $travelStyles, null, ['multiple' => 'multiple','class'=>'form-control', 'id' => 'style_list']) !!}
+        {!! Form::select('styles_list[]', $travelStyles, null, ['multiple' => 'multiple', 'class'=>'form-control select2', 'data-max-selected' => env('MAX_STYLE_TAG')]) !!}
     </div>
 </div>
 <div class="form-group">
@@ -38,9 +38,12 @@
     <div class="col-sm-6">
         {!! Form::text('autocomplete', null,['placeholder'=>'Enter a City','class'=>'form-control', 'autocomplete'=>'off', 'onFocus'=>'geolocate()']) !!}
     </div>
+
+    <!--
     <div class="">
         <a class="" id="addCity">add city &raquo;</a>
     </div>
+    -->
 </div>
 <div class="form-group">
     {!! Form::label('cities_list', '',['class'=>'sr-only col-sm-3 control-label']) !!}
@@ -56,9 +59,6 @@
 
 
 
-
-
-
 <div class="form-group">
     {!! Form::label('region_id', 'Region', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-4">
@@ -66,7 +66,7 @@
     </div>
 </div>
 
-
+<!--
 <div class="pull-right" hidden="true">
     {!! Form::label('top_places', '', ['class'=>'sr-only']) !!}
     {!! Form::text('top_places', null, ['id'=>'top_places','class'=>'form-control', 'autocomplete'=>'off']) !!}
@@ -113,8 +113,7 @@
         </div>
     </div>
 </div>
-
-
+-->
 
 
 
@@ -190,10 +189,10 @@
 
 
 <script>
-    $('#style_list').select2({
-        maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
-        tags: true
-    });
+   // $('#style_list').select2({
+  //      maximumSelectionLength: '{{ env('MAX_STYLE_TAG') }}',
+  //      tags: true
+ //   });
 </script>
 
 
@@ -211,24 +210,29 @@
 
 
     //when 'Add' cliced, move google autocomplted city, state, country, to list box
-    $('#addCity').click(function(){
-        if($('#locality').val() != '')
+    /*$('#addCity').click(function(){
+
+
+
+        if($('#autocomplete').val() != '')
         {
             var city = $('#locality').val();
-
+            alert($('#locality').val());
+            alert($('#administrative_area_level_1').val());
+            alert($('#autocomplete').val());
             $('#city_list').append("<option value='"
             +$('#locality').val()+','+$('#administrative_area_level_1').val()+','+$('#country').val()+"'>"
             +$('#locality').val()+','+$('#administrative_area_level_1').val()+','+$('#country').val()+"</option>");
             $('#autocomplete').val('');
         }
 
-    });
+    });*/
 
 
     $(document).ready(function() {
 
         //tooltip init
-        $('[data-toggle="tooltip"]').tooltip()
+        //$('[data-toggle="tooltip"]').tooltip()
 
         //remove selected city from city list when "remove" btn pressed
         $('#btn-remove').click(function(){
@@ -238,21 +242,26 @@
         });
 
        //top places, using jQuery to insert values from 'top_places' to top-place[]
-       if($('#top_places').val() != '')
+      /* if($('#top_places').val() != '')
        {
+
            var topP = $('#top_places').val();
+
+           alert(topP);
+
            var topPArr = topP.split(",");
            $('#top-place').val($.trim(topPArr[0]));
            for(i = 1; i < 9; i++){
                $('#top-place'+ i).val($.trim(topPArr[i]));
            }
-       }
+       }*/
 
         //form submit
         $('#itit-form').submit(function(){
             //select all listed cities
             $('#city_list option').prop('selected', true);
 
+            /*
             //combine all 8 topplaces[] to string 'top_places' in case validation fails and page bounce back for re-enter
             $('#top_places').val('');
             if($('#top-place').val() != '')
@@ -272,7 +281,7 @@
                         $('#top_places').val($('#top_places').val()+',' + $('#top-place' + i).val());
                     }
                 }
-            }
+            }*/
         });
 
     });
@@ -306,20 +315,24 @@
         // Get the place details from the autocomplete object.
         var place = autocomplete.getPlace();
 
-        for (var component in componentForm) {
+        /*for (var component in componentForm) {
             document.getElementById(component).value = '';
             document.getElementById(component).disabled = false;
-        }
+        }*/
+        $('#city_list').append("<option value='"+$('#autocomplete').val()+"'>"
+                                    +$('#autocomplete').val()+"</option>");
+        $('#autocomplete').val('');
 
-        // Get each component of the address from the place details
+       /* // Get each component of the address from the place details
         // and fill the corresponding field on the form.
         for (var i = 0; i < place.address_components.length; i++) {
+            console.log(place.address_components[i]);
             var addressType = place.address_components[i].types[0];
             if (componentForm[addressType]) {
                 var val = place.address_components[i][componentForm[addressType]];
                 document.getElementById(addressType).value = val;
             }
-        }
+        }*/
 
 
     }

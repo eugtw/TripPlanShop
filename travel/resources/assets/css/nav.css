@@ -37,19 +37,25 @@
     vertical-align: middle;
 }
 
-#sticky-nav{
-    margin-bottom: 0;
-    background-color: transparent;
-    border: none;
-}
+
 #sticky{
     z-index: 1000;
     background-color: #f4f4f4;
     box-shadow: 0 2px 5px grey;
     padding: 4px 0;
-
+    margin-bottom: 0;
+    border: none;
 }
-#days-nav>ul>li>a, #sticky-nav .navbar-brand{
+#sticky .navbar-default{
+    background-color: inherit;
+    border-color: inherit;
+}
+#sticky .navbar{
+    min-height: 0px;
+    margin-bottom: 0px;
+    border: none;
+}
+#days-nav>ul>li>a, #sticky .navbar-brand{
     color: #393c3d;
 }
 #days-nav>ul>li.active{

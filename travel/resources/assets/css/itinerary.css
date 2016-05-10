@@ -2,8 +2,17 @@
 i.fa{
     margin-right: 1px;
 }
+.author-button{
+    width: 100%;
+    padding: 6px 0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+
+}
 #iti-header{
-    height: 430px;
+    height: auto;
     padding: 0;
     margin-bottom: 30px;
     background-color: #808080;
@@ -13,7 +22,8 @@ i.fa{
     position: relative;
 }
 #iti-header .content-container{
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: inline-block;
     max-width: 800px;
     z-index: 1;
@@ -29,7 +39,6 @@ i.fa{
 
 #iti-header .author-name{
     display: block;
-    margin-top: 20px;
     font-family: "Charter BT W01 Roman","Georgia","serif";
     font-size: 30px;
     text-transform: none;
@@ -38,7 +47,7 @@ i.fa{
 }
 #iti-header .img-author img{
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100px;
     padding: 5px;
     border-radius: 50%;
@@ -61,6 +70,7 @@ i.fa{
     background-color: #ff5a5f;
     color: #fff;
     margin-right: 10px;
+    margin-bottom: 5px;
     font-size: 0.9em;
     border-radius: 5px;
 }
@@ -81,6 +91,7 @@ i.fa{
 }
 #iti-overview .buy-button{
     font-size: 1.2em;
+    display: block;
 }
 #iti-overview .heart{
     font-size: 1.1em;
@@ -108,8 +119,22 @@ i.fa{
     font-size: 20px;
     letter-spacing: 0.1em;
 }
-
-
+.daySummary li{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.daySummary .dayTitle{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+.daySummary .dayIntro{
+    font-size: 14px;
+}
+.remaining-content span {
+    display:none;
+}
 
 /*************** iti daily plan *********************/
 .placeMap{
@@ -152,6 +177,9 @@ i.fa{
 
 
 /**************** iti daily places *********************/
+.dayplace-select-info{
+    margin-right: 10px;
+}
 .marker-table{
     display: table;
 }

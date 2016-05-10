@@ -93,15 +93,15 @@
     width: 47%;
 }
 .items-list{
-    border-top: 1px solid #dce0e0;
+    border-top: 1px solid #eeeeee;
     padding-top: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 20px;
 
 }
 
 .items-list>ul>li{
-    border-bottom: 1px solid #dce0e0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .item-check-yes{
@@ -130,7 +130,7 @@
     padding: 7px 10px;
 }
 .itit-footer-button {
-    padding: 6px 30px;
+    padding: 15px 50px;
     min-width: 150px;
 
 }
@@ -141,12 +141,14 @@
 }
 .itit-info-block{
     background-color: #f3f3f3;
+    margin-top: 30px;
 }
 .itit-info-block li{
     line-height: 1;
     padding: 7px;
     margin-bottom: 3px;
     margin-left: 10px;
+    font-size: 14px;
 }
 .itit-info-block p{
     background-color: #ff5a5f;
@@ -160,10 +162,11 @@
 }
 .items-cat{
     color: #aeaeae;
-    font-size: 0.9em;
+    font-size: 14px;
+    text-transform: lowercase;
 }
 .items-detail{
-    font-size: 0.8em;
+    font-size: 14px;
 }
 .blog_link{
     font-size: 0.9em;

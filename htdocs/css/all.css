@@ -509,7 +509,7 @@
     position: absolute;
     top: 150px;
     float: left;
-    width: 105px;
+    width: 120px;
     text-align: center;
 }
 .iti-price sup{
@@ -634,14 +634,23 @@
 }
 
 .items-list-form-box ul li{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 /***************** new design **********************/
 i.fa{
     margin-right: 1px;
 }
+.author-button{
+    width: 100%;
+    padding: 6px 0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+
+}
 #iti-header{
-    height: 430px;
+    height: auto;
     padding: 0;
     margin-bottom: 30px;
     background-color: #808080;
@@ -651,7 +660,8 @@ i.fa{
     position: relative;
 }
 #iti-header .content-container{
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: inline-block;
     max-width: 800px;
     z-index: 1;
@@ -667,7 +677,6 @@ i.fa{
 
 #iti-header .author-name{
     display: block;
-    margin-top: 20px;
     font-family: "Charter BT W01 Roman","Georgia","serif";
     font-size: 30px;
     text-transform: none;
@@ -676,7 +685,7 @@ i.fa{
 }
 #iti-header .img-author img{
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100px;
     padding: 5px;
     border-radius: 50%;
@@ -699,6 +708,7 @@ i.fa{
     background-color: #ff5a5f;
     color: #fff;
     margin-right: 10px;
+    margin-bottom: 5px;
     font-size: 0.9em;
     border-radius: 5px;
 }
@@ -719,6 +729,7 @@ i.fa{
 }
 #iti-overview .buy-button{
     font-size: 1.2em;
+    display: block;
 }
 #iti-overview .heart{
     font-size: 1.1em;
@@ -746,8 +757,22 @@ i.fa{
     font-size: 20px;
     letter-spacing: 0.1em;
 }
-
-
+.daySummary li{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.daySummary .dayTitle{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+.daySummary .dayIntro{
+    font-size: 14px;
+}
+.remaining-content span {
+    display:none;
+}
 
 /*************** iti daily plan *********************/
 .placeMap{
@@ -790,6 +815,9 @@ i.fa{
 
 
 /**************** iti daily places *********************/
+.dayplace-select-info{
+    margin-right: 10px;
+}
 .marker-table{
     display: table;
 }
@@ -1064,15 +1092,15 @@ i.fa{
     width: 47%;
 }
 .items-list{
-    border-top: 1px solid #dce0e0;
+    border-top: 1px solid #eeeeee;
     padding-top: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 20px;
 
 }
 
 .items-list>ul>li{
-    border-bottom: 1px solid #dce0e0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .item-check-yes{
@@ -1101,7 +1129,7 @@ i.fa{
     padding: 7px 10px;
 }
 .itit-footer-button {
-    padding: 6px 30px;
+    padding: 15px 50px;
     min-width: 150px;
 
 }
@@ -1112,12 +1140,14 @@ i.fa{
 }
 .itit-info-block{
     background-color: #f3f3f3;
+    margin-top: 30px;
 }
 .itit-info-block li{
     line-height: 1;
     padding: 7px;
     margin-bottom: 3px;
     margin-left: 10px;
+    font-size: 14px;
 }
 .itit-info-block p{
     background-color: #ff5a5f;
@@ -1131,10 +1161,11 @@ i.fa{
 }
 .items-cat{
     color: #aeaeae;
-    font-size: 0.9em;
+    font-size: 14px;
+    text-transform: lowercase;
 }
 .items-detail{
-    font-size: 0.8em;
+    font-size: 14px;
 }
 .blog_link{
     font-size: 0.9em;
@@ -1336,9 +1367,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 }
 img{
     width: 100%;
-}
-p{
-    text-align: justify;
 }
 .inline-block{
     display: inline-block;
@@ -1603,19 +1631,25 @@ div.jumbotron p{
     vertical-align: middle;
 }
 
-#sticky-nav{
-    margin-bottom: 0;
-    background-color: transparent;
-    border: none;
-}
+
 #sticky{
     z-index: 1000;
     background-color: #f4f4f4;
     box-shadow: 0 2px 5px grey;
     padding: 4px 0;
-
+    margin-bottom: 0;
+    border: none;
 }
-#days-nav>ul>li>a, #sticky-nav .navbar-brand{
+#sticky .navbar-default{
+    background-color: inherit;
+    border-color: inherit;
+}
+#sticky .navbar{
+    min-height: 0px;
+    margin-bottom: 0px;
+    border: none;
+}
+#days-nav>ul>li>a, #sticky .navbar-brand{
     color: #393c3d;
 }
 #days-nav>ul>li.active{
@@ -2331,6 +2365,10 @@ html, body {
 }
 #search-result h2{
     font-size: 1.5em;
+}
+
+.stripe_power{
+    max-width: 150px;
 }
 @media (max-width: 400px) {
     .iti_view_list_box{

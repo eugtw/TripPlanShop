@@ -23,7 +23,7 @@
                               name = "iti_image"
                               id="iti-photo-dropzone">
 
-                            <input name="iti_id" value="{{ $itinerary->id }}" type="hidden">
+                            <input name="iti_slug" value="{{ $itinerary->slug }}" type="hidden">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         </form>
                     </div>
@@ -42,7 +42,7 @@
 
 
                 {{-- form model binding for form update--}}
-                {!! Form::model($itinerary,['route'=>['itinerary.update',$itinerary], 'method'=>'PATCH','class'=>'form-horizontal', 'files'=>true]) !!}
+                {!! Form::model($itinerary,['route'=>['itinerary.update',$itinerary->slug], 'method'=>'PATCH','class'=>'form-horizontal', 'files'=>true]) !!}
 
                 @include('itinerary.partial_ItineraryForm')
 

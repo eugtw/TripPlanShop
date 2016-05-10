@@ -1,135 +1,42 @@
-<!doctype html>
+@extends('app')
 
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+@section('content')
+    <h2>Shortened Text with Show More Link - Jquery</h2>
 
-    <title>Responsive Tabs</title>
-    <meta name="description" content="Responsive Tabs">
-    <meta name="author" content="Gabriel Tomescu"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <div class='forum-content'>
+        <div class='comments-space'>The Indian economy is the world's tenth-largest by nominal GDP and third-largest by purchasing power parity. Following market-based economic reforms in 1991, India became one of the fastest-growing major economies; it is considered a newly industrialised country. However, it continues to face the challenges of poverty, corruption, malnutrition, inadequate public healthcare, and terrorism. A nuclear weapons state and a regional power, it has the third-largest standing army in the world and ranks seventh in military expenditure among nations. India is a federal constitutional republic governed under a parliamentary system consisting of 28 states and 7 union territories. India is a pluralistic, multilingual, and multi-ethnic society. It is also home to a diversity of wildlife in a variety of protected habitats.</div>
+        <div class='comments-space'>Cotton was domesticated in India by 4000 B.C.E. Traditional Indian dress varies in colour and style across regions and depends on various factors, including climate and faith. Popular styles of dress include draped garments such as the sari for women and the dhoti or lungi for men. Stitched clothes, such as the shalwar kameez for women and kurta–pyjama combinations or European-style trousers and shirts for men, are also popular. Use of delicate jewellery, modelled on real flowers worn in ancient India, is part of a tradition dating back some 5,000 years; gemstones are also worn in India as talismans.</div>
+        <div class='comments-space'>The Indian film industry produces the world's most-watched cinema. Established regional cinematic traditions exist in the Assamese, Bengali, Hindi, Kannada, Malayalam, Punjabi, Gujarati, Marathi, Oriya, Tamil, and Telugu languages. South Indian cinema attracts more than 75% of national film revenue. Television broadcasting began in India in 1959 as a state-run medium of communication, and had slow expansion for more than two decades. The state monopoly on television broadcast ended in 1990s and, since then, satellite channels have increasingly shaped popular culture of Indian society. Today, television is the most penetrative media in India; industry estimates indicate that as of 2012 there are over 554 million TV consumers, 462 million with satellite and/or cable connections, compared to other forms of mass media such as press (350 million), radio (156 million) or internet (37 million).</div>
+    </div>
 
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
-    <!-- responsive tabs-->
-    <script src="/js/responsive-tabs/responsive-tabs.js"></script>
-    <style>
-        body{
-            font-size: 1em;
-            padding: 30px;
-        }
-
-        .nav-tabs {
-            width: 100%;
-            float: left;
-            border-bottom-color: #d9d9d9; }
-        .nav-tabs > li a {
-            text-align: center;
-            border-width: 1px 1px 0 1px;
-            border-style: solid;
-            border-color: #e0e0e0;
-            color: #444444;
-            background: #f2f2f2; }
-        .nav-tabs > li a:hover {
-            background: #F9F9F9;
-            border-color: #d9d9d9; }
-        .nav-tabs > li.active a, .nav-tabs > li.active:hover a {
-            color: #444444;
-            background: white;
-            border-color: #d9d9d9;
-            border-bottom-color: transparent; }
-
-        .responsive-tabs-container {
-            position: relative; }
-        .responsive-tabs-container .responsive-tabs {
-            padding-right: 102px; }
-        .responsive-tabs-container .tabs-dropdown {
-            position: absolute;
-            right: 0;
-            margin-right: 0 !important; }
-        .responsive-tabs-container .tabs-dropdown.navbar-nav {
-            margin: 0 !important; }
-        @media only screen and (max-width: 767px) {
-            .responsive-tabs-container .tabs-dropdown .dropdown-menu {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                bottom: 20px;
-                left: 20px;
-                padding-top: 50px;
-                overflow: hidden;
-                overflow-y: scroll; }
-            .responsive-tabs-container .tabs-dropdown .dropdown-menu .dropdown-header {
-                position: fixed;
-                left: 21px;
-                right: 21px;
-                background: #FFF;
-                margin-top: -50px;
-                padding-top: 18px;
-                border-radius: 4px 4px 0 0; }
-            .responsive-tabs-container .tabs-dropdown .dropdown-menu .close {
-                position: absolute;
-                top: 14px;
-                right: 20px; }
-            .responsive-tabs-container .tabs-dropdown .dropdown-menu .divider {
-                margin: 0; } }
-        .responsive-tabs-container .tabs-dropdown .dropdown-toggle {
-            width: 102px;
-            position: relative;
-            display: block;
-            padding: 10px 15px; }
-        .responsive-tabs-container .tabs-dropdown .dropdown-toggle .count {
-            margin-right: 5px; }
-        .responsive-tabs-container .tabs-dropdown .dropdown-toggle .caret {
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-            border-left: 6px solid;
-            margin-left: 0;
-            vertical-align: initial; }
-
-        /*# sourceMappingURL=main.css.map */
-
-    </style>
-</head>
-
-<body>
-<p class="instructions"><strong>How to Test:</strong> Resize your browser window to see how tabs scale / respond.</p>
-
-<!-- Nav tabs -->
-<ul class="nav nav-tabs " ></ul>
-
-<!-- Tab panes -->
-<div class="tab-content"></div>
-
-
-<ul class="nav nav-tabs js-example" role="tablist">
-    <li class="active"><a href="#tab1" data-toggle="tab">Tab1</a></li>
-    <li><a href="#tab2" data-toggle="tab">Tab2</a></li>
-    <li><a href="#tab3" data-toggle="tab">Tab3</a></li>
-    <li><a href="#tab4" data-toggle="tab">Tab4</a></li>
-    <li><a href="#tab5" data-toggle="tab">Tab5</a></li>
-</ul>
-<script>
-    $(document).ready(function () {
-
-
-        //$(".tab-content").ipsum();
-        $(".js-example").find("li").first().addClass("active");
-        $(".tab-content").find(".tab-pane").first().addClass("active");
-
-        $('.js-example').bootstrapResponsiveTabs({
-            minTabWidth: 80,
-            maxTabWidth: 150
+    <script>
+        var showChar = 56;
+        var ellipsestext = "...";
+        var moretext = "See More";
+        var lesstext = "See Less";
+        $('.comments-space').each(function () {
+            var content = $(this).html();
+            if (content.length > showChar) {
+                var show_content = content.substr(0, showChar);
+                var hide_content = content.substr(showChar, content.length - showChar);
+                var html = show_content + '<span class="moreelipses">' + ellipsestext + '</span><span class="remaining-content"><span>' + hide_content + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                $(this).html(html);
+            }
         });
-    });
-</script>
-</body>
-</html>
+
+        $(".morelink").click(function () {
+            if ($(this).hasClass("less")) {
+                $(this).removeClass("less");
+                $(this).html(moretext);
+            } else {
+                $(this).addClass("less");
+                $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+    </script>
+
+@stop
