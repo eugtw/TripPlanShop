@@ -910,7 +910,8 @@ i.fa{
 }
 /**************************************** day form edit ******************/
 #floating-panel{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 .day-photo-thumbs{
     width: 75px;
@@ -1137,8 +1138,10 @@ i.fa{
     padding: 7px 10px;
 }
 .itit-footer-button {
-    padding: 15px 50px;
-    min-width: 150px;
+    padding: 15px 0;
+    width: 190px;
+    text-align: center;
+    margin-bottom: 10px;
 
 }
 .info-block-subtitle{
@@ -1215,6 +1218,11 @@ i.fa{
         left: 0;
     }
     */
+    .itit-footer-button {
+        display: block;
+        margin: 0 auto 10px auto;
+
+    }
     .itit-author{
         left: 0;
     }

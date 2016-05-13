@@ -10,7 +10,7 @@
     <!-- days container -->
     <div class="container">
         <div class="row">
-            <h2 class="page-header">About This Day</h2>
+            <h2 class="page-header col-xs-12">About This Day</h2>
 
             <!-- day images dropzone -->
             <div class="form-group">
@@ -39,18 +39,19 @@
 
                         @endforeach
                     @endif
+                </div>
             </div>
+
+
         </div><!-- row -->
-        </div>
 
-        <hr class="col-xs-12">
-
+        <hr>
         <div class="row">
             <!-- day input form -->
             {!! Form::model($day, [
                     'data-remote',
                     'route'=>['itinerary-day.update', $day],
-                    'method'=>'PATCH', 'class'=>'form-horizontal']) !!}
+                    'method'=>'PATCH', 'class'=>'form-horizontal col-xs-12']) !!}
 
             {!! Form::hidden('day_num', $day->num) !!}
 
@@ -62,8 +63,8 @@
 
 
 
-        <div class="row" id="day-route">
-            <div class="iti-route col-xs-12 ">
+        <div class="" id="day-route">
+            <div class="iti-route">
                 <div class="row">
                     <h3 class="col-xs-12">Places to visit in this day</h3>
                     <ol class="route-list col-md-4 col-xs-12 list-unstyled">
@@ -162,36 +163,35 @@
                                 </div>
                             </div>
 
-
                             <div class="row">
 
-                                <ul class="route-detail-table list-unstyled col-xs-12">
-                                    <li>
-                                        <div class="form-group">
+                                <ul class="route-detail-table list-unstyled">
+                                    <li class="col-xs-12">
+                                        <div class="form-group row">
                                             {!! Form::label('time_to_visit', 'time to visit', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="form-group">
+                                    <li class="col-xs-12">
+                                        <div class="form-group row">
                                             {!! Form::label('business_hours', 'business hours', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::text('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="form-group">
+                                    <li  class="col-xs-12">
+                                        <div class="form-group row">
                                             {!! Form::label('duration', 'duration', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::select('duration', $duration, null, ['placeholder' => 'eg: 3 hours','class'=>'form-control', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="form-group">
+                                    <li  class="col-xs-12">
+                                        <div class="form-group row">
                                             {!! Form::label('public_transit', 'public transportation', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::select('public_transit', $transit_methods,  null, ['placeholder' => 'eg: yes/no','class'=>'form-control', 'required']) !!}
@@ -199,8 +199,8 @@
                                         </div>
                                     </li>
                                     <div class="clearfix"></div>
-                                    <li>
-                                        <div class="form-group">
+                                    <li  class="col-xs-12">
+                                        <div class="form-group row">
                                             {!! Form::label('experiences', 'experiences', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
 
@@ -273,36 +273,14 @@
                 </div><!-- row -->
             </div>
         </div><!-- row -->
-        <hr class="col-xs-12">
+        <hr>
     </div><!-- container -->
 @stop
 
 
 @section('js-bottom')
 
-    <script>
-        CKEDITOR.replaceAll( 'editor',{
 
-            uiColor : '#9AB8F3'
-        });
-       /* //ckeditor
-        $('form').each( function(){
-            $(this).find('.editor').each( function(){
-                console.log($(this).attr('name'));
-
-            });
-        });*/
-        /*$('textarea.editor').each( function(){
-            var fieldName = $(this).attr('id');
-
-            CKEDITOR.replace( $(this),{
-                uiColor : '#9AB8F3',
-                height: '150px',
-                width: '100%'
-            });
-        });*/
-
-    </script>
 
 
 

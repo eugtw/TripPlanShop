@@ -42,7 +42,6 @@ class ItiDayController extends Controller {
 
 	public function update(StoreDayCreateRequest $request,ItiDay $day)
 	{
-		return "in";
 		$itinerary = Itinerary::find($day->itinerary->id);
 
 		$day->update($request->all());

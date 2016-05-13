@@ -172,7 +172,7 @@
 <div class="form-group">
     {!! Form::label('summary', 'Itinerary Summary (text only)', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::textarea('summary', null, ['placeholder' => 'type your itinerary summary here','class'=>'form-control']) !!} </div>
+        {!! Form::textarea('summary', null, ['placeholder' => 'type your itinerary summary here','class'=>'form-control editor']) !!} </div>
 </div>
 
 <!--

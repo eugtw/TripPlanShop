@@ -77,51 +77,67 @@
                 <div class="items-list">
                     <ul class="list-unstyled">
                         <li>
-                            <div class="col-sm-4 col-xs-12 items-cat">DURATION:</div>
-                            <div class="col-sm-8 col-xs-12 items-detail">{!!$itinerary->days()->count()!!}
+                            <div>
+                                <span class="items-cat col-xs-4 ">DURATION:</span>
+                                <span class="items-detail col-xs-8">{!!$itinerary->days()->count()!!}
                                         <span>
                                             Day{{ ($itinerary->days()->count() > 1) ? 's' :  ''}}
-                                        </span></div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="col-sm-4 col-xs-12 items-cat">TRIP STYLES:</div>
-                            <div class="col-sm-8 col-xs-12 items-detail">
-                                <ul class="list-unstyled ">
-                                    @foreach($itinerary->styles as $style)
-                                        {{--@if($style != $itinerary->styles[0])
-                                            <span> | </span>
-                                        @endif --}}
-                                        <li>{{ $style->style }}</li>
-                                    @endforeach
-                                </ul></div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="col-sm-4 col-xs-12 items-cat">Cost Estimate:</div>
-                            <div class="col-sm-8 col-xs-12 items-detail">
-                                <span>$ na (per person / accom. not included)</span>
+                                        </span>
+                                </span>
                             </div>
                             <div class="clearfix"></div>
                         </li>
                         <li>
-                            <div class="col-sm-4 col-xs-12 items-cat">DESTINATION CITIES:</div>
-                            <div class="col-sm-8 col-xs-12 ">
-                                <ul class="list-unstyled">
-                                    @foreach($itinerary->cities as $c)
-                                        {{-- @if($c != $itinerary->cities[0])
-                                             <span> | </span>
-                                         @endif --}}
-                                        <li class="items-detail">{{ $c->city  }}, {{$c->country->country}}</li>
-                                    @endforeach
-                                </ul>
+                            <div>
+                                <span class="col-xs-4 items-cat">TRIP STYLES:</span>
+                                <span class="items-detail col-xs-8">
+                                    <ul class="list-unstyled ">
+                                        @foreach($itinerary->styles as $style)
+                                            {{--@if($style != $itinerary->styles[0])
+                                                <span> | </span>
+                                            @endif --}}
+                                            <li>{{ $style->style }}</li>
+                                        @endforeach
+                                    </ul>
+                                </span>
                             </div>
                             <div class="clearfix"></div>
                         </li>
                         <li>
-                            <div class="col-sm-4 col-xs-12 items-cat">BEST TIME TO VISIT:</div>
-                            <div class="col-sm-8 col-xs-12 items-detail">
-                                {{ $itinerary->best_season }}
+                            <div>
+                                <span class="items-cat col-xs-4 ">Cost Estimate:</span>
+                                <span class="items-detail col-xs-8">
+                                        <span>
+                                            $ na (per person / accom. not included)
+                                        </span>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="items-cat col-xs-4 ">DESTINATION CITIES:</span>
+                                <span class="items-detail col-xs-8">
+                                    <ul class="list-unstyled ">
+                                        @foreach($itinerary->cities as $c)
+                                            {{-- @if($c != $itinerary->cities[0])
+                                                 <span> | </span>
+                                             @endif --}}
+                                            <li class="items-detail">{{ $c->city  }}, {{$c->country->country}}</li>
+                                        @endforeach
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="items-cat col-xs-4 ">BEST SEASON:</span>
+                                <span class="items-detail col-xs-8">
+                                        <span>
+                                             {{ $itinerary->best_season }}
+                                        </span>
+                                </span>
                             </div>
                             <div class="clearfix"></div>
                         </li>
@@ -132,7 +148,7 @@
                     @foreach($itinerary->days as $day)
                         <li>
                             <span class="dayTitle">Day {{$day->day_num . ': '}}{{ $day->title }}</span>
-                            <div class="dayIntro shorten">{{ $day->intro }}</div>
+                            <div class="dayIntro shorten">{!! $day->intro !!}</div>
                         </li>
                     @endforeach
                 </ul>
