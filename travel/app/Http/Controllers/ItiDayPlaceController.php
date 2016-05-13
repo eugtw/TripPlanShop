@@ -9,6 +9,7 @@ use App\ItiDayPlace;
 use App\Itinerary;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ItiDayPlaceController extends Controller {
 
@@ -124,6 +125,14 @@ class ItiDayPlaceController extends Controller {
 	 */
 	public function update(Request $request, ItiDayPlace $place)
 	{
+		/*$v = $this->placeValidate($request);
+
+		if($v->fails())
+		{
+			return redirect()->back()->withInput()->withErrors($v->errors());
+		}
+		*/
+
 		$data = $request->all();
 		$data['experiences'] = implode(',', $request->experiences);
 
@@ -142,6 +151,23 @@ class ItiDayPlaceController extends Controller {
 		$place->delete();
 
 		//return redirect()->back();
+	}
+
+	public function placeValidate($request)
+	{
+		$v = Validator::make($request->all(), [
+			 'place_title' => 'required',
+			 'time_to_visit' => 'required',
+			 'business_hours' => 'required',
+			 'duration' => 'required',
+			 'public_transit' => 'required',
+			 'experiences' => 'required',
+			 'place_intro' => 'required',
+			 'to_do' => 'required',
+			 'tips' => 'required',
+		]);
+
+		return $v;
 	}
 
 }

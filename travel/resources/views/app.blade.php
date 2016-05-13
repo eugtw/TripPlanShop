@@ -16,8 +16,8 @@
 	<link rel="shortcut icon" href="{{ asset('images/site/favicon.ico') }}">
 
 
-	<!--
-	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>  -->
+	<!---->
+	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
 
 	<!-- Fonts -->

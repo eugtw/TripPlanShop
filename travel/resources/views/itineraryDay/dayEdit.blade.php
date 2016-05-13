@@ -84,13 +84,8 @@
                                     {{ $place->place_title }}
 
                                     <div class="marker-table">
-                                        <span class="route-extra mark"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span  class="route-extra detail">{{ $place->place_name_short }}</span>
-                                    </div>
-
-                                    <div>
-
-                                        <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                        <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
+                                        <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $place->place_name_short }}</span>
+                                        <div><span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span></div>
                                     </div>
                                     <div>
                                         @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
@@ -157,6 +152,8 @@
                             {!! Form::text('loc_lng', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-lng']) !!}
                             {!! Form::label('place_name_short', null, ['class'=>'sr-only']) !!}
                             {!! Form::text('place_name_short', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-name-short']) !!}
+                            {!! Form::label('place_name_long', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('place_name_long', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-name-long']) !!}
 
                             <div class="form-group top-buffer">
                                 {!! Form::label('place_title', 'Title', ['class'=>'control-label']) !!}
@@ -170,26 +167,18 @@
 
                                 <ul class="route-detail-table list-unstyled col-xs-12">
                                     <li>
-                                        <div class="form-group top-buffer">
-                                            {!! Form::label('place_name_long', 'Place Name', ['class'=>'control-label col-xs-4']) !!}
-                                            <div class="col-xs-8">
-                                                {!! Form::text('place_name_long', null, ['placeholder' => 'Place name','class'=>'form-control', 'id' => 'place-'.$place->id.'-name-long', 'required']) !!}
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
                                         <div class="form-group">
                                             {!! Form::label('time_to_visit', 'time to visit', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm','class'=>'form-control', 'required']) !!}
+                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            {!! Form::label('business_hours', 'business hours', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('business_hours', 'business hours', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required']) !!}
+                                                {!! Form::text('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -197,23 +186,15 @@
                                         <div class="form-group">
                                             {!! Form::label('duration', 'duration', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('duration', null, ['placeholder' => 'eg: 3 hours','class'=>'form-control', 'required']) !!}
+                                                {!! Form::select('duration', $duration, null, ['placeholder' => 'eg: 3 hours','class'=>'form-control', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            {!! Form::label('price_range', ' price range(US)', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('public_transit', 'public transportation', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::number('price_range', null, ['placeholder' => 'eg: 75','class'=>'form-control', 'required']) !!}
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="form-group">
-                                            {!! Form::label('transportation', 'transportation required', ['class'=>'control-label col-xs-4', ]) !!}
-                                            <div class="col-xs-8">
-                                                {!! Form::text('transportation', null, ['placeholder' => 'eg: car','class'=>'form-control', 'required']) !!}
+                                                {!! Form::select('public_transit', $transit_methods,  null, ['placeholder' => 'eg: yes/no','class'=>'form-control', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -238,28 +219,42 @@
                                     {!! Form::label('place_intro', 'Intro', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('place_intro', null,
-                                        ['placeholder' => 'place introduction', 'rows'=>'5','class'=>'form-control', 'required']) !!}
+                                        ['placeholder' => 'place introduction', 'rows'=>'5','class'=>'form-control editor', 'required', 'id' => $place->id .'place_intro']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('to_do', 'What to do', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('to_do', null,
-                                        ['placeholder' => 'what to do', 'rows'=>'5','class'=>'form-control']) !!}
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    {!! Form::label('to_eat', 'What to eat', ['class'=>'control-label']) !!}
-                                    <div class="">
-                                        {!! Form::textarea('to_eat', null,
-                                        ['placeholder' => 'what to eat', 'rows'=>'5','class'=>'form-control']) !!}
+                                        ['placeholder' => 'what to do', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'to_do']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('tips', 'Helpful tips', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('tips', null,
-                                        ['placeholder' => 'Helpful tips', 'rows'=>'5','class'=>'form-control']) !!}
+                                        ['placeholder' => 'Helpful tips', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'tips']) !!}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {!! Form::label('transportation', 'Transportation plan', ['class'=>'control-label']) !!}
+                                    <div class="">
+                                        {!! Form::textarea('transportation', null,
+                                        ['placeholder' => 'how to get to this place', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'transportation']) !!}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {!! Form::label('restaurants', 'Nearby food/restaurants', ['class'=>'control-label']) !!}
+                                    <div class="">
+                                        {!! Form::textarea('restaurants', null,
+                                        ['placeholder' => 'restaurants recommendation', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'restaurants']) !!}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {!! Form::label('info_links', 'Info websites', ['class'=>'control-label']) !!}
+                                    <div class="">
+                                        {!! Form::textarea('info_links', null,
+                                        ['placeholder' => 'links for information', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'info_links']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -284,6 +279,32 @@
 
 
 @section('js-bottom')
+
+    <script>
+        CKEDITOR.replaceAll( 'editor',{
+
+            uiColor : '#9AB8F3'
+        });
+       /* //ckeditor
+        $('form').each( function(){
+            $(this).find('.editor').each( function(){
+                console.log($(this).attr('name'));
+
+            });
+        });*/
+        /*$('textarea.editor').each( function(){
+            var fieldName = $(this).attr('id');
+
+            CKEDITOR.replace( $(this),{
+                uiColor : '#9AB8F3',
+                height: '150px',
+                width: '100%'
+            });
+        });*/
+
+    </script>
+
+
 
     {{-- dropzone x 2--}}
     <script>
@@ -379,7 +400,6 @@
             });
             var input = /** @type {!HTMLInputElement} */(
                     document.getElementById('place-' + pId + '-address'));
-            console.log(input);
             var autocomplete = new google.maps.places.Autocomplete(input);
             autocomplete.bindTo('bounds', newMap);
             var infowindow = new google.maps.InfoWindow();

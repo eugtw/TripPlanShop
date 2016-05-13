@@ -349,24 +349,46 @@
                     //center: {lat: 52.520, lng: 13.410}
                 });
 
+                var marker = [];
+                var contentString = [];
+                var infowindow = [];
 
                 for (var i = 0; i < loc.length; i++) {
                     if(loc[i].loc_lat != '' && loc[i].loc_lng != '')
                     {
-                        var marker = new google.maps.Marker({
+                        marker[i] = new google.maps.Marker({
                             position: new google.maps.LatLng(loc[i].loc_lat, loc[i].loc_lng),
                             map: window['map' + id],
                             animation: google.maps.Animation.DROP,
+                           // icon: pinImage,
                             label: labels[labelIndex % labels.length]
                         });
-
-                        window['bounds' + id].extend(marker.position);
+                        window['bounds' + id].extend(marker[i].position);
                     }
-
                     labelIndex++;
-                }
+                    window['map' + id].fitBounds(window['bounds' + id]);
 
-                window['map' + id].fitBounds(window['bounds' + id]);
+
+                    contentString[i] = '<div class="placeMarker">' +
+                                        '<p class="title">' + loc[i].place_title + '</p>' +
+                                        '<ul class="list-unstyled">'+
+                                        '<li><i class="fa fa-map-marker" aria-hidden="true"></i>' + loc[i].place_name_short + '</li>' +
+                                        '<li><i class="fa fa-clock-o" aria-hidden="true"></i>' + loc[i].duration + '<li>' +
+                                        '</ul>'+
+                                        '</div>';
+
+                    infowindow[i]= new google.maps.InfoWindow({
+                        content: contentString[i]
+                    });
+
+                    (function(j){
+                        return function() {
+                            marker[j].addListener('click', function() {
+                                infowindow[j].open(window['map' + id], marker[j]);
+                            });
+                        }()
+                    })(i);
+                }
             });
         }//initMap()
     </script>

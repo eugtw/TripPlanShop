@@ -25,11 +25,18 @@ class ItiDayController extends Controller {
 	public function edit(ItiDay $day)
 	{
 		//$exp = Experience::all()->sortBy('experience')->lists('experience','id');
+		$transit_methods = ['Yes' => 'Yes', 'No' => 'No'];
+		$duration = ['less than 1 hour' => 'less than 1 hour',
+		  			 '1 - 2 hours' => '1 - 2 hours',
+					 '2 - 4 hours' => '2 - 4 hours',
+					 'more than 4 hours' => 'more than 4 hours'];
 
 		$itinerary = Itinerary::find($day->itinerary_id);
 		return view('itineraryDay.dayEdit')
 			//->withExperiences($exp)
 			->withDay($day)
+			->withDuration($duration)
+			->with('transit_methods', $transit_methods)
 			->withItinerary($itinerary);
 	}
 

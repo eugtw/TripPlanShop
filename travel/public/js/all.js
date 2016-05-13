@@ -42,10 +42,17 @@ $('form[data-remote]').on('submit', function(e){
     var method = form.find('input[name="_method"]').val() || 'POST';
     var url = form.prop('action');
 
-    $.ajax({
+    if( form.find('textarea[class="editor"]')){
+        for( var i in CKEDITOR.instances){
+            CKEDITOR.instances[i].updateElement();
+        }
+    }
+
+  $.ajax({
         type: method,
         url: url,
         data: form.serialize(),
+
         success: function() {
 
             swal({
@@ -55,7 +62,9 @@ $('form[data-remote]').on('submit', function(e){
                 showConfirmButton: false
             });
             location.reload();
+
         }
+
     });
 
     e.preventDefault();

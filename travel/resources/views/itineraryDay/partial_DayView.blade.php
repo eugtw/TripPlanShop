@@ -40,10 +40,12 @@
 
 
             <!-- ifrom div for googleMap -->
-            <div id="day-{{$day->day_num}}-map" class="col-xs-12  top-buffer dayMap"
-                 data-dayid="{{ $day->day_num }}"
-                 data-places="{{ $day->places }}">
+            <div class="col-xs-12  top-buffer ">
+                <div id="day-{{$day->day_num}}-map" class="dayMap"
+                     data-dayid="{{ $day->day_num }}"
+                     data-places="{{ $day->places }}">
 
+                </div>
             </div>
 
 
@@ -68,11 +70,8 @@
                                         <span class="route-item">
                                             {{ $place->place_title }}
                                             <div class="marker-table">
-                                                <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i><span  class="route-extra detail">{{ $place->place_name_short }}</span></span>
-                                            </div>
-                                            <div>
-                                                <span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                                <span class="route-extra"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>
+                                                <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $place->place_name_short }}</span>
+                                                <div><span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span></div>
                                             </div>
                                             <div>
                                                 @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
@@ -108,12 +107,8 @@
                                                 <span class="pull-right">{{ $place->duration }}</span>
                                             </li>
                                             <li>
-                                                price range
-                                                <span class="pull-right">{{ $place->price_range }}</span>
-                                            </li>
-                                            <li>
-                                                transportation required
-                                                <span class="pull-right">{{ $place->transportation }}</span>
+                                                public transportation
+                                                <span class="pull-right">{{ $place->public_transit }}</span>
                                             </li>
                                             <li>
                                                 category
@@ -130,13 +125,26 @@
 
                                     <div>
                                         <p class="route-detail-title">Intro</p>
-                                        <p>{{ $place->place_intro }}</p>
+                                        <p>{!! $place->place_intro !!}</p>
                                         <p class="route-detail-title">What to do</p>
-                                        <p>{{ $place->to_do }}</p>
-                                        <p class="route-detail-title">What to eat</p>
-                                        <p>{{ $place->to_eat }}</p>
-                                        <p class="route-detail-title">Helpful tips</p>
-                                        <p>{{ $place->tips }}</p>
+                                        <p>{!! $place->to_do !!}</p>
+                                        <p class="route-detail-title">Tips</p>
+                                        <p>{!! $place->tips !!}</p>
+
+                                        @if($place->transportation != '')
+                                            <p class="route-detail-title">Transportation</p>
+                                            <p>{!! $place->transportation !!}</p>
+                                        @endif
+
+                                        @if($place->restaurants != '')
+                                            <p class="route-detail-title">Restaurants nearby</p>
+                                            <p>{!! $place->restaurants !!}</p>
+                                        @endif
+
+                                        @if($place->info_links != '')
+                                            <p class="route-detail-title">Info websites</p>
+                                            <p>{!! $place->info_links !!}</p>
+                                        @endif
                                     </div>
                                 </article>
                             @endforeach

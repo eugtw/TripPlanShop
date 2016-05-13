@@ -32,13 +32,16 @@ class CreateItiDayPlace extends Migration {
 			$table->string('business_hours');
 			$table->string('duration');
 			$table->integer('price_range');
-			$table->string('transportation');
+			$table->string('public_transit');
 			$table->string('experiences');
 
 			$table->longText('place_intro');
 			$table->longText('to_do');
-			$table->longText('to_eat');
+			//$table->longText('to_eat');
 			$table->longText('tips');
+			$table->longText('transportation')->default(null);
+			$table->longText('restaurants')->default(null);
+			$table->longText('info_links')->default(null);
 
 			$table->timestamps();
 		});
