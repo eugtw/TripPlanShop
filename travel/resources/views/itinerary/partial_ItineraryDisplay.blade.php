@@ -20,7 +20,7 @@
 
         <ul class="list-inline">
             @foreach($itinerary->styles as $s)
-                <li class="iti-card-style"><a href="{{'/itinerary-search?style_list='.$s->style}}"><span>#</span>{{$s->style }}</a></li>
+                <li class="iti-card-style"><a href="{{ route('itinerary.postSearch', http_build_query(['style_list[]' => $s->style])) }}"><span>#</span>{{$s->style }}</a></li>
             @endforeach
         </ul>
         <div class="clearfix"></div>

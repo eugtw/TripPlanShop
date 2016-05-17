@@ -11,7 +11,7 @@
 @stop
 @section('content')
     <div id="iti-header" class="text-center"
-         style = "background-image: url('/{{$itinerary->image_path}}');">
+         style = "background-image: url('{{ asset($itinerary->image_path) }}');">
         <div class="overlay"></div>
 
         <div class="content-container">

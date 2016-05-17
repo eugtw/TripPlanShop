@@ -2,108 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf2a9f69-feb8-4501-9e9f-12df96c49b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/link/images/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/link/images/hidpi/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/fontello.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/fontello.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/img/github-top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/img/header-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/img/header-separator.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/assets/inlineall/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/about/dialogs/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/img/navigation-tip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/assets/sample.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/CHANGES.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/about/dialogs/about.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/link/dialogs/anchor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/api.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/appendto.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/build-config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/ckeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/contents.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/datafiltering.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/dialog/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/dialog/dialogDefinition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/divreplace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/skins/office2013/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/enterkey/enterkey.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/css/fontello.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/font/fontello.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/wysiwygarea/fullpage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/inlineall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/inlinebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/inlinetextarea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/jquery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/adapters/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/assets/uilanguages/languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/link/dialogs/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/dialog/assets/my_dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/plugins/clipboard/dialogs/paste.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/assets/posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/readonly.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/replacebyclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/replacebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/sample.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/js/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/sample_posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/css/samples.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/js/sf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/tabindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/toolbar/toolbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/uicolor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/uilanguages.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/ckeditor/samples/old/xhtmlstyle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/users/admin-page.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/users/admin-page.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/css/all.css.map" afterPath="$PROJECT_DIR$/htdocs/css/all.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/css/all.css.map" afterPath="$PROJECT_DIR$/travel/public/css/all.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/css/all.css" afterPath="$PROJECT_DIR$/htdocs/css/all.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/css/all.css" afterPath="$PROJECT_DIR$/travel/public/css/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/js/all.js" afterPath="$PROJECT_DIR$/travel/public/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/js/all.js" afterPath="$PROJECT_DIR$/htdocs/js/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/includes/home-search-mobile.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/includes/home-search-mobile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/assets/css/itinerary.css" afterPath="$PROJECT_DIR$/travel/resources/assets/css/itinerary.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/users/iti_published_overview.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/users/iti_published_overview.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/assets/css/itit.css" afterPath="$PROJECT_DIR$/travel/resources/assets/css/itit.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryForm.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryForm.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/assets/css/search-result.css" afterPath="$PROJECT_DIR$/travel/resources/assets/css/search-result.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="superthie.com.iws" />
@@ -129,21 +44,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="itit.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/itit.css">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.931034" vertical-offset="3292" max-vertical-offset="4386">
-              <caret line="214" column="33" selection-start-line="214" selection-start-column="33" selection-end-line="214" selection-end-column="33" />
+            <state vertical-scroll-proportion="-8.038462" vertical-offset="2596" max-vertical-offset="4488">
+              <caret line="165" column="35" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/travel/public/js/all.js">
+      <file leaf-file-name="ItiDayPlaceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayPlaceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3569079" vertical-offset="565" max-vertical-offset="2754">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+            <state vertical-scroll-proportion="-5.9636364" vertical-offset="1814" max-vertical-offset="2890">
+              <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htdocs/css/all.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="83997">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,58 +77,38 @@
       <file leaf-file-name="ItiDayController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.076923" vertical-offset="489" max-vertical-offset="2278">
+            <state vertical-scroll-proportion="11.615385" vertical-offset="897" max-vertical-offset="2278">
               <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itiView.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php">
+      <file leaf-file-name="Request.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/vendor/laravel/framework/src/Illuminate/Http/Request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-70.92308" vertical-offset="706" max-vertical-offset="7123">
-              <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
+            <state vertical-scroll-proportion="-3.2727273" vertical-offset="2710" max-vertical-offset="13498">
+              <caret line="175" column="31" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/edit.blade.php">
+      <file leaf-file-name="partial_ItineraryDisplay.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2727273" vertical-offset="687" max-vertical-offset="1479">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="35" />
+            <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="1972">
+              <caret line="22" column="130" selection-start-line="22" selection-start-column="130" selection-end-line="22" selection-end-column="130" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial_ItineraryForm.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryForm.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travel/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="37.836365" vertical-offset="5039" max-vertical-offset="6256">
-              <caret line="174" column="126" selection-start-line="174" selection-start-column="126" selection-end-line="174" selection-end-column="126" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dayEdit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-57.98182" vertical-offset="517" max-vertical-offset="8058">
-              <caret line="218" column="64" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="partial_DayForm.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+            <state vertical-scroll-proportion="-78.46154" vertical-offset="0" max-vertical-offset="2992">
+              <caret line="122" column="59" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -217,12 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/travel/resources/assets/css/itit_day.css" />
-        <option value="$PROJECT_DIR$/travel/resources/views/promo/promo-main.blade.php" />
-        <option value="$PROJECT_DIR$/travel/resources/assets/css/promo.css" />
-        <option value="$PROJECT_DIR$/travel/resources/views/becoming-seller.blade.php" />
-        <option value="$PROJECT_DIR$/travel/resources/assets/css/homepage.css" />
-        <option value="$PROJECT_DIR$/travel/resources/assets/css/search-result.css" />
         <option value="$PROJECT_DIR$/travel/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/assets/css/signin.css" />
         <option value="$PROJECT_DIR$/travel/resources/assets/css/iti-card.css" />
@@ -230,13 +129,11 @@
         <option value="$PROJECT_DIR$/travel/resources/views/test.blade.php" />
         <option value="$PROJECT_DIR$/travel/public/js/shortened-text/shortened-text.js" />
         <option value="$PROJECT_DIR$/travel/resources/views/users/user-tripplans.blade.php" />
-        <option value="$PROJECT_DIR$/travel/resources/views/users/iti_published_overview.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/payment/postPurchase.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/includes/disqus.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/view.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/assets/css/nav.css" />
         <option value="$PROJECT_DIR$/travel/resources/views/includes/iti_purchase_block.blade.php" />
-        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" />
         <option value="$PROJECT_DIR$/travel/app/Itinerary.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_sticky_nav.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_iti_footer.blade.php" />
@@ -250,7 +147,6 @@
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/create.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/edit.blade.php" />
         <option value="$PROJECT_DIR$/travel/database/migrations/2015_09_13_074120_create_ItiDays_table.php" />
-        <option value="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" />
         <option value="$PROJECT_DIR$/travel/app/Providers/RouteServiceProvider.php" />
         <option value="$PROJECT_DIR$/travel/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/errors/404.blade.php" />
@@ -261,13 +157,22 @@
         <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/includes/dayPlaceMap.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/assets/css/itinerary.css" />
-        <option value="$PROJECT_DIR$/travel/resources/assets/css/itit.css" />
-        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryForm.blade.php" />
         <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php" />
-        <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" />
         <option value="$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php" />
         <option value="$PROJECT_DIR$/travel/public/js/all.js" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/assets/css/itit.css" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/users/admin-page.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/users/iti_published_overview.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/includes/home-search-mobile.blade.php" />
+        <option value="$PROJECT_DIR$/travel/app/Http/Controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php" />
+        <option value="$PROJECT_DIR$/travel/resources/assets/css/search-result.css" />
+        <option value="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" />
       </list>
     </option>
   </component>
@@ -340,55 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superthie.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superthie.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itinerary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superthie.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superthie.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,6 +260,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superthie.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,104 +391,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="880" max-vertical-offset="4488">
-          <caret line="62" column="59" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/postContactus.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/seller-details.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.055555556" vertical-offset="29" max-vertical-offset="2414">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/terms.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.055555556" vertical-offset="29" max-vertical-offset="663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/test.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26288658" vertical-offset="0" max-vertical-offset="582">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/nav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6809211" vertical-offset="640" max-vertical-offset="1428">
-          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59753954" vertical-offset="1020" max-vertical-offset="1972">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/includes/iti_purchase_block.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4089347" vertical-offset="0" max-vertical-offset="582">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_sticky_nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7469244" vertical-offset="0" max-vertical-offset="569">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/delete/partial_ItineraryView.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08963093" vertical-offset="0" max-vertical-offset="4845">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/delete/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2108963" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="74" column="171" selection-start-line="74" selection-start-column="171" selection-end-line="74" selection-end-column="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_iti_footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.28471" vertical-offset="0" max-vertical-offset="833">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1326">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/user-pages.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74835527" vertical-offset="1381" max-vertical-offset="2057">
@@ -681,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846" vertical-offset="153" max-vertical-offset="1020">
           <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.5" vertical-offset="918" max-vertical-offset="2992">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -780,44 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5384617" vertical-offset="4564" max-vertical-offset="10574">
-          <caret line="295" column="8" selection-start-line="295" selection-start-column="8" selection-end-line="298" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayPlaceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.923077" vertical-offset="1985" max-vertical-offset="3043">
-          <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
-          <folding>
-            <element signature="e#39#61#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.890909" vertical-offset="1976" max-vertical-offset="3145">
-          <caret line="145" column="73" selection-start-line="145" selection-start-column="73" selection-end-line="145" selection-end-column="73" />
-          <folding>
-            <marker date="1463097206365" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1463097206365" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1463097206365" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="83844">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/ckeditor/lang/en.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028571429" vertical-offset="0" max-vertical-offset="595">
@@ -842,25 +574,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/itit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.931034" vertical-offset="3292" max-vertical-offset="4386">
-          <caret line="214" column="33" selection-start-line="214" selection-start-column="33" selection-end-line="214" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-70.92308" vertical-offset="706" max-vertical-offset="7123">
-          <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2727273" vertical-offset="687" max-vertical-offset="1479">
+        <state vertical-scroll-proportion="1.3222222" vertical-offset="153" max-vertical-offset="1479">
           <caret line="51" column="35" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="35" />
           <folding />
         </state>
@@ -868,32 +584,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryForm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="37.836365" vertical-offset="5039" max-vertical-offset="6256">
+        <state vertical-scroll-proportion="3.2296295" vertical-offset="1214" max-vertical-offset="6256">
           <caret line="174" column="126" selection-start-line="174" selection-start-column="126" selection-end-line="174" selection-end-column="126" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php">
+    <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/itit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.98182" vertical-offset="517" max-vertical-offset="8058">
-          <caret line="218" column="64" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.076923" vertical-offset="489" max-vertical-offset="2278">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.3626943" vertical-offset="2034" max-vertical-offset="4386">
+          <caret line="132" column="23" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -902,6 +602,192 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3569079" vertical-offset="565" max-vertical-offset="2754">
           <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.862963" vertical-offset="0" max-vertical-offset="8058">
+          <caret line="218" column="64" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/ItiDay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_swiper.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14604811" vertical-offset="0" max-vertical-offset="595">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9859402" vertical-offset="0" max-vertical-offset="3145">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/itiView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3884007" vertical-offset="0" max-vertical-offset="7123">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/users/admin-page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0074074073" vertical-offset="973" max-vertical-offset="1513">
+          <caret line="57" column="91" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/users/iti_published_overview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5377856" vertical-offset="0" max-vertical-offset="986">
+          <caret line="18" column="137" selection-start-line="18" selection-start-column="137" selection-end-line="18" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="612">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#39#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/includes/home-search-mobile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="561">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/TravelStyle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/database/migrations/2015_09_11_030737_create_itinerary_style_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/ItineraryStyle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-78.46154" vertical-offset="0" max-vertical-offset="2992">
+          <caret line="122" column="59" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/itinerary/partial_ItineraryDisplay.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="1972">
+          <caret line="22" column="130" selection-start-line="22" selection-start-column="130" selection-end-line="22" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2727273" vertical-offset="2710" max-vertical-offset="13498">
+          <caret line="175" column="31" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/assets/css/search-result.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="657" max-vertical-offset="1530">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6111111" vertical-offset="7521" max-vertical-offset="10659">
+          <caret line="438" column="13" selection-start-line="438" selection-start-column="7" selection-end-line="438" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.038462" vertical-offset="2596" max-vertical-offset="4488">
+          <caret line="165" column="35" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.615385" vertical-offset="897" max-vertical-offset="2278">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayPlaceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9636364" vertical-offset="1814" max-vertical-offset="2890">
+          <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="83997">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -164,16 +164,17 @@ class ItineraryController extends Controller {
 		} else {
 			$country = $request->country_name;
 			$location = $request->location;
-
+			$styles = $request->style_list;
+			/*
 			//in case uses click style tags fro iti card and send a single style tag search request
 			if (is_array($request->style_list) || is_null($request->style_list)) {
 				$styles = $request->input('style_list');
 			} else {
+				dd($request->input('style_list'));
 				$styles[] = $request->input('style_list');
-			}
+			}*/
 
 		}
-
 
 		$query = Itinerary::published(true)
 			->select('itineraries.*', 'cities.city', 'countries.country', 'travelstyles.style')
@@ -211,21 +212,25 @@ class ItineraryController extends Controller {
 
 			}
 		}
+
 		if ($country != 'any' && !is_null($country)) {
 			$query->where('countries.country', '=', $country);
 		}
 
 
 		if (!is_null($styles)) {
+
+
+
 			if (count($styles) == 1) {
-				$query->where('style', $styles[0]);
+				$query->where('style', 'like', '%' . $styles[0] . '%');
 			} else {
 				$query->where(function ($qu) use ($styles) {
 					foreach ($styles as $key => $style) {
 						if ($key == 0) {
-							$qu->where('style', $style);
+							$qu->where('style', 'like', '%' . $style . '%');
 						} else {
-							$qu->orWhere('style', $style);
+							$qu->orWhere('style', 'like', '%' . $style .'%');
 						}
 					}
 				});

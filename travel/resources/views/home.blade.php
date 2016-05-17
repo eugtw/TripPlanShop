@@ -145,7 +145,7 @@
 
 	</div><!-- container -->
 
-	@include('includes.home-search-mobile')
+		@include('includes.home-search-mobile')
 
 
 	<script>// This example displays an address form, using the autocomplete feature

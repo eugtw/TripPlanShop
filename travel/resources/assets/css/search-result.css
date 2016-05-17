@@ -12,12 +12,12 @@
 }
 #sr-searchbar select{
     text-indent: 20px;
-    width: 22.5%;
+    width: 180px;
     height: 50px;
     border: none;
 }
 #sr-searchbar .btn-group{
-    width: 22.5%;
+    width: 200px;
     height: 50px;
     position: relative;
     left: -4px;
@@ -31,7 +31,7 @@
     color: inherit;
 }
 #sr-searchbar #autocomplete{
-    width: 30%;
+    width: 230px;
     height: 50px;
     color: #565a5c;
     text-align: left;
@@ -45,10 +45,11 @@
     border-right: 1px solid #d2d2d2;
 }
 #sr-searchbar input[type=submit]{
-    width: 18%;
+    width: auto;
     margin-left: 10px;
     height: 50px;
-    font-size: 1em;
+    padding: 0 15px;
+    font-size: 12px;
     font-width: bold;
     color: #fff;
     background-color: #ff5a5f;

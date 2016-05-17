@@ -17,7 +17,7 @@
     {!! Form::label('intro', 'Day Intro', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::textarea('intro',null, ['placeholder' => 'breifly describe what happens in this day',
-        'class'=>'form-control editor', 'rows'=>'5', 'id'=>'intro']) !!}
+        'class'=>'form-control editor', 'rows'=>'5']) !!}
     </div>
 
     <!--

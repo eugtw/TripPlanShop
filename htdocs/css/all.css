@@ -708,7 +708,7 @@ i.fa{
     background-color: #ff5a5f;
     color: #fff;
     margin-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 0.9em;
     border-radius: 5px;
 }
@@ -910,7 +910,8 @@ i.fa{
 }
 /**************************************** day form edit ******************/
 #floating-panel{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 .day-photo-thumbs{
     width: 75px;
@@ -1137,8 +1138,10 @@ i.fa{
     padding: 7px 10px;
 }
 .itit-footer-button {
-    padding: 15px 50px;
-    min-width: 150px;
+    padding: 15px 20px;
+    min-width: 190px;
+    text-align: center;
+    margin-bottom: 10px;
 
 }
 .info-block-subtitle{
@@ -1215,6 +1218,11 @@ i.fa{
         left: 0;
     }
     */
+    .itit-footer-button {
+        display: block;
+        margin: 0 auto 10px auto;
+
+    }
     .itit-author{
         left: 0;
     }
@@ -2126,12 +2134,12 @@ div.jumbotron p{
 }
 #sr-searchbar select{
     text-indent: 20px;
-    width: 22.5%;
+    width: 180px;
     height: 50px;
     border: none;
 }
 #sr-searchbar .btn-group{
-    width: 22.5%;
+    width: 200px;
     height: 50px;
     position: relative;
     left: -4px;
@@ -2145,7 +2153,7 @@ div.jumbotron p{
     color: inherit;
 }
 #sr-searchbar #autocomplete{
-    width: 30%;
+    width: 230px;
     height: 50px;
     color: #565a5c;
     text-align: left;
@@ -2159,10 +2167,11 @@ div.jumbotron p{
     border-right: 1px solid #d2d2d2;
 }
 #sr-searchbar input[type=submit]{
-    width: 18%;
+    width: auto;
     margin-left: 10px;
     height: 50px;
-    font-size: 1em;
+    padding: 0 15px;
+    font-size: 12px;
     font-width: bold;
     color: #fff;
     background-color: #ff5a5f;

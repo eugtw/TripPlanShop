@@ -148,3 +148,9 @@ $('select.select2').each(function(){
 });
 
 
+//init ckeditor
+CKEDITOR.replaceAll( 'editor',{
+
+    uiColor : '#9AB8F3'
+});
+

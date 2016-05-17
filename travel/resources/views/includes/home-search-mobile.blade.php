@@ -6,7 +6,7 @@
                 {!! Form::open(['url'=>'itinerary-search','method'=>'GET']) !!}
                 <div class="form-group">
                     {!! Form::label('style_list_mobile', 'Style') !!}
-                    {!! Form::select('style_list_mobile[]', (['any'=>'any style'] +$travelStyles), 1,['id'=>'style_list_mobile', 'class'=>'form-control style_list_mobile', 'multiple'=>'multiple']) !!}
+                    {!! Form::select('style_list_mobile[]', $travelStyles, 1,['id'=>'style_list_mobile', 'class'=>'form-control style_list_mobile', 'multiple'=>'multiple']) !!}
                 </div>
                 <div class="form-group">
                     <label for="location_mobile">City</label>

@@ -16,7 +16,7 @@
                 <div class="clearfix"></div>
 
                 <div class="col-xs-12 col-sm-3">
-                    <image class="img-circle img-responsive" src="{{$user->profile->avatar==null  ? env('USER_AVATAR_PATH') . 'default_user.jpg' : $user->profile->avatar}}"></image>
+                    <image class="img-circle img-responsive" src="{{$user->profile->avatar==null  ? env('USER_AVATAR_PATH') . 'default_user.jpg' : $user->profile->avatar}}">
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <table class="table">

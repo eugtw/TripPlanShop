@@ -16,7 +16,7 @@
                             @endif
                         </span>
                         <span class="thumb pub-list-cell">
-                            <a href="{{ route('itinerary.show', $itinerary->slug) }}"><img class="" src="/{{ $itinerary->image_path }}"></a>
+                            <a href="{{ route('itinerary.show', $itinerary->slug) }}"><img class="" src="{{ asset($itinerary->image_path) }}"></a>
                         </span>
 
                         <span class="iti-pub-detail pub-list-cell">

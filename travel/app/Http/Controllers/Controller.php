@@ -14,7 +14,8 @@ abstract class Controller extends BaseController {
 	{
 		$exp = Experience::all()->sortBy('experience')->lists('experience','id');
 
-		$travelStyles = TravelStyle::all()->sortBy('style')->lists('style','id');
+		//for queries, name and value are the ame
+		$travelStyles = TravelStyle::all()->sortBy('style')->lists('style','style');
 		$travelCountries = \App\Country::all()->lists('country','country');
 		$travelCities = \App\City::all()->lists('city','city');
 

@@ -3,8 +3,8 @@
     <div id="gallery{{$day->day_num}}" style="display:none;">
 
         @foreach($day->photos as $photo)
-            <img alt="{{ $photo->name }}" src="/{{ $photo->photo_path }}"
-                 data-image="/{{ $photo->photo_path }}"
+            <img alt="{{ $photo->name }}" src="{{ asset($photo->photo_path) }}"
+                 data-image="{{ asset($photo->photo_path)  }}"
                  data-description="">
         @endforeach
 
