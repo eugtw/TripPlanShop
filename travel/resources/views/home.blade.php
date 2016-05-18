@@ -85,7 +85,7 @@
 			<div class="row">
 				@foreach($pop_styles as $key => $s)
 					<div class="col-sm-4 col-xs-12 top-buffer">
-						<a href="{{'/itinerary-search?style_list='.$s->style}}">
+						<a href="{{'/itinerary-search?' . http_build_query( ['style_list[]' => $s->style ])}}">
 							<div class="pop-style-dis-box" style="background-image: url('{{ env('SITE_IMAGE_PATH') . 'styles/' . strtolower($s->style) . '.jpg' }}')">
 
 								<div >

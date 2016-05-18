@@ -226,7 +226,7 @@ div.jumbotron p{
     max-width: 100%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     body{
         font-size: 14px;
     }

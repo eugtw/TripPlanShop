@@ -17,7 +17,9 @@ var bowerDir = './resources/assets/bower_dl/';
 elixir(function(mix) {
     mix
 
-        .stylesIn("resources/assets/css", null, "public/css/all.css")
+        .stylesIn("resources/assets/css", "public/css/all.css")
         .sass('app.scss');
 
+
+    mix.scriptsIn('resources/assets/js', 'public/js/app.js');
 });

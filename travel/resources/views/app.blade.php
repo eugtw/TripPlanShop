@@ -27,7 +27,6 @@
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -35,39 +34,19 @@
 	{{-- select2 --}}
 	<script src="/js/select2/select2.min.js"></script>
 
-	<!-- colorbox
-	<script src="{{ asset('/js/colorbox/jquery.colorbox.js') }}"></script>-->
-
 	<!-- matchHeight -->
 	<script src="{{ asset('/js/matchHeight/jquery.matchHeight.js') }}"></script>
-
-	<!-- dotdotdot
-	<script src="{{ asset('/js/dotdotdot/jquery.dotdotdot.js') }}"></script>-->
-
-	<!-- multiselect -->
-	<script src="/js/multiselect/bootstrap-multiselect.js"></script>
-
-
-	<!--
-	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}"></script>
-	<script src="{{ asset('/packages/barryvdh/elfinder/js/standalonepopup.js') }}">
-    //standalone elfinder
-</script>-->
-
 
 
 
 	<link href="/css/app.css" rel="stylesheet">
 	<link href="/css/all.css" rel="stylesheet">
+	<script src="/js/app.js"></script>
 
-	<!-- sticky navbar -->
-	<script src="{{ asset('js/sticky/jquery.sticky.js') }}"></script>
 
 	<!-- starr -->
 	<script src="{{ asset('/js/starrr.min.js')  }}"></script>
 
-	<!-- sweet alert -->
-	<script src="/js/sweetalert/sweetalert.min.js"></script>
 
 	<!-- swiper -->
 	<script src="/js/swiper/swiper.js"></script>
@@ -85,10 +64,6 @@
 
 	<link rel='stylesheet' href='/unitegallery/css/unite-gallery.css' type='text/css' />
 	<script type='text/javascript' src='/unitegallery/themes/grid/ug-theme-grid.js'></script>
-
-
-	<!-- responsive tabs-->
-	<script src="/js/ddslick/ddslick.js"></script>
 
 	<!-- Stripe -->
 	<script src="https://checkout.stripe.com/checkout.js"></script>

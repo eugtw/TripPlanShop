@@ -148,7 +148,7 @@
                     @foreach($itinerary->days as $day)
                         <li>
                             <span class="dayTitle">Day {{$day->day_num . ': '}}{{ $day->title }}</span>
-                            <div class="dayIntro shorten">{!! $day->intro !!}</div>
+                            <div class="dayIntro more">{{ strip_tags($day->intro) }}</div>
                         </li>
                     @endforeach
                 </ul>
@@ -282,22 +282,30 @@
     </script>
     <script>
         //shorten day summary in iti overview
-        var showChar = 256;
+        var showChar = 200;  // How many characters are shown by default
         var ellipsestext = "...";
-        var moretext = "See More";
-        var lesstext = "See Less";
-        $('.shorten').each(function () {
+        var moretext = "Show more >";
+        var lesstext = "Show less";
+
+
+        $('.more').each(function() {
             var content = $(this).html();
-            if (content.length > showChar) {
-                var show_content = content.substr(0, showChar);
-                var hide_content = content.substr(showChar, content.length - showChar);
-                var html = show_content + '<span class="moreelipses">' + ellipsestext + '</span><span class="remaining-content"><span>' + hide_content + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            if(content.length > showChar) {
+
+                var c = content.substr(0, showChar);
+                var h = content.substr(showChar, content.length - showChar);
+
+                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
                 $(this).html(html);
+
             }
+
         });
 
-        $(".morelink").click(function () {
-            if ($(this).hasClass("less")) {
+        $(".morelink").click(function(){
+            if($(this).hasClass("less")) {
                 $(this).removeClass("less");
                 $(this).html(moretext);
             } else {

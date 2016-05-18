@@ -291,7 +291,7 @@
     position: relative;
     left: 1px;
     padding: 0 0 0 5px;
-    width: 305px;
+    width: 300px;
     border: 0;
     border-right: 1px solid #c4cdd2;
     border-left: 1px solid #c4cdd2;
@@ -757,7 +757,7 @@ i.fa{
     font-size: 20px;
     letter-spacing: 0.1em;
 }
-.daySummary li{
+.daySummary>li{
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eeeeee;
@@ -770,10 +770,12 @@ i.fa{
 .daySummary .dayIntro{
     font-size: 14px;
 }
-.remaining-content span {
-    display:none;
+.morecontent span {
+    display: none;
 }
-
+.morelink {
+    display: block;
+}
 /*************** iti daily plan *********************/
 .placeMap{
     height: 250px;
@@ -1577,7 +1579,7 @@ div.jumbotron p{
     max-width: 100%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     body{
         font-size: 14px;
     }

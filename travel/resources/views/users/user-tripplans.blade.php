@@ -5,7 +5,7 @@
             <h1 class="col-xs-12 bottom-buffer top-buffer2">{{ $title }}</h1>
 
             @foreach($itineraries as $key => $itinerary)
-                <div class="col-sm-4 col-xs-12 iti_card bottom-buffer">
+                <div class="col-md-4 col-sm-6 col-xs-12 iti_card bottom-buffer">
                     <div class="pop-itit-container">
                         @include('itinerary.partial_ItineraryDisplay', ["is_preview"=>$is_preview, 'key'=>$key])
                     </div>

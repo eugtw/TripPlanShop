@@ -123,7 +123,7 @@ class Itinerary extends Model
      */
     public function getStylesListAttribute()
     {
-        return $this->styles->lists('id');
+        return $this->styles->lists('style');
     }
 
     /**

@@ -119,7 +119,7 @@ i.fa{
     font-size: 20px;
     letter-spacing: 0.1em;
 }
-.daySummary li{
+.daySummary>li{
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eeeeee;
@@ -132,10 +132,12 @@ i.fa{
 .daySummary .dayIntro{
     font-size: 14px;
 }
-.remaining-content span {
-    display:none;
+.morecontent span {
+    display: none;
 }
-
+.morelink {
+    display: block;
+}
 /*************** iti daily plan *********************/
 .placeMap{
     height: 250px;
