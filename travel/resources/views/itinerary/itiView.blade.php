@@ -9,6 +9,11 @@
     <meta property="og:site_name" content="TripPlanShop"/>
     <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
 @stop
+
+@section('snippet-data')
+    @include('includes.searchSnippets')
+@stop
+
 @section('content')
     <div id="iti-header" class="text-center"
          style = "background-image: url('{{ asset($itinerary->image_path) }}');">

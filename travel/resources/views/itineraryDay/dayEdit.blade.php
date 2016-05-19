@@ -279,11 +279,6 @@
 
 
 @section('js-bottom')
-
-
-
-
-
     {{-- dropzone x 2--}}
     <script>
         Dropzone.options.dayPhotosDropzone = {

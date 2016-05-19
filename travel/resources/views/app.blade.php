@@ -12,17 +12,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<!-- fav icon -->
-	<link rel="shortcut icon" href="{{ asset('images/site/favicon.ico') }}">
-
-
-	<!---->
-	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-
-
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- fav icon -->
+	<link rel="shortcut icon" href="{{ asset('images/site/favicon.ico') }}">
+
+	<!-- ckeditor -->
+	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -30,53 +28,24 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+	<!-- Stripe -->
+	<script src="https://checkout.stripe.com/checkout.js"></script>
 
-	{{-- select2 --}}
-	<script src="/js/select2/select2.min.js"></script>
+	<!-- unite gallery-->
+	<link rel='stylesheet' href='/unitegallery/css/unite-gallery.css' type='text/css' />
+	<script type='text/javascript' src='/unitegallery/themes/grid/ug-theme-grid.js'></script>
+	<script type='text/javascript' src='/unitegallery/js/unitegallery.min.js'></script>
 
-	<!-- matchHeight -->
-	<script src="{{ asset('/js/matchHeight/jquery.matchHeight.js') }}"></script>
-
-
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56874d094d1fe552" async="async"></script>
 
 	<link href="/css/app.css" rel="stylesheet">
 	<link href="/css/all.css" rel="stylesheet">
 	<script src="/js/app.js"></script>
 
 
-	<!-- starr -->
-	<script src="{{ asset('/js/starrr.min.js')  }}"></script>
-
-
-	<!-- swiper -->
-	<script src="/js/swiper/swiper.js"></script>
-	<script src="/js/swiper/swiper.jquery.js"></script>
-
-
-	<!-- dropzone -->
-	<script src="/js/dropzone/dropzone.js"></script>
-
-
-	<!-- unite gallery
-	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-	<link rel='stylesheet' href='/unitegallery/themes/default/ug-theme-default.css' type='text/css' />-->
-	<script type='text/javascript' src='/unitegallery/js/unitegallery.min.js'></script>
-
-	<link rel='stylesheet' href='/unitegallery/css/unite-gallery.css' type='text/css' />
-	<script type='text/javascript' src='/unitegallery/themes/grid/ug-theme-grid.js'></script>
-
-	<!-- Stripe -->
-	<script src="https://checkout.stripe.com/checkout.js"></script>
-
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56874d094d1fe552" async="async"></script>
-
-	<script>
-		jQuery(document).ready(function(){
-			jQuery("#sticky").sticky({topSpacing:0});
-		});
-	</script>
-
+	@include('includes.analyticsTracking')
+	@yield('snippet-data')
 	@yield('javascript-block')
 </head>
 <body data-spy="scroll" data-target="#sticky-nav">

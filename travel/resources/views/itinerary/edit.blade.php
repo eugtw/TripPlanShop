@@ -1,7 +1,6 @@
 @extends('app', ['Edit Trip Plan - TripPlanShop'])
 
 @section('javascript-block')
-    <script src="/js/select2/select2.min.js"></script>
 @stop
 
 @section('content')

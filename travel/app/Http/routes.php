@@ -58,6 +58,10 @@ Route::post('account/resent-activation', ['as'=>'auth.postResentActivation','use
 
 
 
+//example itinerary
+Route::get('itinerary/example/{itinerary}', ['as'=>'itinerary.showExample', 'uses' => 'ItineraryController@getItineraryExample']);
+
+
 //login required controllers
 Route::group(['middleware' => ['auth']], function()
 {
@@ -168,6 +172,3 @@ Route::get('auth/logout', ['as' => 'Auth\AuthController@getLogout', 'uses' => 'A
 
 //account activation link
 Route::get('account/activate/{token}', 'UsersController@activate');
-
-//example itinerary
-Route::get('promo/itinerary-example', ['uses' => 'ItineraryController@getItineraryExample']);

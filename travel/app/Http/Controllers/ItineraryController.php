@@ -370,14 +370,14 @@ class ItineraryController extends Controller {
 
 		return $city_ids;
 	}
-	public function getItineraryExample()
+	public function getItineraryExample(Itinerary $itinerary)
 	{
 
-		$iti = Itinerary::find(env('DEMO_ITIT_ID'));
+		//$iti = Itinerary::find(env('DEMO_ITIT_ID'));
 
 		return view('itinerary.itiView')
 		->with('is_preview', '1')
-		->withItinerary($iti);
+		->withItinerary($itinerary);
 	}
 	/**
 	 * Display the specified resource.

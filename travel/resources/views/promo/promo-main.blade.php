@@ -3,6 +3,7 @@
     <meta name="author" content="TripPlanShop">
     <meta name="description" content="Explore personalized trip plans by travel lovers. TripPlanShop is a marketplace for travel lovers to buy and sell trip plans around the world. Find the perfect travel itineraries that fit your styles.">
 @stop
+
 @section('meta-og')
     <meta property="og:url"                content="{{ url('/promo') }}">
     <meta property="og:type"               content="article">
@@ -11,8 +12,11 @@
     trip plans can save you time searching, so you can enjoy more during trips.' }}">
     <meta property="og:image"              content="http://tripplanshop.com/images/site/promo-mar-16.png">
     <meta property="og:site_name"           content=""/>
-    <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
+    <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}">
 @stop
+
+
+
 @section('content')
     <header class="text-center" id="pm-header">
         <a href="/promo"><img id="pm-logo" src="{{ env('SITE_IMAGE_PATH') . 'promo-logo.jpg' }}" alt="logo"></a>
@@ -70,7 +74,7 @@
 
                 <div class="col-md-5 col-sm-6 col-xs-12 top-buffer">
                     <div class="pm-intro-box">
-                        <a href="{{ url('/promo/itinerary-example') }}">
+                        <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">
                             <img src="{{ env('SITE_IMAGE_PATH') . 'promo-iti-card.jpg' }}">
                         </a>
 
@@ -96,7 +100,7 @@
                             Relax before your trip and enjoy more time during trips.
                         </p>
 
-                        <a href="{{ url('/promo/itinerary-example') }}">See our trip plan example</a>
+                        <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">See our trip plan example</a>
                         <div class="text-center top-buffer">
                             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactModal">
                                 Notify Me When Fully Open

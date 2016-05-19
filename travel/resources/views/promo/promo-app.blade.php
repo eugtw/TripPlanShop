@@ -8,6 +8,7 @@
     @yield('meta-description')
     @yield('meta-og')
 
+
     <meta name="keywords" content="tripplanshop, shop,travel, itinerary, trip, backpacking, vacation, getaway, tour, plan, planning, experience">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
