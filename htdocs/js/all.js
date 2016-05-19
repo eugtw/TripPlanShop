@@ -1,4 +1,7 @@
 
+
+jQuery("#sticky").sticky({topSpacing:0});
+
 $('form[data-delete]').on('submit', function(e){
     var form = $(this);
     var method = form.find('input[name="_method"]').val() || 'POST';
