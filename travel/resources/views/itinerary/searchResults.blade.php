@@ -1,4 +1,4 @@
-@extends('app', ['title'=>'Travel Itineraries Search: TripPlanShop'])
+@extends('app', ['title'=>($selected_location != '' ? $selected_location :'Any location') . ' trip plans - TripPlanShop'])
 
 @section('content')
     <div class="text-center">
