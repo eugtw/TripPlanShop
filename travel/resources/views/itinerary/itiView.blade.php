@@ -78,7 +78,7 @@
 
                 <hr class="">
 
-                <p class="itit-summary">{!! nl2br($itinerary->summary) !!}</p>
+                <div class="itit-summary">{!! $itinerary->summary !!}</div>
 
 
                 <h2 class="">Highlights</h2>

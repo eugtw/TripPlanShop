@@ -108,6 +108,9 @@ i.fa{
 #iti-overview a:hover{
     color: #fff;
 }
+#iti-overview .dayIntro a:hover{
+    color: #337ab7;
+}
 #iti-overview .buy-button sup{
     top: -4px;
     font-size: 60%;
@@ -272,6 +275,10 @@ i.fa{
     font-size: 1.1em;
     font-weight: bold;
     color: #565a5c;
+}
+.place-extra{
+    display: block;
+    margin-bottom: 5px;
 }
 /**************************************** day form edit ******************/
 #floating-panel{

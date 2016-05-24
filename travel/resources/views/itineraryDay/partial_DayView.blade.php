@@ -88,7 +88,7 @@
                             @foreach($day->places as $key => $place)
                                 <article id='day{{ $day->day_num }}-route{{($key)}}'  class="col-md-8 col-xs-12 day{{$day->day_num}}">
                                     <h3>{{ $place->place_title }}</h3>
-                                    <p class="place-extra">{{ $place->place_name_long }}</p>
+                                    <span class="place-extra">{{ $place->place_name_long }}</span>
 
 
                                     <div class="row">
@@ -126,32 +126,32 @@
                                     <div>
 
                                         <p class="route-detail-title">Intro</p>
-                                        <p>{!! $place->place_intro !!}</p>
+                                        <div>{!! $place->place_intro !!}</div>
 
 
                                         @if($place->to_do != '')
                                             <p class="route-detail-title">What to do</p>
-                                            <p>{!! $place->to_do !!}</p>
+                                            <div>{!! $place->to_do !!}</div>
                                         @endif
 
                                         @if($place->tips != '')
                                             <p class="route-detail-title">Tips</p>
-                                            <p>{!! $place->tips !!}</p>
+                                            <div>{!! $place->tips !!}</div>
                                         @endif
 
                                         @if($place->transportation != '')
                                             <p class="route-detail-title">Transportation</p>
-                                            <p>{!! $place->transportation !!}</p>
+                                            <div>{!! $place->transportation !!}</div>
                                         @endif
 
                                         @if($place->restaurants != '')
                                             <p class="route-detail-title">Restaurants nearby</p>
-                                            <p>{!! $place->restaurants !!}</p>
+                                            <div>{!! $place->restaurants !!}</div>
                                         @endif
 
                                         @if($place->info_links != '')
                                             <p class="route-detail-title">Info websites</p>
-                                            <p>{!! $place->info_links !!}</p>
+                                            <div>{!! $place->info_links !!}</div>
                                         @endif
                                     </div>
                                 </article>
