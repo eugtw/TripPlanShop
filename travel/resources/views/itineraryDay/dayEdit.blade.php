@@ -223,35 +223,35 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('to_do', 'What to do', ['class'=>'control-label']) !!}
+                                    {!! Form::label('to_do', 'What to do(optional)', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('to_do', null,
                                         ['placeholder' => 'what to do', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'to_do']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('tips', 'Helpful tips', ['class'=>'control-label']) !!}
+                                    {!! Form::label('tips', 'Helpful tips(optional)', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('tips', null,
                                         ['placeholder' => 'Helpful tips', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'tips']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('transportation', 'Transportation plan', ['class'=>'control-label']) !!}
+                                    {!! Form::label('transportation', 'Transportation plan(optional)', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('transportation', null,
                                         ['placeholder' => 'how to get to this place', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'transportation']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('restaurants', 'Nearby food/restaurants', ['class'=>'control-label']) !!}
+                                    {!! Form::label('restaurants', 'Nearby food/restaurants(optional)', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('restaurants', null,
                                         ['placeholder' => 'restaurants recommendation', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'restaurants']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('info_links', 'Info websites', ['class'=>'control-label']) !!}
+                                    {!! Form::label('info_links', 'Info websites(optional)', ['class'=>'control-label']) !!}
                                     <div class="">
                                         {!! Form::textarea('info_links', null,
                                         ['placeholder' => 'links for information', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'info_links']) !!}

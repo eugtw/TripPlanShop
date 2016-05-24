@@ -19,16 +19,19 @@
          style = "background-image: url('{{ asset($itinerary->image_path) }}');">
         <div class="overlay"></div>
 
-        <div class="content-container">
-            <h1>{{$itinerary->title}}</h1>
+        <div class="content-container container">
+            <div class="row">
+                <h1 class="col-xs-12 col-md-10 col-md-offset-1">{{$itinerary->title}}</h1>
 
-            <div>
-                <ul class="list-unstyled list-inline">
-                    @foreach($itinerary->styles as $style)
-                        <li class="style-tag">{{ $style->style }}</li>
-                    @endforeach
-                </ul>
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <ul class="list-unstyled list-inline">
+                        @foreach($itinerary->styles as $style)
+                            <li class="style-tag">{{ $style->style }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
+
 
             <span class="author-name">By {{$itinerary->authorName()}}</span>
 

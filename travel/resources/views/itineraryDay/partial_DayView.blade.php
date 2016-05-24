@@ -124,12 +124,20 @@
 
 
                                     <div>
+
                                         <p class="route-detail-title">Intro</p>
                                         <p>{!! $place->place_intro !!}</p>
-                                        <p class="route-detail-title">What to do</p>
-                                        <p>{!! $place->to_do !!}</p>
-                                        <p class="route-detail-title">Tips</p>
-                                        <p>{!! $place->tips !!}</p>
+
+
+                                        @if($place->to_do != '')
+                                            <p class="route-detail-title">What to do</p>
+                                            <p>{!! $place->to_do !!}</p>
+                                        @endif
+
+                                        @if($place->tips != '')
+                                            <p class="route-detail-title">Tips</p>
+                                            <p>{!! $place->tips !!}</p>
+                                        @endif
 
                                         @if($place->transportation != '')
                                             <p class="route-detail-title">Transportation</p>

@@ -17,7 +17,7 @@
             <div class="day-create-container text-center">
                 {!! Form::open(['route'=>'itinerary-day.create','method'=>'GET']) !!}
                 {!! Form::hidden('iti_id', Crypt::encrypt($itinerary->id)) !!}
-                {!! Form::submit('Add Day', ['class'=>'pv-footer-button btn-info']) !!}
+                {!! Form::submit('Add Day', ['class'=>'btn btn-primary']) !!}
                 {!! Form::close() !!}
             </div>
         @endif

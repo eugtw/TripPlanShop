@@ -4,6 +4,7 @@ i.fa{
 }
 .author-button{
     width: 100%;
+    max-width: 220px;
     padding: 6px 0;
     border: none;
     border-radius: 5px;

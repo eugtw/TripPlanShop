@@ -22,4 +22,8 @@ elixir(function(mix) {
 
 
     mix.scriptsIn('resources/assets/js', 'public/js/app.js');
+
+
+    mix.copy( "public/css", './../htdocs/css' );
+    mix.copy('public/js', './../htdocs/js');
 });

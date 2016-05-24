@@ -163,8 +163,8 @@ class ItiDayPlaceController extends Controller {
 			 'public_transit' => 'required',
 			 'experiences' => 'required',
 			 'place_intro' => 'required',
-			 'to_do' => 'required',
-			 'tips' => 'required',
+			 //'to_do' => 'required',
+			 //'tips' => 'required',
 		]);
 
 		return $v;

@@ -8,8 +8,7 @@
                                     data-imagesrc="/{{ $place->image_path }}"
                                     data-description=
                                 '<span class="dayplace-select-info"><i class="fa fa-map-marker" aria-hidden="true"></i><span  class="detail">{{ $place->place_name_short }}</span></span>
-                                <span class="dayplace-select-info"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                <span class="dayplace-select-info"><i class="fa fa-usd" aria-hidden="true"></i>{{ $place->price_range }}</span>'>
+                                <span class="dayplace-select-info"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span>'>
                                 {{$place->letterLabel() .' - '.  $place->place_title }}</option>
                         @endforeach
                     </select>
