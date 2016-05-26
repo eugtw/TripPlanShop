@@ -42,7 +42,7 @@ class ItineraryController extends Controller {
 					'purchase_price'=>$itinerary->price
 				]);
 
-			return redirect()->route('itinerary.show', $itinerary)->withMessage('Itinerary added to your list');
+			return redirect()->route('itinerary.show', $itinerary->slug)->withMessage('Itinerary added to your list');
 		}
 		else{
 			return back()->withErrors('cannot add itinerary');
@@ -250,6 +250,9 @@ class ItineraryController extends Controller {
 		if (is_null($styles)) {
 			$styles[] = $styles; //making $styles into an array
 		}
+
+		//dd($location);
+
 		return view('itinerary.searchResults')
 			->with('recentItineraries', $recentItineraries)
 			->withItineraries($itineraries)

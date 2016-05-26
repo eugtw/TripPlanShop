@@ -46,6 +46,7 @@
                         @endforeach
                     @else
                         <h1 class="page-header col-xs-12">No results</h1>
+                        <p class="col-xs-12">Try something else or check out recently published itineraries.</p>
                     @endif
                 </div>
 

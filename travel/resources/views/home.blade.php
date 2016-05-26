@@ -107,7 +107,7 @@
 
 			@foreach($pop_cities as $c)
 				<div class="top-buffer col-sm-4 col-xs-12">
-					<a class="" href="{{'/itinerary-search?country_name=any&location=Paris&style_list=any'.$c->city}}">
+					<a class="" href="{{'/itinerary-search?country_name=any&location='.$c->city}}">
 						<div class="pop-city-dis-box" style="background-image: url('{{ env('SITE_IMAGE_PATH') . 'cities/' . strtolower($c->city) . '.jpg' }}')">
 
 							<div>

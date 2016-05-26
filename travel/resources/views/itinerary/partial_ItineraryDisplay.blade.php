@@ -15,7 +15,7 @@
 
     <div class="col-xs-12">
         <div class="iti-card-title">
-            <a href="{{ route('itinerary.show',$itinerary->slug) }}">{{ $itinerary->title }}</a>
+            <a href="{{ route('itinerary.show',$itinerary->slug) }}">{{ ucwords($itinerary->title) }}</a>
         </div>
 
         <ul class="list-inline">

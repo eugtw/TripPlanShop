@@ -15,34 +15,33 @@
 
                 <div class="clearfix"></div>
 
-                <div class="col-xs-12 col-sm-3">
-                    <image class="img-circle img-responsive" src="{{$user->profile->avatar==null  ? env('USER_AVATAR_PATH') . 'default_user.jpg' : $user->profile->avatar}}">
+                <div class="profile-avatar">
+                    <img class="img-circle img-responsive" src="{{ $user->profile->avatar==null ? (env('USER_AVATAR_PATH') . 'default_user.jpg') : $user->profile->avatar}}">
                 </div>
-                <div class="col-xs-12 col-sm-9">
-                    <table class="table">
-                        <tr>
-                            <td>username:</td>
-                            <td>{{$user->name}}</td>
-                        </tr>
-                        @if($user->profile->blog_link != '' )
-                            <tr>
-                                <td>website:</td>
-                                <td><a href="{{url($user->profile->blog_link)}}" target="_blank">{{$user->profile->blog_link}}</a></td>
-                            </tr>
-                        @endif
-                        @if(Auth::check() && $user->stripe_active == 1 )
-                            <tr>
-                                <td>Contact email: </td>
-                                <td>{{$user->profile->contact_email}}</td>
-                            </tr>
-                        @endif
 
+                <table class="table">
+                    <tr>
+                        <td>username:</td>
+                        <td>{{$user->name}}</td>
+                    </tr>
+                    @if($user->profile->blog_link != '' )
                         <tr>
-                            <td>joined since: </td>
-                            <td>{{$user->created_at->toFormattedDateString()}}</td>
+                            <td>website:</td>
+                            <td><a href="http://{{ $user->profile->blog_link}}" target="_blank">{{$user->profile->blog_link}}</a></td>
                         </tr>
-                    </table>
-                </div>
+                    @endif
+                    @if(Auth::check() && $user->stripe_active == 1 )
+                        <tr>
+                            <td>Contact email: </td>
+                            <td>{{$user->profile->contact_email}}</td>
+                        </tr>
+                    @endif
+
+                    <tr>
+                        <td>joined since: </td>
+                        <td>{{$user->created_at->toFormattedDateString()}}</td>
+                    </tr>
+                </table>
             </div>
 
             <div class="clearfix"></div>

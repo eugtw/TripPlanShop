@@ -1,3 +1,10 @@
+.profile-avatar{
+    max-width: 120px;
+    margin: 10px 30px 20px 0;
+}
+.profile-avatar img{
+    width: 100%;
+}
 #pub-list-container{
     background-color: #ffffff;
     padding: 20px;
