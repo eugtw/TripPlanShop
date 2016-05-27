@@ -37,12 +37,14 @@ i.fa{
     text-transform: uppercase;
     font-size: 40px;
 }
-
+#iti-header .by-whom{
+    font-size: 1em;
+    color: #fff;
+}
 #iti-header .author-name{
-    display: block;
     font-family: "Charter BT W01 Roman","Georgia","serif";
     font-size: 30px;
-    text-transform: none;
+    text-transform: capitalize;
     letter-spacing: 1px;
     color: #ffffff;
 }
@@ -138,9 +140,6 @@ i.fa{
 }
 .morecontent span {
     display: none;
-}
-.morelink {
-    display: block;
 }
 /*************** iti daily plan *********************/
 .placeMap{

@@ -33,7 +33,7 @@
             </div>
 
 
-            <span class="author-name">By {{$itinerary->authorName()}}</span>
+            <span class="by-whom">planned by <span class="author-name"><i>{{$itinerary->authorName()}}</i></span></span>
 
             <div class="img-author">
                 <a href="{{ route('user.show', $itinerary->user) }}">
