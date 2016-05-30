@@ -90,6 +90,8 @@ $('form[data-confirm], button[data-confirm]').on('click', function(e) {
 
 
 //{{-- jquery tabs --}}
+
+
 $(document).ready(function(){
     $('ol.route-list').each(function(){
         // For each set of tabs, we want to keep track of
@@ -110,6 +112,9 @@ $(document).ready(function(){
 
         // Bind the click event handler
         $(this).on('click', 'a', function(e){
+
+
+
             // Make the old tab inactive.
             $active.removeClass('active');
             $content.hide();
@@ -129,10 +134,9 @@ $(document).ready(function(){
                 if(markers[id]){
                     maps[id].setCenter(markers[id].getPosition());
                 }
-               /* google.maps.event.trigger(window['map'+id], 'resize');
-                window['map'+id].setCenter(window['marker'+id].getPosition());*/
+                google.maps.event.trigger(window['map'+id], 'resize');
+                window['map'+id].setCenter(window['marker'+id].getPosition());
             }
-
 
             // Prevent the anchor's default click action
             e.preventDefault();
