@@ -52,7 +52,7 @@
                                             <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
                                             <span>
                                                 <div>
-                                                    <img class="" src="{{ asset($place->image_path) }}">
+                                                    <img class="place-nav-img" src="{{ asset($place->image_path) }}">
                                                     <div class="marker-table">
                                                         <div><span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span></div>
                                                         <div><span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $place->place_name_short }}</span></div>

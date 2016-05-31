@@ -7,9 +7,11 @@
 @section('content')
 
 
+
     <!-- days container -->
     <div class="container">
         <div class="row">
+
             <h2 class="page-header col-xs-12">About This Day</h2>
 
             <!-- day images dropzone -->
@@ -111,6 +113,7 @@
                     </ol>
 
                     <div class="col-md-8 col-xs-12">
+
                     @foreach($day->places as $key => $place)
                         <div id='day-route{{($key+1)}}' data-place-id = {{ $place->id }}>
 
@@ -275,6 +278,7 @@
         </div><!-- row -->
         <hr>
     </div><!-- container -->
+
 @stop
 
 
@@ -327,7 +331,15 @@
             $('div.placeMap').each( function() {
 
                 var pId = $(this).data('placeId');
-               setEachGoogleMap(pId);
+               /* console.log(pId);
+
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.397, lng: 150.644},
+                    scrollwheel: false,
+                    zoom: 8
+                });*/
+              setEachGoogleMap(pId);
             });
         }
 
@@ -355,10 +367,15 @@
                     draggable: true
                 });
 
-                google.maps.event.addListener(markers[pId], 'dragend', function() {
-                    //updateMarkerStatus('Drag ended');
-                    geoPosition(markers[pId].getPosition(), geocoder, pId);
-                });
+                (function(id){
+                    return function() {
+                        google.maps.event.addListener(markers[id], 'dragend', function() {
+                            //updateMarkerStatus('Drag ended');
+                            geoPosition(markers[id].getPosition(), geocoder, id);
+                        });
+                    }()
+                })(pId);
+
 
             }
         }

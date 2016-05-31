@@ -142,6 +142,10 @@ i.fa{
     display: none;
 }
 /*************** iti daily plan *********************/
+
+.iti-photo-thumbs{
+    width: 150px;
+}
 .placeMap{
     height: 250px;
 }
@@ -234,7 +238,7 @@ i.fa{
     height: 500px;
     padding-right: 0px;
 }
-.iti-route img{
+.iti-route .place-nav-img{
     float: left;
     margin: 5px 10px 0 0;
     width: 20%;

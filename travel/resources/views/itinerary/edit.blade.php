@@ -31,8 +31,8 @@
                 {{--show iti. cover img to remind poster if they want to change it! --}}
                 <div class="form-group">
                     {!! Form::label('', 'Current Cover Image: ', ['class'=>'col-sm-3 control-label']) !!}
-                    <div class="col-sm-5">
-                        <img class="img-responsive" src="/{{$itinerary->image_path}}">
+                    <div class="iti-photo-thumbs inline-block col-xs-12">
+                        <img class="thumbnail" src="{{ asset($itinerary->image_path) }}" alt="}}">
                     </div>
                 </div>
 
