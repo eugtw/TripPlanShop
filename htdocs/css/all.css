@@ -841,6 +841,11 @@ i.fa{
 .dayplace-select-info{
     margin-right: 10px;
 }
+.dayPlace .inner-wrap{
+    background-color: #efefef;
+    padding: 20px;
+    margin-right: 10px;
+}
 .marker-table{
     display: table;
 }
@@ -991,7 +996,6 @@ i.fa{
     .dayPlace  article{
         max-height: 400px;
         overflow: scroll;
-        padding-right:15px;
         overflow-y: scroll;
         overflow-x: hidden;
     }
