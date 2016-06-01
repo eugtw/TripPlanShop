@@ -50,7 +50,7 @@
 
                     </div>
                 </div>
-                <div class="iti-route col-md-4 col-sm-5 col-xs-12">
+                <div class="iti-route bottom-buffer  col-md-4 col-sm-5 col-xs-12">
                     <ol class="route-list list-unstyled">
                         @foreach($day->places as $key => $place)
 
