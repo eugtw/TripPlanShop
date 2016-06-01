@@ -101,7 +101,7 @@ class ItiDayController extends Controller {
 		$itiDay = ItiDay::find($request->day_id);
 		$itinerary = Itinerary::find($itiDay->itinerary_id);
 
-		$photo = ItiDayPhoto::makePhoto($request->file('image'), $itinerary->getRouteKey());
+		$photo = ItiDayPhoto::makePhoto(1000, $request->file('image'), $itinerary->getRouteKey());
 
 
 

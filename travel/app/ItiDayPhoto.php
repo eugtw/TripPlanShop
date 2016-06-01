@@ -17,7 +17,7 @@ class ItiDayPhoto extends Model {
         return $this->belongsTo('App\ItiDay');
     }
 
-    public static function makePhoto(UploadedFile $file, $folderName, $namePrefix = '')
+    public static function makePhoto($size,UploadedFile $file, $folderName, $namePrefix = '')
     {
         $photo = new static;
 
@@ -39,7 +39,7 @@ class ItiDayPhoto extends Model {
         $photo->name = $file->getClientOriginalName();
 
 
-        $newPhoto = Image::make($photo->photo_path)->resize(2000, null, function ($constraint) {
+        $newPhoto = Image::make($photo->photo_path)->resize($size, null, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });

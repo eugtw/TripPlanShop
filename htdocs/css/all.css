@@ -829,12 +829,12 @@ i.fa{
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 7px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(51, 122, 183, 0.98);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
@@ -980,6 +980,9 @@ i.fa{
     }
     .dayMap{
         max-height: 300px;
+    }
+    .dayMapCont{
+        padding-right: 30px;
     }
     .dayPlace{
 

@@ -74,7 +74,7 @@
                 </div>
 
                 <!-- ifrom div for googleMap -->
-                <div class="col-md-8 col-sm-7 col-xs-12">
+                <div class="col-md-8 col-sm-7 col-xs-12 dayMapCont">
                     <div id="day-{{$day->day_num}}-map" class="dayMap"
                          data-dayid="{{ $day->day_num }}"
                          data-places="{{ $day->places }}">

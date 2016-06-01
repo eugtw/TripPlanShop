@@ -630,7 +630,7 @@ class ItineraryController extends Controller {
 
 		}
 
-		$photo = ItiDayPhoto::makePhoto($request->file('iti_image'), $itinerary->getRouteKey(), 'cover-');
+		$photo = ItiDayPhoto::makePhoto('1800', $request->file('iti_image'), $itinerary->getRouteKey(), 'cover-');
 
 		$itinerary->image_path = $photo->photo_path;
 		$itinerary->save();

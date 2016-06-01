@@ -23,7 +23,7 @@ class ItiDayPlaceController extends Controller {
 		$itiDay = ItiDay::find($request->day_id);
 		$itinerary = Itinerary::find($itiDay->itinerary_id);
 
-		$photo = ItiDayPhoto::makePhoto($request->file('place_image'), $itinerary->getRouteKey(), 'place_');
+		$photo = ItiDayPhoto::makePhoto(300, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
 
 		if($request->place_id == 'new')
 		{
