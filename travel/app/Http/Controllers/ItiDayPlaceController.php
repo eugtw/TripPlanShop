@@ -135,7 +135,6 @@ class ItiDayPlaceController extends Controller {
 
 		$data = $request->all();
 		$data['experiences'] = implode(',', $request->experiences);
-
 		ItiDayPlace::find($place->id)->update($data);
 
 		//return redirect()->back();

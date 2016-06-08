@@ -57,7 +57,7 @@
 
             {!! Form::hidden('day_num', $day->num) !!}
 
-            @include('itineraryDay.partial_DayForm', ['SubmitButtonText' => 'Save Changes'])
+            @include('itineraryDay.partial_DayForm', ['SubmitButtonText' => 'Save'])
 
             {!! Form::close() !!}
 
@@ -69,7 +69,7 @@
             <div class="iti-route">
                 <div class="row">
                     <h3 class="col-xs-12">Places to visit in this day</h3>
-                    <ol class="route-list col-md-4 col-xs-12 list-unstyled">
+                    <ol class="route-list col-md-4 col-xs-12 list-unstyled dayPlaceEdit">
                         @foreach($day->places as $key => $place)
 
                         <li>
@@ -78,23 +78,30 @@
                                 'route' => ['itinerary-day.day-place.destroy',
                                 $place], 'method' => 'DELETE']) !!}
 
-                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
                             {!! Form::close() !!}
 
                             <a href='#day-route{{($key+1)}}'>
-                                <span class="route-letter">{{($key+1)}} </span>
                                 <span class="route-item">
-                                    {{ $place->place_title }}
-
-                                    <div class="marker-table">
-                                        <span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $place->place_name_short }}</span>
-                                        <div><span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span></div>
-                                    </div>
-                                    <div>
-                                        @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                        <span class="route-item-exp">{{$exp}}</span>
-                                        @endforeach
-                                    </div>
+                                    <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
+                                    <span>
+                                        <div>
+                                            @if( $place->image_path == '')
+                                                <img class="place-nav-img" src="{{ $place->photo_ref_google }}">
+                                            @else
+                                                <img class="place-nav-img" src="{{ asset($place->image_path) }}">
+                                            @endif
+                                            <div class="marker-table">
+                                                <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
+                                                <div>
+                                                            <span class="route-item-exp">
+                                                            @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                                    <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
+                                                                @endforeach
+                                                        </span></div>
+                                            </div>
+                                        </div>
+                                    </span>
                                 </span>
                             </a>
                         </li>
@@ -112,7 +119,7 @@
                         </li>
                     </ol>
 
-                    <div class="col-md-8 col-xs-12">
+                    <div class="col-md-8 col-xs-12 dayPlaceEdit">
 
                     @foreach($day->places as $key => $place)
                         <div id='day-route{{($key+1)}}' data-place-id = {{ $place->id }}>
@@ -154,40 +161,44 @@
                             {!! Form::text('loc_lat', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-lat']) !!}
                             {!! Form::label('loc_lng', null, ['class'=>'sr-only']) !!}
                             {!! Form::text('loc_lng', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-lng']) !!}
-                            {!! Form::label('place_name_short', null, ['class'=>'sr-only']) !!}
-                            {!! Form::text('place_name_short', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-name-short']) !!}
-                            {!! Form::label('place_name_long', null, ['class'=>'sr-only']) !!}
-                            {!! Form::text('place_name_long', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-name-long']) !!}
-
-                            <div class="form-group top-buffer">
-                                {!! Form::label('place_title', 'Title', ['class'=>'control-label']) !!}
-                                <div class="">
-                                    {!! Form::text('place_title', null, ['placeholder' => 'Place Title','class'=>'form-control', 'required']) !!}
-                                </div>
-                            </div>
+                            {!! Form::label('place_address', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('place_address', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-formatted_address']) !!}
+                            {!! Form::label('website', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('website', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-website']) !!}
+                            {!! Form::label('photo_ref_google', null, ['class'=>'sr-only']) !!}
+                            {!! Form::text('photo_ref_google', null, ['hidden'=>'hidden', 'id' => 'place-'.$place->id.'-photo_ref_google']) !!}
 
                             <div class="row">
 
                                 <ul class="route-detail-table list-unstyled">
                                     <li class="col-xs-12">
                                         <div class="form-group row">
-                                            {!! Form::label('time_to_visit', 'time to visit', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('place_title', 'Title', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
+                                                {!! Form::text('place_title', null, ['placeholder' => 'Place Title','class'=>'form-control', 'required']) !!}
                                             </div>
                                         </div>
                                     </li>
                                     <li class="col-xs-12">
                                         <div class="form-group row">
-                                            {!! Form::label('business_hours', 'business hours', ['class'=>'control-label col-xs-4']) !!}
+                                            {!! Form::label('business_hours', 'Business hours', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
+                                                {!! Form::textarea('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required', "maxlength"=>"20", 'data-place-id' => $place->id]) !!}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr class="col-xs-12">
+                                    <li class="col-xs-12">
+                                        <div class="form-group row">
+                                            {!! Form::label('time_to_visit', 'Best time to visit', ['class'=>'control-label col-xs-4', ]) !!}
+                                            <div class="col-xs-8">
+                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
                                     <li  class="col-xs-12">
                                         <div class="form-group row">
-                                            {!! Form::label('duration', 'duration', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('duration', 'Duration', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::select('duration', $duration, null, ['placeholder' => 'eg: 3 hours','class'=>'form-control', 'required']) !!}
                                             </div>
@@ -195,7 +206,7 @@
                                     </li>
                                     <li  class="col-xs-12">
                                         <div class="form-group row">
-                                            {!! Form::label('public_transit', 'public transportation', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('public_transit', 'Suggested transportation', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::select('public_transit', $transit_methods,  null, ['placeholder' => 'eg: yes/no','class'=>'form-control', 'required']) !!}
                                             </div>
@@ -204,7 +215,7 @@
                                     <div class="clearfix"></div>
                                     <li  class="col-xs-12">
                                         <div class="form-group row">
-                                            {!! Form::label('experiences', 'experiences', ['class'=>'control-label col-xs-4', ]) !!}
+                                            {!! Form::label('experiences', 'Experiences', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
 
                                                 {!! Form::select('experiences[]', $experiences, null,
@@ -262,7 +273,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="top-buffer">
-                                        {!! Form::submit('Save Changes', ['class'=>'btn itit-footer-button btn-primary']) !!}
+                                        {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary']) !!}
                                         <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Overview</a>
                                     </div>
                                 </div>
@@ -289,6 +300,7 @@
             paramName: "image", // The name that will be used to transfer the file
             maxFilesize: 15, // MB,
             acceptedFiles: '.jpg, .jpeg, .png',
+            dictDefaultMessage: 'Drop images for this day\'s gallery',
             //addRemoveLinks: true,
             init: function(file) {
                 this.on("queuecomplete", function() {
@@ -304,6 +316,7 @@
             paramName: "place_image", // The name that will be used to transfer the file
             maxFilesize: 15, // MB
             acceptedFiles: '.jpg, .jpeg, .png',
+            dictDefaultMessage: 'Drop an image for this place or Google image will be used',
             init: function() {
                 this.on("queuecomplete", function() {
                     location.reload();
@@ -312,170 +325,9 @@
         };
     </script>
 
-
-
-    {{-- map  --}}
-    <script>
-        var maps = [];
-        var markers = [];
-        var componentForm = {
-            street_number: 'short_name',
-            route: 'long_name',
-            locality: 'long_name'
-            //administrative_area_level_1: 'short_name',
-            //country: 'long_name',
-            //postal_code: 'short_name'
-        };
-
-        function setMaps(){
-            $('div.placeMap').each( function() {
-
-                var pId = $(this).data('placeId');
-               /* console.log(pId);
-
-
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -34.397, lng: 150.644},
-                    scrollwheel: false,
-                    zoom: 8
-                });*/
-              setEachGoogleMap(pId);
-            });
-        }
-
-        function setEachGoogleMap(pId){
-            var default_location = {lat: 59.327, lng: 18.067};
-            var LngLat = default_location;
-            var loc_lat = $('#place-' + pId + '-lat').val();
-            var loc_lng = $('#place-' + pId + '-lng').val();
-
-            if(loc_lat != '' && loc_lng != '')
-            {
-                LngLat = new google.maps.LatLng(loc_lat, loc_lng);
-            }
-
-            var geocoder = new google.maps.Geocoder();
-
-            maps[pId] = initMap(pId, LngLat, geocoder);
-
-            if(loc_lat != '' && loc_lng != '')
-            {
-                markers[pId] = new google.maps.Marker({
-                    animation: google.maps.Animation.DROP,
-                    position: LngLat,
-                    map: maps[pId],
-                    draggable: true
-                });
-
-                (function(id){
-                    return function() {
-                        google.maps.event.addListener(markers[id], 'dragend', function() {
-                            //updateMarkerStatus('Drag ended');
-                            geoPosition(markers[id].getPosition(), geocoder, id);
-                        });
-                    }()
-                })(pId);
-
-
-            }
-        }
-
-        function initMap(pId, center, geocoder){
-            var newMap = new google.maps.Map(document.getElementById('place-' + pId + '-Map'), {
-                zoom: 13,
-                scrollwheel: true,
-                scaleControl: true,
-                center: center
-
-            });
-            var input = /** @type {!HTMLInputElement} */(
-                    document.getElementById('place-' + pId + '-address'));
-            var autocomplete = new google.maps.places.Autocomplete(input);
-            autocomplete.bindTo('bounds', newMap);
-            var infowindow = new google.maps.InfoWindow();
-            autocomplete.addListener('place_changed', function() {
-                infowindow.close();
-
-            });
-
-            document.getElementById('place-' + pId + '-submit').addEventListener('click', function () {
-                geoAddress(geocoder, newMap, pId);
-            });
-           return newMap;
-        }
-
-        function geoPosition(pos, geocoder, placeId) {
-            geocoder.geocode({
-                latLng: pos
-            }, function(responses) {
-                if (responses && responses.length > 0) {
-                    updateInputs(placeId, responses);
-
-                } else {
-                    // updateMarkerAddress('Cannot determine address at this location.');
-                }
-            });
-        }
-
-        function geoAddress(geocoder, resultsMap, placeId) {
-            var address = document.getElementById('place-'+placeId+'-address').value;
-            geocoder.geocode({'address': address}, function(results, status) {
-                if (status === google.maps.GeocoderStatus.OK) {
-
-                    placeMarker(results[0].geometry.location, resultsMap, placeId, geocoder);
-                    updateInputs(placeId, results);
-
-                } else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                }
-            });
-        }
-
-        function placeMarker(location, map, placeId, geocoder) {
-            if ( markers[placeId] ) {
-                //if marker already was created change positon
-                markers[placeId].setPosition(location);
-            } else {
-                //create a marker
-                markers[placeId] = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    draggable: true
-                });
-
-                google.maps.event.addListener(markers[placeId], 'dragend', function() {
-                    //updateMarkerStatus('Drag ended');
-                    geoPosition(markers[placeId].getPosition(), geocoder, placeId);
-                });
-            }
-            map.setCenter(markers[placeId].getPosition());
-        }
-
-        function updateInputs(placeId, responses){
-            var address_short = '';
-
-            for( var i = 0; i < responses[0].address_components.length; i++) {
-                var addressType = responses[0].address_components[i].types[0];
-                if( componentForm[addressType]) {
-                    if( i == 0){
-                        address_short = responses[0].address_components[i][componentForm[addressType]]
-                    }else{
-                        address_short = address_short + ' ' + responses[0].address_components[i][componentForm[addressType]];
-                    }
-                }
-            }
-            $('#place-' + placeId + '-address').val(responses[0].formatted_address);
-            $('#place-' + placeId + '-lat').val(responses[0].geometry.location.lat());
-            $('#place-' + placeId + '-lng').val(responses[0].geometry.location.lng());
-            $('#place-' + placeId + '-name-short').val(address_short);
-            $('#place-' + placeId + '-name-long').val(responses[0].formatted_address);
-
-            //alert(address_short);
-        }
-
-    </script>
     <script
-            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&libraries=places&callback=setMaps">
+            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&libraries=places">
     </script>
-
 @stop
+
+

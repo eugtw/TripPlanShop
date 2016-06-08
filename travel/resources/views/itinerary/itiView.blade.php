@@ -401,11 +401,14 @@
                     window['map' + id].fitBounds(window['bounds' + id]);
 
 
+                    var title = loc[i].place_title != '' ? loc[i].place_title : "n/a";
+                    var name = loc[i].place_address != '' ? loc[i].place_address : "n/a";
+                    var duration = loc[i].duration != '' ? loc[i].duration : "n/a";
                     contentString[i] = '<div class="placeMarker">' +
-                                        '<p class="title">' + loc[i].place_title + '</p>' +
+                                        '<p class="title">' + title + '</p>' +
                                         '<ul class="list-unstyled">'+
-                                        '<li><i class="fa fa-map-marker" aria-hidden="true"></i>' + loc[i].place_name_short + '</li>' +
-                                        '<li><i class="fa fa-clock-o" aria-hidden="true"></i>' + loc[i].duration + '<li>' +
+                                        '<li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>' + name + '</li>' +
+                                        '<li><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>' + duration + '<li>' +
                                         '</ul>'+
                                         '</div>';
 
@@ -415,9 +418,11 @@
 
                     (function(j){
                         return function() {
-                            marker[j].addListener('click', function() {
-                                infowindow[j].open(window['map' + id], marker[j]);
-                            });
+                            if(marker[j]) {
+                                marker[j].addListener('click', function() {
+                                    infowindow[j].open(window['map' + id], marker[j]);
+                                });
+                            }
                         }()
                     })(i);
                 }

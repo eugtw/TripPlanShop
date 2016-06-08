@@ -109,6 +109,10 @@ $(document).ready(function(){
         $links.not($active).each(function () {
             $(this.hash).hide();
         });
+        var id = $($active[0].hash).data('placeId');
+        if(id){
+            initPlaceMap(id);
+        }
 
         // Bind the click event handler
         $(this).on('click', 'a', function(e){
@@ -130,19 +134,184 @@ $(document).ready(function(){
             //id passed in from dayEdit page
             var id = $(this.hash).data('placeId');
             if(id){
-                google.maps.event.trigger(maps[id], 'resize');
-                if(markers[id]){
-                    maps[id].setCenter(markers[id].getPosition());
-                }
-                google.maps.event.trigger(window['map'+id], 'resize');
-                window['map'+id].setCenter(window['marker'+id].getPosition());
+                initPlaceMap(id);
             }
 
             // Prevent the anchor's default click action
             e.preventDefault();
         });
     });
+
+
 });
+
+
+function initPlaceMap(pId) {
+    var marker;
+    var default_location = {lat: 59.327, lng: 18.067};
+    var LngLat = default_location;
+    var loc_lat = $('#place-' + pId + '-lat').val();
+    var loc_lng = $('#place-' + pId + '-lng').val();
+
+    if(loc_lat != '' && loc_lng != '')
+    {
+        LngLat = new google.maps.LatLng(loc_lat, loc_lng);
+    }
+
+    var map = new google.maps.Map(document.getElementById('place-' + pId + '-Map'), {
+        zoom: 13,
+        scrollwheel: true,
+        scaleControl: true,
+        center: LngLat
+
+    });
+
+    var geocoder = new google.maps.Geocoder();
+
+
+
+    if(loc_lat != '' && loc_lng != '')
+    {
+        marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
+            position: LngLat,
+            map: map,
+            draggable: true
+        });
+
+        (function(id){
+            return function() {
+                google.maps.event.addListener(marker, 'dragend', function() {
+                    //updateMarkerStatus('Drag ended');
+                    geoPosition(marker.getPosition(), geocoder, id);
+                });
+            }()
+        })(pId);
+    }
+
+
+    setMapListener(pId, map, marker);
+}
+function setMapListener(pId, map, marker){
+
+    var input = /** @type {!HTMLInputElement} */(
+        document.getElementById('place-' + pId + '-addressBar'));
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+
+    var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+
+    autocomplete.addListener('place_changed', function() {
+        infowindow.close();
+        var place = autocomplete.getPlace();
+        service.getDetails({
+            placeId: place.place_id
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+                if ( marker ) {
+                    //if marker already was created change positon
+                    marker.setPosition(place.geometry.location);
+                } else {
+                    //create a marker
+                    marker = new google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map
+                        //draggable: true
+                    });
+                }
+                map.setCenter(marker.getPosition());
+
+                //update form
+                updateInputs(pId, place);
+
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(
+                        '<div class="placeMarker">' +
+                        '<p class="title">' + place.name + '</p>' +
+                        '<ul class="list-unstyled">'+
+                        '<li><i class="fa fa-map-marker" aria-hidden="true"></i>' + place.formatted_address + '</li>' +
+                        '</ul>'+
+                        '</div>'
+                    );
+                    infowindow.open(map, this);
+                });
+            }
+        });
+    });
+}
+function updateInputs(placeId, place){
+    //var address_short = '';
+
+    $('#place-' + placeId + '-addressBar').val(place.formatted_address);
+    $('#place-' + placeId + '-lat').val(place.geometry.location.lat());
+    $('#place-' + placeId + '-lng').val(place.geometry.location.lng());
+    //$('#place-' + placeId + '-name-short').val(address_short);
+    $('#place-' + placeId + '-formatted_address').val(place.formatted_address);
+    $('#place-' + placeId + '-website').val(place.website);
+    $('#place-' + placeId + '-photo_ref_google').val(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
+
+    //console.log(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
+
+    $('div[data-place-id="'+placeId+'"] #place_title').val(place.name);
+
+    var open_hours;
+
+    try {
+        open_hours = place.opening_hours.weekday_text.join(", ");
+    } catch(e) {
+        open_hours = "N/A";
+    }
+
+    $('div[data-place-id="'+placeId+'"] #business_hours').val(open_hours);
+/*
+    var open_hours = [];
+    for( var i = 0; i < 7; i++) {
+        try {
+
+            open_hours[i] = place.opening_hours.weekday_text[i];
+        } catch(e) {
+            switch(i) {
+                case 0:
+                    open_hours[i] = "Sunday: N/A";
+                    break;
+                case 1:
+                    open_hours[i] = "Monday: N/A";
+                    break;
+                case 2:
+                    open_hours[i] = "Tuesday: N/A";
+                    break;
+                case 3:
+                    open_hours[i] = "Wednesday: N/A";
+                    break;
+                case 4:
+                    open_hours[i] = "Thursday: N/A";
+                    break;
+                case 5:
+                    open_hours[i] = "Friday: N/A";
+                    break;
+                case 6:
+                    open_hours[i] = "Saturday: N/A";
+                    break;
+            }
+        }
+    }
+
+    $('div[data-place-id="'+placeId+'"] #business_hours').val(
+        open_hours[0] + "" +
+        open_hours[1] + "\n" +
+        open_hours[2] + "\n" +
+        open_hours[3] + "\n" +
+        open_hours[4] + "\n" +
+        open_hours[5] + "\n" +
+        open_hours[6]
+    );
+*/
+
+}
 
 
 

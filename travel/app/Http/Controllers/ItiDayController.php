@@ -25,7 +25,13 @@ class ItiDayController extends Controller {
 	public function edit(ItiDay $day)
 	{
 		//$exp = Experience::all()->sortBy('experience')->lists('experience','id');
-		$transit_methods = ['Yes' => 'Yes', 'No' => 'No'];
+		$transit_methods = [
+			'Car' => 'Car',
+			'Public transit' => 'Public transit',
+			'Walk' => 'Walk',
+			'Any'
+		];
+
 		$duration = ['less than 1 hour' => 'less than 1 hour',
 		  			 '1 - 2 hours' => '1 - 2 hours',
 					 '2 - 4 hours' => '2 - 4 hours',

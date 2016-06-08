@@ -43,13 +43,18 @@
             <div class="top-buffer">
                 <h3 class="col-xs-12">Places to visit in this day</h3>
                 <!-- ifrom div for googleMap -->
-                <div class="bottom-buffer col-md-8 col-sm-7 col-xs-12 dayMapCont">
+                <div class="bottom-buffer col-xs-12 dayMapCont">
                     <div id="day-{{$day->day_num}}-map" class="dayMap"
                          data-dayid="{{ $day->day_num }}"
                          data-places="{{ $day->places }}">
 
                     </div>
                 </div>
+            </div>
+
+
+            <!-- day places id="day-route"-->
+            <div>
                 <div class="iti-route bottom-buffer  col-md-4 col-sm-5 col-xs-12">
                     <ol class="route-list list-unstyled">
                         @foreach($day->places as $key => $place)
@@ -60,18 +65,23 @@
                                             <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
                                             <span>
                                                 <div>
-                                                    <img class="place-nav-img" src="{{ asset($place->image_path) }}">
+                                                    @if( $place->image_path == '')
+                                                        <img class="place-nav-img" src="{{ $place->photo_ref_google }}">
+                                                    @else
+                                                        <img class="place-nav-img" src="{{ asset($place->image_path) }}">
+                                                    @endif
+
                                                     <div class="marker-table">
-                                                        <div><span class="route-extra"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ $place->duration }}</span></div>
-                                                        <div><span class="route-extra"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $place->place_name_short }}</span></div>
+                                                        <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
+                                                        <div>
+                                                            <span class="route-item-exp">
+                                                            @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                                    <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
+                                                                @endforeach
+                                                        </span></div>
                                                     </div>
                                                 </div>
 
-                                            <div class="route-item-exp">
-                                                @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                                    <span><i class="fa fa-hashtag" aria-hidden="true"></i>{{$exp}}</span>
-                                                @endforeach
-                                            </div>
                                         </span>
                                     </span>
                                 </a>
@@ -80,54 +90,83 @@
                         @endforeach
                     </ol>
                 </div>
-
-
-            </div>
-
-
-            <!-- day places id="day-route"-->
-            <div class="col-md-8 col-xs-12 dayPlace">
+                <div class=" col-md-8 col-sm-7 col-xs-12 col-xs-12 dayPlace">
                     @foreach($day->places as $key => $place)
                         <article id='day{{ $day->day_num }}-route{{($key)}}'  class="day{{$day->day_num}}">
                             <div class="inner-wrap">
                                 <h3>{{ $place->place_title }}</h3>
-                                <span class="place-extra">{{ $place->place_name_long }}</span>
 
+                                @if( $place->image_path == '')
+                                    <div class="photo" style="background-image: url(' {{ $place->photo_ref_google }} ');"></div>
+                                @else
+                                    <div class="photo" style="background-image: url(' {{ asset($place->image_path) }} ');"></div>
+                                @endif
 
                                 <div class="row">
-                                    <img class="col-sm-4" src="/{{ $place->image_path }}">
-                                    <ul class="route-detail-table list-unstyled col-sm-8 col-xs-12">
-                                        <li>
-                                            time to visit
-                                            <span class="pull-right">{{ $place->time_to_visit }}</span>
-                                        </li>
-                                        <li>
-                                            business hours
-                                            <span class="pull-right">{{ $place->business_hours }}</span>
-                                        </li>
-                                        <li>
-                                            duration
-                                            <span class="pull-right">{{ $place->duration }}</span>
-                                        </li>
-                                        <li>
-                                            public transportation
-                                            <span class="pull-right">{{ $place->public_transit }}</span>
-                                        </li>
-                                        <li>
-                                            category
-                                            <div class="pull-right route-item-exp">
-                                                @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                                    <span class=""><i class="fa fa-hashtag" aria-hidden="true"></i>{{$exp}}</span>
-                                                @endforeach
-                                            </div>
+                                    <div class="col-xs-12">
+                                        <ul class="list-unstyled summary-list">
 
-                                        </li>
-                                    </ul>
+                                            @if($place->place_name_long != '')
+                                            <li>
+                                                <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
+                                                <div class="name">{{ $place->place_name_long }}</div>
+                                            </li>
+                                            @endif
+
+                                            @if($place->website != '')
+                                            <li>
+                                                <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                                                <div class="web-link"><a target="_blank" href="{{ $place->website }}">{{ $place->website }}</a></div>
+                                            </li>
+                                            @endif
+
+                                            @if($place->business_hours != '')
+                                            <li>
+                                                <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+                                                <ul class="list-unstyled business_hours">
+                                                    @foreach( explode(',', $place->business_hours) as $h)
+                                                        <li class="">
+                                                            {{ $h  }}
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                            @endif
+                                        </ul>
+                                        <table class="table table-hover table-condensed bottom-buffer">
+                                            <tbody>
+                                            <tr>
+                                                <td>best time to visit</td>
+                                                <td class="text-right">{{ $place->time_to_visit }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>duration</td>
+                                                <td class="text-right">{{ $place->duration }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>suggested transportation</td>
+                                                <td  class="text-right">{{ $place->public_transit }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>category</td>
+                                                <td  class="text-right">
+                                                    <div class=" route-item-exp">
+                                                        @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                            <i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}
+                                                        @endforeach
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+
                                 </div>
 
 
                                 <div>
-
                                     <p class="route-detail-title">Intro</p>
                                     <div>{!! $place->place_intro !!}</div>
 
@@ -161,7 +200,9 @@
 
                         </article>
                     @endforeach
+                </div>
             </div>
+
 
 
         </div>
