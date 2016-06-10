@@ -682,7 +682,6 @@ i.fa{
 #iti-header .author-name{
     font-family: "Charter BT W01 Roman","Georgia","serif";
     font-size: 30px;
-    text-transform: capitalize;
     letter-spacing: 1px;
     color: #ffffff;
 }
@@ -745,7 +744,7 @@ i.fa{
     font-size: 1em;
     font-weight: bold;
 }
-#iti-overview a:hover{
+#iti-header a:hover{
     color: #fff;
 }
 #iti-overview .dayIntro a:hover{
@@ -855,21 +854,23 @@ i.fa{
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 7px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(51, 122, 183, 0.98);
+    background-color: rgba(175, 223, 250, 0.98);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 .dayplace-select-info{
     margin-right: 10px;
 }
+
+.dayPlaceNav ol,
 .dayPlace  article,
 .dayPlaceEdit{
-    max-height: 600px;
+    max-height: 700px;
     overflow: scroll;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -877,7 +878,11 @@ i.fa{
 .dayPlace .inner-wrap{
     background-color: #efefef;
     padding: 10px 30px 30px 30px;
-    margin-right: 10px;
+    box-shadow: 0px 0px 10px 0px;
+    margin: 5px 12px 10px 3px;
+}
+.dayPlace article{
+    font-size: 14px;
 }
 .dayPlace .photo{
     height: 256px;
@@ -898,7 +903,7 @@ i.fa{
     padding-right: 10px;
     overflow: scroll;
 }
-.route-list  li a {
+.route-list li a {
     text-align: left;
     border-bottom: none;
     padding-bottom: 5px;
@@ -910,15 +915,17 @@ i.fa{
     width: 100%;
     line-height: 1.4;
  }
-.route-list  li{
+.route-list li{
     border: 1px solid #ccc;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
+    webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
 }
-.route-list  li:last-child{
+.route-list li:last-child{
     border-bottom: 1px solid #ccc;;
 }
 .iti-route{
-    max-height: 600px;
     padding-right: 0px;
 }
 .iti-route .place-nav-img{
@@ -928,9 +935,11 @@ i.fa{
     max-height: 40px;
 }
 .iti-route li a.active {
-    background-color: #e7e7e7;
-    border-left: 3px solid #ff5a5f;
+    border-left: 5px solid #2e9fff;
     text-decoration: none;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(46, 159, 255);
+    -moz-box-shadow: 0px 0px 15px 0px rgb(46, 159, 255);
+    box-shadow: 0px 0px 15px 0px #2e9fff;
 }
 .iti-route .route-letter{
     margin-right: 10px;

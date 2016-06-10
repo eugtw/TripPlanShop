@@ -19,19 +19,21 @@ class CreateItiDayPlace extends Migration {
 			$table->integer('itiday_id')->unsigned();
 			$table->foreign('itiday_id')->references('id')->on('itidays')->onDelete('cascade');
 
-			$table->string('place_name_short');
-			$table->string('place_name_long');
+			//$table->string('place_name_short');
+			$table->string('place_address');
+			$table->string('website');
 			$table->string('loc_lat');
 			$table->string('loc_lng');
 
 			$table->string('image_path');
+			$table->string('photo_ref_google');
 			$table->string('image_desc');
 
 			$table->string('place_title');
 			$table->string('time_to_visit');
 			$table->string('business_hours');
 			$table->string('duration');
-			$table->integer('price_range');
+			//$table->integer('price_range');
 			$table->string('public_transit');
 			$table->string('experiences');
 

@@ -124,16 +124,13 @@ class ItiDayController extends Controller {
 		$photoDB = ItiDayPhoto::find($photo_id);
 		//$photo = ItiDayphoto::where('photo_path', $photo_path)->first();
 
-
+		$photoDB->delete();
 		if(\File::delete($photoDB->photo_path))
 		{
-			$photoDB->delete();
-			return redirect()->back();
-		}else{
-			return "error";
+
+
 		}
-
-
+		return redirect()->back();
 	}
 
 

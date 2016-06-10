@@ -274,7 +274,7 @@
                                 <div class="form-group">
                                     <div class="top-buffer">
                                         {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary']) !!}
-                                        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Overview</a>
+                                        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Itinerary</a>
                                     </div>
                                 </div>
                             </div>

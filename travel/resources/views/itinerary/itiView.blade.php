@@ -33,7 +33,7 @@
             </div>
 
 
-            <span class="by-whom">planned by <span class="author-name"><i>{{$itinerary->authorName()}}</i></span></span>
+            <span class="by-whom">planned by <a class="author-name" href="{{ route('user.show', $itinerary->user) }}"><i>{{$itinerary->authorName()}}</i></a></span>
 
             <div class="img-author">
                 <a href="{{ route('user.show', $itinerary->user) }}">
@@ -73,8 +73,10 @@
             <div class="col-sm-8 col-xs-12">
                 <h2 class="">About This itinerary</h2>
 
-                <p class="itit-pub-date inline-block">Published: {{ $itinerary->created_at->diffForHumans() }}<br> Edited:
-                    {{ $itinerary->updated_at->diffForHumans() }}</p>
+                <p class="itit-pub-date inline-block">
+                    Author: <a href="{{ route('user.show', $itinerary->user) }}">{{ $itinerary->user->name }}</a> <a href="http://{{ $itinerary->user->profile->blog_link}}" target="_blank">({{ $itinerary->user->profile->blog_link }})</a><br>
+                    Published: {{ $itinerary->created_at->diffForHumans() }}<br>
+                    Edited: {{ $itinerary->updated_at->diffForHumans() }}</p>
 
                 <hr class="">
 
@@ -290,7 +292,7 @@
     </script>
     <script>
         //shorten day summary in iti overview
-        var showChar = 200;  // How many characters are shown by default
+        var showChar = 100;  // How many characters are shown by default
         var ellipsestext = "...";
         var moretext = "Show more >";
         var lesstext = "Show less";
@@ -369,9 +371,72 @@
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         function initMap() {
-            $('div.dayMap').each(function () {
+            $('div.dayPlace').each(function () {
                 var labelIndex = 0;
-                var loc = $(this).data('places');
+
+                var id = $(this).data('dayid');
+                var num = $(this).data('num');
+                window['bounds' + id] = new google.maps.LatLngBounds();
+
+                window['map' + id] = new google.maps.Map(document.getElementById('day-'+id+'-map'), {
+                    zoom: 7,
+                    mousescroll: true
+                    //center: {lat: 52.520, lng: 13.410}
+                });
+
+                var marker = [];
+                var contentString = [];
+                var infowindow = [];
+
+                for (var i = 0; i < num; i++) {
+
+                    var place = document.getElementById('day'+id+'-route'+i);
+
+                    if(place.dataset.lat != '' && place.dataset.lng != '')
+                    {
+                        marker[i] = new google.maps.Marker({
+                            position: new google.maps.LatLng(place.dataset.lat, place.dataset.lng),
+                            map: window['map' + id],
+                            animation: google.maps.Animation.DROP,
+                            // icon: pinImage,
+                            label: labels[labelIndex % labels.length]
+                        });
+                        window['bounds' + id].extend(marker[i].position);
+                    }
+                    labelIndex++;
+                    window['map' + id].fitBounds(window['bounds' + id]);
+
+
+                    var title = place.dataset.title != '' ? place.dataset.title : "n/a";
+                    var address = place.dataset.address != '' ? place.dataset.address : "n/a";
+                    var duration = place.dataset.duration != '' ? place.dataset.duration : "n/a";
+
+                    contentString[i] = '<div class="placeMarker">' +
+                    '<p class="title">' + title + '</p>' +
+                    '<ul class="list-unstyled">'+
+                    '<li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>' + address + '</li>' +
+                    '<li><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>' + duration + '<li>' +
+                    '</ul>'+
+                    '</div>';
+
+                    infowindow[i]= new google.maps.InfoWindow({
+                        content: contentString[i]
+                    });
+
+                    (function(j){
+                        return function() {
+                            if(marker[j]) {
+                                marker[j].addListener('click', function() {
+                                    infowindow[j].open(window['map' + id], marker[j]);
+                                });
+                            }
+                        }()
+                    })(i);
+                }
+            });
+            /*$('div.dayMap').each(function () {
+                var labelIndex = 0;
+                var loc = $(this).data("places");
                 var id = $(this).data('dayid');
                 window['bounds' + id] = new google.maps.LatLngBounds();
 
@@ -384,6 +449,13 @@
                 var marker = [];
                 var contentString = [];
                 var infowindow = [];
+
+
+
+                console.log(loc);
+                console.log(loc.length);
+
+
 
                 for (var i = 0; i < loc.length; i++) {
                     if(loc[i].loc_lat != '' && loc[i].loc_lng != '')
@@ -426,7 +498,7 @@
                         }()
                     })(i);
                 }
-            });
+            });*/
         }//initMap()
     </script>
     <script async defer
