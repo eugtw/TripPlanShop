@@ -1,5 +1,5 @@
 <!-- days container -->
-<div class="container" id="myDay">
+<div class="" id="myDay">
 
     {{-- not to show the 1 day itinerary day details to public --}}
     @if(!$is_preview ||

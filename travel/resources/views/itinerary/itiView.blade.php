@@ -244,8 +244,8 @@
 
 
 
-<!-- daily plan -->
-@include('itineraryDay.view')
+    <!-- daily plan -->
+    @include('itineraryDay.view')
 
     <!-- footer buttons -->
     @include('itinerary.partial_iti_footer')

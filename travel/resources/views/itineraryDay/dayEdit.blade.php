@@ -317,9 +317,14 @@
             maxFilesize: 15, // MB
             acceptedFiles: '.jpg, .jpeg, .png',
             dictDefaultMessage: 'Drop an image for this place or Google image will be used',
+            addRemoveLinks: true,
             init: function() {
                 this.on("queuecomplete", function() {
                     location.reload();
+                });
+               this.on("removedfile", function(file) {
+                   // if (!file.serverId) { return; }
+                    $.get("{{ route('itidayplace.deletePlaceImage', $place->id)}}");
                 });
             }
         };

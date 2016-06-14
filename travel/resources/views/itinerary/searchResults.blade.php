@@ -1,4 +1,4 @@
-@extends('app', ['title'=>($selected_location != '' ? $selected_location :'Any location') . ' trip plans - TripPlanShop'])
+@extends('app', ['title'=>((isset($selected_location) && $selected_location != '') ? $selected_location :'Popular ') . ' trip plans - TripPlanShop'])
 
 @section('content')
     <div class="text-center">

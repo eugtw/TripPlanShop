@@ -44,7 +44,7 @@
 
                 @if(isset($itinerary->user->profile->blog_link) && $itinerary->user->profile->blog_link != '' )
                     <a class="iti-author-blog" href="http://{{$itinerary->user->profile->blog_link}}" target="_blank">
-                        <span>from {{ $itinerary->user->profile->blog_link }}</span>
+                        <span>{{ $itinerary->user->profile->blog_link }}</span>
                     </a>
                 @endif
             </div>

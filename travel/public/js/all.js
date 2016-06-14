@@ -117,8 +117,6 @@ $(document).ready(function(){
         // Bind the click event handler
         $(this).on('click', 'a', function(e){
 
-
-
             // Make the old tab inactive.
             $active.removeClass('active');
             $content.hide();
@@ -136,6 +134,8 @@ $(document).ready(function(){
             if(id){
                 initPlaceMap(id);
             }
+
+            //init dropzone
 
             // Prevent the anchor's default click action
             e.preventDefault();
@@ -267,50 +267,6 @@ function updateInputs(placeId, place){
     }
 
     $('div[data-place-id="'+placeId+'"] #business_hours').val(open_hours);
-/*
-    var open_hours = [];
-    for( var i = 0; i < 7; i++) {
-        try {
-
-            open_hours[i] = place.opening_hours.weekday_text[i];
-        } catch(e) {
-            switch(i) {
-                case 0:
-                    open_hours[i] = "Sunday: N/A";
-                    break;
-                case 1:
-                    open_hours[i] = "Monday: N/A";
-                    break;
-                case 2:
-                    open_hours[i] = "Tuesday: N/A";
-                    break;
-                case 3:
-                    open_hours[i] = "Wednesday: N/A";
-                    break;
-                case 4:
-                    open_hours[i] = "Thursday: N/A";
-                    break;
-                case 5:
-                    open_hours[i] = "Friday: N/A";
-                    break;
-                case 6:
-                    open_hours[i] = "Saturday: N/A";
-                    break;
-            }
-        }
-    }
-
-    $('div[data-place-id="'+placeId+'"] #business_hours').val(
-        open_hours[0] + "" +
-        open_hours[1] + "\n" +
-        open_hours[2] + "\n" +
-        open_hours[3] + "\n" +
-        open_hours[4] + "\n" +
-        open_hours[5] + "\n" +
-        open_hours[6]
-    );
-*/
-
 }
 
 

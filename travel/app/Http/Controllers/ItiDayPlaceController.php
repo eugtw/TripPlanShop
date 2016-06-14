@@ -23,7 +23,7 @@ class ItiDayPlaceController extends Controller {
 		$itiDay = ItiDay::find($request->day_id);
 		$itinerary = Itinerary::find($itiDay->itinerary_id);
 
-		$photo = ItiDayPhoto::makePhoto(300, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
+		$photo = ItiDayPhoto::makePhoto(400, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
 
 		if($request->place_id == 'new')
 		{
@@ -32,18 +32,11 @@ class ItiDayPlaceController extends Controller {
 				'image_desc' => $photo->name
 			]);
 		}else{
-
-			if($this->deletePlaceImage($request->place_id))
-			{
-				ItiDayPlace::find($request->place_id)->update([
-					'image_path' => $photo->photo_path,
-					'image_desc' => $photo->name
-				]);
-			}else{
-
-			}
-
-
+			$this->deletePlaceImage($request->place_id);
+			ItiDayPlace::find($request->place_id)->update([
+				'image_path' => $photo->photo_path,
+				'image_desc' => $photo->name
+			]);
 		}
 	}
 
@@ -51,16 +44,23 @@ class ItiDayPlaceController extends Controller {
 	{
 		$place = ItiDayPlace::find($place_id);
 
+		$place->image_path = '';
+		$place->save();
+		if(\File::delete( asset($place->image_path) ))
+		{
+
+		}
+		return redirect()->back();
+		/*
 		if(\File::delete($place->image_path))
 		{
-			$place->image_path = '';
-			$place->save();
+
 
 			return redirect()->back();
 		}else{
 			return "error";
 		}
-
+*/
 
 	}
 	/**
