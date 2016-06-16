@@ -53,7 +53,7 @@
 
             <div class="text-center pm-button">
                 <div class="">
-                    <a class="" href="#pm-how-it-works">How it works</a>
+                    <a class="" href="/home">Get inside</a>
                     <a class="" href="#pm-become-a-seller">Have trip plans?</a>
                 </div>
 
@@ -73,7 +73,7 @@
                 <h3 class="text-center col-xs-12 pm-info-box-title">Experience Destinations Like Insiders</h3>
 
                 <div class="col-md-5 col-sm-6 col-xs-12 top-buffer">
-                    <div class="pm-intro-box">
+                    <div class="pm-intro-box text-center">
                         <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">
                             <img src="{{ env('SITE_IMAGE_PATH') . 'promo-iti-card.jpg' }}">
                         </a>
@@ -102,9 +102,7 @@
 
                         <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">See our trip plan example</a>
                         <div class="text-center top-buffer">
-                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactModal">
-                                Notify Me When Fully Open
-                            </button>
+                            <a class="btn btn-primary btn-lg" href="/home">Get Inside to See More</a>
                         </div>
 
                     </div>
@@ -144,7 +142,7 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-6  col-xs-12 top-buffer">
-                    <div class="pm-intro-box">
+                    <div class="pm-intro-box text-center">
                         <img src="{{ env('SITE_IMAGE_PATH') . 'promo-seller.jpg' }}">
                     </div>
                 </div>

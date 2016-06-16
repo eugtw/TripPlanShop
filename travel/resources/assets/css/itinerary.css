@@ -384,6 +384,12 @@ i.fa{
     display: block;
     margin-bottom: 5px;
 }
+
+.btn-formToggle{
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+}
 /**************************************** day form edit ******************/
 
 .day-photo-thumbs{

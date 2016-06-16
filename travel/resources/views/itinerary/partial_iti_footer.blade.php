@@ -5,7 +5,7 @@
         @if($itinerary->price == 0)
             <a type="button"
                class="itit-button itit-footer-button btn-primary"
-               href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">Add To List For Free</a>
+               href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">View full itinerary free</a>
         @else
             <a type="button"
                class="itit-button itit-footer-button btn-primary"

@@ -119,6 +119,7 @@
 }
 .pm-intro-box img{
     border: 1px solid #cdcdcd;
+    max-width: 400px;
 }
 .pm-info-box-title{
     font-size: 2em;

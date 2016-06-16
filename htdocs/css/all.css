@@ -1,3 +1,29 @@
+#page-404{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    color: #B0BEC5;
+    display: table;
+    font-weight: 100;
+    font-family: 'Lato';
+}
+
+#page-404 .container {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#page-404 .content {
+    text-align: center;
+    display: inline-block;
+}
+
+#page-404 .title {
+    font-size: 72px;
+    margin-bottom: 40px;
+}
 #becoming-seller-header{
     padding: 30px 0;
 }
@@ -161,13 +187,14 @@
 }
 #sell-trip-plan a{
     width: 100%;
+    max-width: 300px;
     text-align: center;
-    margin-top: 20px;
     background-color: #ff5a5f;
-    display: inline-block;
+    display: block;
     padding: 5px 20px;
     color: #ffffff;
     font-size: 1.1em;
+    margin: 20px auto 0 auto;
 
 }
 .pop-link-btn{
@@ -413,6 +440,7 @@
         top: 35%;
         font-size: 0.9em;
         width: 60%;
+        max-width: 300px;
     }
 
     #header-img {
@@ -917,7 +945,7 @@ i.fa{
  }
 .route-list li{
     border: 1px solid #ccc;
-    margin-bottom: 7px;
+    margin: 7px 0;
     webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
@@ -935,7 +963,6 @@ i.fa{
     max-height: 40px;
 }
 .iti-route li a.active {
-    border-left: 5px solid #2e9fff;
     text-decoration: none;
     -webkit-box-shadow: 0px 0px 15px 0px rgb(46, 159, 255);
     -moz-box-shadow: 0px 0px 15px 0px rgb(46, 159, 255);
@@ -1001,8 +1028,9 @@ i.fa{
     white-space: nowrap;
 }
 .dayPlace .route-detail-title{
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
+    color: #0093de;
 }
 .route-add{
     background-color: transparent;
@@ -1021,6 +1049,12 @@ i.fa{
 .place-extra{
     display: block;
     margin-bottom: 5px;
+}
+
+.btn-formToggle{
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
 }
 /**************************************** day form edit ******************/
 
@@ -1999,6 +2033,7 @@ div.jumbotron p{
 }
 .pm-intro-box img{
     border: 1px solid #cdcdcd;
+    max-width: 400px;
 }
 .pm-info-box-title{
     font-size: 2em;

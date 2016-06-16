@@ -1,4 +1,4 @@
-@extends('app', ['homepage'=>1])
+@extends('app', ['homepage'=>1, 'title' => 'TripPlanShop: Home - Travel Itineraries & Guides Marketplace'])
 
 @section('meta-description')
 	<meta name="author" content="TripPlanShop">

@@ -12,6 +12,7 @@
 
             {{-- jquery tabs --}}
             <script>
+                /*
                 $("ol.route-day{{ $day->day_num }}").each(function(){
                     // For each set of tabs, we want to keep track of
                     // which tab is active and its associated content
@@ -46,7 +47,7 @@
                         // Prevent the anchor's default click action
                         e.preventDefault();
                     });
-                });
+                });*/
             </script>
     @endforeach  {{-- end Day foreach --}}
     @endif

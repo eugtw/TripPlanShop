@@ -18,7 +18,11 @@ class PromoController extends Controller {
 
 	public function getPromoPage()
 	{
-		$itiEx = Itinerary::find(env('DEMO_ITIT_ID'));
+		if(!$itiEx = Itinerary::find(env('DEMO_ITIT_ID')))
+		{
+			$itiEx = Itinerary::where('published', 1)->first();
+		}
+
 		return view('promo.promo-main')->with('itinerary', $itiEx);
 	}
 

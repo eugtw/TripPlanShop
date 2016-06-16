@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ $title or 'TripPlanShop: Trip Plans Marketplace | Travel Itineraries & Guides'}}</title>
+    <title>{{ $title or 'TripPlanShop: Promo - Travel Itineraries & Guides'}}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     @yield('meta-description')

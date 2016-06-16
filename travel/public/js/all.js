@@ -32,7 +32,7 @@ $('form[data-delete]').on('submit', function(e){
 
                 },
                 error: function() {
-                    swal({   title: "Error!",   text: "Here's my error message!",   type: "error",   confirmButtonText: "Cool" });
+                    swal({   title: "Error!",   type: "error",   confirmButtonText: "go back" });
                 }
             });
 
@@ -93,6 +93,9 @@ $('form[data-confirm], button[data-confirm]').on('click', function(e) {
 
 
 $(document).ready(function(){
+
+    Dropzone.autoDiscover = false;
+
     $('ol.route-list').each(function(){
         // For each set of tabs, we want to keep track of
         // which tab is active and its associated content
@@ -112,6 +115,7 @@ $(document).ready(function(){
         var id = $($active[0].hash).data('placeId');
         if(id){
             initPlaceMap(id);
+            initDropzone(id);
         }
 
         // Bind the click event handler
@@ -133,9 +137,14 @@ $(document).ready(function(){
             var id = $(this.hash).data('placeId');
             if(id){
                 initPlaceMap(id);
+
+                //init dropzone
+                if( $(this.hash).data('placeEdit') ) {
+                   initDropzone(id);
+                }
+
             }
 
-            //init dropzone
 
             // Prevent the anchor's default click action
             e.preventDefault();
@@ -144,7 +153,46 @@ $(document).ready(function(){
 
 
 });
+function initDropzone(pId)
+{
 
+  $("#dropzone-" + pId).dropzone(
+      {
+           maxFiles: 1,
+           paramName: "place_image", // The name that will be used to transfer the file
+           maxFilesize: 15, // MB
+           acceptedFiles: '.jpg, .jpeg, .png',
+           addRemoveLinks: true,
+           dictDefaultMessage: 'Drop an image for this place or Google image will be used',
+          init: function() {
+              this.on("queuecomplete", function() {
+                 // location.reload();
+              });
+              this.on("removedfile", function(file) {
+                  // if (!file.serverId) { return; }
+                  $.get("/iti-day-place-photo-delete/" + pId);
+              });
+          }
+      });
+/*
+    Dropzone.options.testabc = {
+        maxFiles: 1,
+        paramName: "place_image", // The name that will be used to transfer the file
+        maxFilesize: 15, // MB
+        acceptedFiles: '.jpg, .jpeg, .png',
+        dictDefaultMessage: 'Drop an image for this place or Google image will be used',
+        addRemoveLinks: true,
+        init: function() {
+            this.on("queuecomplete", function() {
+                location.reload();
+            });
+            this.on("removedfile", function(file) {
+                // if (!file.serverId) { return; }
+                $.get("{{ route('itidayplace.deletePlaceImage', $place->id)}}");
+            });
+        }
+    };*/
+}
 
 function initPlaceMap(pId) {
     var marker;

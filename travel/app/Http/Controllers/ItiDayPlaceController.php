@@ -16,6 +16,7 @@ class ItiDayPlaceController extends Controller {
 
 	public function storePlaceImage(Request $request)
 	{
+		//dd($request);
 		$this->validate($request, [
 			'place_image' => 'required|mimes:jpg,jpeg,png'
 		]);

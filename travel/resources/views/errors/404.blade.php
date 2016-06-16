@@ -1,6 +1,20 @@
-<html>
-<head>
+
+@extends('app', ['title' => 'Error | TripPlanShop: Travel Itineraries & Guides Marketplace'])
+
+@section('javascript-block')
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@stop
+
+@section('content')
+    <div id="page-404">
+        <div class="container">
+            <div class="title">Error! Please try again</div>
+        </div>
+    </div>
+@stop
+
+<head>
+
 
     <style>
         body {
@@ -32,10 +46,6 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="content">
-        <div class="title">Error! Please try again</div>
-    </div>
-</div>
+
 </body>
 </html>

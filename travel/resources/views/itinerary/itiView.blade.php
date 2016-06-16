@@ -5,7 +5,7 @@
     <meta property="og:type"               content="article">
     <meta property="og:title"              content="{{ $itinerary->title }}">
     <meta property="og:description"        content="{{ $itinerary->summary }}">
-    <meta property="og:image"              content="http://tripplanshop.com{{ preg_replace('/ /', '%20', env('IMAGE_ROOT') . $itinerary->image)   }}">
+    <meta property="og:image"              content=" url('{{ asset($itinerary->image_path) }}') ">
     <meta property="og:site_name" content="TripPlanShop"/>
     <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
 @stop

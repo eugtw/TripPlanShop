@@ -23,7 +23,7 @@
                           method="POST"
                           class="dropzone "
                           name = "image"
-                          id="day-photos-dropzone">
+                          id="day-dropzone">
 
                         <input name="day_id" value="{{ $day->id }}" type="hidden">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -122,15 +122,18 @@
                     <div class="col-md-8 col-xs-12 dayPlaceEdit">
 
                     @foreach($day->places as $key => $place)
-                        <div id='day-route{{($key+1)}}' data-place-id = {{ $place->id }}>
+                        <div id='day-route{{($key+1)}}' data-place-id = "{{ $place->id }}" data-place-edit = "1">
+
 
                             {{-- dropzone --}}
                             <form action="{{ route('itidayplace.storePlaceImage') }}"
                                   method="POST"
                                   class="dropzone"
-                                  name = "place_image"
-                                  id="place-photo-dropzone">
-
+                                  name ="place_image"
+                                  id="dropzone-{{ $place->id }}">
+                                <div class="fallback">
+                                    <input name="place_image" type="file" multiple />
+                                </div>
                                 <input name="day_id" value="{{ $day->id }}" type="hidden">
                                 <input name="place_id" value="{{ $place->id }}" type="hidden">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -139,10 +142,10 @@
                             {{-- display photos already saved for editing --}}
                             @if( $place->image_path != '')
                             <div class="day-photo-thumbs inline-block">
-                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" >
+                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-delete>
                                     <i class="fa fa-times delete-btn" aria-hidden="true"></i>
                                 </a>
-                                <img class="thumbnail" src="/{{ $place->image_path }}" alt="}}">
+                                <img class="thumbnail" src="{{ asset($place->image_path) }}" alt="}}">
                             </div>
 
                             @endif
@@ -231,42 +234,60 @@
                             <div>
                                 <div class="form-group">
                                     {!! Form::label('place_intro', 'Intro', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseIntro-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseIntro-{{$place->id}}">
                                         {!! Form::textarea('place_intro', null,
                                         ['placeholder' => 'place introduction', 'rows'=>'5','class'=>'form-control editor', 'required', 'id' => $place->id .'place_intro']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('to_do', 'What to do(optional)', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseToDo-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseToDo-{{$place->id}}">
                                         {!! Form::textarea('to_do', null,
                                         ['placeholder' => 'what to do', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'to_do']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('tips', 'Helpful tips(optional)', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseTips-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseTips-{{$place->id}}">
                                         {!! Form::textarea('tips', null,
                                         ['placeholder' => 'Helpful tips', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'tips']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('transportation', 'Transportation plan(optional)', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseTran-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseTran-{{$place->id}}">
                                         {!! Form::textarea('transportation', null,
                                         ['placeholder' => 'how to get to this place', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'transportation']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('restaurants', 'Nearby food/restaurants(optional)', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseRest-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseRest-{{$place->id}}">
                                         {!! Form::textarea('restaurants', null,
                                         ['placeholder' => 'restaurants recommendation', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'restaurants']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('info_links', 'Info websites(optional)', ['class'=>'control-label']) !!}
-                                    <div class="">
+                                    <button class="btn-formToggle" type="button" data-toggle="collapse" data-target="#collapseInfoLinks-{{$place->id}}" aria-expanded="false" aria-controls="collapseExample">
+                                        open/close form
+                                    </button>
+                                    <div class="collapse" id="collapseInfoLinks-{{$place->id}}">
                                         {!! Form::textarea('info_links', null,
                                         ['placeholder' => 'links for information', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'info_links']) !!}
                                     </div>
@@ -296,6 +317,19 @@
 @section('js-bottom')
     {{-- dropzone x 2--}}
     <script>
+        $("#day-dropzone").dropzone({
+            paramName: "image", // The name that will be used to transfer the file
+            maxFilesize: 15, // MB,
+            acceptedFiles: '.jpg, .jpeg, .png',
+            dictDefaultMessage: 'Drop images for this day\'s gallery',
+            //addRemoveLinks: true,
+            init: function(file) {
+                this.on("queuecomplete", function() {
+                    location.reload();
+                });
+            }
+        });
+        /*
         Dropzone.options.dayPhotosDropzone = {
             paramName: "image", // The name that will be used to transfer the file
             maxFilesize: 15, // MB,
@@ -307,10 +341,10 @@
                     location.reload();
                 });
             }
-        };
+        };*/
     </script>
 
-    <script>
+    <script>/*
         Dropzone.options.placePhotoDropzone = {
             maxFiles: 1,
             paramName: "place_image", // The name that will be used to transfer the file
@@ -320,14 +354,14 @@
             addRemoveLinks: true,
             init: function() {
                 this.on("queuecomplete", function() {
-                    location.reload();
+                    //location.reload();
                 });
                this.on("removedfile", function(file) {
                    // if (!file.serverId) { return; }
                     $.get("{{ route('itidayplace.deletePlaceImage', $place->id)}}");
                 });
             }
-        };
+        };*/
     </script>
 
     <script
