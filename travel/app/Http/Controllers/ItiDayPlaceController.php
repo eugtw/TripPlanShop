@@ -51,7 +51,10 @@ class ItiDayPlaceController extends Controller {
 		{
 
 		}
-		return redirect()->back();
+
+		return $place;
+
+		//return redirect()->back();
 		/*
 		if(\File::delete($place->image_path))
 		{
@@ -102,9 +105,13 @@ class ItiDayPlaceController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(ItiDayPlace $place)
 	{
-		//
+		return $place;
+/*
+		return view('itineraryDay.partial_PlaceView')
+			->withPlace($place);
+*/
 	}
 
 	/**

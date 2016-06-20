@@ -99,7 +99,7 @@ Route::group(['middleware' => ['auth']], function()
 	Route::resource('itinerary-day/day-place','ItiDayPlaceController');
 
 	Route::post('itinerary-day/photo-upload', ['as' => 'itiday.storeDayImages', 'uses' => 'ItiDayController@storeDayImages']);
-	Route::get('iti-day-photo-delete/{photo_id}', ['as' => 'itiday.deleteDayImages', 'uses' => 'ItiDayController@deleteDayImages']);
+	Route::get('iti-day-photo-delete/{photo_name}', ['as' => 'itiday.deleteDayImages', 'uses' => 'ItiDayController@deleteDayImages']);
 	Route::resource('itinerary-day','ItiDayController');
 
 	//users

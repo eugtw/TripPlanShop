@@ -67,9 +67,9 @@
                                         <span>
                                             <div>
                                                 @if( $place->image_path == '')
-                                                    <img class="place-nav-img" src="{{ $place->photo_ref_google }}">
+                                                    <img class="place-nav-img" src="{{ $place->photo_ref_google }}" alt="{{ $place->title }}">
                                                 @else
-                                                    <img class="place-nav-img" src="{{ asset($place->image_path) }}">
+                                                    <img class="place-nav-img" src="{{ asset($place->image_path) }}" alt="{{ $place->title }}">
                                                 @endif
 
                                                 <div class="marker-table">
@@ -91,7 +91,7 @@
                             @endforeach
                         </ol>
                     </div>
-                    <div class=" col-md-8 col-sm-7 col-xs-12 col-xs-12 dayPlace"
+                    <div class=" col-md-8 col-sm-7 col-xs-12 dayPlace"
                          data-dayid="{{ $day->day_num }}"
                          data-num="{{$day->places->count() }}">
 
@@ -183,27 +183,27 @@
 
 
                                         @if($place->to_do != '')
-                                            <p class="route-detail-title">What to do</p>
+                                            <p class="route-detail-title top-buffer">What to do</p>
                                             <div>{!! $place->to_do !!}</div>
                                         @endif
 
                                         @if($place->tips != '')
-                                            <p class="route-detail-title">Tips</p>
+                                            <p class="route-detail-title top-buffer">Tips</p>
                                             <div>{!! $place->tips !!}</div>
                                         @endif
 
                                         @if($place->transportation != '')
-                                            <p class="route-detail-title">Transportation</p>
+                                            <p class="route-detail-title top-buffer">Transportation</p>
                                             <div>{!! $place->transportation !!}</div>
                                         @endif
 
                                         @if($place->restaurants != '')
-                                            <p class="route-detail-title">Food nearby</p>
+                                            <p class="route-detail-title top-buffer">Food nearby</p>
                                             <div>{!! $place->restaurants !!}</div>
                                         @endif
 
                                         @if($place->info_links != '')
-                                            <p class="route-detail-title">Useful links</p>
+                                            <p class="route-detail-title top-buffer">Useful links</p>
                                             <div>{!! $place->info_links !!}</div>
                                         @endif
                                     </div>
@@ -214,6 +214,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 

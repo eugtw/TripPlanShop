@@ -115,22 +115,32 @@ class ItiDayController extends Controller {
 
 		ItiDay::find($request->day_id)->addPhoto($photo);
 
+		return $photo;
+
 	}
 
-	public function deleteDayImages($photo_id) //
+	public function deleteDayImages($photo_name) //
 	{
 
 
-		$photoDB = ItiDayPhoto::find($photo_id);
+		$photoDB = ItiDayPhoto::where('name', $photo_name)->first();
 		//$photo = ItiDayphoto::where('photo_path', $photo_path)->first();
 
-		$photoDB->delete();
-		if(\File::delete($photoDB->photo_path))
+		if($photoDB)
 		{
+			$photoDB->delete();
+			if(\File::delete($photoDB->photo_path))
+			{
 
 
+			}
+
+			return redirect()->back();
+		}else{
+			return false;
 		}
-		return redirect()->back();
+
+
 	}
 
 

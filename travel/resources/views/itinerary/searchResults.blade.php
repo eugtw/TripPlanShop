@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        {!! Form::open(['url'=>'itinerary-search','method'=>'GET','id'=>'sr-searchbar']) !!}
+                        {!! Form::open(['url'=>'itinerary-search','method'=>'GET','id'=>'sr-searchbar', 'class'=>'form-inline']) !!}
 
                         {!! Form::label('style_list', 'Style Select',['hidden'=>'true']) !!}
                         {!! Form::select('style_list[]', $travelStyles, (isset($selected_styles) && $selected_styles == '') ? $selected_styles : 5,['id'=>'style_list', 'class'=>'style_list', 'multiple' => 'multiple']) !!}
@@ -17,8 +17,10 @@
                         {!! Form::text('location', (isset($selected_location) && $selected_location != '' ) ? $selected_location : null,['placeholder'=>'any city','id' => 'autocomplete', 'onFocus'=>'geolocate()']) !!}
 
 
-                        {!! Form::label('country_name', 'Country Select',['hidden'=>'true']) !!}
-                        {!! Form::select('country_name', (['any'=>'any country'] +$travelCountries), (isset($selected_country) && $selected_country != 'any') ? $selected_country : 1) !!}
+                        <div class="form-group">
+                            {!! Form::label('country_name', 'Country Select',['hidden'=>'true']) !!}
+                            {!! Form::select('country_name', (['any'=>'any country'] +$travelCountries), (isset($selected_country) && $selected_country != 'any') ? $selected_country : 1, ['class'=>'form-control']) !!}
+                        </div>
 
 
                         {!! Form::submit('SEARCH', ['class'=>'', 'id'=>'iti-search-btn']) !!}

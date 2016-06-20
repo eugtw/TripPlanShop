@@ -30,12 +30,12 @@ class ItiDayPhoto extends Model {
                 return "We are having technical difficulties. Please contact admin.";
             }
         }
+        $name = $namePrefix. str_slug($file->getClientOriginalName()). '-' . time() .'.'. $file->getClientOriginalExtension();
+        //$full_name = preg_replace('/ /', '_', $name);
 
-        $full_name = preg_replace('/ /', '_', $namePrefix . time() .'.'. $file->getClientOriginalExtension());
+        $file->move($iti_dir, $name);
 
-        $file->move($iti_dir, $full_name);
-
-        $photo->photo_path = $iti_dir . '/' . $full_name;
+        $photo->photo_path = $iti_dir . '/' . $name;
         $photo->name = $file->getClientOriginalName();
 
 

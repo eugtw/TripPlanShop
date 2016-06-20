@@ -128,7 +128,15 @@
     margin-bottom: 20px;
 }
 /*****************/
-
+.searchbar>input{
+    height: 50px;
+    border-radius: 0;
+}
+#autocomplete{
+    width: 500px;
+    position: relative;
+    left: 6px;
+}
 #header-search{
     line-height: normal;
 
@@ -142,6 +150,11 @@
     max-width: 800px;
     margin: 0 auto;
 }
+
+
+
+/*
+
 #header-search #autocomplete{
     position: relative;
     left: 1px;
@@ -189,12 +202,7 @@
      height: inherit;
     font-size: 16px;
     color: inherit;
- }
-.multiselect .caret{
-    float: right;
-    position: relative;
-    top: 8px;
-}
+ }*/
 /********************************/
 
 

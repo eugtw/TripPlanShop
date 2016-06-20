@@ -6,8 +6,6 @@
 
 @section('content')
 
-
-
     <!-- days container -->
     <div class="container">
         <div class="row">
@@ -33,10 +31,10 @@
                     @if( !is_null($day->photos))
                         @foreach($day->photos as $photo)
                             <div class="day-photo-thumbs inline-block">
-                                <a href="{{ route('itiday.deleteDayImages', $photo->id)}}" class="">
-                                    <i class="fa fa-times delete-btn" aria-hidden="true"></i>
-                                </a>
-                                <img class="thumbnail" src="/{{ $photo->photo_path }}" alt="}}">
+                                    <a href="{{ route('itiday.deleteDayImages', $photo->name)}}" data-day-img-delete="1">
+                                        <i class="fa fa-times delete-btn" aria-hidden="true"></i>
+                                    </a>
+                                    <img class="thumbnail" src="/{{ $photo->photo_path }}" alt="}}">
                             </div>
 
                         @endforeach
@@ -87,9 +85,9 @@
                                     <span>
                                         <div>
                                             @if( $place->image_path == '')
-                                                <img class="place-nav-img" src="{{ $place->photo_ref_google }}">
+                                                <img class="place-nav-img place-{{$place->id}}"  src="{{ $place->photo_ref_google }}">
                                             @else
-                                                <img class="place-nav-img" src="{{ asset($place->image_path) }}">
+                                                <img class="place-nav-img place-{{$place->id}}" src="{{ asset($place->image_path) }}">
                                             @endif
                                             <div class="marker-table">
                                                 <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
@@ -142,13 +140,14 @@
                             {{-- display photos already saved for editing --}}
                             @if( $place->image_path != '')
                             <div class="day-photo-thumbs inline-block">
-                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-delete>
+                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-place-img-delete = "data-place-img-delete" data-pId = "{{ $place->id }}">
                                     <i class="fa fa-times delete-btn" aria-hidden="true"></i>
                                 </a>
-                                <img class="thumbnail" src="{{ asset($place->image_path) }}" alt="}}">
+                                <img class="thumbnail" src="{{ asset($place->image_path) }}" alt="{{ $place->place_title }}}}">
                             </div>
-
+                                <div class="clearfix"></div>
                             @endif
+
 
 
                             {!! Form::model($place, [   'data-remote',
@@ -309,6 +308,9 @@
             </div>
         </div><!-- row -->
         <hr>
+        <div id="testground">
+
+        </div>
     </div><!-- container -->
 
 @stop
@@ -322,10 +324,21 @@
             maxFilesize: 15, // MB,
             acceptedFiles: '.jpg, .jpeg, .png',
             dictDefaultMessage: 'Drop images for this day\'s gallery',
-            //addRemoveLinks: true,
+            addRemoveLinks: true,
             init: function(file) {
                 this.on("queuecomplete", function() {
-                    location.reload();
+                    //location.reload();
+                });
+                this.on("removedfile", function(file) {
+
+                    var photoNameLength = file['name'].lastIndexOf(".");
+                    var photoName = file['name'].substring(0, photoNameLength);
+
+                    $.get("/iti-day-photo-delete/" + photoName, function(){
+                        //
+                    }).fail(function(){
+                        alert('error!');
+                    });
                 });
             }
         });

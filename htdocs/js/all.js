@@ -143,6 +143,11 @@ $(document).ready(function(){
                    initDropzone(id);
                 }
 
+                var getPlaceUrl = '/itinerary-day/day-place/'+id;
+                $.get(getPlaceUrl, function(data) {
+                    console.log(data);
+                    $("#testground").html(data);
+                });
             }
 
 
@@ -167,10 +172,29 @@ function initDropzone(pId)
           init: function() {
               this.on("queuecomplete", function() {
                  // location.reload();
+
+                  var getPlaceUrl = '/itinerary-day/day-place/'+pId;
+                  $.get(getPlaceUrl, function(data) {
+                      $('.place-nav-img.place-' + pId).attr('src', '/'+data['image_path']);
+                  }).fail(function(){
+                      alert('error!');
+                  });
+
               });
               this.on("removedfile", function(file) {
                   // if (!file.serverId) { return; }
-                  $.get("/iti-day-place-photo-delete/" + pId);
+                  $.get("/iti-day-place-photo-delete/" + pId, function(){
+
+                  }).fail(function(){
+                      alert('error!');
+                  });
+
+                  var getPlaceUrl = '/itinerary-day/day-place/'+pId;
+                  $.get(getPlaceUrl, function(data) {
+                      $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
+                  }).fail(function(){
+                      alert('error!');
+                  });
               });
           }
       });
@@ -334,3 +358,34 @@ CKEDITOR.replaceAll( 'editor',{
     uiColor : '#9AB8F3'
 });
 
+$(document).ready(function(){
+    $('a[data-place-img-delete]').click(function(e){
+
+        var pId = $(this).data('pid');
+        var url = $(this).attr('href');
+        var element = $(this);
+
+        $.get(url, function(data) {
+            element.parent().fadeOut();
+            $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
+        }).fail(function() {
+            alert('error! please try again');
+        });
+
+        e.preventDefault();
+    });
+});
+
+$(document).ready(function(){
+    $('a[data-day-img-delete]').click(function(e){
+        var url = $(this).attr('href');
+        var element = $(this);
+
+        $.get(url, function(data) {
+            element.parent().fadeOut();
+        }).fail(function() {
+            alert('error! please try again');
+        });
+        e.preventDefault();
+    });
+});
