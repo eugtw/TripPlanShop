@@ -216,7 +216,7 @@ i.fa{
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 5px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -229,22 +229,28 @@ i.fa{
     margin-right: 10px;
 }
 
-.dayPlaceNav ol,
+.route-list,
 .dayPlace  article,
 .dayPlaceEdit{
-    max-height: 700px;
+    max-height: 800px;
     overflow: scroll;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.dayPlaceNav ol{
+.iti-route ol{
     padding-left: 5px;
 }
+.iti-route{
+    padding-right: 0px;
+}
+.iti-route ol > li{
+    margin-right: 15px;
+}
 .dayPlace .inner-wrap{
-    background-color: #efefef;
+    background-color: #f8f8f8;
     padding: 10px 30px 30px 30px;
     box-shadow: 0px 0px 10px 0px;
-    margin: 5px 12px 10px 3px;
+    margin: 5px 15px 10px 3px;
 }
 .dayPlace article{
     font-size: 14px;
@@ -262,11 +268,6 @@ i.fa{
 .marker-table .mark, .marker-table .detail{
     display: table-cell;
     padding: 0;
-}
-.route-list{
-    height: 100%;
-    padding-right: 10px;
-    overflow: scroll;
 }
 .route-list li a {
     text-align: left;
@@ -289,9 +290,6 @@ i.fa{
 }
 .route-list li:last-child{
     border-bottom: 1px solid #ccc;;
-}
-.iti-route{
-    padding-right: 0px;
 }
 .iti-route .place-nav-img{
     float: left;
@@ -414,15 +412,14 @@ i.fa{
 }
 
 /********************* mobile view ***********************************/
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .iti-route .place-nav-img{
         max-height: 80px;
     }
 }
-@media (max-width: 768px) {
-    .iti-route{
-        height: 250px;
-        padding-right: 15px;
+@media (max-width: 767px) {
+    .route-list{
+        height: 300px;
     }
     .dayMap{
         max-height: 300px;
@@ -430,12 +427,11 @@ i.fa{
     .dayMapCont{
         padding-right: 30px;
     }
-    .dayPlace{
-
+    .dayPlace, .iti-route{
         padding-right: 15px;
     }
     .dayPlace  article{
-        max-height: 400px;
+        max-height: 500px;
     }
     article img{
         max-height: 150px;
@@ -445,8 +441,8 @@ i.fa{
 
 }
 @media (max-width: 480px) {
-    .iti-route{
-        height: 160px;
+    .route-list{
+        height: 200px;
     }
     .dayPlace .inner-wrap{
         padding:  10px;

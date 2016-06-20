@@ -63,11 +63,11 @@
 
 
 
-        <div class="" id="day-route">
+        <divid="day-route">
             <div class="iti-route">
                 <div class="row">
                     <h3 class="col-xs-12">Places to visit in this day</h3>
-                    <ol class="route-list col-md-4 col-xs-12 list-unstyled dayPlaceEdit">
+                    <ol class="route-list col-md-4 col-xs-12 list-unstyled">
                         @foreach($day->places as $key => $place)
 
                         <li>
