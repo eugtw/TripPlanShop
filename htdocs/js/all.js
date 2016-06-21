@@ -145,7 +145,6 @@ $(document).ready(function(){
 
                 var getPlaceUrl = '/itinerary-day/day-place/'+id;
                 $.get(getPlaceUrl, function(data) {
-                    console.log(data);
                     $("#testground").html(data);
                 });
             }
@@ -183,19 +182,25 @@ function initDropzone(pId)
               });
               this.on("removedfile", function(file) {
                   // if (!file.serverId) { return; }
-                  $.get("/iti-day-place-photo-delete/" + pId, function(){
+                  var $loading = $('#loading');
+                  $loading.show();
 
+                  $.get("/iti-day-place-photo-delete/" + pId, function(data){
+                      $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
                   }).fail(function(){
                       alert('error!');
-                  });
-
+                  }).always(function() {
+                    $loading.hide();
+                  })
+              });
+/*
                   var getPlaceUrl = '/itinerary-day/day-place/'+pId;
                   $.get(getPlaceUrl, function(data) {
                       $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
                   }).fail(function(){
                       alert('error!');
                   });
-              });
+              });*/
           }
       });
 /*
@@ -361,31 +366,58 @@ CKEDITOR.replaceAll( 'editor',{
 $(document).ready(function(){
     $('a[data-place-img-delete]').click(function(e){
 
+        e.preventDefault();
+
         var pId = $(this).data('pid');
         var url = $(this).attr('href');
         var element = $(this);
+
+        var $body = $("body");
+        $body.addClass("loading");
 
         $.get(url, function(data) {
             element.parent().fadeOut();
             $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
         }).fail(function() {
             alert('error! please try again');
+        }).always(function() {
+            $body.removeClass("loading");
         });
 
-        e.preventDefault();
     });
 });
 
 $(document).ready(function(){
     $('a[data-day-img-delete]').click(function(e){
+
+        e.preventDefault();
+
         var url = $(this).attr('href');
         var element = $(this);
+
+        var $body = $("body");
+        $body.addClass("loading");
 
         $.get(url, function(data) {
             element.parent().fadeOut();
         }).fail(function() {
             alert('error! please try again');
+        }).always(function() {
+                $body.removeClass("loading");
         });
-        e.preventDefault();
+
+
+
+
+        // if (!file.serverId) { return; }
+
+/*
+        $.get("/iti-day-place-photo-delete/" + pId, function(data){
+            $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
+        }).fail(function(){
+            alert('error!');
+        }).always(function() {
+            $loading.hide();
+        })*/
     });
 });

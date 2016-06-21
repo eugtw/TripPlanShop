@@ -63,64 +63,62 @@
 
 
 
-        <divid="day-route">
-            <div class="iti-route">
-                <div class="row">
-                    <h3 class="col-xs-12">Places to visit in this day</h3>
-                    <ol class="route-list col-md-4 col-xs-12 list-unstyled">
-                        @foreach($day->places as $key => $place)
-
-                        <li>
+        <div class="row">
+            <h3 class="col-xs-12">Places to visit in this day</h3>
+            <div class="iti-route bottom-buffer col-md-4 col-sm-5 col-xs-12">
+                <ol class="route-list list-unstyled">
+                    @foreach($day->places as $key => $place)
+                    <li>
                             {!! Form::model($place, [
-                                'data-delete',
-                                'route' => ['itinerary-day.day-place.destroy',
-                                $place], 'method' => 'DELETE']) !!}
+                            'data-delete',
+                            'route' => ['itinerary-day.day-place.destroy',
+                            $place], 'method' => 'DELETE']) !!}
 
-                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
+                            <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
                             {!! Form::close() !!}
 
                             <a href='#day-route{{($key+1)}}'>
-                                <span class="route-item">
-                                    <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
-                                    <span>
+                        <span class="route-item">
+                            <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
+                            <span>
+                                <div>
+                                    @if( $place->image_path == '')
+                                        <img class="place-nav-img place-{{$place->id}}"  src="{{ $place->photo_ref_google }}">
+                                    @else
+                                        <img class="place-nav-img place-{{$place->id}}" src="{{ asset($place->image_path) }}">
+                                    @endif
+                                    <div class="marker-table">
+                                        <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
                                         <div>
-                                            @if( $place->image_path == '')
-                                                <img class="place-nav-img place-{{$place->id}}"  src="{{ $place->photo_ref_google }}">
-                                            @else
-                                                <img class="place-nav-img place-{{$place->id}}" src="{{ asset($place->image_path) }}">
-                                            @endif
-                                            <div class="marker-table">
-                                                <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
-                                                <div>
-                                                            <span class="route-item-exp">
-                                                            @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                                                    <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
-                                                                @endforeach
-                                                        </span></div>
-                                            </div>
-                                        </div>
-                                    </span>
-                                </span>
+                                                    <span class="route-item-exp">
+                                                    @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                            <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
+                                                        @endforeach
+                                                </span></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </span>
                             </a>
                         </li>
+                    @endforeach
 
-                        @endforeach
+                    <li>
+                        {!! Form::open(['data-remote', 'route' => 'itinerary-day.day-place.store', 'method' => 'POST']) !!}
+                        {!! Form::text('day_id', $day->id, ['hidden' => 'hidden']) !!}
 
-                        <li>
-                            {!! Form::open(['data-remote', 'route' => 'itinerary-day.day-place.store', 'method' => 'POST']) !!}
-                            {!! Form::text('day_id', $day->id, ['hidden' => 'hidden']) !!}
+                        <button class="route-add" type="submit">Add new place</button>
 
-                            <button class="route-add" type="submit">Add new place</button>
+                        {!! Form::close() !!}
+                    </li>
+                </ol>
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 dayPlace">
 
-                            {!! Form::close() !!}
+                @foreach($day->places as $key => $place)
+                    <article id='day-route{{($key+1)}}' data-place-id = "{{ $place->id }}" data-place-edit = "1">
 
-                        </li>
-                    </ol>
-
-                    <div class="col-md-8 col-xs-12 dayPlaceEdit">
-
-                    @foreach($day->places as $key => $place)
-                        <div id='day-route{{($key+1)}}' data-place-id = "{{ $place->id }}" data-place-edit = "1">
+                        <div class="inner-wrap">
 
 
                             {{-- dropzone --}}
@@ -139,20 +137,20 @@
 
                             {{-- display photos already saved for editing --}}
                             @if( $place->image_path != '')
-                            <div class="day-photo-thumbs inline-block">
-                                <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-place-img-delete = "data-place-img-delete" data-pId = "{{ $place->id }}">
-                                    <i class="fa fa-times delete-btn" aria-hidden="true"></i>
-                                </a>
-                                <img class="thumbnail" src="{{ asset($place->image_path) }}" alt="{{ $place->place_title }}}}">
-                            </div>
+                                <div class="day-photo-thumbs inline-block">
+                                    <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-place-img-delete = "data-place-img-delete" data-pId = "{{ $place->id }}">
+                                        <i class="fa fa-times delete-btn" aria-hidden="true"></i>
+                                    </a>
+                                    <img class="thumbnail" src="{{ asset($place->image_path) }}" alt="{{ $place->place_title }}}}">
+                                </div>
                                 <div class="clearfix"></div>
                             @endif
 
 
 
                             {!! Form::model($place, [   'data-remote',
-                                                        'route' => ['itinerary-day.day-place.update', $place->id],
-                                                        'method' => 'PATCH']) !!}
+                            'route' => ['itinerary-day.day-place.update', $place->id],
+                            'method' => 'PATCH']) !!}
 
 
                             <!-- day google map input -->
@@ -214,12 +212,10 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <div class="clearfix"></div>
                                     <li  class="col-xs-12">
                                         <div class="form-group row">
                                             {!! Form::label('experiences', 'Experiences', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-
                                                 {!! Form::select('experiences[]', $experiences, null,
                                                 ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '2', 'required']) !!}
                                             </div>
@@ -301,18 +297,22 @@
 
 
                             {!! Form::close() !!}
-                        </div><!-- #day -->
-                    @endforeach
-                    </div>
-                </div><!-- row -->
+                        </div>
+
+                    </article><!-- #day -->
+                @endforeach
             </div>
-        </div><!-- row -->
-        <hr>
-        <div id="testground">
-
         </div>
-    </div><!-- container -->
 
+
+        <hr>
+    </div><!-- container -->
+    <div class="loading-modal">
+        <div class="loading-message">
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw theme-blue"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 @stop
 
 
@@ -339,6 +339,7 @@
                     }).fail(function(){
                         alert('error!');
                     });
+
                 });
             }
         });
