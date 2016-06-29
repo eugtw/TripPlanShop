@@ -146,7 +146,8 @@ class ItiDayPlaceController extends Controller {
 		$data = $request->all();
 
 
-		if( $data['experiences'] != null ) {
+
+		if( $request->experiences != null ) {
 
 			$data['experiences'] = implode(',', $request->experiences);
 		}

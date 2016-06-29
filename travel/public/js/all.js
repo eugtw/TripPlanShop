@@ -65,7 +65,7 @@ $('form[data-remote]').on('submit', function(e){
                timer: 500,
                showConfirmButton: false
                });*/
-              //location.reload();
+              location.reload();
     }).fail(function() {
           alert('error! please try again');
     });

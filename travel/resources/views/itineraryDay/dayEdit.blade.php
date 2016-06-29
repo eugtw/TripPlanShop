@@ -179,7 +179,7 @@
                                         <div class="form-group row">
                                             {!! Form::label('place_title', 'Title', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('place_title', null, ['placeholder' => 'Place Title','class'=>'form-control', 'required']) !!}
+                                                {!! Form::text('place_title', null, ['placeholder' => 'Place Title','class'=>'form-control']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -187,7 +187,7 @@
                                         <div class="form-group row">
                                             {!! Form::label('business_hours', 'Business hours', ['class'=>'control-label col-xs-4']) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::textarea('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', 'required', "maxlength"=>"20", 'data-place-id' => $place->id]) !!}
+                                                {!! Form::textarea('business_hours', null, ['placeholder' => 'eg: mon - fri, 8am - 6am','class'=>'form-control', "maxlength"=>"20", 'data-place-id' => $place->id]) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -196,7 +196,7 @@
                                         <div class="form-group row">
                                             {!! Form::label('time_to_visit', 'Best time to visit', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', 'required', "maxlength"=>"20"]) !!}
+                                                {!! Form::text('time_to_visit', null, ['placeholder' => 'eg: 2pm or afternoon','class'=>'form-control', "maxlength"=>"20"]) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -204,7 +204,7 @@
                                         <div class="form-group row">
                                             {!! Form::label('duration', 'Duration', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::select('duration', $duration, null, ['placeholder' => 'eg: 3 hours','class'=>'form-control', 'required']) !!}
+                                                {!! Form::select('duration', $duration, null, ['placeholder' => 'eg: 3 hours','class'=>'form-control']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -212,7 +212,7 @@
                                         <div class="form-group row">
                                             {!! Form::label('public_transit', 'Suggested transportation', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
-                                                {!! Form::select('public_transit', $transit_methods,  null, ['placeholder' => 'eg: yes/no','class'=>'form-control', 'required']) !!}
+                                                {!! Form::select('public_transit', $transit_methods,  null, ['placeholder' => 'eg: yes/no','class'=>'form-control']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -221,7 +221,7 @@
                                             {!! Form::label('experiences', 'Experiences', ['class'=>'control-label col-xs-4', ]) !!}
                                             <div class="col-xs-8">
                                                 {!! Form::select('experiences[]', $experiences, null,
-                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '2', 'required']) !!}
+                                                ['multiple' => 'multiple', 'placeholder' => 'category','class'=>'form-control select2', 'id' => "exp_place_$key" , 'data-max-selected' => '2']) !!}
                                             </div>
                                         </div>
                                     </li>
@@ -238,7 +238,7 @@
                                     </button>
                                     <div class="collapse" id="collapseIntro-{{$place->id}}">
                                         {!! Form::textarea('place_intro', null,
-                                        ['placeholder' => 'place introduction', 'rows'=>'5','class'=>'form-control editor', 'required', 'id' => $place->id .'place_intro']) !!}
+                                        ['placeholder' => 'place introduction', 'rows'=>'5','class'=>'form-control editor', 'id' => $place->id .'place_intro']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -326,35 +326,34 @@
                 var form = $(this);
                 var method = form.find('input[name="_method"]').val() || 'POST';
                 var url = form.prop('action');
+                if( form.find('textarea[class="editor"]')){
+                    for( var i in CKEDITOR.instances){
+                        CKEDITOR.instances[i].updateElement();
+                    }
+                }
 
+                var $body = $("body");
+                $body.addClass("loading");
+
+
+                $.ajax({
+                    type: method,
+                    url: url,
+                    data: form.serialize()
+                }).done(function() {
+
+                }).fail(function() {
+                    alert('error! please try again');
+                }).always(function() {
+                    $body.removeClass("loading");
+                });
+                /*
                 if(form[0].checkValidity()) {
 
-                    if( form.find('textarea[class="editor"]')){
-                        for( var i in CKEDITOR.instances){
-                            CKEDITOR.instances[i].updateElement();
-                        }
-                    }
-
-                    var $body = $("body");
-                    $body.addClass("loading");
-
-
-                    $.ajax({
-                        type: method,
-                        url: url,
-                        data: form.serialize()
-                    }).done(function() {
-
-                    }).fail(function() {
-                        alert('error! please try again');
-                    }).always(function() {
-                        $body.removeClass("loading");
-                    });
-
                 }else {
-                    $("input,textarea,select").filter('[required]:visible').before( "<span style='color: red;font-size: 10px;'>required</span>");
+                   $("input,textarea,select").filter('[required]:visible').before( "<span style='color: red;font-size: 10px;'>required</span>");
                     alert('please fill out all required fields!');
-                }
+                }*/
             });
         });
     </script>
