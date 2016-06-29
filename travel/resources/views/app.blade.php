@@ -79,6 +79,8 @@
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{ route('home.getFaqs') }}">FAQs</a></li>
 								<li><a href="{{ route('home.getSellerDetails') }}">Selling</a></li>
+								<li><a href="{{ url('/password/email') }}">Password reset</a></li>
+								<li><a href="{{ route('auth.getActivation') }}">Account activation</a></li>
 								<li><a href="{{ route('home.getContactus') }}">Contact</a></li>
 							</ul>
 						</li>
@@ -141,6 +143,12 @@
 		@yield('content')
 
 
+		<div class="loading-modal">
+			<div class="loading-message">
+				<i class="fa fa-spinner fa-spin fa-2x fa-fw theme-blue"></i>
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
 
 		<div class="push"></div>
 	</div><!-- .wrapper -->

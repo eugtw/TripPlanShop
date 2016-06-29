@@ -5,7 +5,7 @@
     <meta property="og:type"               content="article">
     <meta property="og:title"              content="{{ $itinerary->title }}">
     <meta property="og:description"        content="{{ $itinerary->summary }}">
-    <meta property="og:image"              content=" url('{{ asset($itinerary->image_path) }}') ">
+    <meta property="og:image"              content=" url('{{ asset($itinerary->image_path) }}')">
     <meta property="og:site_name" content="TripPlanShop"/>
     <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
 @stop
@@ -202,7 +202,7 @@
                     <div class="buy-block text-center">
 
                         @if( $itinerary->price == 0 )
-                            <a type="button" class="buy-button" href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">Get this Free</a>
+                            <a type="button" class="buy-button" href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">GET THIS FREE</a>
                         @else
                             <a type="button" class="buy-button"href="{{ route('itinerary.purchaseConfirm', $itinerary->slug) }}">
                                 BUY<sup> $</sup><span>{{ $itinerary->price }}</span><sup> US</sup></a>
@@ -371,7 +371,7 @@
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         function initMap() {
-            $('div.dayPlace').each(function () {
+            $('div.iti-route').each(function () {
                 var labelIndex = 0;
 
                 var id = $(this).data('dayid');
@@ -434,71 +434,6 @@
                     })(i);
                 }
             });
-            /*$('div.dayMap').each(function () {
-                var labelIndex = 0;
-                var loc = $(this).data("places");
-                var id = $(this).data('dayid');
-                window['bounds' + id] = new google.maps.LatLngBounds();
-
-                window['map' + id] = new google.maps.Map(document.getElementById('day-'+id+'-map'), {
-                    zoom: 7,
-                    mousescroll: true
-                    //center: {lat: 52.520, lng: 13.410}
-                });
-
-                var marker = [];
-                var contentString = [];
-                var infowindow = [];
-
-
-
-                console.log(loc);
-                console.log(loc.length);
-
-
-
-                for (var i = 0; i < loc.length; i++) {
-                    if(loc[i].loc_lat != '' && loc[i].loc_lng != '')
-                    {
-                        marker[i] = new google.maps.Marker({
-                            position: new google.maps.LatLng(loc[i].loc_lat, loc[i].loc_lng),
-                            map: window['map' + id],
-                            animation: google.maps.Animation.DROP,
-                           // icon: pinImage,
-                            label: labels[labelIndex % labels.length]
-                        });
-                        window['bounds' + id].extend(marker[i].position);
-                    }
-                    labelIndex++;
-                    window['map' + id].fitBounds(window['bounds' + id]);
-
-
-                    var title = loc[i].place_title != '' ? loc[i].place_title : "n/a";
-                    var name = loc[i].place_address != '' ? loc[i].place_address : "n/a";
-                    var duration = loc[i].duration != '' ? loc[i].duration : "n/a";
-                    contentString[i] = '<div class="placeMarker">' +
-                                        '<p class="title">' + title + '</p>' +
-                                        '<ul class="list-unstyled">'+
-                                        '<li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>' + name + '</li>' +
-                                        '<li><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>' + duration + '<li>' +
-                                        '</ul>'+
-                                        '</div>';
-
-                    infowindow[i]= new google.maps.InfoWindow({
-                        content: contentString[i]
-                    });
-
-                    (function(j){
-                        return function() {
-                            if(marker[j]) {
-                                marker[j].addListener('click', function() {
-                                    infowindow[j].open(window['map' + id], marker[j]);
-                                });
-                            }
-                        }()
-                    })(i);
-                }
-            });*/
         }//initMap()
     </script>
     <script async defer

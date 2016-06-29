@@ -4,11 +4,11 @@
     @if($is_preview)
         @if($itinerary->price == 0)
             <a type="button"
-               class="itit-button itit-footer-button btn-primary"
-               href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">View full itinerary free</a>
+               class="itit-button itit-footer-button btn-primary btn-lg"
+               href="{{ route('itinerary.getItiFree', $itinerary->slug) }}">VIEW FULL ITINERARY</a>
         @else
             <a type="button"
-               class="itit-button itit-footer-button btn-primary"
+               class="itit-button itit-footer-button btn-primary btn-lg"
                href="{{ route('itinerary.purchaseConfirm', $itinerary->slug) }}">BUY FULL ITINERARY</a>
         @endif
     @elseif($itinerary->user_id == Auth::user()->id)

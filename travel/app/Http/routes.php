@@ -96,7 +96,7 @@ Route::group(['middleware' => ['auth']], function()
 	//itineraryDay
 	Route::post('itinerary-day/places/photo-upload', ['as' => 'itidayplace.storePlaceImage', 'uses' => 'ItiDayPlaceController@storePlaceImage']);
 	Route::get('iti-day-place-photo-delete/{photo_id}', ['as' => 'itidayplace.deletePlaceImage', 'uses' => 'ItiDayPlaceController@deletePlaceImage']);
-	Route::resource('itinerary-day/day-place','ItiDayPlaceController');
+
 
 	Route::post('itinerary-day/photo-upload', ['as' => 'itiday.storeDayImages', 'uses' => 'ItiDayController@storeDayImages']);
 	Route::get('iti-day-photo-delete/{photo_name}', ['as' => 'itiday.deleteDayImages', 'uses' => 'ItiDayController@deleteDayImages']);
@@ -118,7 +118,8 @@ Route::group(['middleware' => ['auth']], function()
 	}]);
 
 });
-
+//iti place controller
+Route::resource('itinerary-day/day-place','ItiDayPlaceController');
 
 //itinerary preview does not require login
 //later

@@ -61,21 +61,4 @@
             </div>
     </div>
 
-
-
-    {{-- dropzone --}}
-    <script>
-        Dropzone.options.itiPhotoDropzone = {
-            dictDefaultMessage: 'Click to upload new cover image',
-            paramName: "iti_image", // The name that will be used to transfer the file
-            maxFilesize: 99, // MB
-            acceptedFiles: '.jpg, .jpeg, .png',
-            maxFiles: 1,
-            init: function(file) {
-                this.on("queuecomplete", function() {
-                    location.reload();
-                });
-            }
-        };
-    </script>
 @stop

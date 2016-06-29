@@ -21,7 +21,9 @@
                 gallery_height:900,
                 gallery_min_height: 250,
                 theme_panel_position: "right",
-                theme_hide_panel_under_width: 480
+                theme_hide_panel_under_width: 480,
+                gallery_autoplay:true,
+                gallery_play_interval: 3000
             });
         });
 

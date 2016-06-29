@@ -41,6 +41,8 @@ $('form[data-delete]').on('submit', function(e){
 });
 
 $('form[data-remote]').on('submit', function(e){
+    e.preventDefault();
+
     var form = $(this);
     var method = form.find('input[name="_method"]').val() || 'POST';
     var url = form.prop('action');
@@ -51,26 +53,22 @@ $('form[data-remote]').on('submit', function(e){
         }
     }
 
-  $.ajax({
+    $.ajax({
         type: method,
         url: url,
-        data: form.serialize(),
-
-        success: function() {
-
-            swal({
-                title: "Loading...",
-                animation: false,
-                timer: 500,
-                showConfirmButton: false
-            });
-            location.reload();
-
-        }
-
+        data: form.serialize()
+    }).done(function() {
+              /*
+               swal({
+               title: "Loading...",
+               animation: false,
+               timer: 500,
+               showConfirmButton: false
+               });*/
+              //location.reload();
+    }).fail(function() {
+          alert('error! please try again');
     });
-
-    e.preventDefault();
 });
 
 
@@ -143,10 +141,6 @@ $(document).ready(function(){
                    initDropzone(id);
                 }
 
-                var getPlaceUrl = '/itinerary-day/day-place/'+id;
-                $.get(getPlaceUrl, function(data) {
-                    $("#testground").html(data);
-                });
             }
 
 
@@ -169,14 +163,15 @@ function initDropzone(pId)
            addRemoveLinks: true,
            dictDefaultMessage: 'Drop an image for this place or Google image will be used',
           init: function() {
+
               this.on("queuecomplete", function() {
                  // location.reload();
+                  var getPlaceUrl = '/itinerary-day/day-place/' + pId + '/edit';
 
-                  var getPlaceUrl = '/itinerary-day/day-place/'+pId;
                   $.get(getPlaceUrl, function(data) {
-                      $('.place-nav-img.place-' + pId).attr('src', '/'+data['image_path']);
+                      $('.place-nav-img.place-' + pId).attr('src', '/' + data['image_path']);
                   }).fail(function(){
-                      alert('error!');
+                      alert('error! please refresh page');
                   });
 
               });
@@ -193,34 +188,8 @@ function initDropzone(pId)
                     $loading.hide();
                   })
               });
-/*
-                  var getPlaceUrl = '/itinerary-day/day-place/'+pId;
-                  $.get(getPlaceUrl, function(data) {
-                      $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
-                  }).fail(function(){
-                      alert('error!');
-                  });
-              });*/
           }
       });
-/*
-    Dropzone.options.testabc = {
-        maxFiles: 1,
-        paramName: "place_image", // The name that will be used to transfer the file
-        maxFilesize: 15, // MB
-        acceptedFiles: '.jpg, .jpeg, .png',
-        dictDefaultMessage: 'Drop an image for this place or Google image will be used',
-        addRemoveLinks: true,
-        init: function() {
-            this.on("queuecomplete", function() {
-                location.reload();
-            });
-            this.on("removedfile", function(file) {
-                // if (!file.serverId) { return; }
-                $.get("{{ route('itidayplace.deletePlaceImage', $place->id)}}");
-            });
-        }
-    };*/
 }
 
 function initPlaceMap(pId) {
@@ -337,13 +306,29 @@ function updateInputs(placeId, place){
 
     var open_hours;
 
+
     try {
         open_hours = place.opening_hours.weekday_text.join(", ");
     } catch(e) {
         open_hours = "N/A";
     }
+    $('textarea[data-place-id="'+placeId+'"]').val(open_hours);
 
-    $('div[data-place-id="'+placeId+'"] #business_hours').val(open_hours);
+
+    // ajaxForm save doesnt save business_hours part, maybe it's becuase async
+    var form = $('form.pid-' + placeId);
+    var method = form.find('input[name="_method"]').val() || 'POST';
+    var url = form.prop('action');
+
+    $.ajax({
+        type: method,
+        url: url,
+        data: form.serialize()
+    }).done(function() {
+
+    }).fail(function() {
+        alert('error! please try again');
+    });
 }
 
 
@@ -419,5 +404,58 @@ $(document).ready(function(){
         }).always(function() {
             $loading.hide();
         })*/
+    });
+});
+
+$(document).ready(function() {
+    var api = {};
+
+    $("ol.route-list.view-mode li a").click(function(e) {
+
+        e.preventDefault();
+        var pId = $(this).attr('href').split('-')[1];
+        var url = '/itinerary-day/day-place/' + pId;
+        var currentDayDiv =  $(this).parents("div.dayView");
+
+
+        var $body = $("body");
+        $body.addClass("loading");
+
+        if(!api[pId]) {
+            api[pId] = $.get({
+                url: url,
+                timeout: 15000
+        }) }
+        api[pId].done(function(data) {
+            currentDayDiv.children(".dayPlace").html(data);
+        }).fail(function() {
+            alert("error! please try again")
+        }).always(function() {
+            $body.removeClass("loading");
+        });
+
+
+
+    });
+
+    $("ol.route-list.view-mode li:first-child a").each(function() {
+        $(this).trigger("click");
+    });
+});
+
+
+//iti overview edit
+$(document).ready(function() {
+    $("#iti-photo-dropzone").dropzone({
+        dictDefaultMessage: 'Click to upload new cover image',
+        paramName: "iti_image", // The name that will be used to transfer the file
+        maxFilesize: 99, // MB
+        acceptedFiles: '.jpg, .jpeg, .png',
+        maxFiles: 1,
+        init: function(file) {
+            this.on("queuecomplete", function() {
+                location.reload();
+            });
+        }
     });
 });

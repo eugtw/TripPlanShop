@@ -1,11 +1,5 @@
 
-<article id='day-route'  class="day"
-                 data-lat = "{{ $place->loc_lat }}"
-                 data-lng = "{{ $place->loc_lng }}"
-                 data-title = "{{ $place->place_title }}"
-                 data-address = "{{ $place->place_address }}"
-                 data-duration = "{{ $place->duration }}" >
-            <div class="clearfix"></div>
+<article>
             <div class="inner-wrap">
                 <h3>{{ $place->place_title }}</h3>
 

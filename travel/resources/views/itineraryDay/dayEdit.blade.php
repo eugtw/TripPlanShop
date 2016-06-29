@@ -51,7 +51,7 @@
             {!! Form::model($day, [
                     'data-remote',
                     'route'=>['itinerary-day.update', $day],
-                    'method'=>'PATCH', 'class'=>'form-horizontal col-xs-12']) !!}
+                    'method'=>'PATCH', 'class'=>'form-horizontal col-xs-12 ajaxForm']) !!}
 
             {!! Form::hidden('day_num', $day->num) !!}
 
@@ -69,17 +69,19 @@
                 <ol class="route-list list-unstyled">
                     @foreach($day->places as $key => $place)
                     <li>
-                            {!! Form::model($place, [
-                            'data-delete',
-                            'route' => ['itinerary-day.day-place.destroy',
-                            $place], 'method' => 'DELETE']) !!}
+                        <a href='#day-route{{($key+1)}}'>
+                            <span class="route-item">
+                            <div>
 
-                            <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
-                            {!! Form::close() !!}
+                                <span class="route-letter">
+                                    {!! Form::model($place, [
+                                        'data-delete',
+                                        'route' => ['itinerary-day.day-place.destroy',
+                                        $place], 'method' => 'DELETE', 'class'=>'inline-block pull-right']) !!}
 
-                            <a href='#day-route{{($key+1)}}'>
-                        <span class="route-item">
-                            <div><span class="route-letter">{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
+
+                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
+                                {!! Form::close() !!}{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
                             <span>
                                 <div>
                                     @if( $place->image_path == '')
@@ -90,17 +92,18 @@
                                     <div class="marker-table">
                                         <span class="route-extra"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ $place->duration }}</span>
                                         <div>
-                                                    <span class="route-item-exp">
-                                                    @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                                            <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
-                                                        @endforeach
-                                                </span></div>
+                                            <span class="route-item-exp">
+                                            @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
+                                                <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
+                                            @endforeach
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </span>
                         </span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
                     @endforeach
 
                     <li>
@@ -148,9 +151,10 @@
 
 
 
-                            {!! Form::model($place, [   'data-remote',
+                            {!! Form::model($place, [
                             'route' => ['itinerary-day.day-place.update', $place->id],
-                            'method' => 'PATCH']) !!}
+                            'method' => 'PATCH',
+                            'class' => "ajaxForm pid-$place->id"]) !!}
 
 
                             <!-- day google map input -->
@@ -289,8 +293,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="top-buffer">
-                                        {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary']) !!}
-                                        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Itinerary</a>
+                                        {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary sr-only']) !!}
                                     </div>
                                 </div>
                             </div>
@@ -307,16 +310,56 @@
 
         <hr>
     </div><!-- container -->
-    <div class="loading-modal">
-        <div class="loading-message">
-            <i class="fa fa-spinner fa-pulse fa-3x fa-fw theme-blue"></i>
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div class="text-center">
+        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Save and Back to Itinerary</a>
     </div>
-@stop
+    @stop
 
 
 @section('js-bottom')
+    <script>
+        //click to save all forms in display
+        $(document).ready(function() {
+
+            $(".ajaxForm").change(function() {
+
+                var form = $(this);
+                var method = form.find('input[name="_method"]').val() || 'POST';
+                var url = form.prop('action');
+
+                if(form[0].checkValidity()) {
+
+                    if( form.find('textarea[class="editor"]')){
+                        for( var i in CKEDITOR.instances){
+                            CKEDITOR.instances[i].updateElement();
+                        }
+                    }
+
+                    var $body = $("body");
+                    $body.addClass("loading");
+
+
+                    $.ajax({
+                        type: method,
+                        url: url,
+                        data: form.serialize()
+                    }).done(function() {
+
+                    }).fail(function() {
+                        alert('error! please try again');
+                    }).always(function() {
+                        $body.removeClass("loading");
+                    });
+
+                }else {
+                    $("input,textarea,select").filter('[required]:visible').before( "<span style='color: red;font-size: 10px;'>required</span>");
+                    alert('please fill out all required fields!');
+                }
+            });
+        });
+    </script>
+
+
     {{-- dropzone x 2--}}
     <script>
         $("#day-dropzone").dropzone({
@@ -343,40 +386,9 @@
                 });
             }
         });
-        /*
-        Dropzone.options.dayPhotosDropzone = {
-            paramName: "image", // The name that will be used to transfer the file
-            maxFilesize: 15, // MB,
-            acceptedFiles: '.jpg, .jpeg, .png',
-            dictDefaultMessage: 'Drop images for this day\'s gallery',
-            //addRemoveLinks: true,
-            init: function(file) {
-                this.on("queuecomplete", function() {
-                    location.reload();
-                });
-            }
-        };*/
     </script>
 
-    <script>/*
-        Dropzone.options.placePhotoDropzone = {
-            maxFiles: 1,
-            paramName: "place_image", // The name that will be used to transfer the file
-            maxFilesize: 15, // MB
-            acceptedFiles: '.jpg, .jpeg, .png',
-            dictDefaultMessage: 'Drop an image for this place or Google image will be used',
-            addRemoveLinks: true,
-            init: function() {
-                this.on("queuecomplete", function() {
-                    //location.reload();
-                });
-               this.on("removedfile", function(file) {
-                   // if (!file.serverId) { return; }
-                    $.get("{{ route('itidayplace.deletePlaceImage', $place->id)}}");
-                });
-            }
-        };*/
-    </script>
+
 
     <script
             src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&libraries=places">

@@ -9,7 +9,7 @@
 
 		<label for="email" class="sr-only">Email</label>
 		<input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Email address" required autofocus>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+		<button class="btn btn-primary btn-block" type="submit">Send</button>
 	</form>
 	</div>
 

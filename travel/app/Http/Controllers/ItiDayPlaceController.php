@@ -107,11 +107,11 @@ class ItiDayPlaceController extends Controller {
 	 */
 	public function show(ItiDayPlace $place)
 	{
-		return $place;
-/*
+		//return $place;
+
 		return view('itineraryDay.partial_PlaceView')
 			->withPlace($place);
-*/
+
 	}
 
 	/**
@@ -120,9 +120,10 @@ class ItiDayPlaceController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(ItiDayPlace $place)
 	{
-		//
+		//used for place image name retrieve. ajax call after place image upload
+		return $place;
 	}
 
 	/**
@@ -141,10 +142,15 @@ class ItiDayPlaceController extends Controller {
 		}
 		*/
 
-		$data = $request->all();
-		$data['experiences'] = implode(',', $request->experiences);
-		ItiDayPlace::find($place->id)->update($data);
 
+		$data = $request->all();
+
+
+		if( $data['experiences'] != null ) {
+
+			$data['experiences'] = implode(',', $request->experiences);
+		}
+		ItiDayPlace::find($place->id)->update($data);
 		//return redirect()->back();
 	}
 
