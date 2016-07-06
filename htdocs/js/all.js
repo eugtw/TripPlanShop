@@ -65,7 +65,7 @@ $('form[data-remote]').on('submit', function(e){
                timer: 500,
                showConfirmButton: false
                });*/
-              //location.reload();
+              location.reload();
     }).fail(function() {
           alert('error! please try again');
     });
@@ -306,13 +306,29 @@ function updateInputs(placeId, place){
 
     var open_hours;
 
+
     try {
         open_hours = place.opening_hours.weekday_text.join(", ");
     } catch(e) {
         open_hours = "N/A";
     }
+    $('textarea[data-place-id="'+placeId+'"]').val(open_hours);
 
-    $('div[data-place-id="'+placeId+'"] #business_hours').val(open_hours);
+
+    // ajaxForm save doesnt save business_hours part, maybe it's becuase async
+    var form = $('form.pid-' + placeId);
+    var method = form.find('input[name="_method"]').val() || 'POST';
+    var url = form.prop('action');
+
+    $.ajax({
+        type: method,
+        url: url,
+        data: form.serialize()
+    }).done(function() {
+
+    }).fail(function() {
+        alert('error! please try again');
+    });
 }
 
 
@@ -365,15 +381,15 @@ $(document).ready(function(){
         var element = $(this);
 
         var $body = $("body");
-        $body.addClass("loading");
+        //$body.addClass("loading");
 
         $.get(url, function(data) {
             element.parent().fadeOut();
         }).fail(function() {
             alert('error! please try again');
-        }).always(function() {
+        });/*.always(function() {
                 $body.removeClass("loading");
-        });
+        });*/
 
 
 

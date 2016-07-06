@@ -1,4 +1,4 @@
-@extends('app', ['homepage'=>1, 'title' => 'TripPlanShop: Home - Travel Itineraries & Guides Marketplace'])
+@extends('app', ['homepage'=>1, 'title' => 'TripPlanShop: Self-guided trip plans with personalities'])
 
 @section('meta-description')
 	<meta name="author" content="TripPlanShop">
@@ -8,38 +8,30 @@
 @section('content')
 	<header class="text-center">
 		<div id="header-img">
-			<h1>LOST IN TRAVEL PLANNING?</h1>
-			<h2>Find personalized trip plans by travel lovers</h2>
+			<h1>Self-guided Trip Plans With Personalities</h1>
+			<h2>Follow the path of experienced travellers</h2>
 			<a class="btn btn-primary" id="header-search-btn-mobile" href="#" data-toggle="modal" data-target="#myModal">FIND PLANS</a>
 
 			<div id="header-search">
-					{!! Form::open(['url'=>'itinerary-search','method'=>'GET', 'class'=>'form-inline']) !!}
-
+				{!! Form::open(['url'=>'itinerary-search','method'=>'GET', 'class'=>'form-inline']) !!}
 				<!--
 					<div class="home-style-search">
 						{!! Form::label('style_list', 'Style Select',['hidden'=>'true']) !!}
 						{!! Form::select('style_list[]', $travelStyles,null,['id'=>'style_list', 'class'=>'style_list', 'multiple'=>'multiple']) !!}
 					</div>
 				-->
-
 				<div class="form-group searchbar">
 					{!! Form::label('location','123',['class'=>'sr-only']) !!}
 					{!! Form::text('location', null,['class'=> 'form-control', 'placeholder'=>'Where are you going?','id' => 'autocomplete', 'onFocus'=>'geolocate()']) !!}
 				</div>
-
-
 				<!--
 					{!! Form::label('country_name', 'Country Select',['hidden'=>'true']) !!}
 					{!! Form::select('country_name', (['any'=>'any country'] +$travelCountries), 1) !!}
 				-->
-
-
 				<div class="form-group searchbar">
 					{!! Form::submit('FIND PLANS', ['class'=>'btn btn-primary', 'id'=>'iti-search-btn']) !!}
 				</div>
-
-
-					{!! Form::close() !!}
+				{!! Form::close() !!}
 			</div>
 		</div>
 	</header>

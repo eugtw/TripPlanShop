@@ -3,10 +3,10 @@
 @section('meta-og')
     <meta property="og:url"                content="{{ route('itinerary.show',$itinerary->slug) }}">
     <meta property="og:type"               content="article">
-    <meta property="og:title"              content="{{ $itinerary->title }}">
-    <meta property="og:description"        content="{{ $itinerary->summary }}">
-    <meta property="og:image"              content=" url('{{ asset($itinerary->image_path) }}')">
-    <meta property="og:site_name" content="TripPlanShop"/>
+    <meta property="og:title"              content="Travel Guide: {{ $itinerary->title }}">
+    <meta property="og:description"        content="{{ strip_tags($itinerary->summary)}}">
+    <meta property="og:image"              content=" {{ asset($itinerary->image_path) }} ">
+    <meta property="og:site_name"           content="TripPlanShop"/>
     <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}"
 @stop
 

@@ -3,12 +3,20 @@
             <div class="inner-wrap">
                 <h3>{{ $place->place_title }}</h3>
 
+                {{---
                 @if( $place->image_path == '')
                     <div class="photo" style="background-image: url(' {{ $place->photo_ref_google }} ');"></div>
                 @else
                     <div class="photo" style="background-image: url(' {{ asset($place->image_path) }} ');"></div>
                 @endif
-
+                ---}}
+                <div>
+                    @if( $place->image_path == '')
+                        <img class="photo" src="{{ $place->photo_ref_google }}" alt="$place->place_title>">
+                    @else
+                        <img class="photo" src="{{ asset($place->image_path) }}" alt="$place->place_title>">
+                    @endif
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <ul class="list-unstyled summary-list">
@@ -59,9 +67,11 @@
                                 <td>Category</td>
                                 <td  class="text-right">
                                     <div class=" route-item-exp">
+                                        @if( $place->experiences != '' )
                                         @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
                                             <i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}
                                         @endforeach
+                                        @endif
                                     </div>
                                 </td>
                             </tr>

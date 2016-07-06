@@ -8,8 +8,14 @@
 
                 {!! Form::open(['route'=>'itinerary-day.store', 'class'=>'form-horizontal']) !!}
                     {!! Form::hidden('iti_id', Crypt::encrypt($itinerary->id)) !!}
-                    @include('itineraryDay.partial_DayForm', ['SubmitButtonText' => 'Save'])
+                    @include('itineraryDay.partial_DayForm')
 
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9 top-buffer">
+                        {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary']) !!}
+                    </div>
+
+                </div>
                 {!! Form::close() !!}
 
             </div>

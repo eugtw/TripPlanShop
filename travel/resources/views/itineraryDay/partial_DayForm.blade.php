@@ -51,12 +51,7 @@
     </script> -->
 </div>
 
-<div class="form-group">
-    <div class="col-sm-offset-3 col-sm-9 top-buffer">
-        {!! Form::submit($SubmitButtonText, ['class'=>'btn itit-footer-button btn-primary sr-only']) !!}
-    </div>
 
-</div>
 
 <hr class="top-buffer">
 

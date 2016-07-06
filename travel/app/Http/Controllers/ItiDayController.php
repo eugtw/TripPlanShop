@@ -26,6 +26,7 @@ class ItiDayController extends Controller {
 	{
 		//$exp = Experience::all()->sortBy('experience')->lists('experience','id');
 		$transit_methods = [
+			'Bicycle' => 'Bicycle',
 			'Car' => 'Car',
 			'Public transit' => 'Public transit',
 			'Walk' => 'Walk',

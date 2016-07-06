@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Experience;
 use App\Http\Requests;
 use App\Http\Requests\DayPlaces;
 use App\Http\Controllers\Controller;
@@ -24,7 +25,7 @@ class ItiDayPlaceController extends Controller {
 		$itiDay = ItiDay::find($request->day_id);
 		$itinerary = Itinerary::find($itiDay->itinerary_id);
 
-		$photo = ItiDayPhoto::makePhoto(400, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
+		$photo = ItiDayPhoto::makePhoto(500, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
 
 		if($request->place_id == 'new')
 		{
@@ -147,13 +148,33 @@ class ItiDayPlaceController extends Controller {
 
 
 
+		
 		if( $request->experiences != null ) {
 
-			$data['experiences'] = implode(',', $request->experiences);
+			$exp_tags = $this->createTags($data['experiences']);
+			$data['experiences'] = implode(',', $exp_tags);
+
+		}else{
+			$data['experiences'] = '';
 		}
 		ItiDayPlace::find($place->id)->update($data);
 		//return redirect()->back();
 	}
+
+	public function createTags($tags)
+	{
+		foreach($tags as $key => $tag)
+		{
+			if(!is_numeric($tag))
+			{
+				$new_StyleTag = Experience::firstOrCreate(['experience'=>$tag]);
+				$tags[$key] = "$new_StyleTag->id";
+			}
+		}
+
+		return $tags;
+	}
+
 
 	/**
 	 * Remove the specified resource from storage.

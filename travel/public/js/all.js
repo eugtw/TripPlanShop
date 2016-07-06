@@ -381,15 +381,15 @@ $(document).ready(function(){
         var element = $(this);
 
         var $body = $("body");
-        $body.addClass("loading");
+        //$body.addClass("loading");
 
         $.get(url, function(data) {
             element.parent().fadeOut();
         }).fail(function() {
             alert('error! please try again');
-        }).always(function() {
+        });/*.always(function() {
                 $body.removeClass("loading");
-        });
+        });*/
 
 
 
@@ -407,6 +407,8 @@ $(document).ready(function(){
     });
 });
 
+
+//day-place view ajax
 $(document).ready(function() {
     var api = {};
 
@@ -429,6 +431,8 @@ $(document).ready(function() {
         api[pId].done(function(data) {
             currentDayDiv.children(".dayPlace").html(data);
         }).fail(function() {
+            //reset this place cache if fails
+            api[pId] = null;
             alert("error! please try again")
         }).always(function() {
             $body.removeClass("loading");

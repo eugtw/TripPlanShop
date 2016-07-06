@@ -55,7 +55,14 @@
 
             {!! Form::hidden('day_num', $day->num) !!}
 
-            @include('itineraryDay.partial_DayForm', ['SubmitButtonText' => 'Save'])
+            @include('itineraryDay.partial_DayForm')
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9 top-buffer">
+                    {!! Form::submit('Save', ['class'=>'btn itit-footer-button btn-primary sr-only']) !!}
+                </div>
+
+            </div>
 
             {!! Form::close() !!}
 
@@ -311,14 +318,23 @@
         <hr>
     </div><!-- container -->
     <div class="text-center">
-        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Save and Back to Itinerary</a>
+        <a type="button" class="btn itit-footer-button btn-primary refreshBtn" href="#">Save Progress</a>
+        <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Itinerary</a>
     </div>
     @stop
 
 
 @section('js-bottom')
     <script>
-        //click to save all forms in display
+        $(document).ready(function() {
+            $('.refreshBtn').click(function(e) {
+                e.preventDefault();
+                location.reload();
+            });
+        });
+    </script>
+    <script>
+        //save forms on change
         $(document).ready(function() {
 
             $(".ajaxForm").change(function() {
@@ -326,14 +342,9 @@
                 var form = $(this);
                 var method = form.find('input[name="_method"]').val() || 'POST';
                 var url = form.prop('action');
-                if( form.find('textarea[class="editor"]')){
-                    for( var i in CKEDITOR.instances){
-                        CKEDITOR.instances[i].updateElement();
-                    }
-                }
 
                 var $body = $("body");
-                $body.addClass("loading");
+                //$body.addClass("loading");
 
 
                 $.ajax({
@@ -342,19 +353,22 @@
                     data: form.serialize()
                 }).done(function() {
 
-                }).fail(function() {
-                    alert('error! please try again');
-                }).always(function() {
-                    $body.removeClass("loading");
                 });
-                /*
-                if(form[0].checkValidity()) {
-
-                }else {
-                   $("input,textarea,select").filter('[required]:visible').before( "<span style='color: red;font-size: 10px;'>required</span>");
-                    alert('please fill out all required fields!');
-                }*/
+                /*.fail(function() {
+                    //alert('error! please try again');
+                }).always(function() {
+                    //$body.removeClass("loading");
+                })*/
             });
+
+            for( var i in CKEDITOR.instances){
+                (function(i) {
+                    CKEDITOR.instances[i].on('change', function() {
+                        CKEDITOR.instances[i].updateElement();
+                        jQuery( CKEDITOR.instances[i].element.$ ).trigger('change');
+                    });
+                })(i);
+            }
         });
     </script>
 
