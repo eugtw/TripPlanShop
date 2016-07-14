@@ -77,7 +77,7 @@ $(document).on('submit', 'form.ajaxForm', function(e) {
     });
 
     $(document).ajaxStop(function () {
-        location.reload();
+       location.reload();
     });
 });
 /*
@@ -133,12 +133,8 @@ $('form[data-confirm], button[data-confirm]').on('click', function(e) {
 
 //{{-- jquery tabs --}}
 
-
+/*
 $(document).ready(function(){
-
-    Dropzone.autoDiscover = false;
-    
-
     $('ol.route-list-test').each(function(){
         // For each set of tabs, we want to keep track of
         // which tab is active and its associated content
@@ -195,7 +191,9 @@ $(document).ready(function(){
     });
 
 
-});
+});*/
+
+
 function initDropzone(pId)
 {
 
@@ -344,12 +342,16 @@ function updateInputs(placeId, place){
     //$('#place-' + placeId + '-name-short').val(address_short);
     $('#place-' + placeId + '-formatted_address').val(place.formatted_address);
     $('#place-' + placeId + '-website').val(place.website);
-    $('#place-' + placeId + '-photo_ref_google').val(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
+    if(typeof place.photos !== 'undefined')
+    {
+        $('#place-' + placeId + '-photo_ref_google').val(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
+    }
+
 
     //console.log(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
 
-    $('div[data-place-id="'+placeId+'"] #place_title').val(place.name);
-
+    $('#place_title').val(place.name);
+    console.log(place.name);
     var open_hours;
 
 
@@ -395,30 +397,6 @@ CKEDITOR.replaceAll( 'editor',{
 });*/
 
 $(document).ready(function(){
-    $('a[data-place-img-delete]').click(function(e){
-
-        e.preventDefault();
-
-        var pId = $(this).data('pid');
-        var url = $(this).attr('href');
-        var element = $(this);
-
-        var $body = $("body");
-        $body.addClass("loading");
-
-        $.get(url, function(data) {
-            element.parent().fadeOut();
-            $('.place-nav-img.place-' + pId).attr('src', data['photo_ref_google']);
-        }).fail(function() {
-            alert('error! please try again');
-        }).always(function() {
-            $body.removeClass("loading");
-        });
-
-    });
-});
-
-$(document).ready(function(){
     $('a[data-day-img-delete]').click(function(e){
 
         e.preventDefault();
@@ -456,47 +434,71 @@ $(document).ready(function(){
 
 //day-place edit ajax
 $(document).ready(function() {
-    
+
+    Dropzone.autoDiscover = false;
+
     $('ol.route-list.edit-mode li a').click(function(e) {
        
         e.preventDefault();
-        var pId = $(this).attr('href').split('-')[1];
+
+        var _page_ajax_pre_load = function() {
+            if (typeof CKEDITOR !== 'undefined') {
+                for (var instanceName in CKEDITOR.instances) {
+                    if (typeof CKEDITOR.instances[instanceName] !== 'undefined' && instanceName != 'dayEditor') {
+                        CKEDITOR.instances[instanceName].destroy();
+                    }
+                }
+            }
+        };
+
+        var $clickedPlace = $(this);
+        $('ol.route-list.edit-mode li a.active').removeClass('active');
+        $clickedPlace.addClass('active');
+
+        var pId = $clickedPlace.attr('href').split('-')[1];
         var url = '/itinerary-day/day-place/' + pId + '/edit';
-        var currentDayDiv =  $(this).parents("div.dayEdit");
+        var currentDayDiv =  $clickedPlace.parents("div.dayEdit");
 
         var $body = $("body");
         $body.addClass("loading");
+
 
         $.get({
             url: url,
             timeout: 20000
         }).done(function(data) {
+
+            _page_ajax_pre_load();
+
             currentDayDiv.children(".dayPlace").html(data);
+
+            CKEDITOR.replaceAll('editor',{
+                uiColor : '#9AB8F3'
+            });
+
             if(pId){
                 initPlaceMap(pId);
                 initDropzone(pId);
             }
 
             $('select.select2').select2({
-                maximumSelectionLength: $(this).data('maxSelected'),
+                maximumSelectionLength: $clickedPlace.data('maxSelected'),
                 tags: true
             });
-
-           /* CKEDITOR.replaceAll( 'editor',{
-
-                uiColor : '#9AB8F3'
-            });*/
         }).fail(function(xhr, status, error) {
             alert("Error! Please refresh page");
             console.log("An AJAX error occured: " + status + "\nError: " + error);
         }).always(function() {
             $body.removeClass("loading");
         });
+
     });
 
     $("ol.route-list.edit-mode li:first-child a").each(function() {
         $(this).trigger("click");
     });
+
+
 });
 
 /**
@@ -504,36 +506,50 @@ $(document).ready(function() {
  */
 //day-place view ajax
 $(document).ready(function() {
+
     var api = {};
+    //var dayId = [];
 
-    $("ol.route-list.view-mode li a").click(function(e) {
+    $('ol.route-list.view-mode').each(function() {
 
-        e.preventDefault();
-        var pId = $(this).attr('href').split('-')[1];
-        var url = '/itinerary-day/day-place/' + pId;
-        var currentDayDiv =  $(this).parents("div.dayView");
+        var $day = $(this);
+        var dayId = $day.data('dayid');
+
+        $("ol.route-list.view-mode.day"+dayId+" li a").click(function(e) {
+
+            e.preventDefault();
+
+            var $clickedPlace = $(this);
+            $("ol.route-list.view-mode.day"+dayId+" li a.active").removeClass('active');
+            $clickedPlace.addClass('active');
 
 
-        var $body = $("body");
-        $body.addClass("loading");
+            var pId = $clickedPlace.attr('href').split('-')[1];
+            var url = '/itinerary-day/day-place/' + pId;
+            var currentDayDiv =  $clickedPlace.parents("div.dayView");
 
-        if(!api[pId]) {
-            api[pId] = $.get({
-                url: url,
-                timeout: 20000
-        }) }
+            var $body = $("body");
+            $body.addClass("loading");
 
-        api[pId].done(function(data) {
-            currentDayDiv.children(".dayPlace").html(data);
-        }).fail(function(xhr, status, error) {
-            //reset this place cache if fails
-            delete api[pId];
-            alert("Error! Please refresh page");
-            console.log("An AJAX error occured: " + status + "\nError: " + error);
-        }).always(function() {
-            $body.removeClass("loading");
+            //cacheing
+            if(!api[pId]) {
+                api[pId] = $.get({
+                    url: url,
+                    timeout: 20000
+                }) }
+
+            api[pId].done(function(data) {
+                currentDayDiv.children(".dayPlace").html(data);
+            }).fail(function(xhr, status, error) {
+                //reset this place cache if fails
+                delete api[pId];
+                alert("Error! Please refresh page");
+                console.log("An AJAX error occured: " + status + "\nError: " + error);
+            }).always(function() {
+                $body.removeClass("loading");
+            });
+
         });
-
     });
 
     $("ol.route-list.view-mode li:first-child a").each(function() {

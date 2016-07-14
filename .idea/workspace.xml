@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf2a9f69-feb8-4501-9e9f-12df96c49b87" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/travel/public/images/itineraries/VqpEPZ8dAWzy/1465367008-The_Warming_Hut.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/travel/public/images/itineraries/WjxlGpBMZQXA/1463787369-Vancouver_Art_Gallery_in_summer.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/css/all.css" afterPath="$PROJECT_DIR$/htdocs/css/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/css/all.css.map" afterPath="$PROJECT_DIR$/htdocs/css/all.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/js/all.js" afterPath="$PROJECT_DIR$/htdocs/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/js/app.js" afterPath="$PROJECT_DIR$/htdocs/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/js/app.js.map" afterPath="$PROJECT_DIR$/htdocs/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayPlaceController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/ItiDayPlaceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/ItineraryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/travel/app/Http/Controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/app/Http/routes.php" afterPath="$PROJECT_DIR$/travel/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/css/all.css" afterPath="$PROJECT_DIR$/travel/public/css/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/css/all.css.map" afterPath="$PROJECT_DIR$/travel/public/css/all.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/js/all.js" afterPath="$PROJECT_DIR$/travel/public/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/js/app.js" afterPath="$PROJECT_DIR$/travel/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/public/js/app.js.map" afterPath="$PROJECT_DIR$/travel/public/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/assets/css/becoming-seller.css" afterPath="$PROJECT_DIR$/travel/resources/assets/css/becoming-seller.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/becoming-seller.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/becoming-seller.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/dayEdit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/itineraryDay/partial_DayView.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/payment/prePurchase.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/payment/prePurchase.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/promo/promo-main.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/promo/promo-main.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/seller-details.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/seller-details.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/travel/resources/views/users/StripeConnect.blade.php" afterPath="$PROJECT_DIR$/travel/resources/views/users/StripeConnect.blade.php" />
-    </list>
+    <list default="true" id="bf2a9f69-feb8-4501-9e9f-12df96c49b87" name="Default" comment="" />
     <ignored path="superthie.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -106,8 +74,8 @@
       <file leaf-file-name="all.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/travel/public/js/all.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="346" column="31" selection-start-line="346" selection-start-column="31" selection-end-line="346" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="340" column="64" selection-start-line="340" selection-start-column="64" selection-end-line="340" selection-end-column="64" />
               <folding>
                 <element signature="n#!!block;n#initDropzone#0" expanded="false" />
                 <element signature="n#!!block;n#setMapListener#0" expanded="false" />
@@ -658,18 +626,18 @@
       <option name="presentableId" value="Default" />
       <updated>1461649068655</updated>
       <workItem from="1467346215176" duration="15115000" />
-      <workItem from="1467693538573" duration="63861000" />
+      <workItem from="1467693538573" duration="64498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78976000" />
+    <option name="totallyTimeSpent" value="79613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-15" y="0" width="1366" height="728" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20222223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20222223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1199,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/travel/public/js/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="346" column="31" selection-start-line="346" selection-start-column="31" selection-end-line="346" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="340" column="64" selection-start-line="340" selection-start-column="64" selection-end-line="340" selection-end-column="64" />
           <folding>
             <element signature="n#!!block;n#initDropzone#0" expanded="false" />
             <element signature="n#!!block;n#setMapListener#0" expanded="false" />
