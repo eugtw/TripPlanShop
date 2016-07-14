@@ -63,7 +63,7 @@
                     <div class="iti-route bottom-buffer  col-md-4 col-sm-5 col-xs-12"
                          data-dayid="{{ $day->day_num }}"
                          data-num="{{$day->places->count() }}">
-                        <ol class="route-list view-mode list-unstyled">
+                        <ol class="route-list view-mode day{{$day->day_num}} list-unstyled" data-dayid="{{ $day->day_num }}">
                             @foreach($day->places as $key => $place)
                             <li>
                                 <a href='place-{{ $place->id }}'

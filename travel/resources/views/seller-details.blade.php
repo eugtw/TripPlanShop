@@ -28,7 +28,6 @@
                     <ul class="list-unstyled">
                         <li><a href="#things-to-know">Things to Know Before Selling</a></li>
                         <li><a href="#create-trip-plans">Create Trip Plans</a></li>
-                        <li><a href="#embed-google-maps">Embed Google Maps</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#getting-paid">Get Paid</a></li>
                     </ul>
@@ -80,25 +79,6 @@
                     <p>Before publishing trip plans, You can view saved trip plans in "plans in progress" under "My Trip Plans".
                     To edit a published trip plan, you need to "unpublish" it and edit.</p>
                 </div>
-                <div id="embed-google-maps">
-                    <h2>Embed Google Maps</h2>
-                    <p>Google My Maps Help: <a target="_blank" href="https://support.google.com/mymaps/answer/4708605?hl=en">https://support.google.com/mymaps/answer/4708605?hl=en</a></p>
-                    <ol>
-                        <li>Choose “public on the web” in sharing settings</li>
-                        <li>Click “embed on my site”</li>
-                        <li>In the box that appears, copy the HTML, and paste it into the source code for your page</li>
-                    </ol>
-
-                    <p>Insert Source Code</p>
-                    <ol>
-                        <li>Click “Source”</li>
-                        <li>“Ctrl + F” to search key words near where you want to put a map</li>
-                        <li>Paste HTML into the source code</li>
-                    </ol>
-                    <div class="bottom-buffer">
-                        <img class="img-responsive" src="/images/site/becoming-seller/source-code-insert.jpg">
-                    </div>
-                </div>
                 <div id="pricing">
                     <h2>Pricing</h2>
                     <p>Sellers choose the price for each itinerary from our pricing selection.
@@ -126,7 +106,7 @@
 
             @if(Auth::check() && Auth::user()->stripe_active == 0)
             <div class="text-center col-xs-12">
-                <a class="btn-primary pv-footer-button" href="{{ route('user.stripeSignup') }}" role="button">Become Seller</a>
+                <a class="itit-button itit-footer-button btn-primary btn-lg" href="{{ route('user.stripeSignup') }}" role="button">Become Seller</a>
             </div>
             @endif
 

@@ -24,6 +24,9 @@
     font-size: 72px;
     margin-bottom: 40px;
 }
+#stripe-connect{
+    width: auto;
+}
 #becoming-seller-header{
     padding: 30px 0;
 }

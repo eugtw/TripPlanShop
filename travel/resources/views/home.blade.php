@@ -9,7 +9,7 @@
 	<header class="text-center">
 		<div id="header-img">
 			<h1>Self-guided Trip Plans With Personalities</h1>
-			<h2>Follow the path of experienced travellers</h2>
+			<h2>Follow the paths of experienced travellers</h2>
 			<a class="btn btn-primary" id="header-search-btn-mobile" href="#" data-toggle="modal" data-target="#myModal">FIND PLANS</a>
 
 			<div id="header-search">

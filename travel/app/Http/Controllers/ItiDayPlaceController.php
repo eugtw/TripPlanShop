@@ -17,12 +17,12 @@ class ItiDayPlaceController extends Controller {
 
 	public function storePlaceImage(Request $request)
 	{
-		//dd($request);
 		$this->validate($request, [
 			'place_image' => 'required|mimes:jpg,jpeg,png'
 		]);
 
-		$itiDay = ItiDay::find($request->day_id);
+		$place = ItiDayPlace::find($request->place_id);
+		$itiDay = ItiDay::find($place->itiday_id);
 		$itinerary = Itinerary::find($itiDay->itinerary_id);
 
 		$photo = ItiDayPhoto::makePhoto(500, $request->file('place_image'), $itinerary->getRouteKey(), 'place_');
@@ -115,6 +115,11 @@ class ItiDayPlaceController extends Controller {
 
 	}
 
+	public function getPlaceData(ItiDayPlace $place)
+	{
+		//used for place image name retrieve. ajax call after place image upload
+		return $place;
+	}
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -123,8 +128,23 @@ class ItiDayPlaceController extends Controller {
 	 */
 	public function edit(ItiDayPlace $place)
 	{
-		//used for place image name retrieve. ajax call after place image upload
-		return $place;
+		$transit_methods = [
+			'Bicycle' => 'Bicycle',
+			'Car' => 'Car',
+			'Public transit' => 'Public transit',
+			'Walk' => 'Walk',
+			'Any'
+		];
+
+		$duration = ['less than 1 hour' => 'less than 1 hour',
+			'1 - 2 hours' => '1 - 2 hours',
+			'2 - 4 hours' => '2 - 4 hours',
+			'more than 4 hours' => 'more than 4 hours'];
+
+		return view('itineraryDay.partial_DayEdit')
+			->withPlace($place)
+			->withDuration($duration)
+			->with('transit_methods', $transit_methods);
 	}
 
 	/**
@@ -158,6 +178,8 @@ class ItiDayPlaceController extends Controller {
 			$data['experiences'] = '';
 		}
 		ItiDayPlace::find($place->id)->update($data);
+		
+		//using ajax no need for return
 		//return redirect()->back();
 	}
 

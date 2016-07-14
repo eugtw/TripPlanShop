@@ -47,7 +47,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Abount Purchase</td>
+                                <td>About Purchase</td>
                             </tr>
                             <tr>
                                 <td colspan="2" class="prepurchase-notes">

@@ -47,9 +47,9 @@
                 </div><!-- messages -->
             </div>
 
-            <P class="pm-header-banner text-center">OPENING SOON!!</P>
-            <h1 class="text-center">Lost In Travel Planning?</h1>
-            <h2>Find trip plans that fit your travel styles</h2>
+            <P class="pm-header-banner text-center">NOW OPEN TO TRIP PLAN SELLERS</P>
+            <h1 class="text-center">Self-guided Trip Plans With Personalities</h1>
+            <h2>Follow the paths of experienced travellers</h2>
 
             <div class="text-center pm-button">
                 <div class="">
@@ -74,7 +74,7 @@
 
                 <div class="col-md-5 col-sm-6 col-xs-12 top-buffer">
                     <div class="pm-intro-box text-center">
-                        <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">
+                        <a href="/home">
                             <img src="{{ env('SITE_IMAGE_PATH') . 'promo-iti-card.jpg' }}">
                         </a>
 
@@ -100,7 +100,7 @@
                             Relax before your trip and enjoy more time during trips.
                         </p>
 
-                        <a href="{{ route('itinerary.showExample', $itinerary->slug) }}">See our trip plan example</a>
+                        <a href="/home">See our trip plan example</a>
                         <div class="text-center top-buffer">
                             <a class="btn btn-primary btn-lg" href="/home">Get Inside to See More</a>
                         </div>
@@ -114,30 +114,34 @@
     <div id="pm-become-a-seller">
         <div class="container">
             <div class="row top-buffer2">
-                <h3 class="text-center  col-xs-12 pm-info-box-title">List your trip plans for sale or share for free</h3>
-                <p class="text-center col-xs-12 col-sm-6 col-sm-offset-3">Get rewarded for your travel experiences and hard work. Or share
-                trip plans for free to expose your web pages or travel businesses.</p>
+                <h3 class="text-center  col-xs-12 pm-info-box-title">Become our trip plan writer to monetize your travel insight</h3>
+                <p class="text-center col-xs-12 col-sm-6 col-sm-offset-3">Create your self-guided trip plans and list them for sale or free.
+                    Viewers can follow the paths of experienced travellers.</p>
                 <div class="col-md-6  col-sm-6 col-xs-12 top-buffer">
                     <div class="pm-intro-box">
                         <div class="become-seller-intro-block">
                             <h3>Great way to promote</h3>
                             <p>Are you a blogger or in travel business? Include any links in trip plans to promote your services.
-                                Trip plans can be for sale or share.</p>
+                                Trip plans can be listed for sale or free.</p>
                         </div>
 
                         <div class="become-seller-intro-block">
-                            <h3>Share, sell, and gain together</h3>
-                            <p>Share trip plans on social media to gain traffic. Together, we are creating a market.</p>
+                            <h3>Share more and gain more</h3>
+                            <p>Share your listed trip plans on social media to gain more traffic and sales. Together, we are creating a new market.</p>
                         </div>
 
                         <h3>Catch audience with travel styles</h3>
-                        <p>Secure the right audience with style tags: #kid-friendly,
-                            #romantic, #adventurous, #marriage proposal.</p>
+                        <p>Trip plans can be categorized by travel personalities and styles. Secure the right audience with style tags: #kid-friendly, #romantic, #adventurous, #marriage proposal.</p>
 
                         <div class="text-center top-buffer">
+                            <!--
                             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sellerModal">
                                 Join to See How to Sell
-                            </button>
+                            </button> -->
+
+                            <a class="btn btn-primary btn-lg" href="/auth/register">
+                                Sign Up and Become A Seller
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +156,7 @@
 
     <div id="pm-footer" class="text-center">
         <div class=" text-center">
-            <ul class="list-unstyled list-inline"
+            <ul class="list-unstyled list-inline">
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Login </a></li><span> | </span>
                 <li><a href="#" data-toggle="modal" data-target="#sellerModal">Join</a></li><span> | </span>
                 <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>

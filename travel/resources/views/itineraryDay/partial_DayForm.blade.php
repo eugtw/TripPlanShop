@@ -17,9 +17,14 @@
     {!! Form::label('intro', 'Day Intro', ['class'=>'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::textarea('intro',null, ['placeholder' => 'breifly describe what happens in this day',
-        'class'=>'form-control editor', 'rows'=>'5']) !!}
+        'class'=>'form-control', 'id'=>'dayEditor', 'rows'=>'5']) !!}
     </div>
 
+    <script>
+        CKEDITOR.replace('dayEditor', {
+            uiColor : '#9AB8F3'
+        });
+    </script>
     <!--
     <script>
         CKEDITOR.replace( 'nono',{

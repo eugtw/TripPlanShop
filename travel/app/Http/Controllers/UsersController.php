@@ -223,8 +223,8 @@ class UsersController extends Controller {
 			$user->active = 1;
 			$user->save();
 
-			//create user profile
-			Profile::create([
+			//create user profile, also in AuthController
+			Profile::firstOrCreate([
 				'user_id' => $user->id
 			]);
 

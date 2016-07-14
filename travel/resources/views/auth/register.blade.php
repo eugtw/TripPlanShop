@@ -5,6 +5,7 @@
 	<form method="POST" action="{{ url('/auth/register') }}" class="form-signin">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<h2 class="form-signin-heading">Sign up</h2>
+
 		<label for="name" class="sr-only">User Name</label>
 		<input type="name" name="name" class="form-control" placeholder="User Name" value="{{old('name')}}" required autofocus>
 
@@ -21,6 +22,7 @@
 		<div>
 			<a class="btn btn-facebook btn-block" href="{{ url('/auth/facebook') }}" role="button"><i class="fa fa-lg fa-facebook pull-left"></i>Sign up with Facebook</a>
 		</div>
+		<p>Already signed up? <a href="/login">log in here</a></p>
 	</form>
 	</div>
 

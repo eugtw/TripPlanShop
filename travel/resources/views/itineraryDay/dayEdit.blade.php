@@ -49,9 +49,9 @@
         <div class="row">
             <!-- day input form -->
             {!! Form::model($day, [
-                    'data-remote',
                     'route'=>['itinerary-day.update', $day],
-                    'method'=>'PATCH', 'class'=>'form-horizontal col-xs-12 ajaxForm']) !!}
+                    'method'=>'PATCH',
+                    'class'=>'ajaxForm form-horizontal col-xs-12']) !!}
 
             {!! Form::hidden('day_num', $day->num) !!}
 
@@ -70,13 +70,22 @@
 
 
 
-        <div class="row">
+        <div class="row dayEdit">
             <h3 class="col-xs-12">Places to visit in this day</h3>
             <div class="iti-route bottom-buffer col-md-4 col-sm-5 col-xs-12">
-                <ol class="route-list list-unstyled">
+                <ol class="route-list edit-mode list-unstyled">
                     @foreach($day->places as $key => $place)
                     <li>
-                        <a href='#day-route{{($key+1)}}'>
+                        {{---<a href='#day-route{{($key+1)}}'>---}}
+                        <a href='place-{{ $place->id }}'
+                           id="day{{ $day->day_num }}-route{{($key)}}"
+                           data-lat = "{{ $place->loc_lat }}"
+                           data-lng = "{{ $place->loc_lng }}"
+                           data-title = "{{ $place->place_title }}"
+                           data-address = "{{ $place->place_address }}"
+                           data-duration = "{{ $place->duration }}">
+
+
                             <span class="route-item">
                             <div>
 
@@ -125,13 +134,14 @@
             </div>
             <div class="col-md-8 col-sm-7 col-xs-12 dayPlace">
 
+                {{---
                 @foreach($day->places as $key => $place)
                     <article id='day-route{{($key+1)}}' data-place-id = "{{ $place->id }}" data-place-edit = "1">
 
                         <div class="inner-wrap">
 
 
-                            {{-- dropzone --}}
+
                             <form action="{{ route('itidayplace.storePlaceImage') }}"
                                   method="POST"
                                   class="dropzone"
@@ -145,7 +155,7 @@
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             </form>
 
-                            {{-- display photos already saved for editing --}}
+                            <!-- display photos already saved for editing -->
                             @if( $place->image_path != '')
                                 <div class="day-photo-thumbs inline-block">
                                     <a href="{{ route('itidayplace.deletePlaceImage', $place->id)}}" data-place-img-delete = "data-place-img-delete" data-pId = "{{ $place->id }}">
@@ -310,7 +320,9 @@
                         </div>
 
                     </article><!-- #day -->
-                @endforeach
+
+                 @endforeach ---}}
+
             </div>
         </div>
 
@@ -318,7 +330,7 @@
         <hr>
     </div><!-- container -->
     <div class="text-center">
-        <a type="button" class="btn itit-footer-button btn-primary refreshBtn" href="#">Save Progress</a>
+        <a type="button" class="btn itit-footer-button btn-primary saveBtn" href="#">Save Progress</a>
         <a type="button" class="btn itit-footer-button btn-primary" href="{{ route('itinerary.show', $itinerary->slug) }}">Back to Itinerary</a>
     </div>
     @stop
@@ -326,18 +338,20 @@
 
 @section('js-bottom')
     <script>
-        $(document).ready(function() {
-            $('.refreshBtn').click(function(e) {
-                e.preventDefault();
-                location.reload();
-            });
-        });
-    </script>
-    <script>
         //save forms on change
         $(document).ready(function() {
 
-            $(".ajaxForm").change(function() {
+            $('.saveBtn').click(function(e) {
+
+                e.preventDefault();
+
+                //only day input form will go thru form[data-remote].on(submit), because placeForm is loaded thru ajax after. (delegate)
+                $('.ajaxForm').trigger('submit');
+
+            });
+
+/*
+            $(".ajaxForm1").change(function() {
 
                 var form = $(this);
                 var method = form.find('input[name="_method"]').val() || 'POST';
@@ -359,8 +373,8 @@
                 }).always(function() {
                     //$body.removeClass("loading");
                 })*/
-            });
-
+          /*  });*/
+/*
             for( var i in CKEDITOR.instances){
                 (function(i) {
                     CKEDITOR.instances[i].on('change', function() {
@@ -368,7 +382,7 @@
                         jQuery( CKEDITOR.instances[i].element.$ ).trigger('change');
                     });
                 })(i);
-            }
+            }*/
         });
     </script>
 

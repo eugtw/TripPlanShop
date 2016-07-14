@@ -18,7 +18,7 @@
     <div class="container" id="become-seller">
         <div class="row top-buffer">
             <div class="col-xs-12 text-center">
-                <h2>Catch audience with travel personality</h2>
+                <h2>Catch audience with travel personalities</h2>
                 <p class="col-xs-12 col-sm-8 col-sm-offset-2">Expose your trip plans to the right audience by
                 tagging travel styles.</p>
             </div>
@@ -55,8 +55,13 @@
                 <p>Why not create travel itineraries from your postings and experiences? Add trip plan links on
                 your websites, and sell them to people who already love your styles.</p>
 
+                <p><a href="{{ route('home.getSellerDetails') }}">More info about becoming a seller</a></p>
                 <div class="text-center top-buffer">
-                    <a class="btn-primary itit-btn itit-footer-button" href="{{ url('/auth/register') }}" role="button">GET STARTED FREE</a>
+                    @if(Auth::check())
+                        <a class="itit-button itit-footer-button btn-primary btn-lg" href="{{ route('user.stripeSignup') }}" role="button">Become a Seller</a>
+                    @else
+                        <a class="btn-primary itit-btn itit-footer-button" href="{{ url('/auth/register') }}" role="button">Sign Up or Log in First</a>
+                    @endif
                 </div>
             </div>
         </div>

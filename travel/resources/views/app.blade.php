@@ -96,11 +96,15 @@
 									<li><a href="{{ route('user.getAllTripPlans', [Auth::user()]) }}">My Trip Plans</a></li>
 									<li><a href="{{ route('user.liked', [Auth::user()]) }}">Wish list</a></li>
 
-
+									<li role="separator" class="divider"></li>
 									@if(Auth::user()->stripe_active)
-										<li role="separator" class="divider"></li>
-										<li><a href="{{ route('itinerary.create') }}">Create Plans</a></li>
+
+										<li><a href="{{ route('itinerary.create') }}">Create Trip Plans</a></li>
 										<li><a href="https://dashboard.stripe.com/login" target="_blank">Stripe Login</a></li>
+									@else
+										<li>
+											<a href="{{ route('user.stripeSignup') }}">Become a seller</a>
+										</li>
 									@endif
 
 									<li role="separator" class="divider"></li>

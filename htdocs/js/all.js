@@ -39,13 +39,57 @@ $('form[data-delete]').on('submit', function(e){
         });
     e.preventDefault();
 });
-
-$('form[data-remote]').on('submit', function(e){
+$(document).on('submit', 'form.ajaxForm', function(e) {
     e.preventDefault();
+
 
     var form = $(this);
     var method = form.find('input[name="_method"]').val() || 'POST';
     var url = form.prop('action');
+
+    var $body = $("body");
+    $body.addClass('loading');
+
+    if( form.find('textarea[class="editor"]')){
+        for( var i in CKEDITOR.instances){
+            CKEDITOR.instances[i].updateElement();
+        }
+    }
+
+    $.ajax({
+        type: method,
+        url: url,
+        data: form.serialize()
+    }).done(function() {
+        /*
+         swal({
+         title: "Loading...",
+         animation: false,
+         timer: 500,
+         showConfirmButton: false
+         });*/
+        //location.reload();
+    }).fail(function(xhr, status, error) {
+        alert("Error! Please refresh page");
+        console.log("An AJAX error occured: " + status + "\nError: " + error);
+    }).always(function() {
+        $body.removeClass('loading');
+    });
+
+    $(document).ajaxStop(function () {
+        location.reload();
+    });
+});
+/*
+$('form[data-remote]').on('submit', function(e){
+    e.preventDefault();
+
+
+    var form = $(this);
+    var method = form.find('input[name="_method"]').val() || 'POST';
+    var url = form.prop('action');
+
+    alert(url);
 
     if( form.find('textarea[class="editor"]')){
         for( var i in CKEDITOR.instances){
@@ -65,11 +109,11 @@ $('form[data-remote]').on('submit', function(e){
                timer: 500,
                showConfirmButton: false
                });*/
-              location.reload();
-    }).fail(function() {
+              //location.reload();
+  /*  }).fail(function() {
           alert('error! please try again');
     });
-});
+});*/
 
 
 
@@ -93,8 +137,9 @@ $('form[data-confirm], button[data-confirm]').on('click', function(e) {
 $(document).ready(function(){
 
     Dropzone.autoDiscover = false;
+    
 
-    $('ol.route-list').each(function(){
+    $('ol.route-list-test').each(function(){
         // For each set of tabs, we want to keep track of
         // which tab is active and its associated content
         var $active, $content, $links = $(this).find('a');
@@ -166,7 +211,8 @@ function initDropzone(pId)
 
               this.on("queuecomplete", function() {
                  // location.reload();
-                  var getPlaceUrl = '/itinerary-day/day-place/' + pId + '/edit';
+                  //var getPlaceUrl = '/itinerary-day/day-place/' + pId + '/edit';
+                  var getPlaceUrl = '/itinerary-day/day-place/getPlaceData/' + pId;
 
                   $.get(getPlaceUrl, function(data) {
                       $('.place-nav-img.place-' + pId).attr('src', '/' + data['image_path']);
@@ -341,12 +387,12 @@ $('select.select2').each(function(){
     });
 });
 
-
+/*
 //init ckeditor
 CKEDITOR.replaceAll( 'editor',{
 
     uiColor : '#9AB8F3'
-});
+});*/
 
 $(document).ready(function(){
     $('a[data-place-img-delete]').click(function(e){
@@ -407,6 +453,56 @@ $(document).ready(function(){
     });
 });
 
+
+//day-place edit ajax
+$(document).ready(function() {
+    
+    $('ol.route-list.edit-mode li a').click(function(e) {
+       
+        e.preventDefault();
+        var pId = $(this).attr('href').split('-')[1];
+        var url = '/itinerary-day/day-place/' + pId + '/edit';
+        var currentDayDiv =  $(this).parents("div.dayEdit");
+
+        var $body = $("body");
+        $body.addClass("loading");
+
+        $.get({
+            url: url,
+            timeout: 20000
+        }).done(function(data) {
+            currentDayDiv.children(".dayPlace").html(data);
+            if(pId){
+                initPlaceMap(pId);
+                initDropzone(pId);
+            }
+
+            $('select.select2').select2({
+                maximumSelectionLength: $(this).data('maxSelected'),
+                tags: true
+            });
+
+           /* CKEDITOR.replaceAll( 'editor',{
+
+                uiColor : '#9AB8F3'
+            });*/
+        }).fail(function(xhr, status, error) {
+            alert("Error! Please refresh page");
+            console.log("An AJAX error occured: " + status + "\nError: " + error);
+        }).always(function() {
+            $body.removeClass("loading");
+        });
+    });
+
+    $("ol.route-list.edit-mode li:first-child a").each(function() {
+        $(this).trigger("click");
+    });
+});
+
+/**
+ *
+ */
+//day-place view ajax
 $(document).ready(function() {
     var api = {};
 
@@ -424,17 +520,19 @@ $(document).ready(function() {
         if(!api[pId]) {
             api[pId] = $.get({
                 url: url,
-                timeout: 15000
+                timeout: 20000
         }) }
+
         api[pId].done(function(data) {
             currentDayDiv.children(".dayPlace").html(data);
-        }).fail(function() {
-            alert("error! please try again")
+        }).fail(function(xhr, status, error) {
+            //reset this place cache if fails
+            delete api[pId];
+            alert("Error! Please refresh page");
+            console.log("An AJAX error occured: " + status + "\nError: " + error);
         }).always(function() {
             $body.removeClass("loading");
         });
-
-
 
     });
 

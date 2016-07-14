@@ -78,7 +78,7 @@ class HomeController extends Controller {
 	{
 		if(!$itiEx = Itinerary::find(env('DEMO_ITIT_ID')))
 		{
-			$itiEx = Itinerary::where('published', 1)->get();
+			$itiEx = Itinerary::where('published', 1)->take(1)->get();
 		}
 
 		return view('becoming-seller')->with('itineraries', $itiEx);

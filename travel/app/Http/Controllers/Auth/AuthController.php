@@ -78,14 +78,20 @@ class AuthController extends Controller {
 		$user = User::create([
 			'name' => $facebookUser->name,
 			'email' => $facebookUser->email,
+			'active' => 1
 			//'facebook_id' => $facebookUser->id,
 			//'avatar' => $facebookUser->avatar
 		]);
 
-		Profile::firstOrCreate([
-			'user_id' => $user->id,
-			'avatar' => $facebookUser->avatar
+
+		//create user profile, also in UserController
+		$profile = Profile::firstOrCreate([
+			'user_id' => $user->id
+			//'avatar' => $facebookUser->avatar
 		]);
+
+		$profile->avatar = $facebookUser->avatar;
+		$profile->save();
 
 		return $user;
 	}

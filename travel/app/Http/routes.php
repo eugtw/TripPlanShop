@@ -59,7 +59,7 @@ Route::post('account/resent-activation', ['as'=>'auth.postResentActivation','use
 
 
 //example itinerary
-Route::get('itinerary/example/{itinerary}', ['as'=>'itinerary.showExample', 'uses' => 'ItineraryController@getItineraryExample']);
+//Route::get('itinerary/example/{itinerary}', ['as'=>'itinerary.showExample', 'uses' => 'ItineraryController@getItineraryExample']);
 
 
 //login required controllers
@@ -119,7 +119,10 @@ Route::group(['middleware' => ['auth']], function()
 
 });
 //iti place controller
+Route::get('itinerary-day/day-place/getPlaceData/{day_place}',
+	['as' => 'itidayplace.getPlaceData', 'uses' => 'ItiDayPlaceController@getPlaceData']);
 Route::resource('itinerary-day/day-place','ItiDayPlaceController');
+
 
 //itinerary preview does not require login
 //later
