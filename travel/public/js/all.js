@@ -351,7 +351,6 @@ function updateInputs(placeId, place){
     //console.log(place.photos[0].getUrl({ 'maxWidth': 626, 'maxHeight': 256 }));
 
     $('#place_title').val(place.name);
-    console.log(place.name);
     var open_hours;
 
 
@@ -535,7 +534,7 @@ $(document).ready(function() {
             if(!api[pId]) {
                 api[pId] = $.get({
                     url: url,
-                    timeout: 20000
+                    timeout: 30000
                 }) }
 
             api[pId].done(function(data) {

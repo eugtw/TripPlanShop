@@ -293,8 +293,6 @@ i.fa{
     background-size: cover;*/
     width: 100%;
     max-height: 500px;
-
-
 }
 .marker-table{
     display: table;
@@ -316,11 +314,18 @@ i.fa{
     line-height: 1.4;
  }
 .route-list li{
+    display: table;
+    width: 100%;
+
     border: 1px solid #ccc;
     margin: 7px 0;
     webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+}
+.route-list li>span{
+    display: table-cell;
+    vertical-align: middle;
 }
 .route-list li:last-child{
     border-bottom: 1px solid #ccc;

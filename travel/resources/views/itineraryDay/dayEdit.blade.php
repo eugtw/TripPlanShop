@@ -31,10 +31,10 @@
                     @if( !is_null($day->photos))
                         @foreach($day->photos as $photo)
                             <div class="day-photo-thumbs inline-block">
-                                    <a href="{{ route('itiday.deleteDayImages', $photo->name)}}" data-day-img-delete="1">
+                                    <a href="{{ route('itiday.deleteDayImages', $photo->name) }}" data-day-img-delete="1">
                                         <i class="fa fa-times delete-btn" aria-hidden="true"></i>
                                     </a>
-                                    <img class="thumbnail" src="/{{ $photo->photo_path }}" alt="}}">
+                                    <img class="thumbnail" src="/{{ $photo->photo_path }}" alt="{{ $photo->name }}">
                             </div>
 
                         @endforeach
@@ -76,28 +76,35 @@
                 <ol class="route-list edit-mode list-unstyled">
                     @foreach($day->places as $key => $place)
                     <li>
-                        {{---<a href='#day-route{{($key+1)}}'>---}}
-                        <a href='place-{{ $place->id }}'
-                           id="day{{ $day->day_num }}-route{{($key)}}"
-                           data-lat = "{{ $place->loc_lat }}"
-                           data-lng = "{{ $place->loc_lng }}"
-                           data-title = "{{ $place->place_title }}"
-                           data-address = "{{ $place->place_address }}"
-                           data-duration = "{{ $place->duration }}">
+                        <span class="">
+                            {!! Form::model($place, [
+                                        'data-delete',
+                                        'route' => ['itinerary-day.day-place.destroy', $place],
+                                        'method' => 'DELETE', 'class'=>''])
+                                        !!}
+                            <button class="delete-btn like-anchor" type="submit">
+                                <i class="fa fa-times fa-fw" aria-hidden="true"></i>
+                            </button>
+                            {!! Form::close() !!}
+                        </span>
 
+                        <span>
+                           {{---<a href='#day-route{{($key+1)}}'>---}}
+                            <a href='place-{{ $place->id }}'
+                               id="day{{ $day->day_num }}-route{{($key)}}"
+                               data-lat = "{{ $place->loc_lat }}"
+                               data-lng = "{{ $place->loc_lng }}"
+                               data-title = "{{ $place->place_title }}"
+                               data-address = "{{ $place->place_address }}"
+                               data-duration = "{{ $place->duration }}">
 
                             <span class="route-item">
                             <div>
-
                                 <span class="route-letter">
-                                    {!! Form::model($place, [
-                                        'data-delete',
-                                        'route' => ['itinerary-day.day-place.destroy',
-                                        $place], 'method' => 'DELETE', 'class'=>'inline-block pull-right']) !!}
-
-
-                                <button class="delete-btn like-anchor" type="submit"><i class="fa fa-times fa-fw" aria-hidden="true"></i></button>
-                                {!! Form::close() !!}{{ $place->letterLabel() }} </span>{{ ucwords($place->place_title) }}</div>
+                                    {{ $place->letterLabel() }}
+                                </span>
+                                {{ ucwords($place->place_title) }}
+                            </div>
                             <span>
                                 <div>
                                     @if( $place->image_path == '')
@@ -110,8 +117,8 @@
                                         <div>
                                             <span class="route-item-exp">
                                             @foreach( array_intersect_key($experiences, array_flip($place->experiences)) as $exp)
-                                                <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
-                                            @endforeach
+                                                    <span><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>{{$exp}}</span>
+                                                @endforeach
                                             </span>
                                         </div>
                                     </div>
@@ -119,17 +126,19 @@
                             </span>
                         </span>
                         </a>
+                        </span>
+
                     </li>
                     @endforeach
 
-                    <li>
-                        {!! Form::open(['data-remote', 'route' => 'itinerary-day.day-place.store', 'method' => 'POST']) !!}
-                        {!! Form::text('day_id', $day->id, ['hidden' => 'hidden']) !!}
 
-                        <button class="route-add" type="submit">Add new place</button>
+                    {!! Form::open(['route' => 'itinerary-day.day-place.store', 'method' => 'POST']) !!}
+                    {!! Form::text('day_id', $day->id, ['hidden' => 'hidden']) !!}
 
-                        {!! Form::close() !!}
-                    </li>
+                    <button class="route-add" type="submit">Add new place</button>
+
+                    {!! Form::close() !!}
+
                 </ol>
             </div>
             <div class="col-md-8 col-sm-7 col-xs-12 dayPlace">
@@ -335,12 +344,14 @@
     </div>
     @stop
 
-
 @section('js-bottom')
     <script>
         //save forms on change
         $(document).ready(function() {
 
+            $('.route-add').click(function() {
+                $('.saveBtn').trigger('click');
+            });
             $('.saveBtn').click(function(e) {
 
                 e.preventDefault();

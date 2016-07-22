@@ -3,18 +3,11 @@
             <div class="inner-wrap">
                 <h3>{{ $place->place_title }}</h3>
 
-                {{---
-                @if( $place->image_path == '')
-                    <div class="photo" style="background-image: url(' {{ $place->photo_ref_google }} ');"></div>
-                @else
-                    <div class="photo" style="background-image: url(' {{ asset($place->image_path) }} ');"></div>
-                @endif
-                ---}}
                 <div>
                     @if( $place->image_path == '')
-                        <img class="photo" src="{{ $place->photo_ref_google }}" alt="$place->place_title>">
+                        <img class="photo" src="{{ $place->photo_ref_google }}" alt="{{$place->place_title}}">
                     @else
-                        <img class="photo" src="{{ asset($place->image_path) }}" alt="$place->place_title>">
+                        <img class="photo" src="{{ asset($place->image_path) }}" alt="{{$place->place_title}}">
                     @endif
                 </div>
                 <div class="row">

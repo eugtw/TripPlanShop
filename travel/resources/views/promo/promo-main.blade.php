@@ -1,15 +1,15 @@
 @extends('promo.promo-app')
 @section('meta-description')
-    <meta name="author" content="TripPlanShop">
-    <meta name="description" content="Explore personalized trip plans by travel lovers. TripPlanShop is a marketplace for travel lovers to buy and sell trip plans around the world. Find the perfect travel itineraries that fit your styles.">
+
 @stop
 
 @section('meta-og')
     <meta property="og:url"                content="{{ url('/promo') }}">
     <meta property="og:type"               content="article">
-    <meta property="og:title"              content="{{ 'TripPlanShop | Find Trip Plans For Your Styles' }}">
-    <meta property="og:description"        content="{{ 'Overwhelmed? Want more than general travel guide? Our day-by-day
-    trip plans can save you time searching, so you can enjoy more during trips.' }}">
+    <meta property="og:author"                 content="TripPlanShop"/>
+    <meta property="og:title"              content="{{ 'TripPlanShop | Self-guided Trip Plans With Personalities' }}">
+    <meta property="og:description"        content="{{ 'Our day by day trip plans can save you time and
+    give you the insight of experienced travellers.' }}">
     <meta property="og:image"              content="http://tripplanshop.com/images/site/promo-mar-16.png">
     <meta property="og:site_name"           content=""/>
     <meta property="fb:app_id"             content="{{ env('FB_CLIENT_ID') }}">
